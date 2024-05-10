@@ -1,8 +1,5 @@
-root = true
+[bdist_wheel]
+universal = 1
 
-[*]
-indent_style = tab
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
+[metadata]
+license_file = LICENSE
