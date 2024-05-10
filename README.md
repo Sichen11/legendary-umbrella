@@ -1,73 +1,78 @@
+# Product Name
+> Short blurb about what your product does.
+
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Downloads Stats][npm-downloads]][npm-url]
+
+One to two paragraph statement about your product and what it does.
+
+![](header.png)
+
+## Installation
+
+OS X & Linux:
+
+```sh
+npm install my-crazy-module --save
+```
+
+Windows:
+
+```sh
+edit autoexec.bat
+```
+
+## Usage example
+
+A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+
+_For more examples and usage, please refer to the [Wiki][wiki]._
+
+## Development setup
+
+Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
+
+```sh
+make install
+npm test
+```
+
+## Release History
+
+* 0.2.1
+    * CHANGE: Update docs (module code remains unchanged)
+* 0.2.0
+    * CHANGE: Remove `setDefaultXYZ()`
+    * ADD: Add `init()`
+* 0.1.1
+    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
+* 0.1.0
+    * The first proper release
+    * CHANGE: Rename `foo()` to `bar()`
+* 0.0.1
+    * Work in progress
+
+## Meta
+
+Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+
+Distributed under the XYZ license. See ``LICENSE`` for more information.
+
+[https://github.com/yourname/github-link](https://github.com/dbader/)
+
 ## Contributing
 
-Contributions are welcome! Feel free to open an issue or submit a pull request if you have a way to improve this project.
+1. Fork it (<https://github.com/yourname/yourproject/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
 
-Make sure your request is meaningful and you have tested the app locally before submitting a pull request.
-
-### Installing Requirements
-
-#### Requirements
-
-- [PHP 7.4+](https://www.apachefriends.org/index.html)
-- [Composer](https://getcomposer.org)
-
-#### Linux
-
-```bash
-sudo apt-get install php
-sudo apt-get install php-curl
-sudo apt-get install composer
-```
-
-#### Windows
-
-Install PHP from [XAMPP](https://www.apachefriends.org/index.html) or [php.net](https://windows.php.net/download)
-
-[▶ How to install and run PHP using XAMPP (Windows)](https://www.youtube.com/watch?v=K-qXW9ymeYQ)
-
-[📥 Download Composer](https://getcomposer.org/download/)
-
-### Clone the repository
-
-```
-git clone https://github.com/DenverCoder1/readme-typing-svg.git
-cd readme-typing-svg
-```
-
-### Running the app locally
-
-```bash
-composer start
-```
-
-Open http://localhost:8000/ and add parameters to run the project locally.
-
-### Running the tests
-
-Before you can run tests, PHPUnit must be installed. You can install it using Composer by running the following command.
-
-```bash
-composer install
-```
-
-### Format and test the code
-
-Run the following command to format the code with Prettier:
-
-```
-composer run format
-```
-
-Run the following command to check if your code is formatted properly:
-
-```
-composer run format:check
-```
-
-> **Note** You need to have [`prettier`](https://prettier.io/) and the [prettier-php plugin](https://github.com/prettier/plugin-php) installed globally in order to run this command.
-
-Run the following command to run the PHPUnit test script which will verify that the tested functionality is still working.
-
-```bash
-composer test
-```
+<!-- Markdown link & img dfn's -->
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/datadog-metrics
+[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+[wiki]: https://github.com/yourname/yourproject/wiki
