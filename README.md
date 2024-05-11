@@ -1,9 +1,12 @@
-release: test
-	@git tag `grep -o -E '[0-9]\.[0-9]{2}\.[0-9]{1,2}' gh-md-toc`
-	@git push --tags origin master
+root = true
 
-test:
-	@bats tests
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
 
-lint:
-	@shellcheck -e SC2008 gh-md-toc
+[*.md]
+trim_trailing_whitespace = true
