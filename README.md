@@ -1,247 +1,97 @@
-Markdown Cheatsheet<a name="TOP"></a>
-===================
+# `buffer-web` workers and cron in Kubernetes
 
-- - - - 
-# Heading 1 #
+We are transitionning `buffer-web` utils workers to k8s (Kubernetes). Here what you'll need to know to make changes to those workers.
 
-    Markup :  # Heading 1 #
+Team members to contact for more information:
+* Primary contacts - Eric, Colin
 
-    -OR-
+## Contents
 
-    Markup :  ============= (below H1 text)
+* [List of workers in k8s](#list-of-workers-in-k8s)
+* [List of crons in k8s](#list-of-crons-in-k8s)
+* [Deploy workers/crons to k8s](#deploying-workers-or-crons-to-kubernetes)
+* [Architecture](#architecture)
+* [Code specific to k8s](#code-specific-to-k8s)
+* [Run k8s workers locally](#run-k8s-workers-locally)
+* [Production Deployments](#production-deployments)
 
-## Heading 2 ##
+## List of workers in k8s
+| Worker name | deployment key | Description|
+| --- | --- | --- |
+| analytics | worker-analytics | Update analytics
+| elasticsearch-indexer | worker-elasticsearch-indexer | Index profiles/users/updates in elasticsearch
+| email | worker-email | ???
+| gnip analytics | worker-gnip-analytics | Process GNIP analytics for a given twitter profile
+| link | worker-link | increment the buffer button
+| patch-records | worker-patch-record | "patch" the image fields for updates with the correct data structure
+| picture | worker-picture | Process images
+| push | worker-push | ???
+| quick-analytics | worker-quick-analytics | Update analytics
+| s3-cleanup | worker-s3-cleanup | ???
+| service | worker-service | ???
+| signup | worker-signup | Add complimentary information to user after the signup process
+| stripe-webhook | worker-stripe-webhook | ???
+| tweet-backfill | worker-tweet-backfill | ?
+| twitter-friends | worker-twitter-friends | Index in the twitter friend elasticsearch cluster
+| update | worker-update | Use to send updates from our users
+| update-migration | worker-update-migration | ???
+| user-cleanup | worker-user-cleanup | clean users information after they leave buffer
+| weekly-email-digest | worker-eweekly-email-digestmail | Send weekly email stats to our users
 
-    Markup :  ## Heading 2 ##
 
-    -OR-
-
-    Markup: --------------- (below H2 text)
-
-### Heading 3 ###
-
-    Markup :  ### Heading 3 ###
-
-#### Heading 4 ####
-
-    Markup :  #### Heading 4 ####
+## List of crons in k8s
+| Cron name | deployment key | Description|
+| --- | --- | --- |
+| queue-analytics | cron-analytics | Send all due analytics to the analytics queue
+| queue-scheduled-updates | cron-updates | Send all due updates to the sqs updates queue (The update workers will process the queue later on)
 
 
-Common text
+## Deploying workers or crons to kubernetes
 
-    Markup :  Common text
-
-_Emphasized text_
-
-    Markup :  _Emphasized text_ or *Emphasized text*
-
-~~Strikethrough text~~
-
-    Markup :  ~~Strikethrough text~~
-
-__Strong text__
-
-    Markup :  __Strong text__ or **Strong text**
-
-___Strong emphasized text___
-
-    Markup :  ___Strong emphasized text___ or ***Strong emphasized text***
-
-[Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
-
-    Markup :  [Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
-
-[heading-1](#heading-1 "Goto heading-1")
-    
-    Markup: [heading-1](#heading-1 "Goto heading-1")
-
-Table, like this one :
-
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-
+Take the deployment key [of the worker](#list-of-workers-in-k8s) or [crons](#list-of-crons-in-k8s) you want to target, and do:
 ```
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+    @bufferbot servicedeploy [deployment key]
 ```
 
-Adding a pipe `|` in a cell :
-
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | \|
-
+For example to deploy to the update worker:
 ```
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  |  \| 
+    @bufferbot servicedeploy worker-update
 ```
 
-Left, right and center aligned table
-
-Left aligned Header | Right aligned Header | Center aligned Header
-| :--- | ---: | :---:
-Content Cell  | Content Cell | Content Cell
-Content Cell  | Content Cell | Content Cell
-
+Then you can check the workers has been properly deployed by checking the age of the worker:
 ```
-Left aligned Header | Right aligned Header | Center aligned Header
-| :--- | ---: | :---:
-Content Cell  | Content Cell | Content Cell
-Content Cell  | Content Cell | Content Cell
+    kubectl get pods -n workers
 ```
 
-`code()`
+## Architecture
 
-    Markup :  `code()`
+To put it in a simple way, we put the `buffer-web` repo in a docker container and run the workers in k8s. [Here the Dockerfile used in production](https://github.com/bufferapp/buffer-web/blob/master/Dockerfile.workers). We use the [official PHP 5.6.31](https://github.com/bufferapp/dockerfiles/blob/master/php56-cli/Dockerfile) image, that uses itself `Debian 8.9 (jessie)`.
 
-```javascript
-    var specificLanguage_code = 
-    {
-        "data": {
-            "lookedUpPlatform": 1,
-            "query": "Kasabian+Test+Transmission",
-            "lookedUpItem": {
-                "name": "Test Transmission",
-                "artist": "Kasabian",
-                "album": "Kasabian",
-                "picture": null,
-                "link": "http://open.spotify.com/track/5jhJur5n4fasblLSCOcrTp"
-            }
-        }
-    }
-```
+Each worker has its own kubernetes deployment file located in the kube repo, under `kube/us-east1.buffer-k8s.com/workers`. Reach anyone in the system team to have access to it!
 
-    Markup : ```javascript
-             ```
+In SQS, the new queue name [has the `_k8s` suffix appened](https://github.com/bufferapp/buffer-web/blob/4eda46cb62a18f9285eab93e33100d7133e92cfc/shared/libraries/Workers/Worker.php#L81-L83) to its previous name. For instance, instead of `update` queue, it will be `update_k8s`
 
-* Bullet list
-    * Nested bullet
-        * Sub-nested bullet etc
-* Bullet list item 2
+## Code specific to k8s
+We set the  [`ENV_KUBERNETES`](https://github.com/bufferapp/buffer-web/blob/37348b9f59c675f420ea7099fd2ed9d0758e4844/Dockerfile.workers#L10
+) environnment variable to specify the code that is specific to kubernetes. Here the handy link to see [how it's used](https://github.com/bufferapp/buffer-web/search?utf8=%E2%9C%93&q=ENV_KUBERNETES&type=).
 
-~~~
- Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
+## Run k8s workers locally
 
--OR-
+Use `buffer-dev` to starts the worker :
 
- Markup : - Bullet list
-              - Nested bullet
-                  - Sub-nested bullet etc
-          - Bullet list item 2 
-~~~
+- `./dev web-worker start worker_name`
+- `./dev web-worker tail worker_name`
+- `./dev web-worker stop worker_name`
 
-1. A numbered list
-    1. A nested numbered list
-    2. Which is numbered
-2. Which is numbered
+If you have modified the `Dockerfile.local.worker`, please make sure to `./dev rebuild web-worker` the dev environment.
 
-~~~
- Markup : 1. A numbered list
-              1. A nested numbered list
-              2. Which is numbered
-          2. Which is numbered
-~~~
+Note: This way is better than the `./dev worker` command  because it reflects the exact same container as production. 🐳🐳🐳
 
-- [ ] An uncompleted task
-- [x] A completed task
 
-~~~
- Markup : - [ ] An uncompleted task
-          - [x] A completed task
-~~~
+## Production Deployments 
 
-- [ ] An uncompleted task
-    - [ ] A subtask
+To deploy to production :
 
-~~~
- Markup : - [ ] An uncompleted task
-              - [ ] A subtask
-~~~
+`@bufferbot servicedeploy [deployment-key]`
 
-> Blockquote
->> Nested blockquote
-
-    Markup :  > Blockquote
-              >> Nested Blockquote
-
-_Horizontal line :_
-- - - -
-
-    Markup :  - - - -
-
-_Image with alt :_
-
-![picture alt](http://via.placeholder.com/200x150 "Title is optional")
-
-    Markup : ![picture alt](http://via.placeholder.com/200x150 "Title is optional")
-
-Foldable text:
-
-<details>
-  <summary>Title 1</summary>
-  <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-</details>
-<details>
-  <summary>Title 2</summary>
-  <p>Content 2 Content 2 Content 2 Content 2 Content 2</p>
-</details>
-
-    Markup : <details>
-               <summary>Title 1</summary>
-               <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-             </details>
-
-```html
-<h3>HTML</h3>
-<p> Some HTML code here </p>
-```
-
-Link to a specific part of the page:
-
-[Go To TOP](#TOP)
-   
-    Markup : [text goes here](#section_name)
-              section_title<a name="section_name"></a>    
-
-Hotkey:
-
-<kbd>⌘F</kbd>
-
-<kbd>⇧⌘F</kbd>
-
-    Markup : <kbd>⌘F</kbd>
-
-Hotkey list:
-
-| Key | Symbol |
-| --- | --- |
-| Option | ⌥ |
-| Control | ⌃ |
-| Command | ⌘ |
-| Shift | ⇧ |
-| Caps Lock | ⇪ |
-| Tab | ⇥ |
-| Esc | ⎋ |
-| Power | ⌽ |
-| Return | ↩ |
-| Delete | ⌫ |
-| Up | ↑ |
-| Down | ↓ |
-| Left | ← |
-| Right | → |
-
-Emoji:
-
-:exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes at [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/)
-
-    Markup : Code appears between colons :EMOJICODE:
+Note:  You'll probably change some library/models that will affect utils, web or api environnments. In that case, you should aslo deploy to those environnments. Just ask in #eng-deploys if you're unsure :) 
