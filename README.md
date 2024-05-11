@@ -1,8 +1,7 @@
- {
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "https://github.com/novatorem/novatorem"
+{
+  "plugins": {
+    "remark-title": {
+      "title": "IPFS Readme Standard"
     }
-  ]
+  }
 }
