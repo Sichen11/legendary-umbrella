@@ -1,89 +1,126 @@
-# Project Name
-> Outline a brief description of your project.
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
-
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
-<!-- * [License](#license) -->
+# Markdown - Extras
 
 
-## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+## Image Align
+
+### Image Align - Middle _(default)_
+
+Aenean eu euismod ante. Phasellus finibus nec est eget euismod.<img src="right-arrow.svg" width="42" height="42"> Duis pharetra sapien dolor, nec euismod nunc maximus ut. Fusce elementum tellus ac lacus ultrices, vel efficitur metus faucibus. Etiam sed egestas risus. Fusce quis ex lorem. Nullam aliquet ante vel mi ultrices, vel pretium nibh pretium. lobortis.
+
+```html
+<img src="right-arrow.svg" width="42" height="42">
+```
+
+### Image Align - Left
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.<img src="left-arrow.svg" alt="left face" align="left" width="42" height="42"> Fusce semper libero ligula, vel varius enim sagittis quis. Aenean sed massa velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras faucibus consequat est eu varius. Nam vitae dignissim velit. 
+
+```html
+<img src="left-arrow.svg" alt="left face" align="left" width="42" height="42"> 
+```
+
+### Image Align - Right
+
+Aenean eu euismod ante. Phasellus finibus nec est eget euismod.<img src="right-arrow.svg" alt="right" align="right" width="42" height="42"> Duis pharetra sapien dolor, nec euismod nunc maximus ut. Fusce elementum tellus ac lacus ultrices, vel efficitur metus faucibus. Etiam sed egestas risus. Fusce quis ex lorem. Nullam aliquet ante vel mi ultrices, vel pretium nibh pretium.
+
+```html
+<img src="right-arrow.svg" alt="right" align="right" width="42" height="42">
+```
+
+## Style Text
 
 
-## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+### keyboard input
 
+<kbd>ALT + F4</kbd> 
+```
+<kbd>ALT + F4</kbd> 
+```
 
-## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+### subscripted
+normal text <sub>subscripted</sub> normal text
+```
+normal text <sub>subscripted</sub> normal text
+```
 
+### superscripted
+normal text <sup>superscripted</sup> normal text
+```
+normal text <sup>superscripted</sup> normal text
+```
 
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+## Table
 
+### Table - _rowspan_
+<table>
+  <tr>
+    <th>column 1</th>
+    <th>column 2</th>
+    <th>column 3</th>
+  </tr>
+  <tr>
+    <td>row 1 - column 1</td>
+    <td>row 1 - column 2</td>
+    <td rowspan="2" align="center">row 1 & 2 - column 3</td>
+  </tr>
+  <tr>
+    <td>row 2 - column 1</td>
+    <td>row 2 - column 2</td>
+  </tr>
+</table>
 
-## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+```html
+<table>
+  <tr>
+    <th>column 1</th>
+    <th>column 2</th>
+    <th>column 3</th>
+  </tr>
+  <tr>
+    <td>row 1 - column 1</td>
+    <td>row 1 - column 2</td>
+    <td rowspan="2" align="center">row 1 & 2 - column 3</td>
+  </tr>
+  <tr>
+    <td>row 2 - column 1</td>
+    <td>row 2 - column 2</td>
+  </tr>
+</table>
+```
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+### Table - _colspan_
+<table>
+  <tr>
+    <th>column 1</th>
+    <th>column 2</th>
+    <th>column 3</th>
+  </tr>
+  <tr>
+    <td>row 1 - column 1</td>
+    <td colspan="2" align="center">row 1 - column 2 & 3</td>
+  </tr>
+  <tr>
+    <td>row 2 - column 1</td>
+    <td>row 2 - column 2</td>
+    <td>row 2 - column 3</td>
+  </tr>
+</table>
 
-
-## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
-
-`write-your-code-here`
-
-
-## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
-
-
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
-
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
-
-
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+```html
+<table>
+  <tr>
+    <th>column 1</th>
+    <th>column 2</th>
+    <th>column 3</th>
+  </tr>
+  <tr>
+    <td>row 1 - column 1</td>
+    <td colspan="2" align="center">row 1 - column 2 & 3</td>
+  </tr>
+  <tr>
+    <td>row 2 - column 1</td>
+    <td>row 2 - column 2</td>
+    <td>row 2 - column 3</td>
+  </tr>
+</table>
+```
