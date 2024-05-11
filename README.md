@@ -1,487 +1,342 @@
-# Описание разметки файла README.md
-Для описания проектов на GitHub используется README.md, который пишется на языке разметки markdown. Что и как поддерживается расписано ниже. Также существует еще один формат - [reStructuredText](https://github.com/GnuriaN/format-README/blob/master/README.rst), описание которого вынесено в отдельный файл `README.rst`.
-
-## Оглавление
-
-0. [Разделительная черта](#Разделительная-черта)
-1. [Заголовки](#Заголовки)
-2. [Работа с выделением текста](#Работа-с-выделением-текста)
-3. [Использование эмодзи (emoji)](#Использование-эмодзи-emoji)
-4. [Использование цитирования в тексте](#Использование-цитирования-в-тексте)
-5. [Подсветка кода](#Подсветка-кода)
-6. [Списки](#Списки)
-    1. [Маркированный](#Маркированный)
-    2. [Нумерованный](#Нумерованный)
-    3. [Смешанные списки](#Смешанные-списки)
-    4. [Список задач](#Список-задач)
-7. [Ссылки](#Ссылки)
-8. [Вставка изображения](#Вставка-изображения)
-9. [Вставка таблиц](#Вставка-таблиц)
-10. [Диаграммы Mermaid.js](#диаграммы-mermaidjs)
-11. [Дополнения](https://github.com/GnuriaN/format-README/blob/master/Дополнения.md)
-    
-## Разделительная черта
-При использовании
-```
-____
-```
-получается разделительная черта
-____
-[:arrow_up:Оглавление](#Оглавление)
-___
-## Заголовки
-
-Всего существует шесть уровней заголовков. Для того, чтобы создать заголовок, необходимо в начале строки добавить символы `#`, в количестве равном его уровню.
-____
-# Заголовок первого уровня
-```
-# Заголовок 1
-```
-Заголовок первого уровня также можно создать:
-```
-Заголовок 1
-===========
-```
-____
-## Заголовок второго уровня
-```
-## Заголовок 2
-```
-Заголовок второго уровня также можно создать:
-```
-Заголовок 2
------------
-```
-____
-### Заголовок третьего уровня
-```
-### Заголовок 3
-```
-____
-#### Заголовок четвертого уровня
-```
-#### Заголовок 4
-```
-____
-##### Заголовок пятого уровня
-```
-##### Заголовок 5
-```
-____
-###### Заголовок шестого уровня
-```
-###### Заголовок 6
-```
-____
-[:arrow_up:Оглавление](#Оглавление)
-____
-## Работа с выделением текста
-
-```
-~~Зачеркнутый текст~~
-```
-~~Зачеркнутый текст (Strikethrough)~~
-
-Для выделения текста **`жирным`** или *`наклонным`* и их сочетания можно использовать комбинации `*` или `_`
-
-```
-**Жирный текст (bold)**
-```
-**Жирный текст (bold)**
-
-```
-*Наклонный текст (italic)*
-```
-*Наклонный текст (italic)*
-
-```
-***Жирный наклонный текст (bold italic)***
-```
-***Жирный наклонный текст (bold italic)***
-
-```
-__Жирный текст (bold)__
-```
-__Жирный текст (bold)__
-
-```
-_Наклонный текст (italic)_
-```
-_Наклонный текст (italic)_
-
-```
-___Жирный наклонный текст (bold italic)___
-```
-___Жирный наклонный текст (bold italic)___
-
-```
-~~*__Тут странный текст__*~~
-```
-~~*__Тут странный текст__*~~
-    
-[:arrow_up:Оглавление](#Оглавление)
-____
-## Использование эмодзи (emoji)
-В самом тексте можно использовать эмодзи, например написать вот так:    
-:white_check_mark: Это уже сделано    
-:negative_squared_cross_mark: Я не буду это делать    
-:black_square_button: делать или не делать, вот в чем вопрос?    
-В оригинале это выглядит так (в конце строки четыре (4) пробела для того, чтобы был переход на новую строку):
-```
-:white_check_mark: Это уже сделано    
-:negative_squared_cross_mark: Я не буду это делать    
-:black_square_button: делать или не делать, вот в чем вопрос?    
-```
-
-Список работающих Эмодзи находится тут -> [emoji.md](https://github.com/GnuriaN/format-README.md/blob/master/emoji.md)    
-    
-[:arrow_up:Оглавление](#Оглавление)
-___
-## Использование цитирования в тексте
-```
-> Цитата (уровень 1)    
-> > Вложенная цитата (уровень 2)    
-> > > Вложенная цитата (уровень 3)    
-
-> > Продолжение цитаты (уровень 2)    
-
-> Продолжение цитаты (уровень 1)    
-```
-> Цитата (уровень 1)    
-> > Вложенная цитата (уровень 2)    
-> > > Вложенная цитата (уровень 3)    
-
-> > Продолжение цитаты (уровень 2)    
-
-> Продолжение цитаты (уровень 1)    
-
-Внешний вид, конечно, не очень, но может и пригодиться.
-
-[:arrow_up:Оглавление](#Оглавление)
-___
-## Подсветка кода
-
-Если нужно выделить слово или фразу внутри строки, то используются одинарные обратные кавычки (`):
-
-    Это `слово` будет выделено
-
-Для выделения в блоки - тройные:
-
-    ```
-        Здесь может быть
-        Ваша реклама
-    ```
-
-Дополнительно можно задавать язык кода внутри блока, указав его после первых трех кавычек:
-
-    ```html
-        <input type="text">
-    ```
-
-    ```css
-        body {
-            margin: 0;
-            padding: 0;
+{
+  "name": "standard-readme-spec",
+  "version": "1.2.2",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "ansi-escapes": {
+      "version": "1.4.0",
+      "resolved": "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-1.4.0.tgz",
+      "integrity": "sha1-06ioOzGapneTZisT52HHkRQiMG4="
+    },
+    "ansi-regex": {
+      "version": "2.1.1",
+      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
+      "integrity": "sha1-w7M6te42DYbg5ijwRorn7yfWVN8="
+    },
+    "ansi-styles": {
+      "version": "2.2.1",
+      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.1.tgz",
+      "integrity": "sha1-tDLdM1i2NM914eRmQ2gkBTPB3b4="
+    },
+    "babel-polyfill": {
+      "version": "6.23.0",
+      "resolved": "https://registry.npmjs.org/babel-polyfill/-/babel-polyfill-6.23.0.tgz",
+      "integrity": "sha1-g2TKYt+Or7gwSZ9pkXdGbDsDSZ0=",
+      "requires": {
+        "babel-runtime": "^6.22.0",
+        "core-js": "^2.4.0",
+        "regenerator-runtime": "^0.10.0"
+      }
+    },
+    "babel-runtime": {
+      "version": "6.26.0",
+      "resolved": "https://registry.npmjs.org/babel-runtime/-/babel-runtime-6.26.0.tgz",
+      "integrity": "sha1-llxwWGaOgrVde/4E/yM3vItWR/4=",
+      "requires": {
+        "core-js": "^2.4.0",
+        "regenerator-runtime": "^0.11.0"
+      },
+      "dependencies": {
+        "regenerator-runtime": {
+          "version": "0.11.1",
+          "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz",
+          "integrity": "sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg=="
         }
-    ```
-
-    ```php
-        <?php phpinfo();?>
-    ```
-
-Пример блока для `C#`:
-
-```C#
-using MarkdownSharp;
-using MarkdownSharp.Extensions.Mal;
-
-Markdown mark = new Markdown();
-
-// Short link for MAL - 
-// http://myanimelist.net/people/413/Kitamura_Eri => mal://Kitamura_Eri
-mark.AddExtension(new Articles()); 
-mark.AddExtension(new Profile());
-
-mark.Transform(text);
-```
-
-Пример блока для `Python`:
-```Python
-from timeit import Timer
-
-tmp = "Python 3.2.2 (default, Jun 12 2011, 15:08:59) [MSC v.1500 32 bit (Intel)] on win32."
-
-def case1(): # А. инкрементальные конкатенации в цикле
-    s = ""
-    for i in range(10000):
-        s += tmp
-
-def case2(): # Б. через промежуточный список и метод join
-    s = []
-    for i in range(10000):
-        s.append(tmp)
-    s = "".join(s)
-
-def case3(): # В. списковое выражение и метод join
-    return "".join([tmp for i in range(10000)])
-
-def case4(): # Г. генераторное выражение и метод join
-    return "".join(tmp for i in range(10000))
-
-for v in range(1,5):
-    print (Timer("func()","from __main__ import case%s as func" % v).timeit(200))
-```
-    
-[:arrow_up:Оглавление](#Оглавление)
-___
-## Списки
-
-#### Маркированный
-Задать **маркированный** список можно несколькими символами `-`, `+` или `*`:
-```
-- Уровень списка 1. Пункт 1.
-- Уровень списка 1. Пункт 2.
-- Уровень списка 1. Пункт 3.
-```
-- Уровень списка 1. Пункт 1.
-- Уровень списка 1. Пункт 2.
-- Уровень списка 1. Пункт 3.
-
-```
-+ Уровень списка 1. Пункт 1.
-+ Уровень списка 1. Пункт 2.
-+ Уровень списка 1. Пункт 3.
-```
-+ Уровень списка 1. Пункт 1.
-+ Уровень списка 1. Пункт 2.
-+ Уровень списка 1. Пункт 3.
-
-```
-* Уровень списка 1. Пункт 1.
-* Уровень списка 1. Пункт 2.
-* Уровень списка 1. Пункт 3.
-```
-* Уровень списка 1. Пункт 1.
-* Уровень списка 1. Пункт 2.
-* Уровень списка 1. Пункт 3.
-
-Можно создавать многоуровневые списки. Каждый уровень отделяется **четырьмя** (4) пробелами:
-```
-- Уровень списка 1. Пункт 1.
-    - Уровень списка 2. Пункт 1.
-- Уровень списка 1. Пункт 2.
-    - Уровень списка 2. Пункт 1.
-    - Уровень списка 2. Пункт 2.
-- Уровень списка 1. Пункт 3.
-    - Уровень списка 2. Пункт 1.
-        - Уровень списка 3. Пункт 1.
-        - Уровень списка 3. Пункт 2.
-           - Уровень списка 4. Пункт 1.
-```
-- Уровень списка 1. Пункт 1.
-  - Уровень списка 2. Пункт 1.
-- Уровень списка 1. Пункт 2.
-    - Уровень списка 2. Пункт 1.
-    - Уровень списка 2. Пункт 2.
-- Уровень списка 1. Пункт 3.
-    - Уровень списка 2. Пункт 1.
-      - Уровень списка 3. Пункт 1.
-      - Уровень списка 3. Пункт 2.
-         - Уровень списка 4. Пункт 1.
-
-Каждый уровень отделяется двумя пробелами.
-
-#### Нумерованный
-Для Githib работа с нумерованными списками выглядит очень интересно. Каждый уровень отделяется **четырьмя** (4) пробелами:
-```
-1. Первый уровень 1
-    1. Второй уровень 1
-        1. Третий уровень 1
-            1. Четвертый уровень 1
-                1. Пятый уровень 1
-                    1. Шестой уровень
-                        1. Седьмой уровень
-                            1. Седьмой уровень
-2. Первый уровень 2
-2. Первый уровень (должно быть 3)
-4. Первый уровень 4
-```
-1. Первый уровень 1
-    1. Второй уровень 1
-        1. Третий уровень 1
-            1. Четвертый уровень 1
-                1. Пятый уровень 1
-                    1. Шестой уровень
-                        1. Седьмой уровень
-                            1. Седьмой уровень
-2. Первый уровень 2
-2. Первый уровень (должно быть 3)
-4. Первый уровень 4
-
-#### Смешанные списки
-При использовании смешанных списков нужно очень внимательно следить за нумерацией. Лучше, как и в нумерованных, использовать четыре (4) пробела для отделения уровня.
-```
-1. Первый уровень "нумерованный" - 1
-    * Второй уровень "маркер"
-        + Третий уровень "маркер"
-        - Третий уровень "маркер"
-        1. Третий уровень "нумерованный" - 1
-            1. Четвертый уровень "нумерованный" - 1
-                1. Пятый уровень "нумерованный" - 1
-                    1. Шестой уровень "нумерованный" - 1
-                        1. Седьмой уровень "нумерованный" - 1
-                        * Седьмой уровень "маркер"
-                        2. Седьмой уровень "нумерованный" - 1 (нарушена нумерация, новая нумерация 1)
-                        3. Седьмой уровень "нумерованный" - 1 (нарушена нумерация, новая нумерация 2)
-                            1. Восьмой уровень "нумерованный" - 1
-2. Первый уровень "нумерованный" - 2
-- Первый уровень "нумерованный" - 3
-4. Первый уровень "нумерованный" - 4 (нарушена нумерация, новая нумерация 1)
-5. Первый уровень "нумерованный" - 5 (нарушена нумерация, новая нумерация 2)
-```
-1. Первый уровень "нумерованный" - 1
-    * Второй уровень "маркер"
-        + Третий уровень "маркер"
-        - Третий уровень "маркер"
-        1. Третий уровень "нумерованный" - 1
-            1. Четвертый уровень "нумерованный" - 1
-                1. Пятый уровень "нумерованный" - 1
-                    1. Шестой уровень "нумерованный" - 1
-                        1. Седьмой уровень "нумерованный" - 1
-                        * Седьмой уровень "маркер"
-                        2. Седьмой уровень "нумерованный" - 2
-                        3. Седьмой уровень "нумерованный" - 3
-                            1. Восьмой уровень "нумерованный" - 1
-2. Первый уровень "нумерованный" - 2
-- Первый уровень "маркерный" - 3
-4. Первый уровень "нумерованный" - 4 (хотя по идее должен быть 3)
-5. Первый уровень "нумерованный" - 5 (хотя, по идее должен быть 3)
-
-#### Список задач
-(Task List)
-Можно создавать "Списки задач" для этого необходимо использовать `- [ ]` для поставленной задачи и `- [X]` для выполненной задачи.
-```
-- [X] Придумать внешний вид резюме
-- [ ] Написать основные категории
-- [X] Опубликовать
-
-```
-- [X] Придумать внешний вид резюме
-- [ ] Написать основные категории
-- [X] Опубликовать
-
-Также можно создавать многоуровневые списки задач. Каждый уровень отделяется **четырьмя** (4) пробелами:
-```
-- [X] Задача 1
-    - [X] Подзадача 1 для Задачи 1
-    - [X] Подзадача 2 для Задачи 1
-- [ ] Задача 2
-    - [X] Подзадача 1 для Задачи 2
-    - [ ] Подзадача 2 для Задачи 2
-- [ ] Задача 3
-    - [ ] Подзадача 1 для Задачи 3
-        - [ ] Подзадача 1 для Подзадача 1 для Задачи 3
-```
-- [X] Задача 1
-    - [X] Подзадача 1 для Задачи 1
-    - [X] Подзадача 2 для Задачи 1
-- [ ] Задача 2
-    - [X] Подзадача 1 для Задачи 2
-    - [ ] Подзадача 2 для Задачи 2
-- [ ] Задача 3
-    - [ ] Подзадача 1 для Задачи 3
-        - [ ] Подзадача 1 для Подзадача 1 для Задачи 3
-    
-[:arrow_up:Оглавление](#Оглавление) 
-___
-## Ссылки
-Либо просто вставить ссылку, либо дополнительно задать текст ссылки (пробела между скобками быть не должно):
-```
-Первый вариант вставки ссылок - это просто написать адрес сайта http://sabaka.net
-```
-Первый вариант вставки ссылок - это просто написать адрес сайта http://sabaka.net
-
-Второй вариант записывается так: `[текст ссылки](адрес ссылки)`
-```
-[sabaka.net](http://sabaka.net)
-```
-[sabaka.net](http://sabaka.net)
-    
-[Sabaka(DOT)Net]:http://sabaka.net    
-    
-[:arrow_up:Оглавление](#Оглавление)
-____
-## Вставка изображения
-```
-![Alt-текст](https://avatars1.githubusercontent.com/u/5384215?v=3&s=460 "Орк")
-```
-![Alt-текст](https://avatars1.githubusercontent.com/u/5384215?v=3&s=460 "Орк")
-
-### Дополнительно:
-#### Вставка ссылки с картинкой на ролик с YouTube
-Описание комбинации `[![Тут текст](адрес до картинки)](ссылка на страничку YouTube)`        
-Пример:        
-```[![Тут текст](https://img.youtube.com/vi/RHPYGwVQB2o/0.jpg)](https://youtu.be/RHPYGwVQB2o)```        
-Что мы увидим:        
-[![Тут текст](https://img.youtube.com/vi/RHPYGwVQB2o/0.jpg)](https://youtu.be/RHPYGwVQB2o)        
-        
-[:arrow_up:Оглавление](#Оглавление) 
-____
-## Вставка таблиц
-```
-| LEFT | CENTER | RIGHT |
-|----------------|:---------:|----------------:|
-| По левому краю | По центру | По правому краю |
-| текст | текст | текст |
-```
-| LEFT | CENTER | RIGHT |
-|----------------|:---------:|----------------:|
-| По левому краю | По центру | По правому краю |
-| текст | текст | текст |
-
-**Внимание:** Если в тексте таблицы нужно использовать символ "вертикальная черта - `|`", то в место него необходимо написать замену на комбинацию HTML-кода* `&#124;`, это нужно для того, чтобы таблица не потеряла ориентации.    
-*) - Можно использовать ASCII и/или UTF коды.
-
-**Пример:**
-```
-| Обозначение | Описание | Пример регулярного выражения|
-|----:|:----:|:----------|
-| literal | Строка содержит символьный литерал literal | foo |
-| re1&#124;re2 | Строка содержит регулярные выражения `rel` или `re2` | foo&#124;bar |
-```
-**Результат:**
-
-| Обозначение | Описание | Пример регулярного выражения|
-|----:|:----:|:----------|
-| literal | Строка содержит символьный литерал literal | foo |
-| re1&#124;re2 | Строка содержит регулярные выражения `rel` или `re2` | foo&#124;bar |
-
-[:arrow_up:Оглавление](#Оглавление) 
-____
-## Диаграммы Mermaid.js
-Появилась возможность вставлять диаграммы [Mermaid.js](https://mermaid-js.github.io/mermaid/#/)
-
-<pre>
-```mermaid
-... код диаграммы ...
-```
-</pre>
-Пример:
-<pre>
-```mermaid
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-```
-</pre>
-```mermaid
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-```
-Очень подробно на русском языке о диаграммах Mermaid.js: https://habr.com/ru/post/652867/ 
-
-[:arrow_up:Оглавление](#Оглавление) 
-____
+      }
+    },
+    "chalk": {
+      "version": "1.1.3",
+      "resolved": "https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz",
+      "integrity": "sha1-qBFcVeSnAv5NFQq9OHKCKn4J/Jg=",
+      "requires": {
+        "ansi-styles": "^2.2.1",
+        "escape-string-regexp": "^1.0.2",
+        "has-ansi": "^2.0.0",
+        "strip-ansi": "^3.0.0",
+        "supports-color": "^2.0.0"
+      }
+    },
+    "chardet": {
+      "version": "0.4.2",
+      "resolved": "https://registry.npmjs.org/chardet/-/chardet-0.4.2.tgz",
+      "integrity": "sha1-tUc7M9yXxCTl2Y3IfVXU2KKci/I="
+    },
+    "cli-cursor": {
+      "version": "2.1.0",
+      "resolved": "https://registry.npmjs.org/cli-cursor/-/cli-cursor-2.1.0.tgz",
+      "integrity": "sha1-s12sN2R5+sw+lHR9QdDQ9SOP/LU=",
+      "requires": {
+        "restore-cursor": "^2.0.0"
+      }
+    },
+    "cli-width": {
+      "version": "2.2.1",
+      "resolved": "https://registry.npmjs.org/cli-width/-/cli-width-2.2.1.tgz",
+      "integrity": "sha512-GRMWDxpOB6Dgk2E5Uo+3eEBvtOOlimMmpbFiKuLFnQzYDavtLFY3K5ona41jgN/WdRZtG7utuVSVTL4HbZHGkw=="
+    },
+    "core-js": {
+      "version": "2.6.12",
+      "resolved": "https://registry.npmjs.org/core-js/-/core-js-2.6.12.tgz",
+      "integrity": "sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ=="
+    },
+    "encoding": {
+      "version": "0.1.13",
+      "resolved": "https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz",
+      "integrity": "sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==",
+      "requires": {
+        "iconv-lite": "^0.6.2"
+      },
+      "dependencies": {
+        "iconv-lite": {
+          "version": "0.6.2",
+          "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.2.tgz",
+          "integrity": "sha512-2y91h5OpQlolefMPmUlivelittSWy0rP+oYVpn6A7GwVHNE8AWzoYOBNmlwks3LobaJxgHCYZAnyNo2GgpNRNQ==",
+          "requires": {
+            "safer-buffer": ">= 2.1.2 < 3.0.0"
+          }
+        }
+      }
+    },
+    "escape-string-regexp": {
+      "version": "1.0.5",
+      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
+      "integrity": "sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ="
+    },
+    "external-editor": {
+      "version": "2.2.0",
+      "resolved": "https://registry.npmjs.org/external-editor/-/external-editor-2.2.0.tgz",
+      "integrity": "sha512-bSn6gvGxKt+b7+6TKEv1ZycHleA7aHhRHyAqJyp5pbUFuYYNIzpZnQDk7AsYckyWdEnTeAnay0aCy2aV6iTk9A==",
+      "requires": {
+        "chardet": "^0.4.0",
+        "iconv-lite": "^0.4.17",
+        "tmp": "^0.0.33"
+      }
+    },
+    "figures": {
+      "version": "2.0.0",
+      "resolved": "https://registry.npmjs.org/figures/-/figures-2.0.0.tgz",
+      "integrity": "sha1-OrGi0qYsi/tDGgyUy3l6L84nyWI=",
+      "requires": {
+        "escape-string-regexp": "^1.0.5"
+      }
+    },
+    "has-ansi": {
+      "version": "2.0.0",
+      "resolved": "https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz",
+      "integrity": "sha1-NPUEnOHs3ysGSa8+8k5F7TVBbZE=",
+      "requires": {
+        "ansi-regex": "^2.0.0"
+      }
+    },
+    "iconv-lite": {
+      "version": "0.4.24",
+      "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz",
+      "integrity": "sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==",
+      "requires": {
+        "safer-buffer": ">= 2.1.2 < 3"
+      }
+    },
+    "inquirer": {
+      "version": "3.0.6",
+      "resolved": "https://registry.npmjs.org/inquirer/-/inquirer-3.0.6.tgz",
+      "integrity": "sha1-4EqqnQW3o8ubD0B9BDdfBEcZA0c=",
+      "requires": {
+        "ansi-escapes": "^1.1.0",
+        "chalk": "^1.0.0",
+        "cli-cursor": "^2.1.0",
+        "cli-width": "^2.0.0",
+        "external-editor": "^2.0.1",
+        "figures": "^2.0.0",
+        "lodash": "^4.3.0",
+        "mute-stream": "0.0.7",
+        "run-async": "^2.2.0",
+        "rx": "^4.1.0",
+        "string-width": "^2.0.0",
+        "strip-ansi": "^3.0.0",
+        "through": "^2.3.6"
+      }
+    },
+    "is-fullwidth-code-point": {
+      "version": "2.0.0",
+      "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
+      "integrity": "sha1-o7MKXE8ZkYMWeqq5O+764937ZU8="
+    },
+    "is-stream": {
+      "version": "1.1.0",
+      "resolved": "https://registry.npmjs.org/is-stream/-/is-stream-1.1.0.tgz",
+      "integrity": "sha1-EtSj3U5o4Lec6428hBc66A2RykQ="
+    },
+    "lodash": {
+      "version": "4.17.19",
+      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.19.tgz",
+      "integrity": "sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ=="
+    },
+    "mimic-fn": {
+      "version": "1.2.0",
+      "resolved": "https://registry.npmjs.org/mimic-fn/-/mimic-fn-1.2.0.tgz",
+      "integrity": "sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ=="
+    },
+    "minimist": {
+      "version": "1.2.0",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz",
+      "integrity": "sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ="
+    },
+    "mute-stream": {
+      "version": "0.0.7",
+      "resolved": "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.7.tgz",
+      "integrity": "sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s="
+    },
+    "node-fetch": {
+      "version": "1.6.3",
+      "resolved": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.6.3.tgz",
+      "integrity": "sha1-3CNO3WSJmC1Y6PDbT2lQKavNjAQ=",
+      "requires": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      }
+    },
+    "object-assign": {
+      "version": "4.1.1",
+      "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
+      "integrity": "sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM="
+    },
+    "onetime": {
+      "version": "2.0.1",
+      "resolved": "https://registry.npmjs.org/onetime/-/onetime-2.0.1.tgz",
+      "integrity": "sha1-BnQoIw/WdEOyeUsiu6UotoZ5YtQ=",
+      "requires": {
+        "mimic-fn": "^1.0.0"
+      }
+    },
+    "opencollective": {
+      "version": "1.0.3",
+      "resolved": "https://registry.npmjs.org/opencollective/-/opencollective-1.0.3.tgz",
+      "integrity": "sha1-ruY3K8KBRFg2kMPKja7PwSDdDvE=",
+      "requires": {
+        "babel-polyfill": "6.23.0",
+        "chalk": "1.1.3",
+        "inquirer": "3.0.6",
+        "minimist": "1.2.0",
+        "node-fetch": "1.6.3",
+        "opn": "4.0.2"
+      }
+    },
+    "opencollective-postinstall": {
+      "version": "2.0.3",
+      "resolved": "https://registry.npmjs.org/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz",
+      "integrity": "sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q=="
+    },
+    "opn": {
+      "version": "4.0.2",
+      "resolved": "https://registry.npmjs.org/opn/-/opn-4.0.2.tgz",
+      "integrity": "sha1-erwi5kTf9jsKltWrfyeQwPAavJU=",
+      "requires": {
+        "object-assign": "^4.0.1",
+        "pinkie-promise": "^2.0.0"
+      }
+    },
+    "os-tmpdir": {
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/os-tmpdir/-/os-tmpdir-1.0.2.tgz",
+      "integrity": "sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ="
+    },
+    "pinkie": {
+      "version": "2.0.4",
+      "resolved": "https://registry.npmjs.org/pinkie/-/pinkie-2.0.4.tgz",
+      "integrity": "sha1-clVrgM+g1IqXToDnckjoDtT3+HA="
+    },
+    "pinkie-promise": {
+      "version": "2.0.1",
+      "resolved": "https://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.1.tgz",
+      "integrity": "sha1-ITXW36ejWMBprJsXh3YogihFD/o=",
+      "requires": {
+        "pinkie": "^2.0.0"
+      }
+    },
+    "regenerator-runtime": {
+      "version": "0.10.5",
+      "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz",
+      "integrity": "sha1-M2w+/BIgrc7dosn6tntaeVWjNlg="
+    },
+    "restore-cursor": {
+      "version": "2.0.0",
+      "resolved": "https://registry.npmjs.org/restore-cursor/-/restore-cursor-2.0.0.tgz",
+      "integrity": "sha1-n37ih/gv0ybU/RYpI9YhKe7g368=",
+      "requires": {
+        "onetime": "^2.0.0",
+        "signal-exit": "^3.0.2"
+      }
+    },
+    "run-async": {
+      "version": "2.4.1",
+      "resolved": "https://registry.npmjs.org/run-async/-/run-async-2.4.1.tgz",
+      "integrity": "sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ=="
+    },
+    "rx": {
+      "version": "4.1.0",
+      "resolved": "https://registry.npmjs.org/rx/-/rx-4.1.0.tgz",
+      "integrity": "sha1-pfE/957zt0D+MKqAP7CfmIBdR4I="
+    },
+    "safer-buffer": {
+      "version": "2.1.2",
+      "resolved": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
+      "integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg=="
+    },
+    "signal-exit": {
+      "version": "3.0.3",
+      "resolved": "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.3.tgz",
+      "integrity": "sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA=="
+    },
+    "string-width": {
+      "version": "2.1.1",
+      "resolved": "https://registry.npmjs.org/string-width/-/string-width-2.1.1.tgz",
+      "integrity": "sha512-nOqH59deCq9SRHlxq1Aw85Jnt4w6KvLKqWVik6oA9ZklXLNIOlqg4F2yrT1MVaTjAqvVwdfeZ7w7aCvJD7ugkw==",
+      "requires": {
+        "is-fullwidth-code-point": "^2.0.0",
+        "strip-ansi": "^4.0.0"
+      },
+      "dependencies": {
+        "ansi-regex": {
+          "version": "3.0.0",
+          "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-3.0.0.tgz",
+          "integrity": "sha1-7QMXwyIGT3lGbAKWa922Bas32Zg="
+        },
+        "strip-ansi": {
+          "version": "4.0.0",
+          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-4.0.0.tgz",
+          "integrity": "sha1-qEeQIusaw2iocTibY1JixQXuNo8=",
+          "requires": {
+            "ansi-regex": "^3.0.0"
+          }
+        }
+      }
+    },
+    "strip-ansi": {
+      "version": "3.0.1",
+      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
+      "integrity": "sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8=",
+      "requires": {
+        "ansi-regex": "^2.0.0"
+      }
+    },
+    "supports-color": {
+      "version": "2.0.0",
+      "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz",
+      "integrity": "sha1-U10EXOa2Nj+kARcIRimZXp3zJMc="
+    },
+    "through": {
+      "version": "2.3.8",
+      "resolved": "https://registry.npmjs.org/through/-/through-2.3.8.tgz",
+      "integrity": "sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU="
+    },
+    "tmp": {
+      "version": "0.0.33",
+      "resolved": "https://registry.npmjs.org/tmp/-/tmp-0.0.33.tgz",
+      "integrity": "sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==",
+      "requires": {
+        "os-tmpdir": "~1.0.2"
+      }
+    }
+  }
+}
