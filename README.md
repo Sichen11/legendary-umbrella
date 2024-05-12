@@ -1,42 +1,89 @@
-Welcome to the list of awesome GitHub profile readme templates and thanks for considering to contribute. Contributions are welcome so we can tap into the collection of best Github profile readmes' in one place.
+# Project Name
+> Outline a brief description of your project.
+> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
-Please [open a pull request](https://github.com/themlphdstudent/awesome-github-profile-readme-templates/pulls) if you would like to contribute new or improve existing readme. If you would like to comment on or discuss content but don't have concrete changes yet, please [open an issue](https://github.com/themlphdstudent/awesome-github-profile-readme-templates/issues).
+## Table of Contents
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Screenshots](#screenshots)
+* [Setup](#setup)
+* [Usage](#usage)
+* [Project Status](#project-status)
+* [Room for Improvement](#room-for-improvement)
+* [Acknowledgements](#acknowledgements)
+* [Contact](#contact)
+<!-- * [License](#license) -->
 
-This is a curated list so the goal is not to collect all possible resources but collect the ones which are most helpful, provide a unique perspective, or are of special significance.
 
-## How to contribute:
+## General Information
+- Provide general information about your project here.
+- What problem does it (intend to) solve?
+- What is the purpose of your project?
+- Why did you undertake it?
+<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
-- Step 1: Fork this repository.
 
-- Step 2: Clone the repository in your local machine.
+## Technologies Used
+- Tech 1 - version 1.0
+- Tech 2 - version 2.0
+- Tech 3 - version 3.0
 
-- Step 3: Create a new branch.
 
-- Step 4: Create a new markdown file. Your file name should be your GitHub username.
-```
-- File name should be username.md 
-```
-- Step 5: Copy and Paste your GitHub profile readme content in the new file. Put file in **templates**
+## Features
+List the ready features here:
+- Awesome feature 1
+- Awesome feature 2
+- Awesome feature 3
 
-- Step 6: At the end of the file add the following content with appropriate changes.
 
-  - Add line break using this command `------`
-  - Credit: `[username](https://github.com/username)`
-  - Last Edited on: Date when you edited this file. The date must be in DD/MM/YYYY format.
+## Screenshots
+![Example screenshot](./img/screenshot.png)
+<!-- If you have screenshots you'd like to share, include them here. -->
 
-- Step 7: Add your name and filename in **\_sidebar.md** like this
 
-```
-- [username](/templates/username.md)
-```
+## Setup
+What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
-- Step 8: Save the file and commit your changes with the proper message. Your message must contain your username.
-```
-- Example Message : Added template for username: <username>
-```
+Proceed to describe how to install / setup one's local environment / get started with the project.
 
-- Step 9: Push your commit to GitHub.
 
-- Step 10: Submit a Pull Request.
+## Usage
+How does one go about using it?
+Provide various use cases and code examples here.
 
-- Step 11: All Done.
+`write-your-code-here`
+
+
+## Project Status
+Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+
+
+## Room for Improvement
+Include areas you believe need improvement / could be improved. Also add TODOs for future development.
+
+Room for improvement:
+- Improvement to be done 1
+- Improvement to be done 2
+
+To do:
+- Feature to be added 1
+- Feature to be added 2
+
+
+## Acknowledgements
+Give credit here.
+- This project was inspired by...
+- This project was based on [this tutorial](https://www.example.com).
+- Many thanks to...
+
+
+## Contact
+Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+
+
+<!-- Optional -->
+<!-- ## License -->
+<!-- This project is open source and available under the [... License](). -->
+
+<!-- You don't have to include all sections - just the one's relevant to your project -->
