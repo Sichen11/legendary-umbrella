@@ -1,291 +1,181 @@
-<a name="readme-top"></a>
+# Set Up
 
-<!--
-!!! IMPORTANT !!!
-This README is an example of how you could professionally present your codebase. 
-Writing documentation is a crucial part of your work as a professional software developer and cannot be ignored. 
+## Spotify API App
 
-You should modify this file to match your project and remove sections that don't apply.
+- Create a [Spotify Application](https://developer.spotify.com/dashboard/applications)
+- Take note of:
+  - `Client ID`
+  - `Client Secret`
+- Click on **Edit Settings**
+- In **Redirect URIs**:
+  - Add `http://localhost/callback/`
 
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
+## Refresh Token
 
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
-
-For more information on the importance of a professional README for your repositories: https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/articles/readme_best_practices.md
--->
-
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
-
-<!-- TABLE OF CONTENTS -->
-
-# 📗 Table of Contents
-
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
-- [📝 License](#license)
-
-<!-- PROJECT DESCRIPTION -->
-
-# 📖 [your_project_name] <a name="about-project"></a>
-
-> Describe your project in 1 or 2 sentences.
-
-**[your_project__name]** is a...
-
-## 🛠 Built With <a name="built-with"></a>
-
-### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
+### Powershell
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
+
+<summary>Script to complete this section</summary>
+
+```powershell
+$ClientId = Read-Host "Client ID"
+$ClientSecret = Read-Host "Client Secret"
+
+Start-Process "https://accounts.spotify.com/authorize?client_id=$ClientId&response_type=code&scope=user-read-currently-playing,user-read-recently-played&redirect_uri=http://localhost/callback/"
+
+$Code = Read-Host "Please insert everything after 'https://localhost/callback/?code='"
+
+$ClientBytes = [System.Text.Encoding]::UTF8.GetBytes("${ClientId}:${ClientSecret}")
+$EncodedClientInfo =[Convert]::ToBase64String($ClientBytes)
+
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Authorization: Basic $EncodedClientInfo" -d "grant_type=authorization_code&redirect_uri=http://localhost/callback/&code=$Code" https://accounts.spotify.com/api/token
+```
+
 </details>
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
+### Manual
 
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
-
-### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://google.com)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
-
-### Prerequisites
-
-In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
-
-### Setup
-
-Clone this repository to your desired folder:
-
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
-
-### Install
-
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
-
-### Usage
-
-To run the project, execute the following command:
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
+- Navigate to the following URL:
 
 ```
- -->
+https://accounts.spotify.com/authorize?client_id={SPOTIFY_CLIENT_ID}&response_type=code&scope=user-read-currently-playing,user-read-recently-played&redirect_uri=http://localhost/callback/
+```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- After logging in, save the {CODE} portion of: `http://localhost/callback/?code={CODE}`
 
-<!-- AUTHORS -->
+- Create a string combining `{SPOTIFY_CLIENT_ID}:{SPOTIFY_CLIENT_SECRET}` (e.g. `5n7o4v5a3t7o5r2e3m1:5a8n7d3r4e2w5n8o2v3a7c5`) and **encode** into [Base64](https://base64.io/).
 
-## 👥 Authors <a name="authors"></a>
+- Then run a [curl command](https://httpie.org/run) in the form of:
 
-> Mention all of the collaborators of this project.
+```sh
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Authorization: Basic {BASE64}" -d "grant_type=authorization_code&redirect_uri=http://localhost/callback/&code={CODE}" https://accounts.spotify.com/api/token
+```
 
-👤 **Author1**
+- Save the Refresh token
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+## Deployment
 
-👤 **Author2**
+### Deploy to Vercel
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- Register on [Vercel](https://vercel.com/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- Fork this repo, then create a vercel project linked to it
 
-<!-- FUTURE FEATURES -->
+- Add Environment Variables:
 
-## 🔭 Future Features <a name="future-features"></a>
+  - `https://vercel.com/<YourName>/<ProjectName>/settings/environment-variables`
+    - `SPOTIFY_REFRESH_TOKEN`
+    - `SPOTIFY_CLIENT_ID`
+    - `SPOTIFY_SECRET_ID`
 
-> Describe 1 - 3 features you will add to the project.
+- Deploy!
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+### Deploy to Heroku
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2Fnovatorem%2Fnovatorem)
 
-<!-- CONTRIBUTING -->
+- Create a Heroku application via the Heroku CLI or via the Heroku Dashboard. Connect the app with your GitHub repository and enable automatic builds <br>
+  `PS. automatic build means that everytime you push changes to remote, heroku will rebuild and redeploy the app.`
+  - To start the Flask server execute `heroku ps:scale web=1` once the build is completed.
+- Or click the `Deploy to Heroku` button above to automatically start the deployment process.
 
-## 🤝 Contributing <a name="contributing"></a>
+### Run locally with Docker
 
-Contributions, issues, and feature requests are welcome!
+- You need to have [Docker](https://docs.docker.com/get-docker/) installed.
 
-Feel free to check the [issues page](../../issues/).
+- Add Environment Variables:
+  - `SPOTIFY_REFRESH_TOKEN`
+  - `SPOTIFY_CLIENT_ID`
+  - `SPOTIFY_SECRET_ID`
+- To run the service, open a terminal in the root folder of the repo: <br>
+  Execute:
+  ```
+  docker compose up
+  ```
+- When finished, navigate to [http://localhost:5000/](http://localhost:5000/)
+- To stop the service, open a terminal in the root folder of the repo: <br>
+  Execute:
+  ```
+  docker compose down
+  ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## ReadMe
 
-<!-- SUPPORT -->
+You can now use the following in your readme:
 
-## ⭐️ Show your support <a name="support"></a>
+`[![Spotify](https://USER_NAME.vercel.app/api/spotify)](https://open.spotify.com/user/USER_NAME)`
 
-> Write a message to encourage readers to support your project
+## Customization
 
-If you like this project...
+### Hide the EQ bar
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Remove the `#` in front of `contentBar` in [line 81](https://github.com/novatorem/novatorem/blob/98ba4a8489ad86f5f73e95088e620e8859d28e71/api/spotify.py#L81) of current master, then the EQ bar will be hidden when you're in not currently playing anything.
 
-<!-- ACKNOWLEDGEMENTS -->
+### Status String
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
+Have a string saying either "Vibing to:" or "Last seen playing:".
 
-> Give credit to everyone who inspired your codebase.
+- Change [`height` to `height + 40`](https://github.com/novatorem/novatorem/blob/5194a689253ee4c89a9d365260d6050923d93dd5/api/templates/spotify.html.j2#L1-L2) (or whatever `margin-top` is set to)
+- Uncomment [**.main**'s `margin-top`](https://github.com/novatorem/novatorem/blob/5194a689253ee4c89a9d365260d6050923d93dd5/api/templates/spotify.html.j2#L10)
+- Uncomment [currentStatus](https://github.com/novatorem/novatorem/blob/5194a689253ee4c89a9d365260d6050923d93dd5/api/templates/spotify.html.j2#L93)
 
-I would like to thank...
+### Theme Templates
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+If you want to change the widget theme, you can do so by the changing the `current-theme` property in the `templates.json` file.
 
-<!-- FAQ (optional) -->
+Themes:
 
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+- `light`
+- `dark`
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
+If you wish to customize farther, you can add your own customized `spotify.html.j2` file to the templates folder, and add the theme and file name to the `templates` dictionary in the `templates.json` file.
 
-- **[Question_1]**
+### Color
 
-  - [Answer_1]
+You can customize the appearance of your `Card` however you wish with URL params.
 
-- **[Question_2]**
+#### Common Options:
 
-  - [Answer_2]
+- `background_color` - Card's background color _(hex color)_ without `#`
+- `border_color` - Card border color _(hex color)_ without `#`
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Use `/?background_color=8b0000&border_color=ffffff` parameter like so:  
+&nbsp; <br> [![Spotify](https://novatorem.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff)]()
 
-<!-- LICENSE -->
+### Spotify Logo
 
-## 📝 License <a name="license"></a>
+You can add the spotify logo by removing the commented out code, seen below:
 
-This project is [MIT](./LICENSE) licensed.
+```html
+<a href="{{songURI}}" class="spotify-logo">
+  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <title>Spotify</title>
+    <path
+      d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"
+    />
+  </svg>
+</a>
+```
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+## Requests
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Customization requests can be submitted as an issue, like https://github.com/novatorem/novatorem/issues/2
+
+If you want to share your own customization options, open a PR if it's done or open an issue if you want it implemented by someone else.
+
+## Debugging
+
+If you have issues setting up, try following this [guide](https://youtu.be/n6d4KHSKqGk?t=615).
+
+Followed the guide and still having problems?
+Try checking out the functions tab in vercel, linked as:
+`https://vercel.com/{name}/spotify/{build}/functions`
+
+<details><summary>Which looks like-</summary>
+
+![image](https://user-images.githubusercontent.com/16753077/91338931-b0326680-e7a3-11ea-8178-5499e0e73250.png)
+
+</details><br>
+
+You will see a log there, and most issues can be resolved by ensuring you have the correct variables from setup.
