@@ -1,240 +1,291 @@
-# Specification
+<a name="readme-top"></a>
 
-A compliant README must satisfy all the requirements listed below.
+<!--
+!!! IMPORTANT !!!
+This README is an example of how you could professionally present your codebase. 
+Writing documentation is a crucial part of your work as a professional software developer and cannot be ignored. 
 
-> Note: Standard Readme is designed for open source libraries. Although it's [historically](README.md#background) made for Node and npm projects, it also applies to libraries in other languages and package managers.
+You should modify this file to match your project and remove sections that don't apply.
 
-**Requirements:**
-  - Be called README (with capitalization) and have a specific extension depending on its format (`.md` for Markdown, `.org` for Org Mode Markup syntax, `.html` for HTML, ...)
-  - If the project supports i18n, the file must be named accordingly: `README.de.md`, where `de` is the BCP 47 Language tag. For naming, prioritize non-regional subtags for languages. If there is only one README and the language is not English, then a different language in the text is permissible without needing to specify the BCP tag: e.g., `README.md` can be in German if there is no `README.md` in another language. Where there are multiple languages, `README.md` is reserved for English.
-  - Be a valid file in the selected format (Markdown, Org Mode, HTML, ...).
-  - Sections must appear in order given below. Optional sections may be omitted.
-  - Sections must have the titles listed below, unless otherwise specified. If the README is in another language, the titles must be translated into that language.
-  - Must not contain broken links.
-  - If there are code examples, they should be linted in the same way as the code is linted in the rest of the project.
+REQUIRED SECTIONS:
+- Table of Contents
+- About the Project
+  - Built With
+  - Live Demo
+- Getting Started
+- Authors
+- Future Features
+- Contributing
+- Show your support
+- Acknowledgements
+- License
 
-## Table of Contents
+OPTIONAL SECTIONS:
+- FAQ
 
-_Note: This is only a navigation guide for the specification, and does not define or mandate terms for any specification-compliant documents._
+After you're finished please remove all the comments and instructions!
 
-- [Sections](#sections)
-  - [Title](#title)
-  - [Banner](#banner)
-  - [Badges](#badges)
-  - [Short Description](#short-description)
-  - [Long Description](#long-description)
-  - [Table of Contents](#table-of-contents-1)
-  - [Security](#security)
-  - [Background](#background)
+For more information on the importance of a professional README for your repositories: https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/articles/readme_best_practices.md
+-->
+
+<div align="center">
+  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+
+  <h3><b>Microverse README Template</b></h3>
+
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
   - [Install](#install)
   - [Usage](#usage)
-  - [Extra Sections](#extra-sections)
-  - [API](#api)
-  - [Maintainers](#maintainers)
-  - [Thanks](#thanks)
-  - [Contributing](#contributing)
-  - [License](#license)
-- [Definitions](#definitions)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
+- [📝 License](#license)
 
-## Sections
+<!-- PROJECT DESCRIPTION -->
 
-### Title
-**Status:** Required.
+# 📖 [your_project_name] <a name="about-project"></a>
 
-**Requirements:**
-- Title must match repository, folder and package manager names - or it may have another, relevant title with the repository, folder, and package manager title next to it in italics and in parentheses. For instance:
+> Describe your project in 1 or 2 sentences.
 
-  ```markdown
-  # Standard Readme Style _(standard-readme)_
-  ```
+**[your_project__name]** is a...
 
-  If any of the folder, repository, or package manager names do not match, there must be a note in the [Long Description](#long-description) explaining why.
+## 🛠 Built With <a name="built-with"></a>
 
-**Suggestions:**
-- Should be self-evident.
+### Tech Stack <a name="tech-stack"></a>
 
-### Banner
-**Status:** Optional.
+> Describe the tech stack and include only the relevant sections that apply to your project.
 
-**Requirements:**
-- Must not have its own title.
-- Must link to local image in current repository.
-- Must appear directly after the title.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
+</details>
 
-### Badges
-**Status:** Optional.
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://expressjs.com/">Express.js</a></li>
+  </ul>
+</details>
 
-**Requirements:**
-- Must not have its own title.
-- Must be newline delimited.
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
-**Suggestions:**
-- Use http://shields.io or a similar service to create and host the images.
-- Add the [Standard Readme badge](https://github.com/RichardLitt/standard-readme#badge).
+<!-- Features -->
 
-### Short Description
-**Status:** Required.
+### Key Features <a name="key-features"></a>
 
-**Requirements:**
-- Must not have its own title.
-- Must be less than 120 characters.
-- Must not start with `> `
-- Must be on its own line.
-- Must match the description in the packager manager's `description` field.
-- Must match GitHub's description (if on GitHub).
+> Describe between 1-3 key features of the application.
 
-**Suggestions:**
-- Use [gh-description](https://github.com/RichardLitt/gh-description) to set and get GitHub description.
-- Use `npm show . description` to show the description from a local [npm](https://npmjs.com) package.
+- **[key_feature_1]**
+- **[key_feature_2]**
+- **[key_feature_3]**
 
-### Long Description
-**Status:** Optional.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Requirements:**
-- Must not have its own title.
-- If any of the folder, repository, or package manager names do not match, there must be a note here as to why. See [Title section](#title).
+<!-- LIVE DEMO -->
 
-**Suggestions:**
-- If too long, consider moving to the [Background](#background) section.
-- Cover the main reasons for building the repository.
-- "This should describe your module in broad terms,
-generally in just a few paragraphs; more detail of the module's
-routines or methods, lengthy code examples, or other in-depth
-material should be given in subsequent sections.
+## 🚀 Live Demo <a name="live-demo"></a>
 
-  Ideally, someone who's slightly familiar with your module should be
-able to refresh their memory without hitting "page down". As your
-reader continues through the document, they should receive a
-progressively greater amount of knowledge."
+> Add a link to your deployed project.
 
-  ~ [Kirrily "Skud" Robert, perlmodstyle](http://perldoc.perl.org/perlmodstyle.html)
+- [Live Demo Link](https://google.com)
 
-### Table of Contents
-**Status:** Required; optional for READMEs shorter than 100 lines.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Requirements:**
-- Must link to all sections in the file.
-- Must start with the next section; do not include the title or Table of Contents headings.
-- Must be at least one-depth: must capture all level two headings (e.g.: Markdown's `##` or Org Mode's `**` or HTML's `<h2>` and so on).
+<!-- GETTING STARTED -->
 
-**Suggestions:**
-- May capture third and fourth depth headings. If it is a long ToC, these are optional.
+## 💻 Getting Started <a name="getting-started"></a>
 
-### Security
-**Status**: Optional.
+> Describe how a new developer could make use of your project.
 
-**Requirements:**
-- May go here if it is important to highlight security concerns. Otherwise, it should be in [Extra Sections](#extra-sections).
+To get a local copy up and running, follow these steps.
 
-### Background
-**Status:** Optional.
+### Prerequisites
 
-**Requirements:**
-- Cover motivation.
-- Cover abstract dependencies.
-- Cover intellectual provenance: A `See Also` section is also fitting.
+In order to run this project you need:
+
+<!--
+Example command:
+
+```sh
+ gem install rails
+```
+ -->
+
+### Setup
+
+Clone this repository to your desired folder:
+
+<!--
+Example commands:
+
+```sh
+  cd my-folder
+  git clone git@github.com:myaccount/my-project.git
+```
+--->
 
 ### Install
-**Status:** Required by default, optional for [documentation repositories](#definitions).
 
-**Requirements:**
-- Code block illustrating how to install.
+Install this project with:
 
-**Subsections:**
-- `Dependencies`. Required if there are unusual dependencies or dependencies that must be manually installed.
+<!--
+Example command:
 
-**Suggestions:**
-- Link to prerequisite sites for programming language: [npmjs](https://npmjs.com), [godocs](https://godoc.org), etc.
-- Include any system-specific information needed for installation.
-- An `Updating` section would be useful for most packages, if there are multiple versions which the user may interface with.
+```sh
+  cd my-project
+  gem install
+```
+--->
 
 ### Usage
-**Status:** Required by default, optional for [documentation repositories](#definitions).
 
-**Requirements:**
-- Code block illustrating common usage.
-- If CLI compatible, code block indicating common usage.
-- If importable, code block indicating both import functionality and usage.
+To run the project, execute the following command:
 
-**Subsections:**
-- `CLI`. Required if CLI functionality exists.
+<!--
+Example command:
 
-**Suggestions:**
-- Cover basic choices that may affect usage: for instance, if JavaScript, cover promises/callbacks, ES6 here.
-- If relevant, point to a runnable file for the usage code.
+```sh
+  rails server
+```
+--->
 
-### Extra Sections
-**Status**: Optional.
+### Run tests
 
-**Requirements:**
-- None.
+To run tests, run the following command:
 
-**Suggestions:**
-- This should not be called `Extra Sections`. This is a space for 0 or more sections to be included, each of which must have their own titles.
-- This should contain any other sections that are relevant, placed after [Usage](#usage) and before [API](#api).
-- Specifically, the [Security](#security) section should be here if it wasn't important enough to be placed above.
+<!--
+Example command:
 
-### API
-**Status:** Optional.
+```sh
+  bin/rails test test/models/article_test.rb
+```
+--->
 
-**Requirements:**
-- Describe exported functions and objects.
+### Deployment
 
-**Suggestions:**
-- Describe signatures, return types, callbacks, and events.
-- Cover types covered where not obvious.
-- Describe caveats.
-- If using an external API generator (like go-doc, js-doc, or so on), point to an external `API.md` file. This can be the only item in the section, if present.
+You can deploy this project using:
 
-### Maintainer(s)
-**Status**: Optional.
+<!--
+Example:
 
-**Requirements:**
-- Must be called `Maintainer` or `Maintainers`.
-- List maintainer(s) for a repository, along with one way of contacting them (e.g. GitHub link or email).
+```sh
 
-**Suggestions:**
-- This should be a small list of people in charge of the repo. This should not be everyone with access rights, such as an entire organization, but the people who should be pinged and who are in charge of the direction and maintenance of the repository.
-- Listing past maintainers is good for attribution, and kind.
+```
+ -->
 
-### Thanks
-**Status**: Optional.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Requirements:**
-- Must be called `Thanks`, `Credits` or `Acknowledgements`.
+<!-- AUTHORS -->
 
-**Suggestions:**
-- State anyone or anything that significantly helped with the development of your project.
-- State public contact hyper-links if applicable.
+## 👥 Authors <a name="authors"></a>
 
-### Contributing
-**Status**: Required.
+> Mention all of the collaborators of this project.
 
-**Requirements:**
-- State where users can ask questions.
-- State whether PRs are accepted.
-- List any requirements for contributing; for instance, having a sign-off on commits.
+👤 **Author1**
 
-**Suggestions:**
-- Link to a CONTRIBUTING file -- if there is one.
-- Be as friendly as possible.
-- Link to the GitHub issues.
-- Link to a Code of Conduct. A CoC is often in the Contributing section or document, or set elsewhere for an entire organization, so it may not be necessary to include the entire file in each repository. However, it is highly recommended to always link to the code, wherever it lives.
-- A subsection for listing contributors is also welcome here.
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-### License
-**Status:** Required.
+👤 **Author2**
 
-**Requirements:**
-- State license full name or identifier, as listed on the  [SPDX](https://spdx.org/licenses/) license list. For unlicensed repositories, add `UNLICENSED`. For more details, add `SEE LICENSE IN <filename>` and link to the license file. (These requirements were adapted from [npm](https://docs.npmjs.com/files/package.json#license)).
-- State license owner.
-- Must be last section.
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-**Suggestions:**
-- Link to longer License file in local repository.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Definitions
+<!-- FUTURE FEATURES -->
 
-_These definitions are provided to clarify any terms used above._
+## 🔭 Future Features <a name="future-features"></a>
 
-- **Documentation repositories**: Repositories without any functional code. For instance, [RichardLitt/knowledge](https://github.com/RichardLitt/knowledge).
+> Describe 1 - 3 features you will add to the project.
+
+- [ ] **[new_feature_1]**
+- [ ] **[new_feature_2]**
+- [ ] **[new_feature_3]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+> Write a message to encourage readers to support your project
+
+If you like this project...
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+> Give credit to everyone who inspired your codebase.
+
+I would like to thank...
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+
+> Add at least 2 questions new developers would ask when they decide to use your project.
+
+- **[Question_1]**
+
+  - [Answer_1]
+
+- **[Question_2]**
+
+  - [Answer_2]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
