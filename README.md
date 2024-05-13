@@ -1,247 +1,436 @@
-Markdown Cheatsheet<a name="TOP"></a>
-===================
+# readme2tex
+Renders LaTeX for Github Readmes
 
-- - - - 
-# Heading 1 #
+$$
+\huge\text{Hello \LaTeX}
+$$
 
-    Markup :  # Heading 1 #
-
-    -OR-
-
-    Markup :  ============= (below H1 text)
-
-## Heading 2 ##
-
-    Markup :  ## Heading 2 ##
-
-    -OR-
-
-    Markup: --------------- (below H2 text)
-
-### Heading 3 ###
-
-    Markup :  ### Heading 3 ###
-
-#### Heading 4 ####
-
-    Markup :  #### Heading 4 ####
-
-
-Common text
-
-    Markup :  Common text
-
-_Emphasized text_
-
-    Markup :  _Emphasized text_ or *Emphasized text*
-
-~~Strikethrough text~~
-
-    Markup :  ~~Strikethrough text~~
-
-__Strong text__
-
-    Markup :  __Strong text__ or **Strong text**
-
-___Strong emphasized text___
-
-    Markup :  ___Strong emphasized text___ or ***Strong emphasized text***
-
-[Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
-
-    Markup :  [Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
-
-[heading-1](#heading-1 "Goto heading-1")
-    
-    Markup: [heading-1](#heading-1 "Goto heading-1")
-
-Table, like this one :
-
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-
-```
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-```
-
-Adding a pipe `|` in a cell :
-
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | \|
-
-```
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  |  \| 
-```
-
-Left, right and center aligned table
-
-Left aligned Header | Right aligned Header | Center aligned Header
-| :--- | ---: | :---:
-Content Cell  | Content Cell | Content Cell
-Content Cell  | Content Cell | Content Cell
-
-```
-Left aligned Header | Right aligned Header | Center aligned Header
-| :--- | ---: | :---:
-Content Cell  | Content Cell | Content Cell
-Content Cell  | Content Cell | Content Cell
-```
-
-`code()`
-
-    Markup :  `code()`
-
-```javascript
-    var specificLanguage_code = 
-    {
-        "data": {
-            "lookedUpPlatform": 1,
-            "query": "Kasabian+Test+Transmission",
-            "lookedUpItem": {
-                "name": "Test Transmission",
-                "artist": "Kasabian",
-                "album": "Kasabian",
-                "picture": null,
-                "link": "http://open.spotify.com/track/5jhJur5n4fasblLSCOcrTp"
-            }
-        }
+\begin{tikzpicture}
+\newcounter{density}
+\setcounter{density}{20}
+    \def\couleur{blue}
+    \path[coordinate] (0,0)  coordinate(A)
+                ++( 60:6cm) coordinate(B)
+                ++(-60:6cm) coordinate(C);
+    \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) -- cycle;
+    \foreach \x in {1,...,15}{%
+        \pgfmathsetcounter{density}{\thedensity+10}
+        \setcounter{density}{\thedensity}
+        \path[coordinate] coordinate(X) at (A){};
+        \path[coordinate] (A) -- (B) coordinate[pos=.15](A)
+                            -- (C) coordinate[pos=.15](B)
+                            -- (X) coordinate[pos=.15](C);
+        \draw[fill=\couleur!\thedensity] (A)--(B)--(C)--cycle;
     }
+\end{tikzpicture}
+
+<sub>**Make sure that pdflatex is installed on your system.**</sub>
+
+----------------------------------------
+
+`readme2tex` is a Python script that "texifies" your readme. It takes in Github Markdown and
+replaces anything enclosed between dollar signs with rendered $\text{\LaTeX}$.
+
+In addition, while other Github TeX renderers tend to give a jumpy look to the compiled text, 
+<p align="center">
+<img src="http://i.imgur.com/XSV1rPw.png?1" width=500/>
+</p>
+
+`readme2tex` ensures that inline mathematical expressions
+are properly aligned with the rest of the text to give a more natural look to the document. For example,
+this formula $\frac{dy}{dx}$ is preprocessed so that it lines up at the correct baseline for the text.
+This is the one salient feature of this package compared to the others out there.
+
+### Installation
+
+Make sure that you have Python 2.7 or above and `pip` installed. In addition, you'll need to have the programs `latex` 
+and `dvisvgm` on your `PATH`. In addition, you'll need to pre-install the `geometry` package in $\text{\LaTeX}$.
+
+To install `readme2tex`, you'll need to run
+
+```bash
+sudo pip install readme2tex
 ```
 
-    Markup : ```javascript
-             ```
+or, if you want to try out the bleeding edge,
 
-* Bullet list
-    * Nested bullet
-        * Sub-nested bullet etc
-* Bullet list item 2
-
-~~~
- Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
-
--OR-
-
- Markup : - Bullet list
-              - Nested bullet
-                  - Sub-nested bullet etc
-          - Bullet list item 2 
-~~~
-
-1. A numbered list
-    1. A nested numbered list
-    2. Which is numbered
-2. Which is numbered
-
-~~~
- Markup : 1. A numbered list
-              1. A nested numbered list
-              2. Which is numbered
-          2. Which is numbered
-~~~
-
-- [ ] An uncompleted task
-- [x] A completed task
-
-~~~
- Markup : - [ ] An uncompleted task
-          - [x] A completed task
-~~~
-
-- [ ] An uncompleted task
-    - [ ] A subtask
-
-~~~
- Markup : - [ ] An uncompleted task
-              - [ ] A subtask
-~~~
-
-> Blockquote
->> Nested blockquote
-
-    Markup :  > Blockquote
-              >> Nested Blockquote
-
-_Horizontal line :_
-- - - -
-
-    Markup :  - - - -
-
-_Image with alt :_
-
-![picture alt](http://via.placeholder.com/200x150 "Title is optional")
-
-    Markup : ![picture alt](http://via.placeholder.com/200x150 "Title is optional")
-
-Foldable text:
-
-<details>
-  <summary>Title 1</summary>
-  <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-</details>
-<details>
-  <summary>Title 2</summary>
-  <p>Content 2 Content 2 Content 2 Content 2 Content 2</p>
-</details>
-
-    Markup : <details>
-               <summary>Title 1</summary>
-               <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-             </details>
-
-```html
-<h3>HTML</h3>
-<p> Some HTML code here </p>
+```bash
+git clone https://github.com/leegao/readme2tex
+cd readme2tex
+python setup.py develop
 ```
 
-Link to a specific part of the page:
+To compile `INPUT.md` and render all of its formulas, run
 
-[Go To TOP](#TOP)
-   
-    Markup : [text goes here](#section_name)
-              section_title<a name="section_name"></a>    
+```bash
+python -m readme2tex --output README.md INPUT.md
+```
 
-Hotkey:
+If you want to do this automatically for every commit of INPUT.md, you can use the `--add-git-hook` command once to
+set up the post-commit hook, like so
 
-<kbd>⌘F</kbd>
+```bash
+git stash --include-untracked
+git branch svgs # if this isn't already there
 
-<kbd>⇧⌘F</kbd>
+python -m readme2tex --output README.md --branch svgs --usepackage tikz INPUT.md --add-git-hook
 
-    Markup : <kbd>⌘F</kbd>
+# modify INPUT.md
 
-Hotkey list:
+git add INPUT.md
+git commit -a -m "updated readme"
 
-| Key | Symbol |
-| --- | --- |
-| Option | ⌥ |
-| Control | ⌃ |
-| Command | ⌘ |
-| Shift | ⇧ |
-| Caps Lock | ⇪ |
-| Tab | ⇥ |
-| Esc | ⎋ |
-| Power | ⌽ |
-| Return | ↩ |
-| Delete | ⌫ |
-| Up | ↑ |
-| Down | ↓ |
-| Left | ← |
-| Right | → |
+git stash pop
+```
 
-Emoji:
+and every `git commit` that touches `INPUT.md` from now on will allow you to automatically run `readme2tex` on it, saving
+you from having to remember how `readme2tex` works. The caveat is that if you use a GUI to interact with git, things
+might get a bit wonky. In particular, `readme2tex` will just assume that you're fine with all of the changes and won't
+prompt you for verification like it does on the terminal.
 
-:exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes at [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/)
+<p align="center">
+<a href="https://asciinema.org/a/2am62r2x2udg1zqyb6r3kpm1i"><img src="https://asciinema.org/a/2am62r2x2udg1zqyb6r3kpm1i.png" width=600/></a>
+</p>
 
-    Markup : Code appears between colons :EMOJICODE:
+You can uninstall the hook by deleting `.git/hooks/post-commit`. See `python -m readme2tex --help` for a list
+of what you can do in `readme2tex`.
+
+### Examples:
+
+Here's a display level formula
+$$
+\frac{n!}{k!(n-k)!} = {n \choose k}
+$$
+
+The code that was used to render this formula is just
+
+    $$
+    \frac{n!}{k!(n-k)!} = {n \choose k}
+    $$
+
+<sub>*Note: you can escape \$ so that they don't render.*</sub>
+
+Here's an inline formula. 
+
+> It is well known that if $ax^2 + bx + c =0$, then $x = \frac{-b \pm \sqrt{b^2- 4ac}}{2a}$.
+
+The code that was used to render this is:
+
+    It is well known that if $ax^2 + bx + c = 0$, then $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.
+
+Notice that the formulas line up with the baseline of the text, even when the height of these two images are different.
+
+Sometimes, you might run into formulas that are bottom-heavy, like $x^2\sum\limits_{3^{n^{n^{n}}}}$. Here, `readme2tex`
+can compute the correct offset to align this formula to the baseline of your paragraph of text as well.
+
+#### Tikz (Courtesy of http://www.texample.net/)
+
+Did you notice the picture at the top of this page? That was also generated by $\text{\LaTeX}$. `readme2tex` is capable of
+handling Tikz code. For reference, the picture
+
+\begin{tikzpicture}
+\newcounter{density}
+\setcounter{density}{20}
+    \def\couleur{red}
+    \path[coordinate] (0,0)  coordinate(A)
+                ++( 60:6cm) coordinate(B)
+                ++(-60:6cm) coordinate(C);
+    \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) -- cycle;
+    \foreach \x in {1,...,15}{%
+        \pgfmathsetcounter{density}{\thedensity+10}
+        \setcounter{density}{\thedensity}
+        \path[coordinate] coordinate(X) at (A){};
+        \path[coordinate] (A) -- (B) coordinate[pos=.15](A)
+                            -- (C) coordinate[pos=.15](B)
+                            -- (X) coordinate[pos=.15](C);
+        \draw[fill=\couleur!\thedensity] (A)--(B)--(C)--cycle;
+    }
+\end{tikzpicture}
+
+is given by the tikz code
+
+    \begin{tikzpicture}
+    \newcounter{density}
+    \setcounter{density}{20}
+        \def\couleur{red}
+        \path[coordinate] (0,0)  coordinate(A)
+                    ++( 60:6cm) coordinate(B)
+                    ++(-60:6cm) coordinate(C);
+        \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) -- cycle;
+        \foreach \x in {1,...,15}{%
+            \pgfmathsetcounter{density}{\thedensity+10}
+            \setcounter{density}{\thedensity}
+            \path[coordinate] coordinate(X) at (A){};
+            \path[coordinate] (A) -- (B) coordinate[pos=.15](A)
+                                -- (C) coordinate[pos=.15](B)
+                                -- (X) coordinate[pos=.15](C);
+            \draw[fill=\couleur!\thedensity] (A)--(B)--(C)--cycle;
+        }
+    \end{tikzpicture}
+
+We can see a few other examples, such as this graphical proof of the Pythagorean Theorem.
+
+\begin{tikzpicture}
+\newcommand{\pythagwidth}{3cm}
+\newcommand{\pythagheight}{2cm}
+  \coordinate [label={below right:$A$}] (A) at (0, 0);
+  \coordinate [label={above right:$B$}] (B) at (0, \pythagheight);
+  \coordinate [label={below left:$C$}] (C) at (-\pythagwidth, 0);
+
+  \coordinate (D1) at (-\pythagheight, \pythagheight + \pythagwidth);
+  \coordinate (D2) at (-\pythagheight - \pythagwidth, \pythagwidth);
+
+  \draw [very thick] (A) -- (C) -- (B) -- (A);
+
+  \newcommand{\ranglesize}{0.3cm}
+  \draw (A) -- ++ (0, \ranglesize) -- ++ (-\ranglesize, 0) -- ++ (0, -\ranglesize);
+
+  \draw [dashed] (A) -- node [below] {$b$} ++ (-\pythagwidth, 0)
+            -- node [right] {$b$} ++ (0, -\pythagwidth)
+            -- node [above] {$b$} ++ (\pythagwidth, 0)
+            -- node [left]  {$b$} ++ (0, \pythagwidth);
+
+  \draw [dashed] (A) -- node [right] {$c$} ++ (0, \pythagheight)
+            -- node [below] {$c$} ++ (\pythagheight, 0)
+            -- node [left]  {$c$} ++ (0, -\pythagheight)
+            -- node [above] {$c$} ++ (-\pythagheight, 0);
+
+  \draw [dashed] (C) -- node [above left]  {$a$} (B)
+                     -- node [below left]  {$a$} (D1)
+                     -- node [below right] {$a$} (D2)
+                     -- node [above right] {$a$} (C);
+\end{tikzpicture}
+
+How about a few snowflakes?
+
+\begin{center}
+\usetikzlibrary{lindenmayersystems}
+
+\pgfdeclarelindenmayersystem{A}{
+    \rule{F -> FF[+F][-F]}
+}
+
+\pgfdeclarelindenmayersystem{B}{
+    \rule{F -> ffF[++FF][--FF]}
+}
+
+\pgfdeclarelindenmayersystem{C}{
+    \symbol{G}{\pgflsystemdrawforward}
+    \rule{F -> F[+F][-F]FG[+F][-F]FG}
+}
+
+\pgfdeclarelindenmayersystem{D}{
+    \symbol{G}{\pgflsystemdrawforward}
+    \symbol{H}{\pgflsystemdrawforward}
+    \rule{F -> H[+HG][-HG]G}
+    \rule{G -> HF}
+}
+
+\tikzset{
+    type/.style={l-system={#1, axiom=F,order=3,step=4pt,angle=60},
+      blue, opacity=0.4, line width=.5mm, line cap=round   
+    },
+}
+
+\newcommand\drawsnowflake[2][scale=0.2]{
+    \tikz[#1]
+    \foreach \a in {0,60,...,300}  {
+    \draw[rotate=\a,#2] l-system;
+    };
+}
+
+\foreach \width in {.2,.4,...,.8} 
+{  \drawsnowflake[scale=0.3]{type=A, line width=\width mm} }
+
+\foreach \width in {.2,.4,...,.8} 
+{  \drawsnowflake[scale=0.38]{type=A, l-system={angle=90}, line width=\width mm} }    
+
+\foreach \width in {.2,.4,...,.8} 
+{  \drawsnowflake[scale=0.3]{type=B, line width=\width mm} }
+
+\foreach \width in {.2,.4,...,.8} 
+{  \drawsnowflake{type=B, l-system={angle=30}, line width=\width mm} }
+
+\drawsnowflake[scale=0.24]{type=C, l-system={order=2}, line width=0.2mm}
+\drawsnowflake[scale=0.25]{type=C, l-system={order=2}, line width=0.4mm}
+\drawsnowflake[scale=0.25]{type=C, l-system={order=2,axiom=fF}, line width=0.2mm}
+\drawsnowflake[scale=0.32]{type=C, l-system={order=2,axiom=---fff+++F}, line width=0.2mm}
+
+\drawsnowflake[scale=0.38]{type=D, l-system={order=4,angle=60,axiom=GF}, line width=0.7mm}
+\drawsnowflake[scale=0.38]{type=D, l-system={order=4,angle=60,axiom=GfF}, line width=0.7mm}
+\drawsnowflake[scale=0.38]{type=D, l-system={order=4,angle=60,axiom=FG}, line width=0.7mm}
+\drawsnowflake[scale=0.38]{type=D, l-system={order=4,angle=60,axiom=FfG}, line width=0.7mm}
+\end{center}
+
+### Usage
+
+    python -m readme2tex --output README.md [READOTHER.md]
+
+It will then look for a file called `readother.md` and compile it down to a readable Github-ready
+document.
+
+In addition, you can specify other arguments to `render.py`, such as:
+
+* `--readme READOTHER.md` The raw readme to process. Defaults to `READOTHER.md`.
+* `--output README.md` The processed readme.md file. Defaults to `README_GH.md`.
+* `--usepackage tikz` Addition packages to use during $\text{\LaTeX}$ compilation. You can specify this multiple times.
+* `--svgdir svgs/` The directory to store the output svgs. The default is `svgs/`
+* `--branch master` *Experimental* Which branch to store the svgs into, the default is just master.
+* `--username username` Your github username. This is optional, and `render.py` will try to infer this for you.
+* `--project project` The current github project. This is also optional.
+* `--nocdn` Ticking this will use relative paths for the output images. Defaults to False.
+* `--htmlize` Ticking this will output a `md.html` file so you can preview what the output looks like. Defaults to False.
+* `--valign` Ticking this will use the `valign` trick (detailed below) instead. See the caveats section for tradeoffs.
+* `--rerender` Ticking this will force a recompilation of all $\text{\LaTeX}$ formulas even if they are already cached.
+* `--bustcache` Ticking this will ensure that Github renews its image cache. Github may sometimes take up to an hour for changed images to reappear. This is usually not necessary unless you've made stylistic changes.
+* `--add-git-hook` Ticking this will generate a post-commit hook for git that runs readme2tex with the rest of the specified arguments after each `git commit`.
+* `--pngtrick` Ticking this will generate `png` files instead of `svgs` for the formulas.
+
+My usual workflow is to create a secondary branch just for the compiled svgs. You can accomplish this via
+
+    python -m readme2tex --branch svgs --output README.md
+
+However, be careful with this command, since it will switch over to the `svgs` branch without any input from you.
+
+#### Relative Paths
+
+If you're on a private repository or you want to, for whatever reason, use relative paths to resolve your images, you can
+do so by using the combination
+
+    python -m readme2tex --branch master --nocdn --pngtrick ...
+
+which will output `pngs` relative to your `README.md`.
+
+Due to security considerations, Github will not resolve `svgs` relatively, which means that private repositories will
+be locked out of the usual `svg` workflow. Using the `--branch master --nocdn --pngtrick` combination will get around
+this restriction.
+
+### Troubleshooting
+
+#### Tikz
+
+If your Tikz drawings don't show up, there's a good chance that you either don't have Ghostscript installed or
+`dvisvgm` isn't picking it up for whatever reason. This is most likely to happen on some installations of TexLive
+on OSX.
+
+Check to see if `ps` is included in the list when you run
+
+```bash
+# dvisvgm -l
+bgcolor    background color special
+color      complete support of color specials
+dvisvgm    special set for embedding raw SVG snippets
+em         line drawing statements of the emTeX special set
+html       hyperref specials
+pdf        pdfTeX font map specials
+ps         dvips PostScript specials <<<
+tpic       TPIC specials
+```
+
+If not, try installing it (either `apt-get`, `yum`, or `brew`). Furthermore, if you are on OSX, make sure to add the
+following to your `~/.bash_profile`
+
+```bash
+export LIBGS=/usr/local/lib/libgs.dylib
+```
+
+where `/usr/local/lib/libgs.dylib` is the location where `libgs.dylib` is installed.
+
+#### I'm seeing weird formatting from time to time.
+
+Make sure that if you have a `<p>...</p>` tag somewhere, you leave at least one blank line after the closing tag.
+
+#### I ran `--add-git-hook`, but the post-commit hook isn't running after committing.
+
+```bash
+chmod +x .git/hooks/post-commit
+```
+
+#### I raw `readme2tex` and got strange image srcs or got images that won't resolve
+
+Try running `readme2tex` with
+
+```bash
+python -m readme2tex ... --username GITHUB_USERNAME  --project PROJECT_NAME
+```
+
+#### I ran `readme2tex` and got a traceback somewhere.
+
+Unfortunately, this script still has a few kinks and bugs that I need to iron out. In the mean time, if the `pypi` releases
+aren't working for you, you should switch over to the development version to see if the bugs have been squashed:
+
+```bash
+git clone https://github.com/leegao/readme2tex
+cd readme2tex
+python setup.py develop
+```
+
+### Technical Tricks
+
+#### How can you tell where the baseline of an image is?
+
+By prepending every inline formula with an anchor. During post-processing, we can isolate the anchor, which
+is fixed at the baseline, and crop it out. It's super clowny, but it does the job.
+
+#### Caveats
+
+Github does not allow you to pass in custom style attributes to your images. While this is useful for security purposes,
+it makes it incredibly difficult to ensure that images will align correctly to the text. `readme2tex` circumvents this
+using one of two tricks:
+
+1. In Chrome, the attribute `valign=offset` works for `img` tags as well. This allows us to shift the image directly.
+Unfortunately, this is not supported within any of the other major browsers, therefore this mode is not enabled by
+default.
+2. In every (reasonably modern) browser, the `align=middle` attribute will vertically center an image. However, the
+definition of the vertical "center" is different. In particular, for Chrome, Firefox, (and probably Safari), that center
+is the exact middle of the image. For IE and Edge however, the center is about 5 pixels (the height of a lower-case character)
+above the exact center. Since this looks great for non-IE browsers, and reasonably good on Edge, this is the default
+rendering method. The trick here is to pad either the top or the bottom of the image with extra spaces until the
+baseline of the formula is at the center. For most formulas, this works great. However, if you have a tall formula,
+like $\frac{~}{\sum\limits_{x^{x^{x^{x}}}}^{x^{x^{x^{x}}}} f(x)}$, you'll notice that there might be a lot
+of slack vertical spacing between these lines. If this is a deal-breaker for you, you can always try the `--valign True`
+mode. For most inline formulas, this is usually a non-issue.
+
+#### How to compile this document
+Make sure that you have the `tikz` and the `xcolor` packages installed locally.
+
+    python -m readme2tex --usepackage "tikz" --usepackage "xcolor" --output README.md --branch svgs
+
+and of course
+
+    python -m readme2tex --usepackage "tikz" --usepackage "xcolor" --output README.md --branch svgs --add-git-hook
+
+For the `png` relative mode, use
+
+    python -m readme2tex --usepackage "tikz" --usepackage "xcolor" --output README.md --branch master --nocdn --pngtrick
+
+----------------------------------------
+
+\begin{tikzpicture}[scale=0.25, line join=bevel]
+% \a and \b are two macros defining characteristic
+% dimensions of the Penrose triangle.		
+\pgfmathsetmacro{\a}{2.5}
+\pgfmathsetmacro{\b}{0.9}
+
+\tikzset{%
+  apply style/.code     = {\tikzset{#1}},
+  triangle_edges/.style = {thick,draw=black}
+}
+
+\foreach \theta/\facestyle in {%
+    0/{triangle_edges, fill = gray!50},
+  120/{triangle_edges, fill = gray!25},
+  240/{triangle_edges, fill = gray!90}%
+}{
+  \begin{scope}[rotate=\theta]
+    \draw[apply style/.expand once=\facestyle]
+      ({-sqrt(3)/2*\a},{-0.5*\a})                     --
+      ++(-\b,0)                                       --
+        ({0.5*\b},{\a+3*sqrt(3)/2*\b})                -- % higher point	
+        ({sqrt(3)/2*\a+2.5*\b},{-.5*\a-sqrt(3)/2*\b}) -- % rightmost point
+      ++({-.5*\b},-{sqrt(3)/2*\b})                    -- % lower point
+        ({0.5*\b},{\a+sqrt(3)/2*\b})                  --
+      cycle;
+    \end{scope}
+  }	
+\end{tikzpicture}
