@@ -1,39 +1,17 @@
-FROM ubuntu:trusty
+source "http://rubygems.org"
+gemspec
 
-RUN apt-get update -qq
-RUN apt-get install -y apt-transport-https
-
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 379CE192D401AB61
-RUN echo "deb https://dl.bintray.com/nxadm/rakudo-pkg-debs `lsb_release -cs` main" | tee -a /etc/apt/sources.list.d/rakudo-pkg.list
-RUN apt-get update -qq
-
-RUN apt-get install -y \
-    perl rakudo-pkg curl git build-essential python python-pip \
-    libssl-dev libreadline-dev zlib1g-dev \
-    libicu-dev cmake pkg-config
-
-ENV PATH $PATH:/opt/rakudo-pkg/bin
-RUN install-zef-as-user && zef install Pod::To::HTML
-
-RUN curl -L http://cpanmin.us | perl - App::cpanminus
-RUN cpanm --installdeps --notest Pod::Simple
-
-RUN pip install docutils
-
-ENV PATH $PATH:/root/.rbenv/bin:/root/.rbenv/shims
-RUN curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
-RUN rbenv install 2.4.1
-RUN rbenv global 2.4.1
-RUN rbenv rehash
-
-RUN gem install bundler
-
-WORKDIR /data/github-markup
-COPY github-markup.gemspec .
-COPY Gemfile .
-COPY Gemfile.lock .
-COPY lib/github-markup.rb lib/github-markup.rb
-RUN bundle
-
-ENV LC_ALL en_US.UTF-8
-RUN locale-gen en_US.UTF-8
+gem "posix-spawn", :platforms => :ruby
+gem "redcarpet", :platforms => :ruby
+gem "kramdown", :platforms => :jruby
+gem "RedCloth"
+# using a tag version here because 0.18.3 was not published by the author to encourage users to upgrade.
+# however we want to bump up to this version since this has a security patch
+gem "commonmarker", git: "https://github.com/gjtorikian/commonmarker.git", tag: "v0.18.3"
+gem "rdoc", "~>3.6"
+gem "org-ruby", "= 0.9.9"
+gem "creole", "~>0.3.6"
+gem "wikicloth", "=0.8.3"
+gem "twitter-text", "~> 1.14"
+gem "asciidoctor", "~> 2.0.5"
+gem "rake"
