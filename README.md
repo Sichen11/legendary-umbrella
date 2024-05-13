@@ -1,1 +1,1 @@
-Dockerfile
+* text=auto eol=lf
