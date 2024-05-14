@@ -1,36 +1,53 @@
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
+#!/bin/bash
 
-  const blogPostTemplate = require.resolve(`./src/templates/blogTemplate.js`);
+function encrypt(){
+    echo $(aws kms encrypt --key-id alias/encrypter --plaintext "$1" --output text --query CiphertextBlob)
+}
 
-  const result = await graphql(`
-    {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000) {
-        edges {
-          node {
-            frontmatter {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `);
+function decrypt(){
+    echo "$1" | base64 --decode > awsencrypteddata.temp
+    OLDIFS=$IFS
+    IFS=
+    echo $(aws kms decrypt --ciphertext-blob fileb://awsencrypteddata.temp --output text --query Plaintext | base64 --decode)
+    IFS=$OLDIFS
+    rm awsencrypteddata.temp
+}
 
-  // Handle errors
-  if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`);
-    return;
-  }
+function encryptfile(){
+    echo $(aws kms encrypt --key-id alias/encrypter --plaintext fileb://"$1" --output text --query CiphertextBlob)
+}
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.slug,
-      component: blogPostTemplate,
-      context: {
-        // additional data can be passed via context
-        slug: node.frontmatter.slug,
-      },
-    });
-  });
-};
+function help(){
+    printf "
+A utility to encrypt sensitive information that we might need to paste
+in sensitive locations.
+
+Usage: bufcrypt COMMAND \"input\"
+
+Commands:
+
+  encrypt                 Use this to encrypt text directly via terminal.
+                          Supports multi line strings
+  decrypt                 Use this to decrypt encrypted text. Paste the encrypted
+                          text inside quotes
+  encryptfile             Encrypt the contents of a file using this.
+
+Examples:
+
+Encrypt single line text:
+bufcrypt encrypt \"senstive info goes here\"
+
+Encrypt multi line text:
+bufcrypt encrypt \"my sensitive info
+goes
+on multiple lines\"
+
+Decrypt
+bufcrypt decrypt \"ciphertexttodecrypt\"
+
+Encrypt a file
+bufcrypt encryptfile \"~/.aws/credentials.backup\"
+"
+}
+
+$1 "$2"
