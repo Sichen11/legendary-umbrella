@@ -1,68 +1,247 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=FF3670&size=35&center=true&vCenter=true&width=1000&lines=Welcome+to+my+GitHub+profile!;My+name+is+Jacqueline+Atae;I'm+Software+Engineering+Student)](https://git.io/typing-svg)
+Markdown Cheatsheet<a name="TOP"></a>
+===================
 
-<h3 align="center">"Talk is cheap. Show me the code"</h3>
-<h4 align="center">- Linus Torvalds -</h4>
+- - - - 
+# Heading 1 #
 
-<br>
+    Markup :  # Heading 1 #
 
-<div align="center" style="margin-bottom:200px">
- <img width=45% align="center" src="https://github-readme-stats.vercel.app/api?username=jacquelineatae&theme=radical&show_icons=true" />
- <img width=40% align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jacquelineatae&layout=compact&theme=radical" />
-</div>
+    -OR-
 
+    Markup :  ============= (below H1 text)
 
-<br>
+## Heading 2 ##
 
-## Language and Tools
+    Markup :  ## Heading 2 ##
 
-<img src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" min-width="400px" max-width="400px" width="400px" align="right" alt="Computador iuriCode">
+    -OR-
 
-#### Main Stack:
-  [<img height="48px" width="48px" alt="Icone VS-Code" src="https://skillicons.dev/icons?i=html"/>](https://developer.mozilla.org/en-US/docs/Web/HTML)
-  [<img height="48px" width="48px" alt="Icone VS-Code" src="https://skillicons.dev/icons?i=css"/>](https://developer.mozilla.org/en-US/docs/Web/CSS)
-  [<img height="48px" width="48px" alt="Icone VS-Code" src="https://skillicons.dev/icons?i=js"/>](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-  [<img height="48px" width="48px" alt="Icone VS-Code" src="https://skillicons.dev/icons?i=nodejs"/>](https://nodejs.org/en)
-  [<img height="48px" width="48px" alt="Icone VS-Code" src="https://skillicons.dev/icons?i=react"/>](https://react.dev/)
+    Markup: --------------- (below H2 text)
 
+### Heading 3 ###
 
-#### Studying in this moment:
-  [<img height="48px" width="48px" alt="Icone VS-Code" src="https://skillicons.dev/icons?i=sass"/>](https://sass-lang.com/)
-  [<img height="48px" width="48px" alt="Icone VS-Code" src="https://skillicons.dev/icons?i=ts"/>](https://www.typescriptlang.org/)
-  [<img height="48px" width="48px" alt="Icone VS-Code" src="https://skillicons.dev/icons?i=mysql"/>](https://www.mysql.com/)
+    Markup :  ### Heading 3 ###
 
-#### Tools:
+#### Heading 4 ####
 
-  [<img height="48px" width="48px" alt="Icone VS-Code" src="https://skillicons.dev/icons?i=figma"/>](https://www.figma.com/)
-  [<img height="48px" width="48px" alt="Icone VS-Code" src="https://skillicons.dev/icons?i=vscode"/>](https://code.visualstudio.com/)
-  [<img height="48px" width="48px" alt="Icone VS-Code" src="https://skillicons.dev/icons?i=github"/>](https://github.com/)
-  [<img height="48px" width="48px" alt="Icone VS-Code" src="https://skillicons.dev/icons?i=git"/>](https://git-scm.com/)
-
-<br>
-
-## Academic Background:
-
-[<img align="left" height="94px" width="94px" alt="Warpnet" src="https://media.licdn.com/dms/image/C4E0BAQG5HFi6nWrpQg/company-logo_200_200/0/1655119369480/grupo_uninter_logo?e=1709164800&v=beta&t=A_gJyj3OZmT1JZNQcxaIJY67jzxMEJMvcpxyq1CwmS0"/>](https://www.uninter.com/)
-**Software Engineering Undergraduate** \
-[**UNINTER**](https://www.uninter.com/)  • In progress\
-Skills: `Agile Methodologies` `Requirements Engineering` `Software Architecture` `Professional Ethics`
-`Project Management` `Software Development` `Software Security` `Software Quality`
-
-[<img align="left" height="94px" width="94px" alt="Warpnet" src="https://yt3.googleusercontent.com/rObOEbK1sg50-EG5bF6XWqtUMS5FHsFMA5bOl50UwrXnezjLqovTdtPK6Ql9V-4jGkasyOXs1g=s900-c-k-c0x00ffffff-no-rj"/>](https://www.onebitcode.com/)
-**Full Stack Developer** \
-[**One Bit Code**](https://www.onebitcode.com/) • In progress \
-Skills: `HTML5` `CSS3` `SASS` `Flexbox` `GRID` `Bootstrap` `JavaScript` `Git` `GitHub` `TypeScript` `PostgreSQL` `NodeJs` `ExpressJS` `NextJs`
-`Bulma` `MongoDB` `ElectronJS`
-
-<br>
-
-## Contact me:
-<div>
-<a href="https://www.instagram.com/y_m_k.02/" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
-<a href = "mailto: contatojacquelineatae@gmail.com"><img loading="lazy" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
-<a href="https://www.linkedin.com/in/jacquelineatae/" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>   
-</div>
+    Markup :  #### Heading 4 ####
 
 
-------
-Credit: [jacquelineatae](https://github.com/jacquelineatae)
-Last Edited on: 16/01/2024
+Common text
+
+    Markup :  Common text
+
+_Emphasized text_
+
+    Markup :  _Emphasized text_ or *Emphasized text*
+
+~~Strikethrough text~~
+
+    Markup :  ~~Strikethrough text~~
+
+__Strong text__
+
+    Markup :  __Strong text__ or **Strong text**
+
+___Strong emphasized text___
+
+    Markup :  ___Strong emphasized text___ or ***Strong emphasized text***
+
+[Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
+
+    Markup :  [Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
+
+[heading-1](#heading-1 "Goto heading-1")
+    
+    Markup: [heading-1](#heading-1 "Goto heading-1")
+
+Table, like this one :
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+```
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+```
+
+Adding a pipe `|` in a cell :
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | \|
+
+```
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  |  \| 
+```
+
+Left, right and center aligned table
+
+Left aligned Header | Right aligned Header | Center aligned Header
+| :--- | ---: | :---:
+Content Cell  | Content Cell | Content Cell
+Content Cell  | Content Cell | Content Cell
+
+```
+Left aligned Header | Right aligned Header | Center aligned Header
+| :--- | ---: | :---:
+Content Cell  | Content Cell | Content Cell
+Content Cell  | Content Cell | Content Cell
+```
+
+`code()`
+
+    Markup :  `code()`
+
+```javascript
+    var specificLanguage_code = 
+    {
+        "data": {
+            "lookedUpPlatform": 1,
+            "query": "Kasabian+Test+Transmission",
+            "lookedUpItem": {
+                "name": "Test Transmission",
+                "artist": "Kasabian",
+                "album": "Kasabian",
+                "picture": null,
+                "link": "http://open.spotify.com/track/5jhJur5n4fasblLSCOcrTp"
+            }
+        }
+    }
+```
+
+    Markup : ```javascript
+             ```
+
+* Bullet list
+    * Nested bullet
+        * Sub-nested bullet etc
+* Bullet list item 2
+
+~~~
+ Markup : * Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
+
+-OR-
+
+ Markup : - Bullet list
+              - Nested bullet
+                  - Sub-nested bullet etc
+          - Bullet list item 2 
+~~~
+
+1. A numbered list
+    1. A nested numbered list
+    2. Which is numbered
+2. Which is numbered
+
+~~~
+ Markup : 1. A numbered list
+              1. A nested numbered list
+              2. Which is numbered
+          2. Which is numbered
+~~~
+
+- [ ] An uncompleted task
+- [x] A completed task
+
+~~~
+ Markup : - [ ] An uncompleted task
+          - [x] A completed task
+~~~
+
+- [ ] An uncompleted task
+    - [ ] A subtask
+
+~~~
+ Markup : - [ ] An uncompleted task
+              - [ ] A subtask
+~~~
+
+> Blockquote
+>> Nested blockquote
+
+    Markup :  > Blockquote
+              >> Nested Blockquote
+
+_Horizontal line :_
+- - - -
+
+    Markup :  - - - -
+
+_Image with alt :_
+
+![picture alt](http://via.placeholder.com/200x150 "Title is optional")
+
+    Markup : ![picture alt](http://via.placeholder.com/200x150 "Title is optional")
+
+Foldable text:
+
+<details>
+  <summary>Title 1</summary>
+  <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+</details>
+<details>
+  <summary>Title 2</summary>
+  <p>Content 2 Content 2 Content 2 Content 2 Content 2</p>
+</details>
+
+    Markup : <details>
+               <summary>Title 1</summary>
+               <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+             </details>
+
+```html
+<h3>HTML</h3>
+<p> Some HTML code here </p>
+```
+
+Link to a specific part of the page:
+
+[Go To TOP](#TOP)
+   
+    Markup : [text goes here](#section_name)
+              section_title<a name="section_name"></a>    
+
+Hotkey:
+
+<kbd>⌘F</kbd>
+
+<kbd>⇧⌘F</kbd>
+
+    Markup : <kbd>⌘F</kbd>
+
+Hotkey list:
+
+| Key | Symbol |
+| --- | --- |
+| Option | ⌥ |
+| Control | ⌃ |
+| Command | ⌘ |
+| Shift | ⇧ |
+| Caps Lock | ⇪ |
+| Tab | ⇥ |
+| Esc | ⎋ |
+| Power | ⌽ |
+| Return | ↩ |
+| Delete | ⌫ |
+| Up | ↑ |
+| Down | ↓ |
+| Left | ← |
+| Right | → |
+
+Emoji:
+
+:exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes at [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/)
+
+    Markup : Code appears between colons :EMOJICODE:
