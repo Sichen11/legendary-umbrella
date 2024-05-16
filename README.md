@@ -1,35 +1,12 @@
-from setuptools import setup
+# Contribution Guidelines
 
-def readme():
-    return '''
-readme2tex
-==========
+Please ensure your pull request adheres to the following guidelines:
 
-Renders LaTeX for Github Readmes.
-  
-See https://github.com/leegao/readme2tex/
-'''
+- Suggested Github Profile READMEs should be beautiful or stand out in some way.
+- Make an individual pull request for each suggestion.
+- Can suggest for different categories as well.
+- Start the Name with a capital.
+- Check your spelling and grammar.
+- Make sure your text editor is set to remove trailing whitespace.
 
-setup(name='readme2tex',
-      version='0.0.1b3',
-      description='Render LaTeX within your Github Readmes',
-      long_description=readme(),
-      url='http://github.com/leegao/readme2tex',
-      author='Lee Gao',
-      author_email='lg342@cornell.edu',
-      license='MIT',
-      packages=['readme2tex'],
-      classifiers=[
-          'Development Status :: 3 - Alpha',
-          'License :: OSI Approved :: MIT License',
-          'Programming Language :: Python :: 2.7',
-          'Topic :: Text Processing :: Markup :: LaTeX',
-      ],
-      keywords='github readme markdown latex tex equations math svg markup',
-      install_requires=[
-          'markdown',
-          'pygments',
-          'cairosvg==1.0.22',
-      ],
-      include_package_data=True,
-      zip_safe=False)
+Thank you for your suggestions!
