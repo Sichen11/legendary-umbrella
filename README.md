@@ -1,12 +1,12 @@
-# Contribution Guidelines
+# syntax=docker/dockerfile:1
 
-Please ensure your pull request adheres to the following guidelines:
+FROM python:3.10.0
 
-- Suggested Github Profile READMEs should be beautiful or stand out in some way.
-- Make an individual pull request for each suggestion.
-- Can suggest for different categories as well.
-- Start the Name with a capital.
-- Check your spelling and grammar.
-- Make sure your text editor is set to remove trailing whitespace.
+WORKDIR /api
 
-Thank you for your suggestions!
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt --no-cache-dir
+
+COPY api/ .
+
+CMD ["gunicorn", "--workers=1", "--bind", "0.0.0.0:5000", "spotify:app"]
