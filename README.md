@@ -1,84 +1,17 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+source "http://rubygems.org"
+gemspec
 
-.DS_Store
-ec2-user-key-pair.pem
-/tmp
-env.json
-package-lock.json
-
-# compiled output
-/dist
-
-# dependencies
-/node_modules
-/example/node_modules
-/functions/node_modules
-
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-# misc
-/.sass-cache
-/connect.lock
-/coverage/*
-/libpeerconnection.log
-npm-debug.log
-testem.log
-logfile
-
-# e2e
-/e2e/*.js
-/e2e/*.map
-
-#System Files
-.DS_Store
-Thumbs.db
-dump.rdb
-
-/compiled/
-/.idea/
-/.cache/
-/.rpt2_cache/
-/.vscode/
-*.log
-/logs/
-npm-debug.log*
-/lib-cov/
-/coverage/
-/.nyc_output/
-/.grunt/
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-.tgz
-.env
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-*.pem
-*.p12
-*.crt
-*.csr
-/node_modules/
-/dist/
-/documentation/
+gem "posix-spawn", :platforms => :ruby
+gem "redcarpet", :platforms => :ruby
+gem "kramdown", :platforms => :jruby
+gem "RedCloth"
+# using a tag version here because 0.18.3 was not published by the author to encourage users to upgrade.
+# however we want to bump up to this version since this has a security patch
+gem "commonmarker", git: "https://github.com/gjtorikian/commonmarker.git", tag: "v0.18.3"
+gem "rdoc", "~>3.6"
+gem "org-ruby", "= 0.9.9"
+gem "creole", "~>0.3.6"
+gem "wikicloth", "=0.8.3"
+gem "twitter-text", "~> 1.14"
+gem "asciidoctor", "~> 2.0.5"
+gem "rake"
