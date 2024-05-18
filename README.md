@@ -1,2 +1,1 @@
-*.md linguist-detectable=true
-*.md linguist-documentation=false
+theme: jekyll-theme-hacker
