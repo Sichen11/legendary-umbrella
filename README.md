@@ -1,32 +1,10 @@
-import ts from "@wessberg/rollup-plugin-ts";
-import commonjs from "rollup-plugin-commonjs";
-import resolve from "rollup-plugin-node-resolve";
-import pkg from "./package.json";
-import json from "rollup-plugin-json";
+![banner](https://user-images.githubusercontent.com/23727056/87433896-78ae9700-c607-11ea-9ca6-9cdbe3f67998.jpg)
 
-export const distPath = "dist";
-export const srcPath = "src";
+The aim of this repository is to collect awesome READMEs that developers around the world are using on their own profiles to act as an inspiration for others.
+Video about [GitHub Profile README](https://twitter.com/github/status/1294348292130836482?s=20)
 
-export const config = {
-	plugins: [
-		resolve({
-			module: true,
-			browser: true,
-			jsnext: true,
-			main: false,
-			modulesOnly: false
-		}),
-		json(),
-		ts({
-			transpiler: "babel"
-		}),
-		commonjs({
-			include: "**/node_modules/**"
-		})
-	],
-	external: [
-		...Object.keys(pkg.dependencies || {}),
-		...Object.keys(pkg.devDependencies || {}),
-	],
-	treeshake: false
-};
+Feel free to add your own or someone else's profile README if you find it super awesome! 
+
+Don't forget to leave a if you find this repo useful ⭐
+
+Thankyou🎆
