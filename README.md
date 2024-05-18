@@ -1,8 +1,3 @@
-#MacOS
-.DS_Store
-
-# Environment variables
-.env
-
-# Pycache
+.dockerignore
+Dockerfile
 __pycache__
