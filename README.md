@@ -1,3 +1,1 @@
-.dockerignore
-Dockerfile
-__pycache__
+node_modules/**
