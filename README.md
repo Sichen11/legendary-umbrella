@@ -1,38 +1,21 @@
-const rimraf = require("rimraf");
-const path = require("path");
-const colors = require("colors");
-const fse = require("fs-extra");
+MIT License
 
-const distPath = "dist";
+Copyright (c) 2019 tchapi
 
-async function prebuild () {
-	await cleanDist();
-	await copyFiles("", distPath, [
-		"README.md",
-		"package.json"
-	]);
-}
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-function cleanDist () {
-	return new Promise((res, rej) => {
-		rimraf(distPath, res);
-	});
-}
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-function copyFiles (inSrc, outSrc, files) {
-	return new Promise((res, rej) => {
-		for (const file of files) {
-			copySync(`./${inSrc}/${file}`, `./${outSrc}/${file}`);
-		}
-		res();
-	});
-}
-
-function copySync (src, dest) {
-	fse.copySync(path.resolve(__dirname, src), path.resolve(__dirname, dest));
-}
-
-prebuild().then(_ => {
-	console.log(colors.green("[prebuild] - Completed"));
-});
-
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
