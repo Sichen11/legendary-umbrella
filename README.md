@@ -1,12 +1,5 @@
-{
-  "name": "Readme Typing SVG",
-  "description": "⚡ Dynamically generated, customizable SVG that gives the appearance of typing and deleting text. Typing SVGs can be used as a bio on your Github profile readme or repository.",
-  "repository": "https://github.com/DenverCoder1/readme-typing-svg/",
-  "keywords": ["github", "dynamic", "readme", "typing", "svg", "profile"],
-  "formation": {
-    "web": {
-      "quantity": 1,
-      "size": "free"
-    }
-  }
-}
+# Explanation
+
+You can put HTML (actually XHTML) and CSS inside a [`<foreignObject>` tag](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject) inside a SVG file inside an `<img>` tag inside your readme. 🤯
+
+Thanks to [@Richienb](https://github.com/Richienb) for sharing the trick in [this pull request](https://github.com/sindresorhus/sindresorhus/pull/9).
