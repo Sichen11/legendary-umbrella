@@ -1,1 +1,1 @@
-theme: jekyll-theme-hacker
+* text=auto eol=lf
