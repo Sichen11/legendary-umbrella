@@ -1,89 +1,110 @@
-# Project Name
-> Outline a brief description of your project.
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+# Contributing to [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)
 
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
-<!-- * [License](#license) -->
+We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
 
+-   Reporting [an issue](https://github.com/anuraghazra/github-readme-stats/issues/new?assignees=&labels=bug&template=bug_report.yml).
+-   [Discussing](https://github.com/anuraghazra/github-readme-stats/discussions) the current state of the code.
+-   Submitting [a fix](https://github.com/anuraghazra/github-readme-stats/compare).
+-   Proposing [new features](https://github.com/anuraghazra/github-readme-stats/issues/new?assignees=&labels=enhancement&template=feature_request.yml).
+-   Becoming a maintainer.
 
-## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+## All Changes Happen Through Pull Requests
 
+Pull requests are the best way to propose changes. We actively welcome your pull requests:
 
-## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+1.  Fork the repo and create your branch from `master`.
+2.  If you've added code that should be tested, add some tests' examples.
+3.  If you've changed APIs, update the documentation.
+4.  Issue that pull request!
 
+## Under the hood of github-readme-stats
 
-## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+Interested in diving deeper into understanding how github-readme-stats works?
 
+[Bohdan](https://github.com/Bogdan-Lyashenko) wrote a fantastic in-depth post about it, check it out:
 
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+**[Under the hood of github-readme-stats project](https://codecrumbs.io/library/github-readme-stats)**
 
+## Local Development
 
-## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+To run & test github-readme-stats, you need to follow a few simple steps:-
+_(make sure you already have a [Vercel](https://vercel.com/) account)_
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+1.  Install [Vercel CLI](https://vercel.com/download).
+2.  Fork the repository and clone the code to your local machine.
+3.  Run `npm install` in the repository root.
+4.  Run the command `vercel` in the root and follow the steps there.
+5.  Run the command `vercel dev` to start a development server at <http://localhost:3000>.
+6.  The cards will then be available from this local endpoint (i.e. `http://localhost:3000/api?username=anuraghazra`).
 
+> [!NOTE]\
+> You can debug the package code in [Vscode](https://code.visualstudio.com/) by using the [Node.js: Attach to process](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_setting-up-an-attach-configuration) debug option. You can also debug any tests using the [VSCode Jest extension](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest). For more information, see https://github.com/jest-community/vscode-jest/issues/912.
 
-## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
+## Themes Contribution
 
-`write-your-code-here`
+We're currently paused addition of new themes to decrease maintenance efforts. All pull requests related to new themes will be closed.
 
+> [!NOTE]\
+> If you are considering contributing your theme just because you are using it personally, then instead of adding it to our theme collection, you can use card [customization options](./readme.md#customization).
 
-## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+## Translations Contribution
 
+GitHub Readme Stats supports multiple languages, if we are missing your language, you can contribute it! You can check the currently supported languages [here](./readme.md#available-locales).
 
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
+To contribute your language you need to edit the [src/translations.js](./src/translations.js) file and add new property to each object where the key is the language code in [ISO 639-1 standard](https://www.andiamo.co.uk/resources/iso-language-codes/) and the value is the translated string.
 
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+## Any contributions you make will be under the MIT Software License
 
-To do:
-- Feature to be added 1
-- Feature to be added 2
+In short, when you submit changes, your submissions are understood to be under the same [MIT License](https://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
 
+## Report issues/bugs using GitHub's [issues](https://github.com/anuraghazra/github-readme-stats/issues)
 
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/anuraghazra/github-readme-stats/issues/new/choose); it's that easy!
 
+## Frequently Asked Questions (FAQs)
 
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+**Q:** How to hide Jupyter Notebook?
 
+> **Ans:** &hide=jupyter%20notebook
 
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
+**Q:** I could not figure out how to deploy on my own Vercel instance
 
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+> **Ans:**
+>
+> -   docs: <https://github.com/anuraghazra/github-readme-stats/#deploy-on-your-own-vercel-instance>
+> -   YT tutorial by codeSTACKr: <https://www.youtube.com/watch?v=n6d4KHSKqGk&feature=youtu.be&t=107>
+
+**Q:** Language Card is incorrect
+
+> **Ans:** Please read all the related issues/comments before opening any issues regarding language card stats:
+>
+> -   <https://github.com/anuraghazra/github-readme-stats/issues/136#issuecomment-665164174>
+>
+> -   <https://github.com/anuraghazra/github-readme-stats/issues/136#issuecomment-665172181>
+
+**Q:** How to count private stats?
+
+> **Ans:** We can only count public commits & we cannot access any other private info of any users, so it's not possible. The only way to count your personal private stats is to deploy on your own instance & use your own PAT (Personal Access Token)
+
+### Bug Reports
+
+**Great Bug Reports** tend to have:
+
+-   A quick summary and/or background
+-   Steps to reproduce
+    -   Be specific!
+    -   Share the snapshot, if possible.
+    -   GitHub Readme Stats' live link
+-   What actually happens
+-   What you expected would happen
+-   Notes (possibly including why you think this might be happening or stuff you tried that didn't work)
+
+People _love_ thorough bug reports. I'm not even kidding.
+
+### Feature Request
+
+**Great Feature Requests** tend to have:
+
+-   A quick idea summary
+-   What & why do you want to add the specific feature
+-   Additional context like images, links to resources to implement the feature, etc.
