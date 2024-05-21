@@ -1,50 +1,38 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+const rimraf = require("rimraf");
+const path = require("path");
+const colors = require("colors");
+const fse = require("fs-extra");
 
-# Folder config file
-Desktop.ini
+const distPath = "dist";
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+async function prebuild () {
+	await cleanDist();
+	await copyFiles("", distPath, [
+		"README.md",
+		"package.json"
+	]);
+}
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+function cleanDist () {
+	return new Promise((res, rej) => {
+		rimraf(distPath, res);
+	});
+}
 
-# Windows shortcuts
-*.lnk
+function copyFiles (inSrc, outSrc, files) {
+	return new Promise((res, rej) => {
+		for (const file of files) {
+			copySync(`./${inSrc}/${file}`, `./${outSrc}/${file}`);
+		}
+		res();
+	});
+}
 
-# =========================
-# Operating System Files
-# =========================
+function copySync (src, dest) {
+	fse.copySync(path.resolve(__dirname, src), path.resolve(__dirname, dest));
+}
 
-# OSX
-# =========================
+prebuild().then(_ => {
+	console.log(colors.green("[prebuild] - Completed"));
+});
 
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-.idea
-/.vs
