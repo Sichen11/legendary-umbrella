@@ -1,110 +1,58 @@
-# Contributing to [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)
+# Buffer Open Source FAQ
+Need to know how open source works at Buffer? This is the place!
 
-We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
+### What license do we release software under?
+We release all of our open source software under the [M.I.T. license](https://opensource.org/licenses/MIT). It’s very freeing and not restrictive, literally 
+the only “ask” it contains is that they include the license with the software.
 
--   Reporting [an issue](https://github.com/anuraghazra/github-readme-stats/issues/new?assignees=&labels=bug&template=bug_report.yml).
--   [Discussing](https://github.com/anuraghazra/github-readme-stats/discussions) the current state of the code.
--   Submitting [a fix](https://github.com/anuraghazra/github-readme-stats/compare).
--   Proposing [new features](https://github.com/anuraghazra/github-readme-stats/issues/new?assignees=&labels=enhancement&template=feature_request.yml).
--   Becoming a maintainer.
+### What can I open source?
+We want to try and share all we can, it’s quite literally who we are as a company. The value of transparency should 
+flow over to our codebase as much as it does into all other parts of the company. If you feel you’ve worked on something 
+that can help others, by all means - pay it forward and share it to help others out.
 
-## All Changes Happen Through Pull Requests
+One aspect to always consider is security, something we’re always cognizant of even more so since the [hack](https://open.buffer.com/buffer-has-been-hacked-here-is-whats-going-on/). 
+Does this code have any API keys? Is there sensitive data hardcoded in any strings? 
+Things like this should always be the first question to ask, and if the answer is yes - abstract out the code 
+if you can to another repo. Security comes before open sourcing our code, since it ensures our quality of life 
+for the code and our awesome customers!
 
-Pull requests are the best way to propose changes. We actively welcome your pull requests:
+Another gotcha - **if you’re open sourcing a mature repo**, make sure there aren’t any sensitive commits someone 
+could go back and view. If you aren’t sure, it’s much easier to just create a fresh repo and add the code there.
 
-1.  Fork the repo and create your branch from `master`.
-2.  If you've added code that should be tested, add some tests' examples.
-3.  If you've changed APIs, update the documentation.
-4.  Issue that pull request!
+### What should I open source?
+Even though we want to share all we can, we also want to share code that’s particularly helpful and modular. 
+This is why we don’t flip our entire web or mobile repos to public. Would that be neat? Yea, I think so. But it’s 
+also not the most actionable service we can provide to the community.
 
-## Under the hood of github-readme-stats
+But, some of the hard problems we’ve solved - those are perfect. For example, on iOS there are no stock controls to 
+display an image, support pinch to zoom, paging or have a nice black background to focus on the content. We’ve solved 
+that problem though, and it was (and still is) a great [example](https://github.com/bufferapp/buffer-ios-image-viewer) of what we like to open source.
 
-Interested in diving deeper into understanding how github-readme-stats works?
+### Can I spend time on open source? Is it part of our cycles? Can I spend time contributing back to other open source projects?
+We value transparency, and open sourcing our code is part of that ethos, so it’s important to us. If you feel you’re 
+about to work on something that’s an open source candidate, remember to code for that from the beginning. If you’re 
+asked about any time estimates, include that time along with it.
 
-[Bohdan](https://github.com/Bogdan-Lyashenko) wrote a fantastic in-depth post about it, check it out:
+The free roam period of our cycles is a great spot to look at contributing back to open source projects if you’re not 
+in a natural spot to do so.
 
-**[Under the hood of github-readme-stats project](https://codecrumbs.io/library/github-readme-stats)**
+### How do I open source - what’s it all look like end to end?
+- [ ] Double check the code and the repo fit the bill for being secure, and that it contains no sensitive data ✅
+- [ ] Consult anyone else on your team if need be, i.e. “Heads up - I’m about to flip this repo to public.” ✅
+- [ ] Adding a good README is key for open source, so now is a good time to add one. For a phenomenal example, [check this one out](https://github.com/bufferapp/BufferTextInputLayout).
+- [ ] Make the repo public on Github ✅
+- [ ] Celebrate and party that we’ve helped out the community some more and shared our knowledge! 🎊
+- [ ] Add your open source project to our [open source page](http://bufferapp.github.io/), here’s some info on [how to do that](https://github.com/bufferapp/buffer-opensource). ✅
+- [ ] Tweet it out on @bufferdevs - and pat yourself on the back! ✅
 
-## Local Development
-
-To run & test github-readme-stats, you need to follow a few simple steps:-
-_(make sure you already have a [Vercel](https://vercel.com/) account)_
-
-1.  Install [Vercel CLI](https://vercel.com/download).
-2.  Fork the repository and clone the code to your local machine.
-3.  Run `npm install` in the repository root.
-4.  Run the command `vercel` in the root and follow the steps there.
-5.  Run the command `vercel dev` to start a development server at <http://localhost:3000>.
-6.  The cards will then be available from this local endpoint (i.e. `http://localhost:3000/api?username=anuraghazra`).
-
-> [!NOTE]\
-> You can debug the package code in [Vscode](https://code.visualstudio.com/) by using the [Node.js: Attach to process](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_setting-up-an-attach-configuration) debug option. You can also debug any tests using the [VSCode Jest extension](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest). For more information, see https://github.com/jest-community/vscode-jest/issues/912.
-
-## Themes Contribution
-
-We're currently paused addition of new themes to decrease maintenance efforts. All pull requests related to new themes will be closed.
-
-> [!NOTE]\
-> If you are considering contributing your theme just because you are using it personally, then instead of adding it to our theme collection, you can use card [customization options](./readme.md#customization).
-
-## Translations Contribution
-
-GitHub Readme Stats supports multiple languages, if we are missing your language, you can contribute it! You can check the currently supported languages [here](./readme.md#available-locales).
-
-To contribute your language you need to edit the [src/translations.js](./src/translations.js) file and add new property to each object where the key is the language code in [ISO 639-1 standard](https://www.andiamo.co.uk/resources/iso-language-codes/) and the value is the translated string.
-
-## Any contributions you make will be under the MIT Software License
-
-In short, when you submit changes, your submissions are understood to be under the same [MIT License](https://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
-
-## Report issues/bugs using GitHub's [issues](https://github.com/anuraghazra/github-readme-stats/issues)
-
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/anuraghazra/github-readme-stats/issues/new/choose); it's that easy!
-
-## Frequently Asked Questions (FAQs)
-
-**Q:** How to hide Jupyter Notebook?
-
-> **Ans:** &hide=jupyter%20notebook
-
-**Q:** I could not figure out how to deploy on my own Vercel instance
-
-> **Ans:**
->
-> -   docs: <https://github.com/anuraghazra/github-readme-stats/#deploy-on-your-own-vercel-instance>
-> -   YT tutorial by codeSTACKr: <https://www.youtube.com/watch?v=n6d4KHSKqGk&feature=youtu.be&t=107>
-
-**Q:** Language Card is incorrect
-
-> **Ans:** Please read all the related issues/comments before opening any issues regarding language card stats:
->
-> -   <https://github.com/anuraghazra/github-readme-stats/issues/136#issuecomment-665164174>
->
-> -   <https://github.com/anuraghazra/github-readme-stats/issues/136#issuecomment-665172181>
-
-**Q:** How to count private stats?
-
-> **Ans:** We can only count public commits & we cannot access any other private info of any users, so it's not possible. The only way to count your personal private stats is to deploy on your own instance & use your own PAT (Personal Access Token)
-
-### Bug Reports
-
-**Great Bug Reports** tend to have:
-
--   A quick summary and/or background
--   Steps to reproduce
-    -   Be specific!
-    -   Share the snapshot, if possible.
-    -   GitHub Readme Stats' live link
--   What actually happens
--   What you expected would happen
--   Notes (possibly including why you think this might be happening or stuff you tried that didn't work)
-
-People _love_ thorough bug reports. I'm not even kidding.
-
-### Feature Request
-
-**Great Feature Requests** tend to have:
-
--   A quick idea summary
--   What & why do you want to add the specific feature
--   Additional context like images, links to resources to implement the feature, etc.
+### Any general tips?
+  - It’s great to think about coding for open source from the beginning. Keeping an “open source” mindset can also 
+  lead to objectively better code, since it enforces abstraction inherently and makes you think about processes 
+  more proactively. 
+  - **//Commenting** is great! **#DocumentAllTheThings**
+  - Feel free to let Jordan know you’ve open sourced something so he can tweet it out on @bufferdevs - or feel 
+  free to add it to the queue yourself! If you’re not a content contributor to that account, Jordan can add you or 
+  you can hop into admin and add yourself, either way!
+  - Any other questions you couldn’t quite get answered here? Feel free to tap on the shoulder of someone from your team, 
+  or ask your lead any questions. Jordan is also available to answer any questions - and the #eng-opensource channel is 
+  a great place to chat too!
