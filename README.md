@@ -1,73 +1,89 @@
-{
-  "name": "github-readme-stats",
-  "version": "1.0.0",
-  "description": "Dynamically generate stats for your GitHub readme",
-  "keywords": [
-    "github-readme-stats",
-    "readme-stats",
-    "cards",
-    "card-generator"
-  ],
-  "main": "src/index.js",
-  "type": "module",
-  "homepage": "https://github.com/anuraghazra/github-readme-stats",
-  "bugs": {
-    "url": "https://github.com/anuraghazra/github-readme-stats/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/anuraghazra/github-readme-stats.git"
-  },
-  "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
-    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
-    "test:update:snapshot": "node --experimental-vm-modules node_modules/jest/bin/jest.js -u",
-    "test:e2e": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.e2e.config.js",
-    "theme-readme-gen": "node scripts/generate-theme-doc",
-    "preview-theme": "node scripts/preview-theme",
-    "close-stale-theme-prs": "node scripts/close-stale-theme-prs",
-    "generate-langs-json": "node scripts/generate-langs-json",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "prepare": "husky",
-    "lint": "npx eslint --max-warnings 0 \"./src/**/*.js\" \"./scripts/**/*.js\" \"./tests/**/*.js\" \"./api/**/*.js\" \"./themes/**/*.js\"",
-    "bench": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.bench.config.js"
-  },
-  "author": "Anurag Hazra",
-  "license": "MIT",
-  "devDependencies": {
-    "@actions/core": "^1.10.1",
-    "@actions/github": "^6.0.0",
-    "@testing-library/dom": "^10.1.0",
-    "@testing-library/jest-dom": "^6.4.5",
-    "@uppercod/css-to-object": "^1.1.1",
-    "axios-mock-adapter": "^1.22.0",
-    "color-contrast-checker": "^2.1.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "hjson": "^3.2.2",
-    "husky": "^9.0.11",
-    "jest": "^29.7.0",
-    "jest-bench": "^29.7.1",
-    "jest-environment-jsdom": "^29.7.0",
-    "js-yaml": "^4.1.0",
-    "lint-staged": "^15.2.2",
-    "lodash.snakecase": "^4.1.1",
-    "parse-diff": "^0.11.1",
-    "prettier": "^3.2.5"
-  },
-  "dependencies": {
-    "axios": "^1.7.1",
-    "dotenv": "^16.4.5",
-    "emoji-name-map": "^1.2.8",
-    "github-username-regex": "^1.0.0",
-    "upgrade": "^1.1.0",
-    "word-wrap": "^1.2.5"
-  },
-  "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  }
-}
+# Project Name
+> Outline a brief description of your project.
+> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+
+## Table of Contents
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Screenshots](#screenshots)
+* [Setup](#setup)
+* [Usage](#usage)
+* [Project Status](#project-status)
+* [Room for Improvement](#room-for-improvement)
+* [Acknowledgements](#acknowledgements)
+* [Contact](#contact)
+<!-- * [License](#license) -->
+
+
+## General Information
+- Provide general information about your project here.
+- What problem does it (intend to) solve?
+- What is the purpose of your project?
+- Why did you undertake it?
+<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+
+
+## Technologies Used
+- Tech 1 - version 1.0
+- Tech 2 - version 2.0
+- Tech 3 - version 3.0
+
+
+## Features
+List the ready features here:
+- Awesome feature 1
+- Awesome feature 2
+- Awesome feature 3
+
+
+## Screenshots
+![Example screenshot](./img/screenshot.png)
+<!-- If you have screenshots you'd like to share, include them here. -->
+
+
+## Setup
+What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+
+Proceed to describe how to install / setup one's local environment / get started with the project.
+
+
+## Usage
+How does one go about using it?
+Provide various use cases and code examples here.
+
+`write-your-code-here`
+
+
+## Project Status
+Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+
+
+## Room for Improvement
+Include areas you believe need improvement / could be improved. Also add TODOs for future development.
+
+Room for improvement:
+- Improvement to be done 1
+- Improvement to be done 2
+
+To do:
+- Feature to be added 1
+- Feature to be added 2
+
+
+## Acknowledgements
+Give credit here.
+- This project was inspired by...
+- This project was based on [this tutorial](https://www.example.com).
+- Many thanks to...
+
+
+## Contact
+Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+
+
+<!-- Optional -->
+<!-- ## License -->
+<!-- This project is open source and available under the [... License](). -->
+
+<!-- You don't have to include all sections - just the one's relevant to your project -->
