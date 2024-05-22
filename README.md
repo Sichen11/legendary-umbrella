@@ -1,1 +1,3 @@
-* text=auto eol=lf
+.dockerignore
+Dockerfile
+__pycache__
