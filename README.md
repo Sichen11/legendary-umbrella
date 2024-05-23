@@ -1,48 +1,126 @@
+# Markdown - Extras
 
-# <Type>: <Subject text> # 50-char limit #########
-# 72-character lines for description ###################################
 
-# Why:
+## Image Align
 
-# Related Issues:
+### Image Align - Middle _(default)_
 
-# References:
+Aenean eu euismod ante. Phasellus finibus nec est eget euismod.<img src="right-arrow.svg" width="42" height="42"> Duis pharetra sapien dolor, nec euismod nunc maximus ut. Fusce elementum tellus ac lacus ultrices, vel efficitur metus faucibus. Etiam sed egestas risus. Fusce quis ex lorem. Nullam aliquet ante vel mi ultrices, vel pretium nibh pretium. lobortis.
 
-# Run git config commit.template .gitmessage
-# Use git commit when committing files, and this template will be used.
+```html
+<img src="right-arrow.svg" width="42" height="42">
+```
 
-# Example commit message:
-# chore: Add commit message template
+### Image Align - Left
 
-# Capitalize subject line.
-# Write capitalized imperative statement with no period for subject
-# List details of significant changes below the subject line
-# Write details as capitalized imperative statements
-# Provide the below sections for further context
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.<img src="left-arrow.svg" alt="left face" align="left" width="42" height="42"> Fusce semper libero ligula, vel varius enim sagittis quis. Aenean sed massa velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras faucibus consequat est eu varius. Nam vitae dignissim velit. 
 
-# Why:
+```html
+<img src="left-arrow.svg" alt="left face" align="left" width="42" height="42"> 
+```
 
-# A short imperative subject helps when viewing the log, especially when
-# viewing one-line formatted logs.  Clear writing of what changed helps
-# give a clean understanding of context when reading blame messages and
-# when looking at a specific commit.
+### Image Align - Right
 
-# Related Issues:
-# Link to related issue numbers (hyper link if applicable), e.g.:
-# git issue 123
+Aenean eu euismod ante. Phasellus finibus nec est eget euismod.<img src="right-arrow.svg" alt="right" align="right" width="42" height="42"> Duis pharetra sapien dolor, nec euismod nunc maximus ut. Fusce elementum tellus ac lacus ultrices, vel efficitur metus faucibus. Etiam sed egestas risus. Fusce quis ex lorem. Nullam aliquet ante vel mi ultrices, vel pretium nibh pretium.
 
-# References:
-# List relevant references e.g.:
-# https://chris.beams.io/posts/git-commit/
+```html
+<img src="right-arrow.svg" alt="right" align="right" width="42" height="42">
+```
 
-# Type can be
-#    chore    (updating grunt tasks etc; no production code change)
-#    docs     (changes to documentation, comments.  No logic change)
-#    feat     (New feature)
-#    fix      (Bug fix, or other change related to tracked issue)
-#    merge    (Merge of one branch into another, no other change)
-#    refactor (refactoring production code)
-#    revert   (Revert of a previous commit, no other change)
-#    style    (formatting, missing semi colons, etc; no code change)
-#    test     (adding or refactoring tests; no production code change)
-#    tool     (adding or refactoring tools; no production code change)
+## Style Text
+
+
+### keyboard input
+
+<kbd>ALT + F4</kbd> 
+```
+<kbd>ALT + F4</kbd> 
+```
+
+### subscripted
+normal text <sub>subscripted</sub> normal text
+```
+normal text <sub>subscripted</sub> normal text
+```
+
+### superscripted
+normal text <sup>superscripted</sup> normal text
+```
+normal text <sup>superscripted</sup> normal text
+```
+
+## Table
+
+### Table - _rowspan_
+<table>
+  <tr>
+    <th>column 1</th>
+    <th>column 2</th>
+    <th>column 3</th>
+  </tr>
+  <tr>
+    <td>row 1 - column 1</td>
+    <td>row 1 - column 2</td>
+    <td rowspan="2" align="center">row 1 & 2 - column 3</td>
+  </tr>
+  <tr>
+    <td>row 2 - column 1</td>
+    <td>row 2 - column 2</td>
+  </tr>
+</table>
+
+```html
+<table>
+  <tr>
+    <th>column 1</th>
+    <th>column 2</th>
+    <th>column 3</th>
+  </tr>
+  <tr>
+    <td>row 1 - column 1</td>
+    <td>row 1 - column 2</td>
+    <td rowspan="2" align="center">row 1 & 2 - column 3</td>
+  </tr>
+  <tr>
+    <td>row 2 - column 1</td>
+    <td>row 2 - column 2</td>
+  </tr>
+</table>
+```
+
+### Table - _colspan_
+<table>
+  <tr>
+    <th>column 1</th>
+    <th>column 2</th>
+    <th>column 3</th>
+  </tr>
+  <tr>
+    <td>row 1 - column 1</td>
+    <td colspan="2" align="center">row 1 - column 2 & 3</td>
+  </tr>
+  <tr>
+    <td>row 2 - column 1</td>
+    <td>row 2 - column 2</td>
+    <td>row 2 - column 3</td>
+  </tr>
+</table>
+
+```html
+<table>
+  <tr>
+    <th>column 1</th>
+    <th>column 2</th>
+    <th>column 3</th>
+  </tr>
+  <tr>
+    <td>row 1 - column 1</td>
+    <td colspan="2" align="center">row 1 - column 2 & 3</td>
+  </tr>
+  <tr>
+    <td>row 2 - column 1</td>
+    <td>row 2 - column 2</td>
+    <td>row 2 - column 3</td>
+  </tr>
+</table>
+```
