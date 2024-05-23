@@ -1,321 +1,143 @@
-# EMOJI CHEAT SHEET
 
-[Назад к README.md](https://github.com/GnuriaN/format-README.md/blob/master/README.md)
+# Awesome README [![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome#readme)
+> A curated list of awesome READMEs
+> <img src="icon.png" align="right"/>
 
-##  People
-|		|		|		|
-|	-	|	-	|	-	|
-|	:bowtie:    `:bowtie:`	|	:rage:    `:rage:`	|	:ok_hand:    `:ok_hand:`	|
-|	:smile:    `:smile:`	|	:triumph:    `:triumph:`	|	:punch:    `:punch:`	|
-|	:laughing:    `:laughing:`	|	:sleepy:    `:sleepy:`	|	:facepunch:    `:facepunch:`	|
-|	:blush:    `:blush:`	|	:yum:    `:yum:`	|	:fist:    `:fist:`	|
-|	:smiley:    `:smiley:`	|	:mask:    `:mask:`	|	:v:    `:v:`	|
-|	:relaxed:    `:relaxed:`	|	:sunglasses:    `:sunglasses:`	|	:wave:    `:wave:`	|
-|	:smirk:    `:smirk:`	|	:dizzy_face:    `:dizzy_face:`	|	:hand:    `:hand:`	|
-|	:heart_eyes:    `:heart_eyes:`	|	:imp:    `:imp:`	|	:raised_hand:    `:raised_hand:`	|
-|	:kissing_heart:    `:kissing_heart:`	|	:smiling_imp:    `:smiling_imp:`	|	:open_hands:    `:open_hands:`	|
-|	:kissing_closed_eyes:    `:kissing_closed_eyes:`	|	:neutral_face:    `:neutral_face:`	|	:point_up:    `:point_up:`	|
-|	:flushed:    `:flushed:`	|	:no_mouth:    `:no_mouth:`	|	:point_down:    `:point_down:`	|
-|	:relieved:    `:relieved:`	|	:innocent:    `:innocent:`	|	:point_left:    `:point_left:`	|
-|	:satisfied:    `:satisfied:`	|	:alien:    `:alien:`	|	:point_right:    `:point_right:`	|
-|	:grin:    `:grin:`	|	:yellow_heart:    `:yellow_heart:`	|	:raised_hands:    `:raised_hands:`	|
-|	:wink:    `:wink:`	|	:blue_heart:    `:blue_heart:`	|	:pray:    `:pray:`	|
-|	:stuck_out_tongue_winking_eye:    `:stuck_out_tongue_winking_eye:`	|	:purple_heart:    `:purple_heart:`	|	:point_up_2:    `:point_up_2:`	|
-|	:stuck_out_tongue_closed_eyes:    `:stuck_out_tongue_closed_eyes:`	|	:heart:    `:heart:`	|	:clap:    `:clap:`	|
-|	:grinning:    `:grinning:`	|	:green_heart:    `:green_heart:`	|	:muscle:    `:muscle:`	|
-|	:kissing:    `:kissing:`	|	:broken_heart:    `:broken_heart:`	|	:metal:    `:metal:`	|
-|	:kissing_smiling_eyes:    `:kissing_smiling_eyes:`	|	:heartbeat:    `:heartbeat:`	|	:fu:    `:fu:`	|
-|	:stuck_out_tongue:    `:stuck_out_tongue:`	|	:heartpulse:    `:heartpulse:`	|	:runner:    `:runner:`	|
-|	:sleeping:    `:sleeping:`	|	:two_hearts:    `:two_hearts:`	|	:running:    `:running:`	|
-|	:worried:    `:worried:`	|	:revolving_hearts:    `:revolving_hearts:`	|	:couple:    `:couple:`	|
-|	:frowning:    `:frowning:`	|	:cupid:    `:cupid:`	|	:family:    `:family:`	|
-|	:anguished:    `:anguished:`	|	:sparkling_heart:    `:sparkling_heart:`	|	:two_men_holding_hands:    `:two_men_holding_hands:`	|
-|	:open_mouth:    `:open_mouth:`	|	:sparkles:    `:sparkles:`	|	:two_women_holding_hands:    `:two_women_holding_hands:`	|
-|	:grimacing:    `:grimacing:`	|	:star:    `:star:`	|	:dancer:    `:dancer:`	|
-|	:confused:    `:confused:`	|	:star2:    `:star2:`	|	:dancers:    `:dancers:`	|
-|	:hushed:    `:hushed:`	|	:dizzy:    `:dizzy:`	|	:ok_woman:    `:ok_woman:`	|
-|	:expressionless:    `:expressionless:`	|	:boom:    `:boom:`	|	:no_good:    `:no_good:`	|
-|	:unamused:    `:unamused:`	|	:collision:    `:collision:`	|	:information_desk_person:    `:information_desk_person:`	|
-|	:sweat_smile:    `:sweat_smile:`	|	:anger:    `:anger:`	|	:raising_hand:    `:raising_hand:`	|
-|	:sweat:    `:sweat:`	|	:exclamation:    `:exclamation:`	|	:bride_with_veil:    `:bride_with_veil:`	|
-|	:disappointed_relieved:    `:disappointed_relieved:`	|	:question:    `:question:`	|	:person_with_pouting_face:    `:person_with_pouting_face:`	|
-|	:weary:    `:weary:`	|	:grey_exclamation:    `:grey_exclamation:`	|	:person_frowning:    `:person_frowning:`	|
-|	:pensive:    `:pensive:`	|	:grey_question:    `:grey_question:`	|	:bow:    `:bow:`	|
-|	:disappointed:    `:disappointed:`	|	:zzz:    `:zzz:`	|	:couple_with_heart:    `:couple_with_heart:`	|
-|	:confounded:    `:confounded:`	|	:dash:    `:dash:`	|	:massage:    `:massage:`	|
-|	:fearful:    `:fearful:`	|	:sweat_drops:    `:sweat_drops:`	|	:haircut:    `:haircut:`	|
-|	:cold_sweat:    `:cold_sweat:`	|	:notes:    `:notes:`	|	:nail_care:    `:nail_care:`	|
-|	:persevere:    `:persevere:`	|	:musical_note:    `:musical_note:`	|	:boy:    `:boy:`	|
-|	:cry:    `:cry:`	|	:fire:    `:fire:`	|	:girl:    `:girl:`	|
-|	:sob:    `:sob:`	|	:hankey:    `:hankey:`	|	:woman:    `:woman:`	|
-|	:joy:    `:joy:`	|	:poop:    `:poop:`	|	:man:    `:man:`	|
-|	:astonished:    `:astonished:`	|	:shit:    `:shit:`	|	:baby:    `:baby:`	|
-|	:scream:    `:scream:`	|	:+1:    `:+1:`	|	:older_woman:    `:older_woman:`	|
-|	:neckbeard:    `:neckbeard:`	|	:thumbsup:    `:thumbsup:`	|	:older_man:    `:older_man:`	|
-|	:tired_face:    `:tired_face:`	|	:-1:    `:-1:`	|	:person_with_blond_hair:    `:person_with_blond_hair:`	|
-|	:angry:    `:angry:`	|	:thumbsdown:    `:thumbsdown:`	|	:feelsgood:    `:feelsgood:`	|
-|	:man_with_gua_pi_mao:    `:man_with_gua_pi_mao:`	|	:hear_no_evil:    `:hear_no_evil:`	|	:finnadie:    `:finnadie:`	|
-|	:man_with_turban:    `:man_with_turban:`	|	:speak_no_evil:    `:speak_no_evil:`	|	:goberserk:    `:goberserk:`	|
-|	:construction_worker:    `:construction_worker:`	|	:guardsman:    `:guardsman:`	|	:godmode:    `:godmode:`	|
-|	:cop:    `:cop:`	|	:skull:    `:skull:`	|	:hurtrealbad:    `:hurtrealbad:`	|
-|	:angel:    `:angel:`	|	:feet:    `:feet:`	|	:rage1:    `:rage1:`	|
-|	:princess:    `:princess:`	|	:lips:    `:lips:`	|	:rage2:    `:rage2:`	|
-|	:smiley_cat:    `:smiley_cat:`	|	:kiss:    `:kiss:`	|	:rage3:    `:rage3:`	|
-|	:smile_cat:    `:smile_cat:`	|	:droplet:    `:droplet:`	|	:rage4:    `:rage4:`	|
-|	:heart_eyes_cat:    `:heart_eyes_cat:`	|	:ear:    `:ear:`	|	:suspect:    `:suspect:`	|
-|	:kissing_cat:    `:kissing_cat:`	|	:eyes:    `:eyes:`	|	:trollface:    `:trollface:`	|
-|	:smirk_cat:    `:smirk_cat:`	|	:nose:    `:nose:`	|	:joy_cat:    `:joy_cat:`	|
-|	:scream_cat:    `:scream_cat:`	|	:tongue:    `:tongue:`	|	:pouting_cat:    `:pouting_cat:`	|
-|	:crying_cat_face:    `:crying_cat_face:`	|	:love_letter:    `:love_letter:`	|	:japanese_ogre:    `:japanese_ogre:`	|
-|	:thought_balloon:    `:thought_balloon:`	|	:bust_in_silhouette:    `:bust_in_silhouette:`	|	:japanese_goblin:    `:japanese_goblin:`	|
-|	:see_no_evil:    `:see_no_evil:`	|	:busts_in_silhouette:    `:busts_in_silhouette:`	|	:speech_balloon:    `:speech_balloon:`	|
+Elements in beautiful READMEs include, but are not limited to:
 
+images, screenshots, GIFs, text formatting, etc.
+   
+## Examples
 
-## Nature
-|		|		|		|
-|	-	|	-	|	-	|
-|	:sunny:    `:sunny:`	|	:bug:    `:bug:`	|	:maple_leaf:    `:maple_leaf:`	|
-|	:umbrella:    `:umbrella:`	|	:honeybee:    `:honeybee:`	|	:leaves:    `:leaves:`	|
-|	:cloud:    `:cloud:`	|	:ant:    `:ant:`	|	:fallen_leaf:    `:fallen_leaf:`	|
-|	:snowflake:    `:snowflake:`	|	:beetle:    `:beetle:`	|	:herb:    `:herb:`	|
-|	:snowman:    `:snowman:`	|	:snail:    `:snail:`	|	:mushroom:    `:mushroom:`	|
-|	:zap:    `:zap:`	|	:octopus:    `:octopus:`	|	:cactus:    `:cactus:`	|
-|	:cyclone:    `:cyclone:`	|	:tropical_fish:    `:tropical_fish:`	|	:palm_tree:    `:palm_tree:`	|
-|	:foggy:    `:foggy:`	|	:fish:    `:fish:`	|	:evergreen_tree:    `:evergreen_tree:`	|
-|	:ocean:    `:ocean:`	|	:whale:    `:whale:`	|	:deciduous_tree:    `:deciduous_tree:`	|
-|	:cat:    `:cat:`	|	:whale2:    `:whale2:`	|	:chestnut:    `:chestnut:`	|
-|	:dog:    `:dog:`	|	:dolphin:    `:dolphin:`	|	:seedling:    `:seedling:`	|
-|	:mouse:    `:mouse:`	|	:cow2:    `:cow2:`	|	:blossom:    `:blossom:`	|
-|	:hamster:    `:hamster:`	|	:ram:    `:ram:`	|	:ear_of_rice:    `:ear_of_rice:`	|
-|	:rabbit:    `:rabbit:`	|	:rat:    `:rat:`	|	:shell:    `:shell:`	|
-|	:wolf:    `:wolf:`	|	:water_buffalo:    `:water_buffalo:`	|	:globe_with_meridians:    `:globe_with_meridians:`	|
-|	:frog:    `:frog:`	|	:tiger2:    `:tiger2:`	|	:sun_with_face:    `:sun_with_face:`	|
-|	:tiger:    `:tiger:`	|	:rabbit2:    `:rabbit2:`	|	:full_moon_with_face:    `:full_moon_with_face:`	|
-|	:koala:    `:koala:`	|	:dragon:    `:dragon:`	|	:new_moon_with_face:    `:new_moon_with_face:`	|
-|	:bear:    `:bear:`	|	:goat:    `:goat:`	|	:new_moon:    `:new_moon:`	|
-|	:pig:    `:pig:`	|	:rooster:    `:rooster:`	|	:waxing_crescent_moon:    `:waxing_crescent_moon:`	|
-|	:pig_nose:    `:pig_nose:`	|	:dog2:    `:dog2:`	|	:first_quarter_moon:    `:first_quarter_moon:`	|
-|	:cow:    `:cow:`	|	:pig2:    `:pig2:`	|	:waxing_gibbous_moon:    `:waxing_gibbous_moon:`	|
-|	:boar:    `:boar:`	|	:mouse2:    `:mouse2:`	|	:full_moon:    `:full_moon:`	|
-|	:monkey_face:    `:monkey_face:`	|	:ox:    `:ox:`	|	:waning_gibbous_moon:    `:waning_gibbous_moon:`	|
-|	:monkey:    `:monkey:`	|	:dragon_face:    `:dragon_face:`	|	:last_quarter_moon:    `:last_quarter_moon:`	|
-|	:horse:    `:horse:`	|	:blowfish:    `:blowfish:`	|	:waning_crescent_moon:    `:waning_crescent_moon:`	|
-|	:racehorse:    `:racehorse:`	|	:crocodile:    `:crocodile:`	|	:last_quarter_moon_with_face:    `:last_quarter_moon_with_face:`	|
-|	:camel:    `:camel:`	|	:dromedary_camel:    `:dromedary_camel:`	|	:first_quarter_moon_with_face:    `:first_quarter_moon_with_face:`	|
-|	:sheep:    `:sheep:`	|	:leopard:    `:leopard:`	|	:crescent_moon:    `:crescent_moon:`	|
-|	:elephant:    `:elephant:`	|	:cat2:    `:cat2:`	|	:earth_africa:    `:earth_africa:`	|
-|	:panda_face:    `:panda_face:`	|	:poodle:    `:poodle:`	|	:earth_americas:    `:earth_americas:`	|
-|	:snake:    `:snake:`	|	:paw_prints:    `:paw_prints:`	|	:earth_asia:    `:earth_asia:`	|
-|	:bird:    `:bird:`	|	:bouquet:    `:bouquet:`	|	:volcano:    `:volcano:`	|
-|	:baby_chick:    `:baby_chick:`	|	:cherry_blossom:    `:cherry_blossom:`	|	:milky_way:    `:milky_way:`	|
-|	:hatched_chick:    `:hatched_chick:`	|	:tulip:    `:tulip:`	|	:partly_sunny:    `:partly_sunny:`	|
-|	:hatching_chick:    `:hatching_chick:`	|	:four_leaf_clover:    `:four_leaf_clover:`	|	:octocat:    `:octocat:`	|
-|	:chicken:    `:chicken:`	|	:rose:    `:rose:`	|	:squirrel:    `:squirrel:`	|
-|	:penguin:    `:penguin:`	|	:sunflower:    `:sunflower:`	|		|
-|	:turtle:    `:turtle:`	|	:hibiscus:    `:hibiscus:`	|		|
-
-## Objects
-|		|		|		|
-|	-	|	-	|	-	|
-|	:bamboo:    `:bamboo:`	|	:postal_horn:    `:postal_horn:`	|	:guitar:    `:guitar:`	|
-|	:gift_heart:    `:gift_heart:`	|	:mailbox_closed:    `:mailbox_closed:`	|	:shoe:    `:shoe:`	|
-|	:dolls:    `:dolls:`	|	:mailbox_with_mail:    `:mailbox_with_mail:`	|	:sandal:    `:sandal:`	|
-|	:school_satchel:    `:school_satchel:`	|	:mailbox_with_no_mail:    `:mailbox_with_no_mail:`	|	:high_heel:    `:high_heel:`	|
-|	:mortar_board:    `:mortar_board:`	|	:package:    `:package:`	|	:lipstick:    `:lipstick:`	|
-|	:flags:    `:flags:`	|	:door:    `:door:`	|	:boot:    `:boot:`	|
-|	:fireworks:    `:fireworks:`	|	:smoking:    `:smoking:`	|	:shirt:    `:shirt:`	|
-|	:sparkler:    `:sparkler:`	|	:bomb:    `:bomb:`	|	:tshirt:    `:tshirt:`	|
-|	:wind_chime:    `:wind_chime:`	|	:gun:    `:gun:`	|	:necktie:    `:necktie:`	|
-|	:rice_scene:    `:rice_scene:`	|	:hocho:    `:hocho:`	|	:womans_clothes:    `:womans_clothes:`	|
-|	:jack_o_lantern:    `:jack_o_lantern:`	|	:pill:    `:pill:`	|	:dress:    `:dress:`	|
-|	:ghost:    `:ghost:`	|	:syringe:    `:syringe:`	|	:running_shirt_with_sash:    `:running_shirt_with_sash:`	|
-|	:santa:    `:santa:`	|	:page_facing_up:    `:page_facing_up:`	|	:jeans:    `:jeans:`	|
-|	:christmas_tree:    `:christmas_tree:`	|	:page_with_curl:    `:page_with_curl:`	|	:kimono:    `:kimono:`	|
-|	:gift:    `:gift:`	|	:bookmark_tabs:    `:bookmark_tabs:`	|	:bikini:    `:bikini:`	|
-|	:bell:    `:bell:`	|	:bar_chart:    `:bar_chart:`	|	:ribbon:    `:ribbon:`	|
-|	:no_bell:    `:no_bell:`	|	:chart_with_upwards_trend:    `:chart_with_upwards_trend:`	|	:tophat:    `:tophat:`	|
-|	:tanabata_tree:    `:tanabata_tree:`	|	:chart_with_downwards_trend:    `:chart_with_downwards_trend:`	|	:crown:    `:crown:`	|
-|	:tada:    `:tada:`	|	:scroll:    `:scroll:`	|	:womans_hat:    `:womans_hat:`	|
-|	:confetti_ball:    `:confetti_ball:`	|	:clipboard:    `:clipboard:`	|	:mans_shoe:    `:mans_shoe:`	|
-|	:balloon:    `:balloon:`	|	:calendar:    `:calendar:`	|	:closed_umbrella:    `:closed_umbrella:`	|
-|	:crystal_ball:    `:crystal_ball:`	|	:date:    `:date:`	|	:briefcase:    `:briefcase:`	|
-|	:cd:    `:cd:`	|	:card_index:    `:card_index:`	|	:handbag:    `:handbag:`	|
-|	:dvd:    `:dvd:`	|	:file_folder:    `:file_folder:`	|	:pouch:    `:pouch:`	|
-|	:floppy_disk:    `:floppy_disk:`	|	:open_file_folder:    `:open_file_folder:`	|	:purse:    `:purse:`	|
-|	:camera:    `:camera:`	|	:scissors:    `:scissors:`	|	:eyeglasses:    `:eyeglasses:`	|
-|	:video_camera:    `:video_camera:`	|	:pushpin:    `:pushpin:`	|	:fishing_pole_and_fish:    `:fishing_pole_and_fish:`	|
-|	:movie_camera:    `:movie_camera:`	|	:paperclip:    `:paperclip:`	|	:coffee:    `:coffee:`	|
-|	:computer:    `:computer:`	|	:black_nib:    `:black_nib:`	|	:tea:    `:tea:`	|
-|	:tv:    `:tv:`	|	:pencil2:    `:pencil2:`	|	:sake:    `:sake:`	|
-|	:iphone:    `:iphone:`	|	:straight_ruler:    `:straight_ruler:`	|	:baby_bottle:    `:baby_bottle:`	|
-|	:phone:    `:phone:`	|	:triangular_ruler:    `:triangular_ruler:`	|	:beer:    `:beer:`	|
-|	:telephone:    `:telephone:`	|	:closed_book:    `:closed_book:`	|	:beers:    `:beers:`	|
-|	:telephone_receiver:    `:telephone_receiver:`	|	:green_book:    `:green_book:`	|	:cocktail:    `:cocktail:`	|
-|	:pager:    `:pager:`	|	:blue_book:    `:blue_book:`	|	:tropical_drink:    `:tropical_drink:`	|
-|	:fax:    `:fax:`	|	:orange_book:    `:orange_book:`	|	:wine_glass:    `:wine_glass:`	|
-|	:minidisc:    `:minidisc:`	|	:notebook:    `:notebook:`	|	:fork_and_knife:    `:fork_and_knife:`	|
-|	:vhs:    `:vhs:`	|	:notebook_with_decorative_cover:    `:notebook_with_decorative_cover:`	|	:pizza:    `:pizza:`	|
-|	:sound:    `:sound:`	|	:ledger:    `:ledger:`	|	:hamburger:    `:hamburger:`	|
-|	:speaker:    `:speaker:`	|	:books:    `:books:`	|	:fries:    `:fries:`	|
-|	:mute:    `:mute:`	|	:bookmark:    `:bookmark:`	|	:poultry_leg:    `:poultry_leg:`	|
-|	:loudspeaker:    `:loudspeaker:`	|	:name_badge:    `:name_badge:`	|	:meat_on_bone:    `:meat_on_bone:`	|
-|	:mega:    `:mega:`	|	:microscope:    `:microscope:`	|	:spaghetti:    `:spaghetti:`	|
-|	:hourglass:    `:hourglass:`	|	:telescope:    `:telescope:`	|	:curry:    `:curry:`	|
-|	:hourglass_flowing_sand:    `:hourglass_flowing_sand:`	|	:newspaper:    `:newspaper:`	|	:fried_shrimp:    `:fried_shrimp:`	|
-|	:alarm_clock:    `:alarm_clock:`	|	:football:    `:football:`	|	:bento:    `:bento:`	|
-|	:watch:    `:watch:`	|	:basketball:    `:basketball:`	|	:sushi:    `:sushi:`	|
-|	:radio:    `:radio:`	|	:soccer:    `:soccer:`	|	:fish_cake:    `:fish_cake:`	|
-|	:satellite:    `:satellite:`	|	:baseball:    `:baseball:`	|	:rice_ball:    `:rice_ball:`	|
-|	:loop:    `:loop:`	|	:tennis:    `:tennis:`	|	:rice_cracker:    `:rice_cracker:`	|
-|	:mag:    `:mag:`	|	:8ball:    `:8ball:`	|	:rice:    `:rice:`	|
-|	:mag_right:    `:mag_right:`	|	:rugby_football:    `:rugby_football:`	|	:ramen:    `:ramen:`	|
-|	:unlock:    `:unlock:`	|	:bowling:    `:bowling:`	|	:stew:    `:stew:`	|
-|	:lock:    `:lock:`	|	:golf:    `:golf:`	|	:oden:    `:oden:`	|
-|	:lock_with_ink_pen:    `:lock_with_ink_pen:`	|	:mountain_bicyclist:    `:mountain_bicyclist:`	|	:dango:    `:dango:`	|
-|	:closed_lock_with_key:    `:closed_lock_with_key:`	|	:bicyclist:    `:bicyclist:`	|	:egg:    `:egg:`	|
-|	:key:    `:key:`	|	:horse_racing:    `:horse_racing:`	|	:bread:    `:bread:`	|
-|	:bulb:    `:bulb:`	|	:snowboarder:    `:snowboarder:`	|	:doughnut:    `:doughnut:`	|
-|	:flashlight:    `:flashlight:`	|	:swimmer:    `:swimmer:`	|	:custard:    `:custard:`	|
-|	:high_brightness:    `:high_brightness:`	|	:surfer:    `:surfer:`	|	:icecream:    `:icecream:`	|
-|	:low_brightness:    `:low_brightness:`	|	:ski:    `:ski:`	|	:ice_cream:    `:ice_cream:`	|
-|	:electric_plug:    `:electric_plug:`	|	:spades:    `:spades:`	|	:shaved_ice:    `:shaved_ice:`	|
-|	:battery:    `:battery:`	|	:hearts:    `:hearts:`	|	:birthday:    `:birthday:`	|
-|	:calling:    `:calling:`	|	:clubs:    `:clubs:`	|	:cake:    `:cake:`	|
-|	:email:    `:email:`	|	:diamonds:    `:diamonds:`	|	:cookie:    `:cookie:`	|
-|	:mailbox:    `:mailbox:`	|	:gem:    `:gem:`	|	:chocolate_bar:    `:chocolate_bar:`	|
-|	:postbox:    `:postbox:`	|	:ring:    `:ring:`	|	:candy:    `:candy:`	|
-|	:bath:    `:bath:`	|	:trophy:    `:trophy:`	|	:lollipop:    `:lollipop:`	|
-|	:bathtub:    `:bathtub:`	|	:musical_score:    `:musical_score:`	|	:honey_pot:    `:honey_pot:`	|
-|	:shower:    `:shower:`	|	:musical_keyboard:    `:musical_keyboard:`	|	:apple:    `:apple:`	|
-|	:toilet:    `:toilet:`	|	:violin:    `:violin:`	|	:green_apple:    `:green_apple:`	|
-|	:wrench:    `:wrench:`	|	:space_invader:    `:space_invader:`	|	:tangerine:    `:tangerine:`	|
-|	:nut_and_bolt:    `:nut_and_bolt:`	|	:video_game:    `:video_game:`	|	:lemon:    `:lemon:`	|
-|	:hammer:    `:hammer:`	|	:black_joker:    `:black_joker:`	|	:cherries:    `:cherries:`	|
-|	:seat:    `:seat:`	|	:flower_playing_cards:    `:flower_playing_cards:`	|	:grapes:    `:grapes:`	|
-|	:moneybag:    `:moneybag:`	|	:game_die:    `:game_die:`	|	:watermelon:    `:watermelon:`	|
-|	:yen:    `:yen:`	|	:dart:    `:dart:`	|	:strawberry:    `:strawberry:`	|
-|	:dollar:    `:dollar:`	|	:mahjong:    `:mahjong:`	|	:peach:    `:peach:`	|
-|	:pound:    `:pound:`	|	:clapper:    `:clapper:`	|	:melon:    `:melon:`	|
-|	:euro:    `:euro:`	|	:memo:    `:memo:`	|	:banana:    `:banana:`	|
-|	:credit_card:    `:credit_card:`	|	:pencil:    `:pencil:`	|	:pear:    `:pear:`	|
-|	:money_with_wings:    `:money_with_wings:`	|	:book:    `:book:`	|	:pineapple:    `:pineapple:`	|
-|	:e-mail:    `:e-mail:`	|	:art:    `:art:`	|	:sweet_potato:    `:sweet_potato:`	|
-|	:inbox_tray:    `:inbox_tray:`	|	:microphone:    `:microphone:`	|	:eggplant:    `:eggplant:`	|
-|	:outbox_tray:    `:outbox_tray:`	|	:headphones:    `:headphones:`	|	:tomato:    `:tomato:`	|
-|	:envelope:    `:envelope:`	|	:trumpet:    `:trumpet:`	|	:corn:    `:corn:`	|
-|	:incoming_envelope:    `:incoming_envelope:`	|	:saxophone:    `:saxophone:`	|		|
+- [ai/size-limit](https://github.com/ai/size-limit#readme) - Project logo, clear description, screenshot, step-by-step installing instructions.
+- [aimeos/aimeos-typo3](https://github.com/aimeos/aimeos-typo3#readme) - Project logo. Clear description of what the project does. Demo screenshot. TOC for easy navigation. Easy installation and setup sections with screenshots. Links for further reading.
+- [ajeetdsouza/zoxide](https://github.com/ajeetdsouza/zoxide#readme) - Badges, project GIF, concise description, quick links, stepwise installation instructions.
+- [alichtman/shallow-backup](https://github.com/alichtman/shallow-backup#readme) - Clear description of what the project does. GIF Demo. TOC for easy navigation. Badges. Links for further reading. Simple install instructions.
+- [alichtman/stronghold](https://github.com/alichtman/stronghold#readme) - Project logo. Clear description of what the project does. GIF Demo. TOC for easy navigation. Badges. Links for further reading. Simple install instructions.
+- [amitmerchant1990/electron-markdownify](https://github.com/amitmerchant1990/electron-markdownify#readme) - Project logo. Minimalist description of what it is. GIF demo of the project. Key features. How to install guide. Credits.
+- [amplication/amplication](https://github.com/amplication/amplication#readme) - Clear project logo. Brief explanation. All features explained. Clean documentation. Useful links (website, docs, discord). List of contributors with their pictures and usernames.
+- [anfederico/Clairvoyant](https://github.com/anfederico/Clairvoyant#readme) - Multiple badges. Clean logo. Simple install instructions. Clear overview of the project accompanied by a schematic. GIF demo. Extensive code examples.
+- [ankitwasankar/mftool-java](https://github.com/ankitwasankar/mftool-java#readme) - Project logo with a short display of what can be achieved with it, TOC for easy navigation, important badges, clean installation guide, and multiple code snippets showing how to use the functionality.
+- [antoinezanardi/werewolves-assistant-api-next](https://github.com/antoinezanardi/werewolves-assistant-api-next#readme) - Project logo. Badges. Concise description. TOC for easy navigation. Simple install instructions and various sections. Clean project with code coverage, CI, and many other features.
+- [AntonioFalcaoJr/EventualShop](https://github.com/AntonioFalcaoJr/EventualShop#readme) - The project has a logo and well-defined sections such as: information about the project, the architectural solution, along with reference links such as articles, videos, and documentation. It explains how to run the project in different environments (development and production). It has documented load tests, it also describes which technologies are used, and it has diagrams for the archetype.
+- [aregtech/areg-sdk](https://github.com/aregtech/areg-sdk#readme) - Logo. Multiple info and statistics badges. List of contributors and stargazers with pictures. TOC and "Back to top" links for easy navigation. Headlines with graphics. Topic hide/show menu. Project description and philosophy. Clone and integration instructions. Quick build with multiple tools. Tools configuration instructions. Reference to examples and Demo projects. Reference to use cases. References to guidance and Wiki pages. Links with badges to contact. Links with badges to share project in social network.
+- [Armync/Arminc-AutoExec](https://github.com/ArmynC/ArminC-AutoExec/#readme) - Rich Markdown functions, modern layout, clear description and compliant with the recommended community standards.
+- [athityakumar/colorls](https://github.com/athityakumar/colorls#readme) - Multiple badges. Clean screenshots. Simple install instructions. TOC for easy navigation. Good contributor guidelines.
+- [ccostan/Home-AssistantConfig](https://github.com/CCOSTAN/Home-AssistantConfig#readme) - Project Banner. Badges. Easy navigation.
+- [choojs/choo](https://github.com/choojs/choo#readme) - Badges, clean, clear. Beautiful little menu above the fold with useful links. An FAQ inside of it for the main questions. Backers. Good language.
+- [chroline/well_app](https://github.com/chroline/well_app#readme) - Features attention-grabbing project thumbnail with clean badges, as well as download information and quick navigation links. Organized into multiple descriptive sections, each of which have a title with a yellow emoji. Includes details about the project itself, as well as the technologies used and how to contribute.
+- [create-go-app/cli](https://github.com/create-go-app/cli#readme) - Clean project logo. Useful badges (version, code style, test cover, docs). Clear readme with quickstart, understandable installation and usage manual, video screencast, ToC with well-documented project features (with a demo recording of the work in the terminal), project philosophy notes ("the why another"), most frequently asked questions, and more.
+- [Day8/re-frame](https://github.com/Day8/re-frame#readme) - Badges, logo, TOC, etc. Stands out by being a giant, well-written essay about the tech, how to use it, the philosophy behind it, and how it fits into the greater ecosystem.
+- [dbt-labs/dbt-core](https://github.com/dbt-labs/dbt-core#readme) - Project banner, super clear description (friendly to people brand new to the product), screenshot of the docs the tool generates, and concise links to other comprehensive pages explaining Getting Started, Joining the dbt Community, Bug Reports, Code Contribution, and Code of Conduct
+- [dowjones/react-dropdown-tree-select](https://github.com/dowjones/react-dropdown-tree-select#readme) - Clear readme with GIF screenshot for quick demo. Multiple badges, concise ToC, online playground, storybook, detailed description and more.
+- [easybase/easybase-react](https://github.com/easybase/easybase-react#readme) - Project banner and logo. Badges. Expandable walkthrough sections. Concise description and purpose. TOC for easy navigation. GIFs for installation demo. Multiple informative visuals.
+- [emalderson/thephish](https://github.com/emalderson/ThePhish#readme) - Project logo, informative badges, useful TOC, clear description, screenshots, step-by-step installation and configuration guide, contributor guidelines, code of conduct, UML diagrams, coherent tags, issue and pull request templates, well-documented and well-commented code, examples.
+- [github-changelog-generator/github-changelog-generator](https://github.com/github-changelog-generator/github-changelog-generator#readme) - TOC for easy navigation. Concise project description. Installation and usage sections. Output example. Great feature overview. List of alternatives. FAQ.
+- [gitpoint/git-point](https://github.com/gitpoint/git-point#readme) - Clear description. Project Logo. App Store logos. TOC. Clean screenshots. List of features. Detailed installation process. Landing Page.
+- [gofiber/fiber](https://github.com/gofiber/fiber#readme) - Clean project logo. Useful badges and links (languages switcher, code style, test cover, docs, Discord channel). Clear description of what the project does with quickstart, benchmark charts, well-documented code examples (with the ability to hide long content), project philosophy notes ("the why of project"), tables with project addons, list of contributors, star growth statistics, and more.
+- [gowebly/gowebly](https://github.com/gowebly/gowebly#readme) - Clean project banner with logo. Useful badges and links (languages switcher, test cover, docs). Clear description of what the project does with quickstart, understandable feature list, links to the introduction video and article, well-documented CLI command examples, project philosophy notes ("motivation to create"), tables with project components, links to addons and helpers, list of stargazers, and more.
+- [Hexworks/Zircon](https://github.com/Hexworks/zircon#readme) - Dogfood in readme. Clear description of what the project does. Demo screenshot. TOC for easy navigation. Easy installation and setup sections with screenshots. Links for further reading.
+- [httpie/httpie](https://github.com/httpie/httpie#readme) - Description of what the project does. Demo screenshots. Project logo. TOC for easy navigation. Build badges. Quick and simple installation and usage sections. Includes an examples section.
+- [hywax/mafl](https://github.com/hywax/mafl#readme) - Project logo. Clear description of what the project does. TOC for easy navigation. Usage code samples.
+- [IgorAntun/node-chat](https://github.com/IgorAntun/node-chat#readme) - Project screenshot. Informative badges. Clear description. Easy installation/use instructions. Live demo.
+- [iharsh234/WebApp](https://github.com/iharsh234/WebApp#readme) - Project landing page. Clear description of what the project does. Demo screenshot. Simple install and usage sections. Includes an examples section with common uses and a mobile demo section.
+- [iterative/dvc](https://github.com/iterative/dvc#readme) - ReStructuredText format example, PyPi compatible. Logo, custom website-like menu. Smooth how-it-works animation. Badges. Nice contribution section with the hall-of-fame.
+- [ivanperez-keera/Yampa](https://github.com/ivanperez-keera/Yampa#readme) - Clear description. Feature list. TOC for easy navigation. Simple install instructions. Usage code samples. Project samples with GIFs and links to app stores. Documentation and publications. Clear development / contribution rules.
+- [karan/joe](https://github.com/karan/joe#readme) - Project logo. Clear description of what the project does. GIF demo. Easy install and usage sections.
+- [kopach/karma-sabarivka-reporter](https://github.com/kopach/karma-sabarivka-reporter#readme) - Project logo. Useful badges, clear readme with screenshots for quick demo. Concise ToC.
+- [L0garithmic/FastColabCopy](https://github.com/L0garithmic/FastColabCopy#readme) - Project logo. Minimalist description. Badges. GIF demo. About The Project. How To Use. Examples. Credits. Additional Examples.
+- [ma-shamshiri/Human-Activity-Recognition](https://github.com/ma-shamshiri/Human-Activity-Recognition#readme) - Beautiful table of contents. Project logo. Animated project banner. Complete project folder structure. Clear description of what the project does. Nice contributors’ section. Easy navigation.
+- [ma-shamshiri/Pacman-Game](https://github.com/ma-shamshiri/Pacman-Game#readme) - Beautiful table of contents. Project logo. Animated project banner. Suitable GIFs to display each part of the project. Complete list of project files in the repo along with their function. Complete execution instruction.
+- [ma-shamshiri/Spam-Detector](https://github.com/ma-shamshiri/Spam-Detector#readme) - Complete project file description. Project logo. Animated project banner. Concise project description. Clear execution instruction.
+- [MananTank/radioactive-state](https://github.com/MananTank/radioactive-state#readme) - Badges (version, downloads, coverage, size), Twitter Intent, Project Logo, Feature list, Motivation, Installation, Example with GIFs, Emojis, Collapsible Sections, Live Demos, API detailed usage, FAQs, Chat link.
+- [Martinsos/edlib](https://github.com/Martinsos/edlib#readme) - Informative badges (build, version, publication). Concise description. Feature list. TOC. Screenshots. Concise instructions with examples for building and including in your project. Common code examples to get you started quickly.
+- [NASA/ogma](https://github.com/NASA/ogma#readme) - Clear description. Feature list. Demo GIFs. Simple install instructions. Usage code samples. TOC for easy navigation.
+- [nhn/tui.editor](https://github.com/nhn/tui.editor#readme) - Project logo. Clear overview of project features with a demo GIF. Badges. TOC for easy navigation. Colorful icons in front of titles.
+- [NSRare/NSGIF](https://github.com/NSRare/NSGIF#readme) - Project logo. GIF Demo. Usage artwork. Usage code samples.
+- [Owloops/updo](https://github.com/owloops/updo#readme) - Well-structured, visually appealing, and provides comprehensive information about the tool, from its purpose and features to installation and usage, in a clear and user-friendly manner.
+- [php-censor/php-censor](https://github.com/php-censor/php-censor#readme) - Multiple badges, project logo, screenshots, step-by-step installing and upgrading instructions, TOC for easy navigation.
+- [PostHog/posthog](https://github.com/PostHog/posthog#readme) - Custom-made section icons, demo GIF, deploy button, profile images for contributors, concise, clear structure, project logo.
+- [priyavrat-misra/xrays-and-gradcam](https://github.com/priyavrat-misra/xrays-and-gradcam#readme) - TOC for easy navigation. Clear introduction of what the project does. Complete list of all files in the repo and what their function is. Usage section. Clean and concise tables.
+- [React on lambda](https://github.com/sultan99/react-on-lambda#readme) - Project logo, comics to present the main idea, badges, examples with code snippets, demo projects, api documentations, editor configurations.
+- [React Parallax Tilt](https://github.com/mkosir/react-parallax-tilt#readme) - GIF demo. Multiple badges. Feature list. Great live demo with code examples. Easy to follow instructions for local development set up.
+- [Rebilly/redoc](https://github.com/Redocly/redoc#readme) - Multiple badges, project logo, live demo link, GIF-animations of the key features, TL;DR usage.
+- [refinedev/refine](https://github.com/refinedev/refine#readme) - Clean project logo. Brief description at top. Multiple badges. Usage description and examples. Use cases and demo links. Screenshots. Key Features. Contributors. Stargazers. Contribution guidelines.
+- [release-it/release-it](https://github.com/release-it/release-it#readme) - Clear overview of project features with a demo GIF. Badges. Expandable TOC. Usage description and examples. Contribution guidelines. Detailed releases.
+- [rstacruz/hicat](https://github.com/rstacruz/hicat#readme) - GIF demo. Easy installation and setup sections with screenshots. Build badges. Great examples of use cases.
+- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts#readme) - Clean project logo. Brief description at top. Sankey diagram, quick links, badges, OS specific icons, TOC, detailed release changelog.
+- [sebyddd/SDVersion](https://github.com/sebyddd/SDVersion#readme) - Project logo. Build badges. Documentation structuring for multiple programming languages. Usage examples.
+- [serpro69/kotlin-faker](https://github.com/serpro69/kotlin-faker#readme) - Project logo. Badges. Concise description and clear getting-started instructions with a link to the full documentation website. Test, build and contributing guidelines. Licence info.
+- [shama/gaze](https://github.com/shama/gaze#readme) - Project logo. Concise description. Feature list. Usage section. FAQ. Great API documentation. Release history.
+- [sidneycadot/oeis](https://github.com/sidneycadot/oeis#readme) - Overview. List of required dependencies. Complete list of all files in the repo and what their function is. Visual graph of how it all ties together.
+- [sindresorhus/pageres](https://github.com/sindresorhus/pageres#readme) - Project logo. Clear description of what the project does. Build badges. Demo screenshot. Simple install and usage sections. Includes an examples section with common uses.
+- [skydio/revup](https://github.com/Skydio/revup#readme) - Project logo. Animated GIF demo + GIFs for major stages of the step-by-step tutorial. Concise explanation, installation instructions, and contribution section. 
+- [Slackadays/Clipboard](https://github.com/Slackadays/Clipboard#readme) - Project logo. Build and test/coverage badges. Transition from plain description to people-oriented description. Animated GIF showing usage. Custom banners for clearly laid out sections. Custom text assets for headers. Immediate call to action with Quick Start section. Consistent and easy to read command names and signatures. Three immediate options for getting help provided. Easter eggs provided for the detail-oriented.
+- [sourcerer-io/sourcerer-app](https://github.com/sourcerer-io/sourcerer-app#readme) - Clean animated screenshot. Customized call to action badge. Usage showcase.
+- [sr6033/lterm](https://github.com/sr6033/lterm#readme) - Clean logo using characters. Brief updates on development. Detailed contribution guidelines. Contribution suggestions.
+- [Stack-in-a-box/triumphmayflowerclub.com](https://github.com/Stack-in-a-box/triumphmayflowerclub.com#readme) - Stands-out because, while only a simple website, it is presented as a very open project for lesser-experienced developers to cut their teeth on, with a friendly, inclusive tone and accessible set-up instructions. Includes many common elements found in other beautiful READMEs.
+- [stevenfoncken/multitool-for-spotify-php](https://github.com/stevenfoncken/multitool-for-spotify-php#readme) - Concise introduction description. Clear overview of features. Why-section with easter egg (heading). Informative badges. Clear disclaimer. Step-by-step setup instructions. Expandable TOC. Headlines with emojis. Detailed usage section. Shortlinks at top. Back-to-top link in footer. Credits to third-party code/libraries.
+- [sulu/sulu](https://github.com/sulu/sulu#readme) - Project logo, useful badges, clear instructions on where to find more information and report bugs, GIF screenshots, nice use of emoticons.
+- [supunlakmal/thismypc](https://github.com/supunlakmal/thismypc#readme) - Project logo. Useful badges. Web site URL. Screenshot. GIF step-by-step instructions for installation. Project folder structure.
+- [teles/array-mixer](https://github.com/teles/array-mixer#readme) - Clean project logo, badges. Table of contents. Contributing section. Many illustrated examples.
+- [thelounge/thelounge](https://github.com/thelounge/thelounge#readme) - Project logo. Useful badges and links (website, docs, demo). Screenshot. Feature list. Step-by-step instructions for installation, development, and testing. Link to the contributing guide. Good mobile summary.
+- [themerdev/themer](https://github.com/themerdev/themer#readme) - Project logo. Visual description (flowchart) of what the project does. Build badges. TOC. Demo screenshot. Concise install and usage sections, including common workflows. Colorful previews.
+- [vhesener/Closures](https://github.com/vhesener/Closures#readme) - Project logo, cognitive funnel, animated examples. Color coordinated. Clean documentation.
+- [xnbox/DeepfakeHTTP](https://github.com/xnbox/DeepfakeHTTP#readme) - Original hero section. Clear navigation. Minimalist design. Appendices.
+- [zenml-io/zenml](https://github.com/zenml-io/zenml#readme) - Clean project logo. Useful TOC. Clear code examples amongst feature list. Quickstart example.
 
 
-## Places
-|		|		|		|
-|	-	|	-	|	-	|
-|	:house:    `:house:`	|	:sailboat:    `:sailboat:`	|	:monorail:    `:monorail:`	|
-|	:house_with_garden:    `:house_with_garden:`	|	:rowboat:    `:rowboat:`	|	:railway_car:    `:railway_car:`	|
-|	:school:    `:school:`	|	:anchor:    `:anchor:`	|	:trolleybus:    `:trolleybus:`	|
-|	:office:    `:office:`	|	:rocket:    `:rocket:`	|	:ticket:    `:ticket:`	|
-|	:post_office:    `:post_office:`	|	:airplane:    `:airplane:`	|	:fuelpump:    `:fuelpump:`	|
-|	:hospital:    `:hospital:`	|	:helicopter:    `:helicopter:`	|	:vertical_traffic_light:    `:vertical_traffic_light:`	|
-|	:bank:    `:bank:`	|	:steam_locomotive:    `:steam_locomotive:`	|	:traffic_light:    `:traffic_light:`	|
-|	:convenience_store:    `:convenience_store:`	|	:tram:    `:tram:`	|	:warning:    `:warning:`	|
-|	:love_hotel:    `:love_hotel:`	|	:mountain_railway:    `:mountain_railway:`	|	:construction:    `:construction:`	|
-|	:hotel:    `:hotel:`	|	:bike:    `:bike:`	|	:beginner:    `:beginner:`	|
-|	:wedding:    `:wedding:`	|	:aerial_tramway:    `:aerial_tramway:`	|	:atm:    `:atm:`	|
-|	:church:    `:church:`	|	:suspension_railway:    `:suspension_railway:`	|	:slot_machine:    `:slot_machine:`	|
-|	:department_store:    `:department_store:`	|	:mountain_cableway:    `:mountain_cableway:`	|	:busstop:    `:busstop:`	|
-|	:european_post_office:    `:european_post_office:`	|	:tractor:    `:tractor:`	|	:barber:    `:barber:`	|
-|	:city_sunrise:    `:city_sunrise:`	|	:blue_car:    `:blue_car:`	|	:hotsprings:    `:hotsprings:`	|
-|	:city_sunset:    `:city_sunset:`	|	:oncoming_automobile:    `:oncoming_automobile:`	|	:checkered_flag:    `:checkered_flag:`	|
-|	:japanese_castle:    `:japanese_castle:`	|	:car:    `:car:`	|	:crossed_flags:    `:crossed_flags:`	|
-|	:european_castle:    `:european_castle:`	|	:red_car:    `:red_car:`	|	:izakaya_lantern:    `:izakaya_lantern:`	|
-|	:tent:    `:tent:`	|	:taxi:    `:taxi:`	|	:moyai:    `:moyai:`	|
-|	:factory:    `:factory:`	|	:oncoming_taxi:    `:oncoming_taxi:`	|	:circus_tent:    `:circus_tent:`	|
-|	:tokyo_tower:    `:tokyo_tower:`	|	:articulated_lorry:    `:articulated_lorry:`	|	:performing_arts:    `:performing_arts:`	|
-|	:japan:    `:japan:`	|	:bus:    `:bus:`	|	:round_pushpin:    `:round_pushpin:`	|
-|	:mount_fuji:    `:mount_fuji:`	|	:oncoming_bus:    `:oncoming_bus:`	|	:triangular_flag_on_post:    `:triangular_flag_on_post:`	|
-|	:sunrise_over_mountains:    `:sunrise_over_mountains:`	|	:rotating_light:    `:rotating_light:`	|	:jp:    `:jp:`	|
-|	:sunrise:    `:sunrise:`	|	:police_car:    `:police_car:`	|	:kr:    `:kr:`	|
-|	:stars:    `:stars:`	|	:oncoming_police_car:    `:oncoming_police_car:`	|	:cn:    `:cn:`	|
-|	:statue_of_liberty:    `:statue_of_liberty:`	|	:fire_engine:    `:fire_engine:`	|	:us:    `:us:`	|
-|	:bridge_at_night:    `:bridge_at_night:`	|	:ambulance:    `:ambulance:`	|	:fr:    `:fr:`	|
-|	:carousel_horse:    `:carousel_horse:`	|	:minibus:    `:minibus:`	|	:es:    `:es:`	|
-|	:rainbow:    `:rainbow:`	|	:truck:    `:truck:`	|	:it:    `:it:`	|
-|	:ferris_wheel:    `:ferris_wheel:`	|	:train:    `:train:`	|	:ru:    `:ru:`	|
-|	:fountain:    `:fountain:`	|	:station:    `:station:`	|	:gb:    `:gb:`	|
-|	:roller_coaster:    `:roller_coaster:`	|	:train2:    `:train2:`	|	:uk:    `:uk:`	|
-|	:ship:    `:ship:`	|	:bullettrain_front:    `:bullettrain_front:`	|	:de:    `:de:`	|
-|	:speedboat:    `:speedboat:`	|	:bullettrain_side:    `:bullettrain_side:`	|		|
-|	:boat:    `:boat:`	|	:light_rail:    `:light_rail:`	|		|
+## Articles
 
+- ["Art of Readme - Learn the art of writing quality READMEs."](https://github.com/hackergrrl/art-of-readme#readme) - *Stephen Whitmore*
+- ["Elegant READMEs"](https://www.yegor256.com/2019/04/23/elegant-readme.html) - *Yegor Bugayenko*
+- ["How To Write A Great README"](https://thoughtbot.com/blog/how-to-write-a-great-readme) - *Caleb Thompson (thoughtbot)*
+- ["Readme Driven Development"](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html) - *Tom Preston-Werner*
+- ["Top ten reasons why I won’t use your open source project"](https://changelog.com/posts/top-ten-reasons-why-i-wont-use-your-open-source-project) - *Adam Stacoviak*
+- ["What I learned from an old GitHub project that won 3,000 Stars in a Week"](https://www.freecodecamp.org/news/what-i-learned-from-an-old-github-project-that-won-3-000-stars-in-a-week-628349a5ee14/) - *KyuWoo Choi*
 
+## Tools
 
-## Symbols
-|		|		|		|
-|	-	|	-	|	-	|
-|	:one:    `:one:`	|	:mens:    `:mens:`	|	:clock1030:    `:clock1030:`	|
-|	:two:    `:two:`	|	:womens:    `:womens:`	|	:clock11:    `:clock11:`	|
-|	:three:    `:three:`	|	:baby_symbol:    `:baby_symbol:`	|	:clock1130:    `:clock1130:`	|
-|	:four:    `:four:`	|	:no_smoking:    `:no_smoking:`	|	:clock12:    `:clock12:`	|
-|	:five:    `:five:`	|	:parking:    `:parking:`	|	:clock1230:    `:clock1230:`	|
-|	:six:    `:six:`	|	:wheelchair:    `:wheelchair:`	|	:clock2:    `:clock2:`	|
-|	:seven:    `:seven:`	|	:metro:    `:metro:`	|	:clock230:    `:clock230:`	|
-|	:eight:    `:eight:`	|	:baggage_claim:    `:baggage_claim:`	|	:clock3:    `:clock3:`	|
-|	:nine:    `:nine:`	|	:accept:    `:accept:`	|	:clock330:    `:clock330:`	|
-|	:keycap_ten:    `:keycap_ten:`	|	:wc:    `:wc:`	|	:clock4:    `:clock4:`	|
-|	:1234:    `:1234:`	|	:potable_water:    `:potable_water:`	|	:clock430:    `:clock430:`	|
-|	:zero:    `:zero:`	|	:put_litter_in_its_place:    `:put_litter_in_its_place:`	|	:clock5:    `:clock5:`	|
-|	:hash:    `:hash:`	|	:secret:    `:secret:`	|	:clock530:    `:clock530:`	|
-|	:symbols:    `:symbols:`	|	:congratulations:    `:congratulations:`	|	:clock6:    `:clock6:`	|
-|	:arrow_backward:    `:arrow_backward:`	|	:m:    `:m:`	|	:clock630:    `:clock630:`	|
-|	:arrow_down:    `:arrow_down:`	|	:passport_control:    `:passport_control:`	|	:clock7:    `:clock7:`	|
-|	:arrow_forward:    `:arrow_forward:`	|	:left_luggage:    `:left_luggage:`	|	:clock730:    `:clock730:`	|
-|	:arrow_left:    `:arrow_left:`	|	:customs:    `:customs:`	|	:clock8:    `:clock8:`	|
-|	:capital_abcd:    `:capital_abcd:`	|	:ideograph_advantage:    `:ideograph_advantage:`	|	:clock830:    `:clock830:`	|
-|	:abcd:    `:abcd:`	|	:cl:    `:cl:`	|	:clock9:    `:clock9:`	|
-|	:abc:    `:abc:`	|	:sos:    `:sos:`	|	:clock930:    `:clock930:`	|
-|	:arrow_lower_left:    `:arrow_lower_left:`	|	:id:    `:id:`	|	:heavy_dollar_sign:    `:heavy_dollar_sign:`	|
-|	:arrow_lower_right:    `:arrow_lower_right:`	|	:no_entry_sign:    `:no_entry_sign:`	|	:copyright:    `:copyright:`	|
-|	:arrow_right:    `:arrow_right:`	|	:underage:    `:underage:`	|	:registered:    `:registered:`	|
-|	:arrow_up:    `:arrow_up:`	|	:no_mobile_phones:    `:no_mobile_phones:`	|	:tm:    `:tm:`	|
-|	:arrow_upper_left:    `:arrow_upper_left:`	|	:do_not_litter:    `:do_not_litter:`	|	:x:    `:x:`	|
-|	:arrow_upper_right:    `:arrow_upper_right:`	|	:non-potable_water:    `:non-potable_water:`	|	:heavy_exclamation_mark:    `:heavy_exclamation_mark:`	|
-|	:arrow_double_down:    `:arrow_double_down:`	|	:no_bicycles:    `:no_bicycles:`	|	:bangbang:    `:bangbang:`	|
-|	:arrow_double_up:    `:arrow_double_up:`	|	:no_pedestrians:    `:no_pedestrians:`	|	:interrobang:    `:interrobang:`	|
-|	:arrow_down_small:    `:arrow_down_small:`	|	:children_crossing:    `:children_crossing:`	|	:o:    `:o:`	|
-|	:arrow_heading_down:    `:arrow_heading_down:`	|	:no_entry:    `:no_entry:`	|	:heavy_multiplication_x:    `:heavy_multiplication_x:`	|
-|	:arrow_heading_up:    `:arrow_heading_up:`	|	:eight_spoked_asterisk:    `:eight_spoked_asterisk:`	|	:heavy_plus_sign:    `:heavy_plus_sign:`	|
-|	:leftwards_arrow_with_hook:    `:leftwards_arrow_with_hook:`	|	:sparkle:    `:sparkle:`	|	:heavy_minus_sign:    `:heavy_minus_sign:`	|
-|	:arrow_right_hook:    `:arrow_right_hook:`	|	:eight_pointed_black_star:    `:eight_pointed_black_star:`	|	:heavy_division_sign:    `:heavy_division_sign:`	|
-|	:left_right_arrow:    `:left_right_arrow:`	|	:heart_decoration:    `:heart_decoration:`	|	:white_flower:    `:white_flower:`	|
-|	:arrow_up_down:    `:arrow_up_down:`	|	:vs:    `:vs:`	|	:100:    `:100:`	|
-|	:arrow_up_small:    `:arrow_up_small:`	|	:vibration_mode:    `:vibration_mode:`	|	:heavy_check_mark:    `:heavy_check_mark:`	|
-|	:arrows_clockwise:    `:arrows_clockwise:`	|	:mobile_phone_off:    `:mobile_phone_off:`	|	:ballot_box_with_check:    `:ballot_box_with_check:`	|
-|	:arrows_counterclockwise:    `:arrows_counterclockwise:`	|	:chart:    `:chart:`	|	:radio_button:    `:radio_button:`	|
-|	:rewind:    `:rewind:`	|	:currency_exchange:    `:currency_exchange:`	|	:link:    `:link:`	|
-|	:fast_forward:    `:fast_forward:`	|	:aries:    `:aries:`	|	:curly_loop:    `:curly_loop:`	|
-|	:information_source:    `:information_source:`	|	:taurus:    `:taurus:`	|	:wavy_dash:    `:wavy_dash:`	|
-|	:ok:    `:ok:`	|	:gemini:    `:gemini:`	|	:part_alternation_mark:    `:part_alternation_mark:`	|
-|	:twisted_rightwards_arrows:    `:twisted_rightwards_arrows:`	|	:cancer:    `:cancer:`	|	:trident:    `:trident:`	|
-|	:repeat:    `:repeat:`	|	:leo:    `:leo:`	|	:black_small_square:    `:black_small_square:`	|
-|	:repeat_one:    `:repeat_one:`	|	:virgo:    `:virgo:`	|	:white_small_square:    `:white_small_square:`	|
-|	:new:    `:new:`	|	:libra:    `:libra:`	|	:black_medium_small_square:    `:black_medium_small_square:`	|
-|	:top:    `:top:`	|	:scorpius:    `:scorpius:`	|	:white_medium_small_square:    `:white_medium_small_square:`	|
-|	:up:    `:up:`	|	:sagittarius:    `:sagittarius:`	|	:black_medium_square:    `:black_medium_square:`	|
-|	:cool:    `:cool:`	|	:capricorn:    `:capricorn:`	|	:white_medium_square:    `:white_medium_square:`	|
-|	:free:    `:free:`	|	:aquarius:    `:aquarius:`	|	:black_large_square:    `:black_large_square:`	|
-|	:ng:    `:ng:`	|	:pisces:    `:pisces:`	|	:white_large_square:    `:white_large_square:`	|
-|	:cinema:    `:cinema:`	|	:ophiuchus:    `:ophiuchus:`	|	:white_check_mark:    `:white_check_mark:`	|
-|	:koko:    `:koko:`	|	:six_pointed_star:    `:six_pointed_star:`	|	:black_square_button:    `:black_square_button:`	|
-|	:signal_strength:    `:signal_strength:`	|	:negative_squared_cross_mark:    `:negative_squared_cross_mark:`	|	:white_square_button:    `:white_square_button:`	|
-|	:u5272:    `:u5272:`	|	:a:    `:a:`	|	:black_circle:    `:black_circle:`	|
-|	:u5408:    `:u5408:`	|	:b:    `:b:`	|	:white_circle:    `:white_circle:`	|
-|	:u55b6:    `:u55b6:`	|	:ab:    `:ab:`	|	:red_circle:    `:red_circle:`	|
-|	:u6307:    `:u6307:`	|	:o2:    `:o2:`	|	:large_blue_circle:    `:large_blue_circle:`	|
-|	:u6708:    `:u6708:`	|	:diamond_shape_with_a_dot_inside:    `:diamond_shape_with_a_dot_inside:`	|	:large_blue_diamond:    `:large_blue_diamond:`	|
-|	:u6709:    `:u6709:`	|	:recycle:    `:recycle:`	|	:large_orange_diamond:    `:large_orange_diamond:`	|
-|	:u6e80:    `:u6e80:`	|	:end:    `:end:`	|	:small_blue_diamond:    `:small_blue_diamond:`	|
-|	:u7121:    `:u7121:`	|	:back:    `:back:`	|	:small_orange_diamond:    `:small_orange_diamond:`	|
-|	:u7533:    `:u7533:`	|	:on:    `:on:`	|	:small_red_triangle:    `:small_red_triangle:`	|
-|	:u7a7a:    `:u7a7a:`	|	:soon:    `:soon:`	|	:small_red_triangle_down:    `:small_red_triangle_down:`	|
-|	:u7981:    `:u7981:`	|	:clock1:    `:clock1:`	|	:shipit:    `:shipit:`	|
-|	:sa:    `:sa:`	|	:clock130:    `:clock130:`	|		|
-|	:restroom:    `:restroom:`	|	:clock10:    `:clock10:`	|		|
+- [Amazing GitHub Template](https://github.com/dec0dOS/amazing-github-template#readme) - Useful README.md, LICENSE, CONTRIBUTING.md, CODE_OF_CONDUCT.md, SECURITY.md, GitHub Issues, Pull Requests and Actions templates to jumpstart your projects.
+- [Common Readme](https://github.com/hackergrrl/common-readme#readme) - A common readme style for Node. Includes a guide and a readme generator.
+- [Feedmereadmes](https://github.com/lappleapple/feedmereadmes#readme) - README editing and project analysis/feedback.
+- [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats#readme) - Dynamically generated customizable GitHub cards for README. Stats, extra pins, top languages and WakaTime.
+- [Hall-of-fame](https://github.com/sourcerer-io/hall-of-fame#readme) - Helps show recognition to repo contributors on README. Features new/trending/top contributors. Updates every hour.
+- [Make a README](https://www.makeareadme.com/) - A guide to writing READMEs. Includes an editable template with live Markdown rendering.
+- [README best practices](https://github.com/jehna/readme-best-practices#readme) - A place to copy-paste your README.md from
+- [readme-md-generator](https://github.com/kefranabg/readme-md-generator#readme) - A CLI that generates beautiful README.md files
+- [Readme.so](https://readme.so/) - A simple editor that allows you to quickly add and customize all the sections you need for your project's readme.
+- [READMINE](https://github.com/mhucka/readmine) - A thorough, clear and self-describing README file template for software projects; copy it and edit it as needed.
+- [StackEdit](https://stackedit.io/) - A user-friendly online editor that allows you to quickly customize all the sections you need for your project's readme.
+- [Standard Readme](https://github.com/RichardLitt/standard-readme#readme) - A standard README style specification. Has a generator to help create spec-compliant READMEs, too.
+- [user-statistician](https://github.com/cicirello/user-statistician) - A GitHub Action that generates SVG of detailed GitHub user activity for profile readmes. 
+- [Zalando's README Template](https://github.com/zalando/zalando-howto-open-source/blob/master/READMEtemplate.md#readme) - Simple template to help you cover all the basics.
+
+## Creating GIFs
+
+Embedding an animated gif in your README quickly demonstrates what your project does and catches the reader's eye. Here are a few programs that can help you quickly create gifs for your project:
+
+- [Gifski](https://github.com/sindresorhus/Gifski#readme) - **FREE** - More vivid colors than the rest, but still keep size low.
+- [Giphy Capture](https://giphy.com/apps/giphycapture) - **FREE** - Easy to upload to giphy.com, slightly annoying UX.
+- [LICEcap](https://www.cockos.com/licecap/) - **FREE** - Less intuitive, more features.
+- [Peek](https://github.com/phw/peek#readme) - **FREE** - Simple and easy to use for Linux users.
+- [Recordit](https://recordit.co/) - **FREE** - Simple, clean UI, but auto-uploads to Recordit.
+- [ScreenToGif](https://github.com/NickeManarin/ScreenToGif/) - **FREE** - Open source, customizable UI and easily editable GIFs, easy to get started.
+- [terminalizer](https://github.com/faressoft/terminalizer) - **FREE** - Record your terminal and generate animated gif images or share a web player.
+- [ttystudio](https://github.com/chjj/ttystudio#readme) - **FREE** - For commandline tools, a terminal-to-gif recorder minus the headaches.
+- [vhs](https://github.com/charmbracelet/vhs) - **FREE** - Generate beautiful terminal gifs with a simple scripting language
+
+## Get Feedback
+
+- [feedmereadmes](https://github.com/LappleApple/feedmereadmes#readme) - Free README editing+feedback to make your open-source projects grow. See the README maturity model to help you keep going.
+- [maintainer.io](https://maintainer.io/) - Free README standardization and feedback, if you click on 'Book an audit'.
+
+## Contribute
+
+Contributions are always welcome!
+Please read the [contribution guidelines](contributing.md) first.
+
+## License
+
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, [Matias Singers](https://mts.io) has waived all copyright and related or neighboring rights to this work.
