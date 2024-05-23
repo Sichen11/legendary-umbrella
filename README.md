@@ -1,12 +1,12 @@
-# syntax=docker/dockerfile:1
+root = true
 
-FROM python:3.10.0
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
 
-WORKDIR /api
-
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt --no-cache-dir
-
-COPY api/ .
-
-CMD ["gunicorn", "--workers=1", "--bind", "0.0.0.0:5000", "spotify:app"]
+[*.md]
+trim_trailing_whitespace = true
