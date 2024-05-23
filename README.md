@@ -1,126 +1,60 @@
-# Markdown - Extras
+# This file is to provide an easy interface to specify vendor, board, and compiler for FreeRTOS.
+# It is supposed to be processed first by cmake before the top level CMakeLists.txt file. Note the
+# behavior of this file is not officially supported by CMake. After CMake 3.17, there's a better
+# way for this, https://cmake.org/cmake/help/v3.17/variable/CMAKE_PROJECT_PROJECT-NAME_INCLUDE_BEFORE.html
 
+# If VENDOR or BOARD is specified, try to find a match.
+if(DEFINED VENDOR OR DEFINED BOARD)
+    include("${CMAKE_CURRENT_LIST_DIR}/tools/cmake/afr_utils.cmake")
 
-## Image Align
+    set(matched_boards)
+    afr_get_boards(all_boards)
+    foreach(board IN LISTS all_boards)
+        string(REGEX MATCH "${VENDOR}.*\\.${BOARD}.*" match "${board}")
+        if(match)
+            list(APPEND matched_boards "${match}")
+        endif()
+    endforeach()
 
-### Image Align - Middle _(default)_
+    list(LENGTH matched_boards size)
+    if(size EQUAL 0)
+        message(FATAL_ERROR "No matching board found, please check your VENDOR and BOARD value.")
+    endif()
+    if(NOT size EQUAL 1)
+        list(JOIN matched_boards ", " matched_boards)
+        message(FATAL_ERROR "Multiple matching boards found: ${matched_boards}")
+    else()
+        set(AFR_BOARD "${matched_boards}" CACHE STRING "")
+    endif()
+endif()
 
-Aenean eu euismod ante. Phasellus finibus nec est eget euismod.<img src="right-arrow.svg" width="42" height="42"> Duis pharetra sapien dolor, nec euismod nunc maximus ut. Fusce elementum tellus ac lacus ultrices, vel efficitur metus faucibus. Etiam sed egestas risus. Fusce quis ex lorem. Nullam aliquet ante vel mi ultrices, vel pretium nibh pretium. lobortis.
+# If COMPILER is specified, set toolchain file to ${COMPILER}.cmake.
+if(DEFINED COMPILER)
+    if(DEFINED CMAKE_TOOLCHAIN_FILE)
+        get_filename_component(toolchain "${CMAKE_TOOLCHAIN_FILE}" NAME_WE)
+        if(NOT "${COMPILER}" STREQUAL "${toolchain}")
+            message(WARNING "CMAKE_TOOLCHAIN_FILE is already defined to ${toolchain}.cmake, you\
+                need to delete cache and reconfigure if you want to switch compiler.")
+        endif()
+    else()
+        set(toolchain_dir "${CMAKE_CURRENT_LIST_DIR}/tools/cmake/toolchains")
+        set(toolchain_file "${toolchain_dir}/${COMPILER}.cmake")
+        if(EXISTS "${toolchain_file}")
+            set(CMAKE_TOOLCHAIN_FILE "${toolchain_file}" CACHE INTERNAL "")
+        else()
+            message(FATAL_ERROR "Toolchain file \"${COMPILER}.cmake\" does not exist, please\
+                select one from \"cmake/toolchains\" folder.")
+        endif()
+    endif()
+endif()
 
-```html
-<img src="right-arrow.svg" width="42" height="42">
-```
+# Disable compiler checks when only outputing metadata.
+if(AFR_METADATA_MODE)
+    set(CMAKE_C_COMPILER_FORCED TRUE CACHE INTERNAL "")
+    set(CMAKE_CXX_COMPILER_FORCED TRUE CACHE INTERNAL "")
+endif()
 
-### Image Align - Left
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.<img src="left-arrow.svg" alt="left face" align="left" width="42" height="42"> Fusce semper libero ligula, vel varius enim sagittis quis. Aenean sed massa velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras faucibus consequat est eu varius. Nam vitae dignissim velit. 
-
-```html
-<img src="left-arrow.svg" alt="left face" align="left" width="42" height="42"> 
-```
-
-### Image Align - Right
-
-Aenean eu euismod ante. Phasellus finibus nec est eget euismod.<img src="right-arrow.svg" alt="right" align="right" width="42" height="42"> Duis pharetra sapien dolor, nec euismod nunc maximus ut. Fusce elementum tellus ac lacus ultrices, vel efficitur metus faucibus. Etiam sed egestas risus. Fusce quis ex lorem. Nullam aliquet ante vel mi ultrices, vel pretium nibh pretium.
-
-```html
-<img src="right-arrow.svg" alt="right" align="right" width="42" height="42">
-```
-
-## Style Text
-
-
-### keyboard input
-
-<kbd>ALT + F4</kbd> 
-```
-<kbd>ALT + F4</kbd> 
-```
-
-### subscripted
-normal text <sub>subscripted</sub> normal text
-```
-normal text <sub>subscripted</sub> normal text
-```
-
-### superscripted
-normal text <sup>superscripted</sup> normal text
-```
-normal text <sup>superscripted</sup> normal text
-```
-
-## Table
-
-### Table - _rowspan_
-<table>
-  <tr>
-    <th>column 1</th>
-    <th>column 2</th>
-    <th>column 3</th>
-  </tr>
-  <tr>
-    <td>row 1 - column 1</td>
-    <td>row 1 - column 2</td>
-    <td rowspan="2" align="center">row 1 & 2 - column 3</td>
-  </tr>
-  <tr>
-    <td>row 2 - column 1</td>
-    <td>row 2 - column 2</td>
-  </tr>
-</table>
-
-```html
-<table>
-  <tr>
-    <th>column 1</th>
-    <th>column 2</th>
-    <th>column 3</th>
-  </tr>
-  <tr>
-    <td>row 1 - column 1</td>
-    <td>row 1 - column 2</td>
-    <td rowspan="2" align="center">row 1 & 2 - column 3</td>
-  </tr>
-  <tr>
-    <td>row 2 - column 1</td>
-    <td>row 2 - column 2</td>
-  </tr>
-</table>
-```
-
-### Table - _colspan_
-<table>
-  <tr>
-    <th>column 1</th>
-    <th>column 2</th>
-    <th>column 3</th>
-  </tr>
-  <tr>
-    <td>row 1 - column 1</td>
-    <td colspan="2" align="center">row 1 - column 2 & 3</td>
-  </tr>
-  <tr>
-    <td>row 2 - column 1</td>
-    <td>row 2 - column 2</td>
-    <td>row 2 - column 3</td>
-  </tr>
-</table>
-
-```html
-<table>
-  <tr>
-    <th>column 1</th>
-    <th>column 2</th>
-    <th>column 3</th>
-  </tr>
-  <tr>
-    <td>row 1 - column 1</td>
-    <td colspan="2" align="center">row 1 - column 2 & 3</td>
-  </tr>
-  <tr>
-    <td>row 2 - column 1</td>
-    <td>row 2 - column 2</td>
-    <td>row 2 - column 3</td>
-  </tr>
-</table>
-```
+# Remove these helper variables from CMake cache.
+unset(VENDOR CACHE)
+unset(BOARD CACHE)
+unset(COMPILER CACHE)
