@@ -1,291 +1,126 @@
-<a name="readme-top"></a>
+# Using the encryption tool (bufcrypt)
 
-<!--
-!!! IMPORTANT !!!
-This README is an example of how you could professionally present your codebase. 
-Writing documentation is a crucial part of your work as a professional software developer and cannot be ignored. 
+`bufcrypt encrypt "mysupersecret"`
 
-You should modify this file to match your project and remove sections that don't apply.
+`AQICAH******************************************************************************************************************cFrAlYeM`
 
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
+## Contents
 
-OPTIONAL SECTIONS:
-- FAQ
+* [Before you use the tool](#before-you-use-the-tool)
+* [Installation and usage](#installation-and-usage)
+  * [Installation](#installation)
+  * [Usage](#usage)
+* [Intro and motivation](#intro-and-motivation)
+  * [How bufcrypt helps with documentation](#how-bufcrypt-helps-with-documentation)
+* [How to use bufcrypt in documentation](#how-bufcrypt-helps-with-documentation)
 
-After you're finished please remove all the comments and instructions!
+## Before you use the tool
 
-For more information on the importance of a professional README for your repositories: https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/articles/readme_best_practices.md
--->
+You'll need an AWS key setup on your machine to use the `bufcrypt` encryption
+tool. Additionally the key will need permission to access the KMS key used.
+Ping Adnan to help you get setup with this if you need it.
 
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
+## Installation and usage
 
-  <h3><b>Microverse README Template</b></h3>
+### Installation
 
-</div>
-
-<!-- TABLE OF CONTENTS -->
-
-# 📗 Table of Contents
-
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
-- [📝 License](#license)
-
-<!-- PROJECT DESCRIPTION -->
-
-# 📖 [your_project_name] <a name="about-project"></a>
-
-> Describe your project in 1 or 2 sentences.
-
-**[your_project__name]** is a...
-
-## 🛠 Built With <a name="built-with"></a>
-
-### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
-
-### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://google.com)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
-
-### Prerequisites
-
-In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
-
-### Setup
-
-Clone this repository to your desired folder:
-
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
-
-### Install
-
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
+1. Download the script from this repo and place it in `/usr/local/bin/bufcrypt`. 
+  * Use `chmod +x /usr/local/bin/bufcrypt` to make it executable.
+  * You may need to use `sudo` for this step depending on your local
+    environment.
+2. Run `bufcrypt help` to view the command documentation.
+3. Run `bufcrypt encrypt "MYSECRET"` to test it out. You should receive the
+   garbled text that looks like the stuff shown above.
+4. Copy the value that showed up in your terminal and run `bufcrypt decrypt
+   "paste-the-value-between-quotes"`.
+5. You should get `MYSECRET` as a result.
 
 ### Usage
 
-To run the project, execute the following command:
+**Encrypting single lines of text**
 
-<!--
-Example command:
+`bufcrypt encrypt "senstive info goes here"`
 
-```sh
-  rails server
-```
---->
 
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
+**Encrypting multiple lines of text**
 
 ```
- -->
+bufcrypt encrypt "my sensitive info
+goes
+on multiple lines"
+```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+You can achieve the above by just typing and hitting enter to get a new line.
+The terminal will allow any number of new lines until it receives a closing
+quotation mark
 
-<!-- AUTHORS -->
+**Decrypting**
 
-## 👥 Authors <a name="authors"></a>
+`bufcrypt decrypt "paste-the-encrypted-text-here"`
 
-> Mention all of the collaborators of this project.
+**Encrypting a file**
 
-👤 **Author1**
+`bufcrypt encryptfile "~/.aws/credentials.backup"`
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+---
 
-👤 **Author2**
+**NOTE:** `bufcrypt help` will always carry the most up to date documentation of the
+command. This file is in sync at the time of this writing but might fall behind
+at times. Please refer to `bufcrypt help` as the primary documentation source
+for usage of the command.
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Intro and Motivation
 
-<!-- FUTURE FEATURES -->
+The encryption tool (henceforth referred to as `bufcrypt`) is a small shell
+script that uses AWS KMS for ecnrypting small chunks of text. The limit is
+currently capped at 4096 bits and will be increased in the near future. The
+script will also change to become a binary will allow even binary files to be
+encrypted.
 
-## 🔭 Future Features <a name="future-features"></a>
+Bufcrypt was create to allow us to encrypt values that you need to share via
+slack or other insecure channels **if needed**. This is especially useful if you
+need to share sensitive information such as AWS keys or login details to an app
+with the whole team. It is more convenient than sharing it via multiple one time
+secrets. Instead you can use a single ecnrypted value which can be safely pasted
+into channels such as slack or email.
 
-> Describe 1 - 3 features you will add to the project.
+### How `bufcrypt` helps with documentation
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+For the purpose of documentation, bufcrypt is used to encrypt sensitive
+information that goes into our documenation.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Sensitive information here is any info that we would avoid sharing in public.
+This includes IP addresses, certain commands, SQL structures such as column
+names of tables, and internal application subdomain information.
 
-<!-- CONTRIBUTING -->
+**This should not be used as way to share volatile information such as API
+secret tokens inside our documentation. That information MUST remain outside of
+the docs regardless of it being encrypted or not.**
 
-## 🤝 Contributing <a name="contributing"></a>
+A good measuring stick would be, "can an attacker immediately or effortlessly do
+something malicious with this information?". If the answer is Yes, it is
+volatile. If no, it's probably information that can be encrypted and placed in
+the docs.
 
-Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+## How to use `bufcrypt` in documentation
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Once you have your encrypted value, to add it to the documentation, please enter
+the value between `<secret></secret>` tags. 
 
-<!-- SUPPORT -->
+If my encrpted value is `908454j3h319u0ashujhufhafa=/134o2urf1+` for example,
+I'd use
 
-## ⭐️ Show your support <a name="support"></a>
+`<secret>908454j3h319u0ashujhufhafa=/134o2urf1+</secret>` inside the docs when
+editing it. The final displayed markdown renders the value as normal (without
+the <secret> tag being visible)
 
-> Write a message to encourage readers to support your project
+The reason for using `<secret>` is that in the future, we'll have a tool to
+automatically read the documentation and re-encrypt values with rotated keys.
+Having it between `<secret>` tags will make it easier to detect secrets and
+rotate them.
 
-If you like this project...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+There will be additional safeguards for this so don't worry if you forgot to use
+the `<secret>` tag. We'll be trying to have as many safeguards as possible for
+this.
