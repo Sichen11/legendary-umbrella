@@ -1,2 +1,3 @@
-*.md linguist-detectable=true
-*.md linguist-documentation=false
+open_collective: standard-readme
+github: RichardLitt
+patreon: richlitt
