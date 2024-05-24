@@ -1,4 +1,2 @@
-{
-  "singleQuote": true,
-  "semi": false
-}
+*.md linguist-detectable=true
+*.md linguist-documentation=false
