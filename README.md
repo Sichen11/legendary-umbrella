@@ -1,267 +1,110 @@
-Getting started with Markdown
-=============================
-
-
-- [Getting started with Markdown](#getting-started-with-markdown)
-- [Titles](#titles)
-- [Paragraph](#paragraph)
-- [List](#list)
-	- [List CheckBox](#list-checkbox)
-- [Link](#link)
-	- [Anchor links](#anchor-links)
-- [Blockquote](#blockquote)
-- [Image | GIF](#image--gif)
-- [Style Text](#style-text)
-	- [Italic](#italic)
-	- [Bold](#bold)
-	- [Strikethrough](#strikethrough)
-- [Code](#code)
-- [Email](#email)
-- [Table](#table)
-	- [Table Align](#table-align)
-    	- [Align Center](#align-center)
-    	- [Align Left](#align-left)
-    	- [Align Right](#align-right)
-- [Escape Characters](#escape-characters)
-- [Emoji](#emoji)
-- [Shields Badges](#Shields-Badges)
-- [Markdown Editor](#markdown-editor)
-- [Some links for more in depth learning](#some-links-for-more-in-depth-learning)
-
-----------------------------------
-
-# Titles 
-
-### Title 1
-### Title 2
-
-	Title 1
-	========================
-	Title 2 
-	------------------------
-
-# Title 1
-## Title 2
-### Title 3
-#### Title 4
-##### Title 5
-###### Title 6
-
-    # Title 1
-    ## Title 2
-    ### Title 3    
-    #### Title 4
-    ##### Title 5
-    ###### Title 6    
-
-# Paragraph
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit. Phasellus eleifend egestas diam, id tincidunt arcu dictum quis. Pellentesque eu dui tempus, tempus massa sed, eleifend tortor. Donec in sem in erat iaculis tincidunt. Fusce condimentum hendrerit turpis nec vehicula. Aliquam finibus nisi vel eros lobortis dictum. Etiam congue tortor libero, quis faucibus ligula gravida a. Suspendisse non pulvinar nisl. Sed malesuada, felis vitae consequat gravida, dui ligula suscipit ligula, nec elementum nulla sem vel dolor. Vivamus augue elit, venenatis non lorem in, volutpat placerat turpis. Nullam et libero at eros vulputate auctor. Duis sed pharetra lacus. Sed egestas ligula vitae libero aliquet, ac imperdiet est ullamcorper. Sed dapibus sem tempus eros dignissim, ac suscipit lectus dapibus. Proin sagittis diam vel urna volutpat, vel ullamcorper urna lobortis. Suspendisse potenti.
-
-Nulla varius risus sapien, nec fringilla massa facilisis sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc vel ornare erat, eget rhoncus lectus. Suspendisse interdum scelerisque molestie. Aliquam convallis consectetur lorem ut consectetur. Nullam massa libero, cursus et porta ac, consequat eget nibh. Sed faucibus nisl augue, non viverra justo sagittis venenatis.
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit. 
-    
-    Phasellus eleifend egestas diam, id tincidunt arcu dictum quis.
-
-# List 
-* Item 1;
-	* Item 1.1;
-* Item 2;
-	* Item 2.1;
-	* Item 2.2;
-* Item 3
-	* Item 3.1;
-		* Item 3.1.1;
-    
->      * Item 1;
->	      * Item 1.1;
->	    * Item 2;
->	     * Item 2.1;
->	     * Item 2.2;
->	    * Item 3
->		   * Item 3.1;
->			  * Item 3.1.1;
-
-## List CheckBox
-
- - [ ] Item A
- - [x] Item B
- - [x] Item C
- 
->     - [ ] Item A
->     - [x] Item B
->     - [x] Item C
-
-
-# Link
-[Google](https://www.google.com) - _Google | Youtube | Gmail | Maps | PlayStore | GoogleDrive_
-
-[Youtube](https://www.youtube.com) - _Enjoy videos and music you love, upload original content, and share it with friends, family, and the world on YouTube._
-
-[GitHub](https://github.com/fefong/markdown_readme#getting-started-with-markdown) - _Project_
+# Artsy Engineering [![CircleCI](https://circleci.com/gh/artsy/README.svg?style=svg)](https://circleci.com/gh/artsy/README)
 
-		[Google](https://www.google.com) - _Google | Youtube | Gmail | Maps | PlayStore | GoogleDrive_
+Welcome to Artsy! If you're a new team member, we're excited to have you! Here are your
+[onboarding docs](/onboarding#readme).
 
-## Anchor links
+This repo is a work in progress. In fact, your first pull request could be to fix or add to
+[this doc](https://github.com/artsy/README/blob/master/README.md). Reach out to your mentor or anyone else on the
+engineering team with questions, or try the [#dev Slack channel](https://artsy.slack.com/messages/dev) 🔒.
 
-[Markdown - Summary](#Getting-started-with-Markdown)
+Whether you're seasoned or fresh out of school, take a moment to read
+[Your First 60 Days at an Engineering Job](https://code.dblock.org/2015/04/23/your-first-60-days-at-an-engineering-job.html).
 
-[Markdown - Markdown Editor](#Markdown-Editor)
+We split this repo out into different sections, each one has a summary of what's inside to make it easy to browse.
 
-		[Markdown - Link](#Link)
+<!-- prettier-ignore-start -->
+<!-- start_toc -->
+| Section |  |
+|--|--|
+| [[TODO] Add a summary.json to RFCs](/RFCs) | [TODO] |
+| [[TODO] Add a summary.json to _templates](/_templates) | [TODO] |
+| [Careers at Artsy](/careers#readme) | How do we grow people |
+| [Conference Notes](/conference-notes#readme) | Artsy Engineers' notes from attending conferences. |
+| [Engineering Culture](/culture#readme) | What makes Artsy Engineering tick? |
+| [Events at Artsy](/events#readme) | Documentation on regularly occurring events and meetings. |
+| [Hiring at Artsy](/hiring#readme) | How do we hire people |
+| [Onboarding Notes for New Engineers](/onboarding#readme) | Your first steps to being productive |
+| [Playbooks](/playbooks#readme) | Tips, procedures, and best practices |
+| [Engineering Practices](/practices#readme) | How do we handle cross-functional concerns. |
+| [Engineering Recommendations](/resources#readme) | Collections of further reading. |
+<!-- end_toc -->
+<!-- prettier-ignore-end -->
 
-# Blockquote
-> Lebenslangerschicksalsschatz: Lifelong Treasure of Destiny
+## Artsy Engineering Operations
 
-    > Lebenslangerschicksalsschatz: Lifelong Treasure of Destiny 
+### Product & Engineering Teams
 
-# Image | GIF
-![myImage](https://media.giphy.com/media/XRB1uf2F9bGOA/giphy.gif)
-    
-    ![myImage](https://media.giphy.com/media/XRB1uf2F9bGOA/giphy.gif)
-    
-See more [Markdown Extras - Image Align](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#image-align)    
+Artsy product engineering is organized in product teams. Each team has a _purpose_, eg. _"Help galleries get the
+most out of Artsy and run their business better"_, and Key Performance Indicators, or KPIs, eg. _"The number of
+artworks uploaded by partners."_ Each team has members with different responsibilities, including a _Product
+Manager_, a _Designer_, a _Technical Lead_ and _Engineers_, depending on size. Sometimes the same person wears
+multiple hats.
 
-# Style Text
-### Italic
+You can see this organization
+[in the Product section of Notion 🔑](https://www.notion.so/artsy/Product-470238180cf94c87906ef1d3ee259e05).
 
-*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.*
+In addition to working on a product team, engineers are encouraged to participate in our practices:
 
-     *Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.*
+- Platform Practice
 
-### Bold
-**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.**
+  - Practice lead: [Matt Jones](https://github.com/mc-jones)
+  - [Slack: #practice-platform](https://artsy.slack.com/messages/practice-platform) 🔒
+  - [Notion](https://www.notion.so/artsy/Platform-Practice-1b558d0627444c9c9bf7ed7583767ca2) 🔒
 
-    **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.**
-    
-### Strikethrough
-~~strikethrough text~~
+- Mobile Practice
 
-    ~~strikethrough text~~
-    
-# Code
+  - Practice co-leads: [George Kartalis](https://github.com/gkartalis) and
+    [Sultan Al-Maari](https://github.com/MrSltun)
+  - [Slack: #practice-mobile](https://artsy.slack.com/messages/practice-mobile) 🔒
+  - [Notion](https://www.notion.so/artsy/Mobile-Practice-ecc07763bfd04a848c74107dde3ec6dc) 🔒
 
-```java
-public static void main(String[] args) {
-	//TODO
-}
-```
+- Web Practice
 
->   \`\`\`java <br>
->   public static void main(String[] args) {<br>
->	    //TODO<br>
->	}<br>
->   \`\`\`<br>
+  - Practice co-leads: [Tanjie McMeans](https://github.com/TMcMeans) and [Tamara
+    Kiš](https://github.com/tam-kis)
+  - [Slack: #practice-web](https://artsy.slack.com/messages/practice-web) 🔒
+  - [Notion](https://www.notion.so/artsy/Web-Practice-bfe55e2c614a4c0eae493b7830622843) 🔒
 
-See more [Markdown Extras - Style Text](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#style-text)
+- Data Practice
+  - Practice lead: [Anil Bawa-Cavia](https://github.com/cavvia)
+  - [Slack: #practice-data](https://artsy.slack.com/messages/practice-data) 🔒
+  - [Notion](https://www.notion.so/artsy/Data-Practice-e248b46638604067a89ba77ca70b39b1) 🔒
 
-# Email
-<email@email.com>
+## Request For Comments
 
-    <email@email.com>
+A Request For Comments (or RFC) is how we change things, by opening a discussion
+that everyone can participate in and deciding if we want to move forward with the suggested change or not.
 
-# Table
+RFCs should be created by authoring a markdown file in the `/RFCs` folder and then
+opening a pull request. [Read the full playbook][rfc_playbook] for all the details!
 
-|Column 1|Column 2|Column 3|
-|---|---|---|
-|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
-|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
+[rfc_playbook]: /playbooks/rfcs.md
 
->\|Column 1|Column 2|Column 3|<br>
->\|---|---|---|<br>
->\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
->\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
+## Support
 
-## Table Align
+If you are on call or asked to fix an immediate issue reference our
+[support wiki](https://github.com/artsy/potential/wiki) 🔒 for up-to-date playbooks on how to solve issues.
 
-## Align Center
+<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
 
-|Column 1|Column 2|Column 3|
-|:---:|:---:|:---:|
-|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
-|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
+## About Artsy
 
->\|Column 1|Column 2|Column 3|<br>
->\|:---:|:---:|:---:|<br>
->\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
->\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
+<a href="https://www.artsy.net/">
+  <img align="left" src="https://avatars2.githubusercontent.com/u/546231?s=200&v=4"/>
+</a>
 
-## Align Left
+This project is the work of engineers at [Artsy][footer_website], the world's leading and largest online art
+marketplace and platform for discovering art. One of our core [Engineering Principles][footer_principles] is being
+[Open Source by Default][footer_open] which means we strive to share as many details of our work as possible.
 
-|Column 1|Column 2|Column 3|
-|:---|:---|:---|
-|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
-|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
-
->\|Column 1|Column 2|Column 3|<br>
->\|:---|:---|:---|<br>
->\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
->\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
-
-## Align Right
-
-|Column 1|Column 2|Column 3|
-|---:|---:|---:|
-|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
-|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
-
->\|Column 1|Column 2|Column 3|<br>
->\|---:|---:|---:|<br>
->\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
->\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
-
-See more [Markdown Extras - Table](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table)
-* [Rownspan](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table---rowspan)
-* [Colspan](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table---colspan)
-
-# Escape Characters
-
-```
-\   backslash
-`   backtick
-*   asterisk
-_   underscore
-{}  curly braces
-[]  square brackets
-()  parentheses
-#   hash mark
-+   plus sign
--   minus sign (hyphen)
-.   dot
-!   exclamation mark
-```
-
-# Emoji
-
-* [Emoji](emoji.md#emoji);
-	* [People](emoji.md#people) - (:blush: ; :hushed: ; :shit:);
-	* [Nature](emoji.md#nature) - (:sunny: ; :snowman: ; :dog:);
-	* [Objects](emoji.md#objects) - (:file_folder: ; :computer: ; :bell:);
-	* [Places](emoji.md#places) - (:rainbow: ; :warning: ; :statue_of_liberty:);
-	* [Symbols](emoji.md#symbols) - (:cancer: ; :x: ; :shipit:);
-* [Kaomoji](emoji.md#kaomoji);
-* [Special-Symbols](emoji.md#special-symbols);
-	
-
-# Shields Badges
-
-:warning: _We are not responsible for this site_
-
-See more: [https://shields.io/](https://shields.io/)
-
-[![GitHub forks](https://img.shields.io/github/forks/fefong/markdown_readme)](https://github.com/fefong/markdown_readme/network)
-![Markdown](https://img.shields.io/badge/markdown-project-red)
-
-# Markdown Editor
-
-[StackEdit](https://stackedit.io) - _StackEdit’s Markdown syntax highlighting is unique. The refined text formatting of the editor helps you visualize the final rendering of your files._
-
-# Some links for more in depth learning
-
-:page_facing_up: [Markdown Extras](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#markdown---extras)
-
-:page_facing_up: [Wikipedia - Markdown](https://pt.wikipedia.org/wiki/Markdown)
-
-:page_facing_up: [Oficial](https://daringfireball.net/projects/markdown/)
-
-
+You can learn more about this work from [our blog][footer_blog] and by following [@ArtsyOpenSource][footer_twitter]
+or explore our public data by checking out [our API][footer_api]. If you're interested in a career at Artsy, read
+through our [job postings][footer_jobs]!
+
+[footer_website]: https://www.artsy.net/
+[footer_principles]: https://github.com/artsy/README/blob/master/culture/engineering-principles.md
+[footer_open]: https://github.com/artsy/README/blob/master/culture/engineering-principles.md#open-source-by-default
+[footer_blog]: https://artsy.github.io/
+[footer_twitter]: https://twitter.com/ArtsyOpenSource
+[footer_api]: https://developers.artsy.net/
+[footer_jobs]: https://www.artsy.net/jobs
