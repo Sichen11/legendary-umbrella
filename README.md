@@ -1,39 +1,35 @@
-FROM ubuntu:trusty
+from setuptools import setup
 
-RUN apt-get update -qq
-RUN apt-get install -y apt-transport-https
+def readme():
+    return '''
+readme2tex
+==========
 
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 379CE192D401AB61
-RUN echo "deb https://dl.bintray.com/nxadm/rakudo-pkg-debs `lsb_release -cs` main" | tee -a /etc/apt/sources.list.d/rakudo-pkg.list
-RUN apt-get update -qq
+Renders LaTeX for Github Readmes.
+  
+See https://github.com/leegao/readme2tex/
+'''
 
-RUN apt-get install -y \
-    perl rakudo-pkg curl git build-essential python python-pip \
-    libssl-dev libreadline-dev zlib1g-dev \
-    libicu-dev cmake pkg-config
-
-ENV PATH $PATH:/opt/rakudo-pkg/bin
-RUN install-zef-as-user && zef install Pod::To::HTML
-
-RUN curl -L http://cpanmin.us | perl - App::cpanminus
-RUN cpanm --installdeps --notest Pod::Simple
-
-RUN pip install docutils
-
-ENV PATH $PATH:/root/.rbenv/bin:/root/.rbenv/shims
-RUN curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
-RUN rbenv install 2.4.1
-RUN rbenv global 2.4.1
-RUN rbenv rehash
-
-RUN gem install bundler
-
-WORKDIR /data/github-markup
-COPY github-markup.gemspec .
-COPY Gemfile .
-COPY Gemfile.lock .
-COPY lib/github-markup.rb lib/github-markup.rb
-RUN bundle
-
-ENV LC_ALL en_US.UTF-8
-RUN locale-gen en_US.UTF-8
+setup(name='readme2tex',
+      version='0.0.1b3',
+      description='Render LaTeX within your Github Readmes',
+      long_description=readme(),
+      url='http://github.com/leegao/readme2tex',
+      author='Lee Gao',
+      author_email='lg342@cornell.edu',
+      license='MIT',
+      packages=['readme2tex'],
+      classifiers=[
+          'Development Status :: 3 - Alpha',
+          'License :: OSI Approved :: MIT License',
+          'Programming Language :: Python :: 2.7',
+          'Topic :: Text Processing :: Markup :: LaTeX',
+      ],
+      keywords='github readme markdown latex tex equations math svg markup',
+      install_requires=[
+          'markdown',
+          'pygments',
+          'cairosvg==1.0.22',
+      ],
+      include_package_data=True,
+      zip_safe=False)
