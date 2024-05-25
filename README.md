@@ -1,115 +1,267 @@
-[submodule "unity"]
-	path = libraries/3rdparty/unity
-	url = https://github.com/ThrowTheSwitch/Unity.git
-	branch = v2.4.3
-[submodule "freertos_kernel"]
-	path = freertos_kernel
-	url = https://github.com/FreeRTOS/FreeRTOS-Kernel.git
-[submodule "pkcs11"]
-	path = libraries/3rdparty/pkcs11
-	url = https://github.com/amazon-freertos/pkcs11.git
-	branch = v2.40_errata01
-[submodule "lwip"]
-	path = libraries/3rdparty/lwip
-	url = https://github.com/lwip-tcpip/lwip.git
-[submodule "libraries/3rdparty/CMock"]
-	path = libraries/3rdparty/CMock
-	url = https://github.com/ThrowTheSwitch/CMock.git
-[submodule "vendors/espressif/esp-idf"]
-	path = vendors/espressif/esp-idf
-	url = https://github.com/espressif/esp-afr-sdk.git
-	branch = release/v4.2
-[submodule "mbedtls"]
-	path = libraries/3rdparty/mbedtls
-	url = https://github.com/ARMmbed/mbedtls.git
-	branch = mbedtls-2.28
-[submodule "libraries/abstractions/pkcs11/psa"]
-	path = libraries/abstractions/pkcs11/psa
-	url = https://github.com/Linaro/freertos-pkcs11-psa.git
-[submodule "libraries/coreMQTT"]
-	path = libraries/coreMQTT
-	url = https://github.com/FreeRTOS/coreMQTT.git
-[submodule "libraries/coreJSON"]
-	path = libraries/coreJSON
-	url = https://github.com/FreeRTOS/coreJSON.git
-[submodule "libraries/abstractions/pkcs11/corePKCS11"]
-	path = libraries/abstractions/pkcs11/corePKCS11
-	url = https://github.com/FreeRTOS/corePKCS11.git
-[submodule "libraries/freertos_plus/standard/freertos_plus_tcp"]
-	path = libraries/freertos_plus/standard/freertos_plus_tcp
-	url = https://github.com/FreeRTOS/FreeRTOS-Plus-TCP.git
-[submodule "libraries/device_shadow_for_aws"]
-	path = libraries/device_shadow_for_aws
-	url = https://github.com/aws/device-shadow-for-aws-iot-embedded-sdk.git
-[submodule "libraries/coreHTTP"]
-	path = libraries/coreHTTP
-	url = https://github.com/FreeRTOS/coreHTTP.git
-[submodule "libraries/jobs_for_aws"]
-	path = libraries/jobs_for_aws
-	url = https://github.com/aws/jobs-for-aws-iot-embedded-sdk.git
-[submodule "libraries/device_defender_for_aws"]
-	path = libraries/device_defender_for_aws
-	url = https://github.com/aws/device-defender-for-aws-iot-embedded-sdk.git
-[submodule "libraries/abstractions/backoff_algorithm"]
-	path = libraries/abstractions/backoff_algorithm
-	url = https://github.com/FreeRTOS/backoffAlgorithm.git
-[submodule "libraries/coreMQTT-Agent"]
-	path = libraries/coreMQTT-Agent
-	url = https://github.com/FreeRTOS/coreMQTT-Agent.git
-[submodule "vendors/cypress/MTB/libraries/serial-flash"]
-	path = vendors/cypress/MTB/libraries/serial-flash
-	url = https://github.com/cypresssemiconductorco/serial-flash.git
-[submodule "vendors/cypress/MTB/libraries/whd-bsp-integration"]
-	path = vendors/cypress/MTB/libraries/whd-bsp-integration
-	url = https://github.com/cypresssemiconductorco/whd-bsp-integration.git
-[submodule "vendors/cypress/MTB/libraries/retarget-io"]
-	path = vendors/cypress/MTB/libraries/retarget-io
-	url = https://github.com/cypresssemiconductorco/retarget-io.git
-[submodule "vendors/cypress/MTB/libraries/rgb-led"]
-	path = vendors/cypress/MTB/libraries/rgb-led
-	url = https://github.com/cypresssemiconductorco/rgb-led.git
-[submodule "vendors/cypress/MTB/libraries/core-lib"]
-	path = vendors/cypress/MTB/libraries/core-lib
-	url = https://github.com/cypresssemiconductorco/core-lib.git
-[submodule "vendors/cypress/MTB/libraries/abstraction-rtos"]
-	path = vendors/cypress/MTB/libraries/abstraction-rtos
-	url = https://github.com/cypresssemiconductorco/abstraction-rtos.git
-[submodule "vendors/cypress/MTB/psoc6/psoc6cm0p"]
-	path = vendors/cypress/MTB/psoc6/psoc6cm0p
-	url = https://github.com/cypresssemiconductorco/psoc6cm0p.git
-[submodule "vendors/cypress/MTB/libraries/capsense"]
-	path = vendors/cypress/MTB/libraries/capsense
-	url = https://github.com/cypresssemiconductorco/capsense.git
-[submodule "vendors/cypress/MTB/libraries/connectivity-utilities"]
-	path = vendors/cypress/MTB/libraries/connectivity-utilities
-	url = https://github.com/cypresssemiconductorco/connectivity-utilities.git
-[submodule "vendors/cypress/MTB/libraries/wifi-host-driver"]
-	path = vendors/cypress/MTB/libraries/wifi-host-driver
-	url = https://github.com/cypresssemiconductorco/wifi-host-driver.git
-[submodule "vendors/cypress/MTB/libraries/clib-support"]
-	path = vendors/cypress/MTB/libraries/clib-support
-	url = https://github.com/cypresssemiconductorco/clib-support.git
-[submodule "vendors/cypress/MTB/psoc6/psoc6make"]
-	path = vendors/cypress/MTB/psoc6/psoc6make
-	url = https://github.com/cypresssemiconductorco/psoc6make.git
-[submodule "vendors/cypress/MTB/psoc6/psoc6pdl"]
-	path = vendors/cypress/MTB/psoc6/psoc6pdl
-	url = https://github.com/cypresssemiconductorco/psoc6pdl.git
-[submodule "vendors/cypress/MTB/psoc6/udb-sdio-whd"]
-	path = vendors/cypress/MTB/psoc6/udb-sdio-whd
-	url = https://github.com/cypresssemiconductorco/udb-sdio-whd.git
-[submodule "vendors/cypress/MTB/psoc6/psoc6hal"]
-	path = vendors/cypress/MTB/psoc6/psoc6hal
-	url = https://github.com/cypresssemiconductorco/psoc6hal.git
-[submodule "vendors/cypress/MTB/libraries/lpa"]
-	path = vendors/cypress/MTB/libraries/lpa
-	url = https://github.com/cypresssemiconductorco/lpa.git
-[submodule "vendors/cypress/MTB/libraries/kv-store"]
-	path = vendors/cypress/MTB/libraries/kv-store
-	url = https://github.com/cypresssemiconductorco/kv-store.git
-[submodule "libraries/ota_for_aws"]
-	path = libraries/ota_for_aws
-	url = https://github.com/aws/ota-for-aws-iot-embedded-sdk.git
-[submodule "libraries/abstractions/ota_pal_psa"]
-	path = libraries/abstractions/ota_pal_psa
-	url = https://github.com/Linaro/freertos-ota-pal-psa.git
+Getting started with Markdown
+=============================
+
+
+- [Getting started with Markdown](#getting-started-with-markdown)
+- [Titles](#titles)
+- [Paragraph](#paragraph)
+- [List](#list)
+	- [List CheckBox](#list-checkbox)
+- [Link](#link)
+	- [Anchor links](#anchor-links)
+- [Blockquote](#blockquote)
+- [Image | GIF](#image--gif)
+- [Style Text](#style-text)
+	- [Italic](#italic)
+	- [Bold](#bold)
+	- [Strikethrough](#strikethrough)
+- [Code](#code)
+- [Email](#email)
+- [Table](#table)
+	- [Table Align](#table-align)
+    	- [Align Center](#align-center)
+    	- [Align Left](#align-left)
+    	- [Align Right](#align-right)
+- [Escape Characters](#escape-characters)
+- [Emoji](#emoji)
+- [Shields Badges](#Shields-Badges)
+- [Markdown Editor](#markdown-editor)
+- [Some links for more in depth learning](#some-links-for-more-in-depth-learning)
+
+----------------------------------
+
+# Titles 
+
+### Title 1
+### Title 2
+
+	Title 1
+	========================
+	Title 2 
+	------------------------
+
+# Title 1
+## Title 2
+### Title 3
+#### Title 4
+##### Title 5
+###### Title 6
+
+    # Title 1
+    ## Title 2
+    ### Title 3    
+    #### Title 4
+    ##### Title 5
+    ###### Title 6    
+
+# Paragraph
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit. Phasellus eleifend egestas diam, id tincidunt arcu dictum quis. Pellentesque eu dui tempus, tempus massa sed, eleifend tortor. Donec in sem in erat iaculis tincidunt. Fusce condimentum hendrerit turpis nec vehicula. Aliquam finibus nisi vel eros lobortis dictum. Etiam congue tortor libero, quis faucibus ligula gravida a. Suspendisse non pulvinar nisl. Sed malesuada, felis vitae consequat gravida, dui ligula suscipit ligula, nec elementum nulla sem vel dolor. Vivamus augue elit, venenatis non lorem in, volutpat placerat turpis. Nullam et libero at eros vulputate auctor. Duis sed pharetra lacus. Sed egestas ligula vitae libero aliquet, ac imperdiet est ullamcorper. Sed dapibus sem tempus eros dignissim, ac suscipit lectus dapibus. Proin sagittis diam vel urna volutpat, vel ullamcorper urna lobortis. Suspendisse potenti.
+
+Nulla varius risus sapien, nec fringilla massa facilisis sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc vel ornare erat, eget rhoncus lectus. Suspendisse interdum scelerisque molestie. Aliquam convallis consectetur lorem ut consectetur. Nullam massa libero, cursus et porta ac, consequat eget nibh. Sed faucibus nisl augue, non viverra justo sagittis venenatis.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit. 
+    
+    Phasellus eleifend egestas diam, id tincidunt arcu dictum quis.
+
+# List 
+* Item 1;
+	* Item 1.1;
+* Item 2;
+	* Item 2.1;
+	* Item 2.2;
+* Item 3
+	* Item 3.1;
+		* Item 3.1.1;
+    
+>      * Item 1;
+>	      * Item 1.1;
+>	    * Item 2;
+>	     * Item 2.1;
+>	     * Item 2.2;
+>	    * Item 3
+>		   * Item 3.1;
+>			  * Item 3.1.1;
+
+## List CheckBox
+
+ - [ ] Item A
+ - [x] Item B
+ - [x] Item C
+ 
+>     - [ ] Item A
+>     - [x] Item B
+>     - [x] Item C
+
+
+# Link
+[Google](https://www.google.com) - _Google | Youtube | Gmail | Maps | PlayStore | GoogleDrive_
+
+[Youtube](https://www.youtube.com) - _Enjoy videos and music you love, upload original content, and share it with friends, family, and the world on YouTube._
+
+[GitHub](https://github.com/fefong/markdown_readme#getting-started-with-markdown) - _Project_
+
+		[Google](https://www.google.com) - _Google | Youtube | Gmail | Maps | PlayStore | GoogleDrive_
+
+## Anchor links
+
+[Markdown - Summary](#Getting-started-with-Markdown)
+
+[Markdown - Markdown Editor](#Markdown-Editor)
+
+		[Markdown - Link](#Link)
+
+# Blockquote
+> Lebenslangerschicksalsschatz: Lifelong Treasure of Destiny
+
+    > Lebenslangerschicksalsschatz: Lifelong Treasure of Destiny 
+
+# Image | GIF
+![myImage](https://media.giphy.com/media/XRB1uf2F9bGOA/giphy.gif)
+    
+    ![myImage](https://media.giphy.com/media/XRB1uf2F9bGOA/giphy.gif)
+    
+See more [Markdown Extras - Image Align](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#image-align)    
+
+# Style Text
+### Italic
+
+*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.*
+
+     *Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.*
+
+### Bold
+**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.**
+
+    **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.**
+    
+### Strikethrough
+~~strikethrough text~~
+
+    ~~strikethrough text~~
+    
+# Code
+
+```java
+public static void main(String[] args) {
+	//TODO
+}
+```
+
+>   \`\`\`java <br>
+>   public static void main(String[] args) {<br>
+>	    //TODO<br>
+>	}<br>
+>   \`\`\`<br>
+
+See more [Markdown Extras - Style Text](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#style-text)
+
+# Email
+<email@email.com>
+
+    <email@email.com>
+
+# Table
+
+|Column 1|Column 2|Column 3|
+|---|---|---|
+|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
+|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
+
+>\|Column 1|Column 2|Column 3|<br>
+>\|---|---|---|<br>
+>\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
+>\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
+
+## Table Align
+
+## Align Center
+
+|Column 1|Column 2|Column 3|
+|:---:|:---:|:---:|
+|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
+|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
+
+>\|Column 1|Column 2|Column 3|<br>
+>\|:---:|:---:|:---:|<br>
+>\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
+>\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
+
+## Align Left
+
+|Column 1|Column 2|Column 3|
+|:---|:---|:---|
+|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
+|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
+
+>\|Column 1|Column 2|Column 3|<br>
+>\|:---|:---|:---|<br>
+>\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
+>\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
+
+## Align Right
+
+|Column 1|Column 2|Column 3|
+|---:|---:|---:|
+|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
+|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
+
+>\|Column 1|Column 2|Column 3|<br>
+>\|---:|---:|---:|<br>
+>\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
+>\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
+
+See more [Markdown Extras - Table](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table)
+* [Rownspan](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table---rowspan)
+* [Colspan](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table---colspan)
+
+# Escape Characters
+
+```
+\   backslash
+`   backtick
+*   asterisk
+_   underscore
+{}  curly braces
+[]  square brackets
+()  parentheses
+#   hash mark
++   plus sign
+-   minus sign (hyphen)
+.   dot
+!   exclamation mark
+```
+
+# Emoji
+
+* [Emoji](emoji.md#emoji);
+	* [People](emoji.md#people) - (:blush: ; :hushed: ; :shit:);
+	* [Nature](emoji.md#nature) - (:sunny: ; :snowman: ; :dog:);
+	* [Objects](emoji.md#objects) - (:file_folder: ; :computer: ; :bell:);
+	* [Places](emoji.md#places) - (:rainbow: ; :warning: ; :statue_of_liberty:);
+	* [Symbols](emoji.md#symbols) - (:cancer: ; :x: ; :shipit:);
+* [Kaomoji](emoji.md#kaomoji);
+* [Special-Symbols](emoji.md#special-symbols);
+	
+
+# Shields Badges
+
+:warning: _We are not responsible for this site_
+
+See more: [https://shields.io/](https://shields.io/)
+
+[![GitHub forks](https://img.shields.io/github/forks/fefong/markdown_readme)](https://github.com/fefong/markdown_readme/network)
+![Markdown](https://img.shields.io/badge/markdown-project-red)
+
+# Markdown Editor
+
+[StackEdit](https://stackedit.io) - _StackEdit’s Markdown syntax highlighting is unique. The refined text formatting of the editor helps you visualize the final rendering of your files._
+
+# Some links for more in depth learning
+
+:page_facing_up: [Markdown Extras](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#markdown---extras)
+
+:page_facing_up: [Wikipedia - Markdown](https://pt.wikipedia.org/wiki/Markdown)
+
+:page_facing_up: [Oficial](https://daringfireball.net/projects/markdown/)
+
+
