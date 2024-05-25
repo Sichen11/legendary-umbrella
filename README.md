@@ -1,480 +1,436 @@
-README
-===========================
+# readme2tex
+Renders LaTeX for Github Readmes
 
-该文件用来测试和展示书写README的各种markdown语法。GitHub的markdown语法在标准的markdown语法基础上做了扩充，称之为`GitHub Flavored Markdown`。简称`GFM`，GFM在GitHub上有广泛应用，除了README文件外，issues和wiki均支持markdown语法。
+$$
+\huge\text{Hello \LaTeX}
+$$
 
-****
+\begin{tikzpicture}
+\newcounter{density}
+\setcounter{density}{20}
+    \def\couleur{blue}
+    \path[coordinate] (0,0)  coordinate(A)
+                ++( 60:6cm) coordinate(B)
+                ++(-60:6cm) coordinate(C);
+    \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) -- cycle;
+    \foreach \x in {1,...,15}{%
+        \pgfmathsetcounter{density}{\thedensity+10}
+        \setcounter{density}{\thedensity}
+        \path[coordinate] coordinate(X) at (A){};
+        \path[coordinate] (A) -- (B) coordinate[pos=.15](A)
+                            -- (C) coordinate[pos=.15](B)
+                            -- (X) coordinate[pos=.15](C);
+        \draw[fill=\couleur!\thedensity] (A)--(B)--(C)--cycle;
+    }
+\end{tikzpicture}
 
-|作者|果冻虾仁|
-|---|---
-|知乎|[![zhihu-shield]][zhihu]
-|公众号|编程往事
+<sub>**Make sure that pdflatex is installed on your system.**</sub>
 
+----------------------------------------
 
-****
-## 目录
-* [横线](#横线)
-* [标题](#标题)
-* [文本](#文本)
-    * 普通文本
-    * 单行文本
-    * 多行文本
-    * 文字高亮
-    * 换行
-    * 斜体
-    * 粗体
-    * 删除线
-* [图片](#图片)
-    * 来源于网络的图片
-    * GitHub仓库中的图片
-* [链接](#链接)
-    * 文字超链接
-        *  链接外部URL
-        *  链接本仓库里的URL
-    *  锚点
-    * [图片链接](#图片链接)
-* [列表](#列表)
-    * 无序列表
-    * 有序列表
-    * 复选框列表
-* [块引用](#块引用)
-* [代码高亮](#代码高亮)
-* [表格](#表格)
-* [表情](#表情)
-* [diff语法](#diff语法)
-* [常用HTML语法](#常用HTML语法)
-    * [折叠](#折叠)
-    * [居中](#居中)
-* [其他](#其他)
-    * [徽章](#徽章)
-    * [star历史](#star历史)
+`readme2tex` is a Python script that "texifies" your readme. It takes in Github Markdown and
+replaces anything enclosed between dollar signs with rendered $\text{\LaTeX}$.
 
-### 横线
------------
-***、---、___可以显示横线效果
+In addition, while other Github TeX renderers tend to give a jumpy look to the compiled text, 
+<p align="center">
+<img src="http://i.imgur.com/XSV1rPw.png?1" width=500/>
+</p>
 
-***
----
-___
+`readme2tex` ensures that inline mathematical expressions
+are properly aligned with the rest of the text to give a more natural look to the document. For example,
+this formula $\frac{dy}{dx}$ is preprocessed so that it lines up at the correct baseline for the text.
+This is the one salient feature of this package compared to the others out there.
 
+### Installation
 
+Make sure that you have Python 2.7 or above and `pip` installed. In addition, you'll need to have the programs `latex` 
+and `dvisvgm` on your `PATH`. In addition, you'll need to pre-install the `geometry` package in $\text{\LaTeX}$.
 
-## 标题
-```
-# 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-```
-效果如下：
+To install `readme2tex`, you'll need to run
 
-# 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-
-
-## 文本
-### 普通文本
-这是一段普通的文本
-### 单行文本
-    Hello,大家好，我是果冻虾仁。
-在一行开头加入1个Tab或者4个空格。
-### 文本块
-#### 语法1
-在连续几行的文本开头加入1个Tab或者4个空格。
-
-    欢迎到访
-    很高兴见到您
-    祝您，早上好，中午好，下午好，晚安
-
-#### 语法2
-使用一对各三个的反引号：
-```
-欢迎到访
-我是C++码农
-你可以在知乎、CSDN、简书搜索【果冻虾仁】找到我
-```
-该语法也可以实现代码高亮，见[代码高亮](#代码高亮)
-### 文字高亮
-文字高亮功能能使行内部分文字高亮，使用一对反引号。
-语法：
-```
-`linux` `网络编程` `socket` `epoll`
-```
-效果：`linux` `网络编程` `socket` `epoll`
-
-也适合做一篇文章的tag
-#### 换行
-直接回车不能换行，
-可以在上一行文本后面补两个空格，
-这样下一行的文本就换行了。
-
-或者就是在两行文本直接加一个空行。
-
-也能实现换行效果，不过这个行间距有点大。
-#### 斜体、粗体、删除线
-
-|语法|效果|
-|----|-----|
-|`*斜体1*`|*斜体1*|
-|`_斜体2_`| _斜体2_|
-|`**粗体1**`|**粗体1**|
-|`__粗体2__`|__粗体2__|
-|`这是一个 ~~删除线~~`|这是一个 ~~删除线~~|
-|`***斜粗体1***`|***斜粗体1***|
-|`___斜粗体2___`|___斜粗体2___|
-|`***~~斜粗体删除线1~~***`|***~~斜粗体删除线1~~***|
-|`~~***斜粗体删除线2***~~`|~~***斜粗体删除线2***~~|
-
-    斜体、粗体、删除线可混合使用
-
-## 图片
-基本格式：
-```
-![alt](URL title)
-```
-alt和title即对应HTML中的alt和title属性（都可省略）：
-- alt表示图片显示失败时的替换文本
-- title表示鼠标悬停在图片时的显示文本（注意这里要加引号）
-
-URL即图片的url地址，如果引用本仓库中的图片，直接使用**相对路径**就可了，如果引用其他github仓库中的图片要注意格式，即：`仓库地址/raw/分支名/图片路径`，如：
-```
-https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
+```bash
+sudo pip install readme2tex
 ```
 
-|#|语法|效果|
-|---|---|----
-|1|`![baidu](http://www.baidu.com/img/bdlogo.gif "百度logo")`|![baidu](http://www.baidu.com/img/bdlogo.gif "百度logo")
-|2|`![][code-past]`|![][code-past]
+or, if you want to try out the bleeding edge,
 
-注意例2的写法使用了**URL标识符**的形式，在[链接](#链接)一节有介绍。
->在文末有code-past的定义：
-```
-[code-past]:/img/codepast-logo.jpg "公众号：编程往事"
+```bash
+git clone https://github.com/leegao/readme2tex
+cd readme2tex
+python setup.py develop
 ```
 
-## 链接
-### 链接外部URL
+To compile `INPUT.md` and render all of its formulas, run
 
-|#|语法|效果|
-|---|----|-----|
-|1|`[我的博客](http://blog.csdn.net/guodongxiaren "悬停显示")`|[我的博客](http://blog.csdn.net/guodongxiaren "悬停显示")|
-|2|`[我的知乎][zhihu] `|[我的知乎][zhihu] |
-
-语法2由两部分组成：
-- 第一部分使用两个中括号，[ ]里的标识符（本例中zhihu），可以是数字，字母等的组合，标识符上下对应就行了（**姑且称之为URL标识符**）
-- 第二部分标记实际URL。
-
->使用URL标识符能达到复用的目的，一般把全文所有的URL标识符统一放在文章末尾，这样看起来比较干净。除了干净之外，它还能达到复用的目的，比如你在多个地方想使用同一个链接，那么文内使用标识符，只在最底部给标识符定义出实际的URL链接即可，类似编程语言中的变量。
->>URL标识符是我起的名字，不知道是否准确。囧。。
-
-### 链接本仓库里的URL
-
-|语法|效果|
-|----|-----|
-|`[我的简介](/example/profile.md)`|[我的简介](/example/profile.md)|
-|`[example](./example)`|[example](./example)|
-
-### 图片链接
-给图片加链接的本质是混合图片显示语法和普通的链接语法。普通的链接中[ ]内部是链接要显示的文本，而图片链接[ ]里面则是要显示的图片。
-直接混合两种语法当然可以，但是十分啰嗦，为此我们可以使用URL标识符的形式。
-
-|#|语法|效果|
-|---|----|:---:|
-|1|`[![weibo-logo]](http://weibo.com/linpiaochen)`|[![weibo-logo]](http://weibo.com/linpiaochen)|
-|2|`[![](/img/zhihu.png "我的知乎，欢迎关注")][zhihu]`|[![](/img/zhihu.png "我的知乎，欢迎关注")][zhihu]|
-|3|`[![csdn-logo]][csdn]`|[![csdn-logo]][csdn]|
-
-因为图片本身和链接本身都支持URL标识符的形式，所以图片链接也可以很简洁（见例3）。
-注意，此时鼠标悬停时显示的文字是图片的title，而非链接本身的title了。
-> 本文URL标识符都放置于文末
-
-### 锚点
-其实呢，每一个标题都是一个锚点，和HTML的锚点（`#`）类似，比如我们
-
-|语法|效果|
-|---|---|
-|`[回到顶部](#readme)`|[回到顶部](#readme)|
-
-不过要注意，标题中的英文字母都被转化为**小写字母**了。
-> 以前GitHub对中文支持的不好，所以中文标题不能正确识别为锚点，但是现在已经没问题啦！
-
-## 列表
-### 无序列表
-#### 语法
-```
-* 昵称：果冻虾仁
-- 别名：隔壁老王
-* 英文名：Jelly
-```
-#### 效果
-* 昵称：果冻虾仁
-- 别名：隔壁老王
-* 英文名：Jelly
-
-### 多级无序列表
-#### 语法
-```
-* 编程语言
-    * 脚本语言
-        * Python
-```
-#### 效果
-* 编程语言
-    * 脚本语言
-        * Python
-
-### 一级有序列表
-#### 语法
-就是在数字后面加一个点，再加一个空格。不过看起来起来可能不够明显。
-```
-面向对象的三个基本特征：
-
-1. 封装
-2. 继承
-3. 多态
+```bash
+python -m readme2tex --output README.md INPUT.md
 ```
 
-#### 效果
-面向对象的三个基本特征：
+If you want to do this automatically for every commit of INPUT.md, you can use the `--add-git-hook` command once to
+set up the post-commit hook, like so
 
-1. 封装
-2. 继承
-3. 多态
+```bash
+git stash --include-untracked
+git branch svgs # if this isn't already there
 
+python -m readme2tex --output README.md --branch svgs --usepackage tikz INPUT.md --add-git-hook
 
-### 多级有序列表
-和无序列表一样，有序列表也有多级结构。
-#### 语法
-```
-1. 这是一级的有序列表，数字1还是1
-   1. 这是二级的有序列表，阿拉伯数字在显示的时候变成了罗马数字
-      1. 这是三级的有序列表，数字在显示的时候变成了英文字母
-```
+# modify INPUT.md
 
-#### 效果
+git add INPUT.md
+git commit -a -m "updated readme"
 
-1. 这是一级的有序列表，数字1还是1
-   1. 这是二级的有序列表，阿拉伯数字在显示的时候变成了罗马数字
-      1. 这是三级的有序列表，数字在显示的时候变成了英文字母
-
-
-### 复选框列表
-#### 语法
-```
-- [x] 需求分析
-- [x] 系统设计
-- [x] 详细设计
-- [ ] 编码
-- [ ] 测试
-- [ ] 交付
-```
-#### 效果
-
-- [x] 需求分析
-- [x] 系统设计
-- [x] 详细设计
-- [ ] 编码
-- [ ] 测试
-- [ ] 交付
-
-您可以使用这个功能来标注某个项目各项任务的完成情况。
-> Tip:
->> 在GitHub的**issue**中使用该语法是可以实时点击复选框来勾选或解除勾选的，而无需修改issue原文。
-
-## 块引用
-
-### 常用于引用文本
-#### 文本摘自《深入理解计算机系统》P27
-　令人吃惊的是，在哪种字节顺序是合适的这个问题上，人们表现得非常情绪化。实际上术语“little endian”（小端）和“big endian”（大端）出自Jonathan Swift的《格利佛游记》一书，其中交战的两个派别无法就应该从哪一端打开一个半熟的鸡蛋达成一致。因此，争论沦为关于社会政治的争论。只要选择了一种规则并且始终如一的坚持，其实对于哪种字节排序的选择都是任意的。
-> **“端”（endian）的起源**
-以下是Jonathan Swift在1726年关于大小端之争历史的描述：
-“……下面我要告诉你的是，Lilliput和Blefuscu这两大强国在过去36个月里一直在苦战。战争开始是由于以下的原因：我们大家都认为，吃鸡蛋前，原始的方法是打破鸡蛋较大的一端，可是当今的皇帝的祖父小时候吃鸡蛋，一次按古法打鸡蛋时碰巧将一个手指弄破了，因此他的父亲，当时的皇帝，就下了一道敕令，命令全体臣民吃鸡蛋时打破较小的一端，违令者重罚。”
-
-### 块引用有多级结构
-#### 语法
-```
-> 数据结构
->> 树
->>> 二叉树
->>>> 平衡二叉树
->>>>> 满二叉树
-```
-#### 效果
-> 数据结构
->> 树
->>> 二叉树
->>>> 平衡二叉树
->>>>> 满二叉树
-
-## 代码高亮
-
-### 语法
-在三个反引号后面加上编程语言的名字，另起一行开始写代码，最后一行再加上三个反引号。
-
-### 效果
-```Java
-public static void main(String[]args){} //Java
-```
-```c
-int main(int argc, char *argv[]) //C
-```
-```Bash
-echo "hello GitHub" #Bash
-```
-```javascript
-document.getElementById("myH1").innerHTML="Welcome to my Homepage"; //javascipt
-```
-```cpp
-string &operator+(const string& A,const string& B) //cpp
-```
-## 表格
-
-表头1  | 表头2|
---------- | --------|
-表格单元  | 表格单元 |
-表格单元  | 表格单元 |
-
-| 表头1  | 表头2|
-| ---------- | -----------|
-| 表格单元   | 表格单元   |
-| 表格单元   | 表格单元   |
-
-### 对齐
-表格可以指定对齐方式
-
-| 左对齐 | 居中  | 右对齐 |
-| :------------ |:---------------:| -----:|
-| col 3 is      | some wordy text | $1600 |
-| col 2 is      | centered        |   $12 |
-| zebra stripes | are neat        |    $1 |
-
-### 混合其他语法
-表格单元中的内容可以和其他大多数GFM语法配合使用，如：
-#### 使用普通文本的删除线，斜体等效果
-
-| 名字 | 描述 |
-| ------------- | ----------- |
-| Help      | ~~Display the~~ help window.|
-| Close     | _Closes_ a window     |
-
-#### 表格中嵌入图片（链接）
-其实前面介绍图片显示、图片链接的时候为了清晰就是放在在表格中显示的。
-
-| 图片 | 描述 |
-| ---- | ---- |
-|![baidu][baidu-logo] | 百度|
-
-## 表情
-Github的Markdown语法支持添加emoji表情，输入不同的符号码（两个冒号包围的字符）可以显示出不同的表情。
-
-比如`:blush:`，可以显示:blush:。
-
-具体每一个表情的符号码，可以查询GitHub的官方网页[http://www.emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com)。
-
-但是这个网页每次都打开**奇慢**。。所以我整理到了本repo中，大家可以直接在此查看[emoji](./emoji.md)。
-
-## diff语法
-版本控制的系统中都少不了diff的功能，即展示一个文件内容的增加与删除。
-GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示删除。
-#### 语法
-其语法与代码高亮类似，只是在三个反引号后面写diff，
-并且其内容中，可以用 `+ `开头表示新增，`- `开头表示删除。
-另外还有有 `!`和`#`的语法。
-
-#### 效果
-
-```diff
-+ 人闲桂花落，
-- 夜静春山空。
-! 月出惊山鸟，
-# 时鸣春涧中。
-```
-## 常用HTML语法
-markdown是支持HTML语法的，虽然不鼓励大量使用HTML语法，毕竟那样就丧失了markdown的意义，但是有一些HTML语法在写README的时候是很少的补充。
-### 折叠
-```
-<details>
-<summary>Linux环境</summary>
-
-##### 编译
-xxxx
-
-##### 安装
-xxxx
-</details>
-```
-<details>
-<summary>Linux环境</summary>
-
-##### 编译
-xxxx
-
-##### 安装
-xxxx
-
-</details>
-
-### 居中
-
-很多地方都会用到居中的效果，比如如下内容将会把一个表格在页面中居中展示：
-
-```
-<div align="center">
-
-| 表头1  | 表头2|
-| ---------- | -----------|
-| 表格单元   | 表格单元   |
-| 表格单元   | 表格单元   |
-
-</div>
+git stash pop
 ```
 
-<div align="center">
+and every `git commit` that touches `INPUT.md` from now on will allow you to automatically run `readme2tex` on it, saving
+you from having to remember how `readme2tex` works. The caveat is that if you use a GUI to interact with git, things
+might get a bit wonky. In particular, `readme2tex` will just assume that you're fine with all of the changes and won't
+prompt you for verification like it does on the terminal.
 
-| 表头1  | 表头2|
-| ---------- | -----------|
-| 表格单元   | 表格单元   |
-| 表格单元   | 表格单元   |
+<p align="center">
+<a href="https://asciinema.org/a/2am62r2x2udg1zqyb6r3kpm1i"><img src="https://asciinema.org/a/2am62r2x2udg1zqyb6r3kpm1i.png" width=600/></a>
+</p>
 
-</div>
+You can uninstall the hook by deleting `.git/hooks/post-commit`. See `python -m readme2tex --help` for a list
+of what you can do in `readme2tex`.
 
-其他任意需要居中展示的语法，都可以放在其中。
+### Examples:
 
-## 其他
-还有一些非markdown语法，但是在README文件中也很实用的组件。
-### 徽章
-绘制徽章，首选就是[shields.io](https://shields.io/)  具体语法去官网探索。
+Here's a display level formula
+$$
+\frac{n!}{k!(n-k)!} = {n \choose k}
+$$
 
-![LICENSE](https://img.shields.io/badge/license-MIT-green)
-![Author](https://img.shields.io/badge/Author-guodongxiaren-blue.svg)
-![zhihu-shield]
+The code that was used to render this formula is just
 
-其次有些第三方平台也提供方便的徽章，比如gitter：
+    $$
+    \frac{n!}{k!(n-k)!} = {n \choose k}
+    $$
 
-[![Join the chat at https://gitter.im/guodongxiaren/README](https://badges.gitter.im/guodongxiaren/README.svg)](https://gitter.im/guodongxiaren/README?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+<sub>*Note: you can escape \$ so that they don't render.*</sub>
 
-### star历史
-star历史可以使用这个网站[star-history.com](https://star-history.com/)
+Here's an inline formula. 
+
+> It is well known that if $ax^2 + bx + c =0$, then $x = \frac{-b \pm \sqrt{b^2- 4ac}}{2a}$.
+
+The code that was used to render this is:
+
+    It is well known that if $ax^2 + bx + c = 0$, then $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.
+
+Notice that the formulas line up with the baseline of the text, even when the height of these two images are different.
+
+Sometimes, you might run into formulas that are bottom-heavy, like $x^2\sum\limits_{3^{n^{n^{n}}}}$. Here, `readme2tex`
+can compute the correct offset to align this formula to the baseline of your paragraph of text as well.
+
+#### Tikz (Courtesy of http://www.texample.net/)
+
+Did you notice the picture at the top of this page? That was also generated by $\text{\LaTeX}$. `readme2tex` is capable of
+handling Tikz code. For reference, the picture
+
+\begin{tikzpicture}
+\newcounter{density}
+\setcounter{density}{20}
+    \def\couleur{red}
+    \path[coordinate] (0,0)  coordinate(A)
+                ++( 60:6cm) coordinate(B)
+                ++(-60:6cm) coordinate(C);
+    \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) -- cycle;
+    \foreach \x in {1,...,15}{%
+        \pgfmathsetcounter{density}{\thedensity+10}
+        \setcounter{density}{\thedensity}
+        \path[coordinate] coordinate(X) at (A){};
+        \path[coordinate] (A) -- (B) coordinate[pos=.15](A)
+                            -- (C) coordinate[pos=.15](B)
+                            -- (X) coordinate[pos=.15](C);
+        \draw[fill=\couleur!\thedensity] (A)--(B)--(C)--cycle;
+    }
+\end{tikzpicture}
+
+is given by the tikz code
+
+    \begin{tikzpicture}
+    \newcounter{density}
+    \setcounter{density}{20}
+        \def\couleur{red}
+        \path[coordinate] (0,0)  coordinate(A)
+                    ++( 60:6cm) coordinate(B)
+                    ++(-60:6cm) coordinate(C);
+        \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) -- cycle;
+        \foreach \x in {1,...,15}{%
+            \pgfmathsetcounter{density}{\thedensity+10}
+            \setcounter{density}{\thedensity}
+            \path[coordinate] coordinate(X) at (A){};
+            \path[coordinate] (A) -- (B) coordinate[pos=.15](A)
+                                -- (C) coordinate[pos=.15](B)
+                                -- (X) coordinate[pos=.15](C);
+            \draw[fill=\couleur!\thedensity] (A)--(B)--(C)--cycle;
+        }
+    \end{tikzpicture}
+
+We can see a few other examples, such as this graphical proof of the Pythagorean Theorem.
+
+\begin{tikzpicture}
+\newcommand{\pythagwidth}{3cm}
+\newcommand{\pythagheight}{2cm}
+  \coordinate [label={below right:$A$}] (A) at (0, 0);
+  \coordinate [label={above right:$B$}] (B) at (0, \pythagheight);
+  \coordinate [label={below left:$C$}] (C) at (-\pythagwidth, 0);
+
+  \coordinate (D1) at (-\pythagheight, \pythagheight + \pythagwidth);
+  \coordinate (D2) at (-\pythagheight - \pythagwidth, \pythagwidth);
+
+  \draw [very thick] (A) -- (C) -- (B) -- (A);
+
+  \newcommand{\ranglesize}{0.3cm}
+  \draw (A) -- ++ (0, \ranglesize) -- ++ (-\ranglesize, 0) -- ++ (0, -\ranglesize);
+
+  \draw [dashed] (A) -- node [below] {$b$} ++ (-\pythagwidth, 0)
+            -- node [right] {$b$} ++ (0, -\pythagwidth)
+            -- node [above] {$b$} ++ (\pythagwidth, 0)
+            -- node [left]  {$b$} ++ (0, \pythagwidth);
+
+  \draw [dashed] (A) -- node [right] {$c$} ++ (0, \pythagheight)
+            -- node [below] {$c$} ++ (\pythagheight, 0)
+            -- node [left]  {$c$} ++ (0, -\pythagheight)
+            -- node [above] {$c$} ++ (-\pythagheight, 0);
+
+  \draw [dashed] (C) -- node [above left]  {$a$} (B)
+                     -- node [below left]  {$a$} (D1)
+                     -- node [below right] {$a$} (D2)
+                     -- node [above right] {$a$} (C);
+\end{tikzpicture}
+
+How about a few snowflakes?
+
+\begin{center}
+\usetikzlibrary{lindenmayersystems}
+
+\pgfdeclarelindenmayersystem{A}{
+    \rule{F -> FF[+F][-F]}
+}
+
+\pgfdeclarelindenmayersystem{B}{
+    \rule{F -> ffF[++FF][--FF]}
+}
+
+\pgfdeclarelindenmayersystem{C}{
+    \symbol{G}{\pgflsystemdrawforward}
+    \rule{F -> F[+F][-F]FG[+F][-F]FG}
+}
+
+\pgfdeclarelindenmayersystem{D}{
+    \symbol{G}{\pgflsystemdrawforward}
+    \symbol{H}{\pgflsystemdrawforward}
+    \rule{F -> H[+HG][-HG]G}
+    \rule{G -> HF}
+}
+
+\tikzset{
+    type/.style={l-system={#1, axiom=F,order=3,step=4pt,angle=60},
+      blue, opacity=0.4, line width=.5mm, line cap=round   
+    },
+}
+
+\newcommand\drawsnowflake[2][scale=0.2]{
+    \tikz[#1]
+    \foreach \a in {0,60,...,300}  {
+    \draw[rotate=\a,#2] l-system;
+    };
+}
+
+\foreach \width in {.2,.4,...,.8} 
+{  \drawsnowflake[scale=0.3]{type=A, line width=\width mm} }
+
+\foreach \width in {.2,.4,...,.8} 
+{  \drawsnowflake[scale=0.38]{type=A, l-system={angle=90}, line width=\width mm} }    
+
+\foreach \width in {.2,.4,...,.8} 
+{  \drawsnowflake[scale=0.3]{type=B, line width=\width mm} }
+
+\foreach \width in {.2,.4,...,.8} 
+{  \drawsnowflake{type=B, l-system={angle=30}, line width=\width mm} }
+
+\drawsnowflake[scale=0.24]{type=C, l-system={order=2}, line width=0.2mm}
+\drawsnowflake[scale=0.25]{type=C, l-system={order=2}, line width=0.4mm}
+\drawsnowflake[scale=0.25]{type=C, l-system={order=2,axiom=fF}, line width=0.2mm}
+\drawsnowflake[scale=0.32]{type=C, l-system={order=2,axiom=---fff+++F}, line width=0.2mm}
+
+\drawsnowflake[scale=0.38]{type=D, l-system={order=4,angle=60,axiom=GF}, line width=0.7mm}
+\drawsnowflake[scale=0.38]{type=D, l-system={order=4,angle=60,axiom=GfF}, line width=0.7mm}
+\drawsnowflake[scale=0.38]{type=D, l-system={order=4,angle=60,axiom=FG}, line width=0.7mm}
+\drawsnowflake[scale=0.38]{type=D, l-system={order=4,angle=60,axiom=FfG}, line width=0.7mm}
+\end{center}
+
+### Usage
+
+    python -m readme2tex --output README.md [READOTHER.md]
+
+It will then look for a file called `readother.md` and compile it down to a readable Github-ready
+document.
+
+In addition, you can specify other arguments to `render.py`, such as:
+
+* `--readme READOTHER.md` The raw readme to process. Defaults to `READOTHER.md`.
+* `--output README.md` The processed readme.md file. Defaults to `README_GH.md`.
+* `--usepackage tikz` Addition packages to use during $\text{\LaTeX}$ compilation. You can specify this multiple times.
+* `--svgdir svgs/` The directory to store the output svgs. The default is `svgs/`
+* `--branch master` *Experimental* Which branch to store the svgs into, the default is just master.
+* `--username username` Your github username. This is optional, and `render.py` will try to infer this for you.
+* `--project project` The current github project. This is also optional.
+* `--nocdn` Ticking this will use relative paths for the output images. Defaults to False.
+* `--htmlize` Ticking this will output a `md.html` file so you can preview what the output looks like. Defaults to False.
+* `--valign` Ticking this will use the `valign` trick (detailed below) instead. See the caveats section for tradeoffs.
+* `--rerender` Ticking this will force a recompilation of all $\text{\LaTeX}$ formulas even if they are already cached.
+* `--bustcache` Ticking this will ensure that Github renews its image cache. Github may sometimes take up to an hour for changed images to reappear. This is usually not necessary unless you've made stylistic changes.
+* `--add-git-hook` Ticking this will generate a post-commit hook for git that runs readme2tex with the rest of the specified arguments after each `git commit`.
+* `--pngtrick` Ticking this will generate `png` files instead of `svgs` for the formulas.
+
+My usual workflow is to create a secondary branch just for the compiled svgs. You can accomplish this via
+
+    python -m readme2tex --branch svgs --output README.md
+
+However, be careful with this command, since it will switch over to the `svgs` branch without any input from you.
+
+#### Relative Paths
+
+If you're on a private repository or you want to, for whatever reason, use relative paths to resolve your images, you can
+do so by using the combination
+
+    python -m readme2tex --branch master --nocdn --pngtrick ...
+
+which will output `pngs` relative to your `README.md`.
+
+Due to security considerations, Github will not resolve `svgs` relatively, which means that private repositories will
+be locked out of the usual `svg` workflow. Using the `--branch master --nocdn --pngtrick` combination will get around
+this restriction.
+
+### Troubleshooting
+
+#### Tikz
+
+If your Tikz drawings don't show up, there's a good chance that you either don't have Ghostscript installed or
+`dvisvgm` isn't picking it up for whatever reason. This is most likely to happen on some installations of TexLive
+on OSX.
+
+Check to see if `ps` is included in the list when you run
+
+```bash
+# dvisvgm -l
+bgcolor    background color special
+color      complete support of color specials
+dvisvgm    special set for embedding raw SVG snippets
+em         line drawing statements of the emTeX special set
+html       hyperref specials
+pdf        pdfTeX font map specials
+ps         dvips PostScript specials <<<
+tpic       TPIC specials
 ```
-[![Star History Chart](https://api.star-history.com/svg?repos=guodongxiaren/README&type=Date)](https://star-history.com/#guodongxiaren/README&Date)
+
+If not, try installing it (either `apt-get`, `yum`, or `brew`). Furthermore, if you are on OSX, make sure to add the
+following to your `~/.bash_profile`
+
+```bash
+export LIBGS=/usr/local/lib/libgs.dylib
 ```
-这段代码的显示效果如下：
 
-[![Star History Chart](https://api.star-history.com/svg?repos=guodongxiaren/README&type=Date)](https://star-history.com/#guodongxiaren/README&Date)
+where `/usr/local/lib/libgs.dylib` is the location where `libgs.dylib` is installed.
 
+#### I'm seeing weird formatting from time to time.
 
---------------------------------
-[csdn]:http://blog.csdn.net/guodongxiaren "我的博客"
-[zhihu]:https://www.zhihu.com/people/guodongxiaren "我的知乎，欢迎关注"
-[weibo]:http://weibo.com/linpiaochen
-[baidu-logo]:http://www.baidu.com/img/bdlogo.gif "百度logo"
-[weibo-logo]:/img/weibo.png "点击图片进入我的微博"
-[csdn-logo]:/img/csdn.png "我的CSDN博客"
-[code-past]:/img/codepast-logo.jpg "公众号：编程往事"
-[zhihu-shield]:https://img.shields.io/badge/dynamic/json?color=0084ff&logo=zhihu&label=%E6%9E%9C%E5%86%BB%E8%99%BE%E4%BB%81&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dzhihu%26queryKey%3Dguodongxiaren
+Make sure that if you have a `<p>...</p>` tag somewhere, you leave at least one blank line after the closing tag.
+
+#### I ran `--add-git-hook`, but the post-commit hook isn't running after committing.
+
+```bash
+chmod +x .git/hooks/post-commit
+```
+
+#### I raw `readme2tex` and got strange image srcs or got images that won't resolve
+
+Try running `readme2tex` with
+
+```bash
+python -m readme2tex ... --username GITHUB_USERNAME  --project PROJECT_NAME
+```
+
+#### I ran `readme2tex` and got a traceback somewhere.
+
+Unfortunately, this script still has a few kinks and bugs that I need to iron out. In the mean time, if the `pypi` releases
+aren't working for you, you should switch over to the development version to see if the bugs have been squashed:
+
+```bash
+git clone https://github.com/leegao/readme2tex
+cd readme2tex
+python setup.py develop
+```
+
+### Technical Tricks
+
+#### How can you tell where the baseline of an image is?
+
+By prepending every inline formula with an anchor. During post-processing, we can isolate the anchor, which
+is fixed at the baseline, and crop it out. It's super clowny, but it does the job.
+
+#### Caveats
+
+Github does not allow you to pass in custom style attributes to your images. While this is useful for security purposes,
+it makes it incredibly difficult to ensure that images will align correctly to the text. `readme2tex` circumvents this
+using one of two tricks:
+
+1. In Chrome, the attribute `valign=offset` works for `img` tags as well. This allows us to shift the image directly.
+Unfortunately, this is not supported within any of the other major browsers, therefore this mode is not enabled by
+default.
+2. In every (reasonably modern) browser, the `align=middle` attribute will vertically center an image. However, the
+definition of the vertical "center" is different. In particular, for Chrome, Firefox, (and probably Safari), that center
+is the exact middle of the image. For IE and Edge however, the center is about 5 pixels (the height of a lower-case character)
+above the exact center. Since this looks great for non-IE browsers, and reasonably good on Edge, this is the default
+rendering method. The trick here is to pad either the top or the bottom of the image with extra spaces until the
+baseline of the formula is at the center. For most formulas, this works great. However, if you have a tall formula,
+like $\frac{~}{\sum\limits_{x^{x^{x^{x}}}}^{x^{x^{x^{x}}}} f(x)}$, you'll notice that there might be a lot
+of slack vertical spacing between these lines. If this is a deal-breaker for you, you can always try the `--valign True`
+mode. For most inline formulas, this is usually a non-issue.
+
+#### How to compile this document
+Make sure that you have the `tikz` and the `xcolor` packages installed locally.
+
+    python -m readme2tex --usepackage "tikz" --usepackage "xcolor" --output README.md --branch svgs
+
+and of course
+
+    python -m readme2tex --usepackage "tikz" --usepackage "xcolor" --output README.md --branch svgs --add-git-hook
+
+For the `png` relative mode, use
+
+    python -m readme2tex --usepackage "tikz" --usepackage "xcolor" --output README.md --branch master --nocdn --pngtrick
+
+----------------------------------------
+
+\begin{tikzpicture}[scale=0.25, line join=bevel]
+% \a and \b are two macros defining characteristic
+% dimensions of the Penrose triangle.		
+\pgfmathsetmacro{\a}{2.5}
+\pgfmathsetmacro{\b}{0.9}
+
+\tikzset{%
+  apply style/.code     = {\tikzset{#1}},
+  triangle_edges/.style = {thick,draw=black}
+}
+
+\foreach \theta/\facestyle in {%
+    0/{triangle_edges, fill = gray!50},
+  120/{triangle_edges, fill = gray!25},
+  240/{triangle_edges, fill = gray!90}%
+}{
+  \begin{scope}[rotate=\theta]
+    \draw[apply style/.expand once=\facestyle]
+      ({-sqrt(3)/2*\a},{-0.5*\a})                     --
+      ++(-\b,0)                                       --
+        ({0.5*\b},{\a+3*sqrt(3)/2*\b})                -- % higher point	
+        ({sqrt(3)/2*\a+2.5*\b},{-.5*\a-sqrt(3)/2*\b}) -- % rightmost point
+      ++({-.5*\b},-{sqrt(3)/2*\b})                    -- % lower point
+        ({0.5*\b},{\a+sqrt(3)/2*\b})                  --
+      cycle;
+    \end{scope}
+  }	
+\end{tikzpicture}
