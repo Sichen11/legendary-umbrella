@@ -1,321 +1,487 @@
-Emoji表情
-=========
-将对应emoji表情的符号码复制后输入你的markdown文本即可显示emoji表情。
-如`:blush:`，显示为:blush:
+# Описание разметки файла README.md
+Для описания проектов на GitHub используется README.md, который пишется на языке разметки markdown. Что и как поддерживается расписано ниже. Также существует еще один формат - [reStructuredText](https://github.com/GnuriaN/format-README/blob/master/README.rst), описание которого вынесено в отдельный файл `README.rst`.
 
-## 人物
+## Оглавление
 
-|syntax|preview|syntax|preview|syntax|preview|
-|:-------:|:---:|:------:|:-----:|:------:|:---:|
-|`:bowtie:`|:bowtie:|`:smile:`|:smile:|`:laughing:`|:laughing:|
-|`:blush:`|:blush:|`:smiley:`|:smiley:|`:relaxed:`|:relaxed:|
-|`:smirk:`|:smirk:|`:heart_eyes:`|:heart_eyes:|`:kissing_heart:`|:kissing_heart:|
-|`:kissing_closed_eyes:`|:kissing_closed_eyes:|`:flushed:`|:flushed:|`:relieved:`|:relieved:|
-|`:satisfied:`|:satisfied:|`:grin:`|:grin:|`:wink:`|:wink:|
-|`:stuck_out_tongue_winking_eye:`|:stuck_out_tongue_winking_eye:|`:stuck_out_tongue_closed_eyes:`|:stuck_out_tongue_closed_eyes:|`:grinning:`|:grinning:|
-|`:kissing:`|:kissing:|`:kissing_smiling_eyes:`|:kissing_smiling_eyes:|`:stuck_out_tongue:`|:stuck_out_tongue:|
-|`:sleeping:`|:sleeping:|`:worried:`|:worried:|`:frowning:`|:frowning:|
-|`:anguished:`|:anguished:|`:open_mouth:`|:open_mouth:|`:grimacing:`|:grimacing:|
-|`:confused:`|:confused:|`:hushed:`|:hushed:|`:expressionless:`|:expressionless:|
-|`:unamused:`|:unamused:|`:sweat_smile:`|:sweat_smile:|`:sweat:`|:sweat:|
-|`:disappointed_relieved:`|:disappointed_relieved:|`:weary:`|:weary:|`:pensive:`|:pensive:|
-|`:disappointed:`|:disappointed:|`:confounded:`|:confounded:|`:fearful:`|:fearful:|
-|`:cold_sweat:`|:cold_sweat:|`:persevere:`|:persevere:|`:cry:`|:cry:|
-|`:sob:`|:sob:|`:joy:`|:joy:|`:astonished:`|:astonished:|
-|`:scream:`|:scream:|`:neckbeard:`|:neckbeard:|`:tired_face:`|:tired_face:|
-|`:angry:`|:angry:|`:rage:`|:rage:|`:triumph:`|:triumph:|
-|`:sleepy:`|:sleepy:|`:yum:`|:yum:|`:mask:`|:mask:|
-|`:sunglasses:`|:sunglasses:|`:dizzy_face:`|:dizzy_face:|`:imp:`|:imp:|
-|`:smiling_imp:`|:smiling_imp:|`:neutral_face:`|:neutral_face:|`:no_mouth:`|:no_mouth:|
-|`:innocent:`|:innocent:|`:alien:`|:alien:|`:yellow_heart:`|:yellow_heart:|
-|`:blue_heart:`|:blue_heart:|`:purple_heart:`|:purple_heart:|`:heart:`|:heart:|
-|`:green_heart:`|:green_heart:|`:broken_heart:`|:broken_heart:|`:heartbeat:`|:heartbeat:|
-|`:heartpulse:`|:heartpulse:|`:two_hearts:`|:two_hearts:|`:revolving_hearts:`|:revolving_hearts:|
-|`:cupid:`|:cupid:|`:sparkling_heart:`|:sparkling_heart:|`:sparkles:`|:sparkles:|
-|`:star:`|:star:|`:star2:`|:star2:|`:dizzy:`|:dizzy:|
-|`:boom:`|:boom:|`:collision:`|:collision:|`:anger:`|:anger:|
-|`:exclamation:`|:exclamation:|`:question:`|:question:|`:grey_exclamation:`|:grey_exclamation:|
-|`:grey_question:`|:grey_question:|`:zzz:`|:zzz:|`:dash:`|:dash:|
-|`:sweat_drops:`|:sweat_drops:|`:notes:`|:notes:|`:musical_note:`|:musical_note:|
-|`:fire:`|:fire:|`:hankey:`|:hankey:|`:poop:`|:poop:|
-|`::`|:shit:|`:+1:`|:+1:|`:thumbsup:`|:thumbsup:|
-|`:-1:`|:-1:|`:thumbsdown:`|:thumbsdown:|`:ok_hand:`|:ok_hand:|
-|`:punch:`|:punch:|`:facepunch:`|:facepunch:|`:fist:`|:fist:|
-|`:v:`|:v:|`:wave:`|:wave:|`:hand:`|:hand:|
-|`:raised_hand:`|:raised_hand:|`:open_hands:`|:open_hands:|`:point_up:`|:point_up:|
-|`:point_down:`|:point_down:|`:point_left:`|:point_left:|`:point_right:`|:point_right:|
-|`:raised_hands:`|:raised_hands:|`:pray:`|:pray:|`:point_up_2:`|:point_up_2:|
-|`:clap:`|:clap:|`:muscle:`|:muscle:|`:metal:`|:metal:|
-|`:fu:`|:fu:|`:walking:`|:walking:|`:runner:`|:runner:|
-|`:running:`|:running:|`:couple:`|:couple:|`:family:`|:family:|
-|`:two_men_holding_hands:`|:two_men_holding_hands:|`:two_women_holding_hands:`|:two_women_holding_hands:|`:dancer:`|:dancer:|
-|`:dancers:`|:dancers:|`:ok_woman:`|:ok_woman:|`:no_good:`|:no_good:|
-|`:information_desk_person:`|:information_desk_person:|`:raising_hand:`|:raising_hand:|`:bride_with_veil:`|:bride_with_veil:|
-|`:person_with_pouting_face:`|:person_with_pouting_face:|`:person_frowning:`|:person_frowning:|`:bow:`|:bow:|
-|`:couplekiss:`|:couplekiss:|`:couple_with_heart:`|:couple_with_heart:|`:massage:`|:massage:|
-|`:haircut:`|:haircut:|`:nail_care:`|:nail_care:|`:boy:`|:boy:|
-|`:girl:`|:girl:|`:woman:`|:woman:|`:man:`|:man:|
-|`:baby:`|:baby:|`:older_woman:`|:older_woman:|`:older_man:`|:older_man:|
-|`:person_with_blond_hair:`|:person_with_blond_hair:|`:man_with_gua_pi_mao:`|:man_with_gua_pi_mao:|`:man_with_turban:`|:man_with_turban:|
-|`:construction_worker:`|:construction_worker:|`:cop:`|:cop:|`:angel:`|:angel:|
-|`:princess:`|:princess:|`:smiley_cat:`|:smiley_cat:|`:smile_cat:`|:smile_cat:|
-|`:heart_eyes_cat:`|:heart_eyes_cat:|`:kissing_cat:`|:kissing_cat:|`:smirk_cat:`|:smirk_cat:|
-|`:scream_cat:`|:scream_cat:|`:crying_cat_face:`|:crying_cat_face:|`:joy_cat:`|:joy_cat:|
-|`:pouting_cat:`|:pouting_cat:|`:japanese_ogre:`|:japanese_ogre:|`:japanese_goblin:`|:japanese_goblin:|
-|`:see_no_evil:`|:see_no_evil:|`:hear_no_evil:`|:hear_no_evil:|`:speak_no_evil:`|:speak_no_evil:|
-|`:guardsman:`|:guardsman:|`:skull:`|:skull:|`:feet:`|:feet:|
-|`:lips:`|:lips:|`:kiss:`|:kiss:|`:droplet:`|:droplet:|
-|`:ear:`|:ear:|`:eyes:`|:eyes:|`:nose:`|:nose:|
-|`:tongue:`|:tongue:|`:love_letter:`|:love_letter:|`:bust_in_silhouette:`|:bust_in_silhouette:|
-|`:busts_in_silhouette:`|:busts_in_silhouette:|`:speech_balloon:`|:speech_balloon:|`:thought_balloon:`|:thought_balloon:|
-|`:feelsgood:`|:feelsgood:|`:finnadie:`|:finnadie:|`:goberserk:`|:goberserk:|
-|`:godmode:`|:godmode:|`:hurtrealbad:`|:hurtrealbad:|`:rage1:`|:rage1:|
-|`:rage2:`|:rage2:|`:rage3:`|:rage3:|`:rage4:`|:rage4:|
-|`:suspect:`|:suspect:|`:trollface:`|:trollface:||||
+0. [Разделительная черта](#Разделительная-черта)
+1. [Заголовки](#Заголовки)
+2. [Работа с выделением текста](#Работа-с-выделением-текста)
+3. [Использование эмодзи (emoji)](#Использование-эмодзи-emoji)
+4. [Использование цитирования в тексте](#Использование-цитирования-в-тексте)
+5. [Подсветка кода](#Подсветка-кода)
+6. [Списки](#Списки)
+    1. [Маркированный](#Маркированный)
+    2. [Нумерованный](#Нумерованный)
+    3. [Смешанные списки](#Смешанные-списки)
+    4. [Список задач](#Список-задач)
+7. [Ссылки](#Ссылки)
+8. [Вставка изображения](#Вставка-изображения)
+9. [Вставка таблиц](#Вставка-таблиц)
+10. [Диаграммы Mermaid.js](#диаграммы-mermaidjs)
+11. [Дополнения](https://github.com/GnuriaN/format-README/blob/master/Дополнения.md)
+    
+## Разделительная черта
+При использовании
+```
+____
+```
+получается разделительная черта
+____
+[:arrow_up:Оглавление](#Оглавление)
+___
+## Заголовки
 
-## 自然
+Всего существует шесть уровней заголовков. Для того, чтобы создать заголовок, необходимо в начале строки добавить символы `#`, в количестве равном его уровню.
+____
+# Заголовок первого уровня
+```
+# Заголовок 1
+```
+Заголовок первого уровня также можно создать:
+```
+Заголовок 1
+===========
+```
+____
+## Заголовок второго уровня
+```
+## Заголовок 2
+```
+Заголовок второго уровня также можно создать:
+```
+Заголовок 2
+-----------
+```
+____
+### Заголовок третьего уровня
+```
+### Заголовок 3
+```
+____
+#### Заголовок четвертого уровня
+```
+#### Заголовок 4
+```
+____
+##### Заголовок пятого уровня
+```
+##### Заголовок 5
+```
+____
+###### Заголовок шестого уровня
+```
+###### Заголовок 6
+```
+____
+[:arrow_up:Оглавление](#Оглавление)
+____
+## Работа с выделением текста
 
-|syntax|preview|syntax|preview|syntax|preview|
-|:-------:|:---:|:------:|:-----:|:------:|:---:|
-|`:sunny:`|:sunny:|`:umbrella:`|:umbrella:|`:cloud:`|:cloud:|
-|`:snowflake:`|:snowflake:|`:snowman:`|:snowman:|`:zap:`|:zap:|
-|`:cyclone:`|:cyclone:|`:foggy:`|:foggy:|`:ocean:`|:ocean:|
-|`:cat:`|:cat:|`:dog:`|:dog:|`:mouse:`|:mouse:|
-|`:hamster:`|:hamster:|`:rabbit:`|:rabbit:|`:wolf:`|:wolf:|
-|`:frog:`|:frog:|`:tiger:`|:tiger:|`:koala:`|:koala:|
-|`:bear:`|:bear:|`:pig:`|:pig:|`:pig_nose:`|:pig_nose:|
-|`:cow:`|:cow:|`:boar:`|:boar:|`:monkey_face:`|:monkey_face:|
-|`:monkey:`|:monkey:|`:horse:`|:horse:|`:racehorse:`|:racehorse:|
-|`:camel:`|:camel:|`:sheep:`|:sheep:|`:elephant:`|:elephant:|
-|`:panda_face:`|:panda_face:|`:snake:`|:snake:|`:bird:`|:bird:|
-|`:baby_chick:`|:baby_chick:|`:hatched_chick:`|:hatched_chick:|`:hatching_chick:`|:hatching_chick:|
-|`:chicken:`|:chicken:|`:penguin:`|:penguin:|`:turtle:`|:turtle:|
-|`:bug:`|:bug:|`:honeybee:`|:honeybee:|`:ant:`|:ant:|
-|`:beetle:`|:beetle:|`:snail:`|:snail:|`:octopus:`|:octopus:|
-|`:tropical_fish:`|:tropical_fish:|`:fish:`|:fish:|`:whale:`|:whale:|
-|`:whale2:`|:whale2:|`:dolphin:`|:dolphin:|`:cow2:`|:cow2:|
-|`:ram:`|:ram:|`:rat:`|:rat:|`:water_buffalo:`|:water_buffalo:|
-|`:tiger2:`|:tiger2:|`:rabbit2:`|:rabbit2:|`:dragon:`|:dragon:|
-|`:goat:`|:goat:|`:rooster:`|:rooster:|`:dog2:`|:dog2:|
-|`:pig2:`|:pig2:|`:mouse2:`|:mouse2:|`:ox:`|:ox:|
-|`:dragon_face:`|:dragon_face:|`:blowfish:`|:blowfish:|`:crocodile:`|:crocodile:|
-|`:dromedary_camel:`|:dromedary_camel:|`:leopard:`|:leopard:|`:cat2:`|:cat2:|
-|`:poodle:`|:poodle:|`:paw_prints:`|:paw_prints:|`:bouquet:`|:bouquet:|
-|`:cherry_blossom:`|:cherry_blossom:|`:tulip:`|:tulip:|`:four_leaf_clover:`|:four_leaf_clover:|
-|`:rose:`|:rose:|`:sunflower:`|:sunflower:|`:hibiscus:`|:hibiscus:|
-|`:maple_leaf:`|:maple_leaf:|`:leaves:`|:leaves:|`:fallen_leaf:`|:fallen_leaf:|
-|`:herb:`|:herb:|`:mushroom:`|:mushroom:|`:cactus:`|:cactus:|
-|`:palm_tree:`|:palm_tree:|`:evergreen_tree:`|:evergreen_tree:|`:deciduous_tree:`|:deciduous_tree:|
-|`:chestnut:`|:chestnut:|`:seedling:`|:seedling:|`:blossom:`|:blossom:|
-|`:ear_of_rice:`|:ear_of_rice:|`:shell:`|:shell:|`:globe_with_meridians:`|:globe_with_meridians:|
-|`:sun_with_face:`|:sun_with_face:|`:full_moon_with_face:`|:full_moon_with_face:|`:new_moon_with_face:`|:new_moon_with_face:|
-|`:new_moon:`|:new_moon:|`:waxing_crescent_moon:`|:waxing_crescent_moon:|`:first_quarter_moon:`|:first_quarter_moon:|
-|`:full_moon:`|:full_moon:|`:waning_gibbous_moon:`|:waning_gibbous_moon:|`:last_quarter_moon:`|:last_quarter_moon:|
-|`:waning_crescent_moon:`|:waning_crescent_moon:|`:last_quarter_moon_with_face:`|:last_quarter_moon_with_face:|`:first_quarter_moon_with_face:`|:first_quarter_moon_with_face:|
-|`:moon:`|:moon:|`:earth_africa:`|:earth_africa:|`:earth_americas:`|:earth_americas:|
-|`:earth_asia:`|:earth_asia:|`:volcano:`|:volcano:|`:milky_way:`|:milky_way:|
-|`:partly_sunny:`|:partly_sunny:|`:octocat:`|:octocat:|`:squirrel:`|:squirrel:|
-|`:waxing_gibbous_moon:`|:waxing_gibbous_moon:||||||
+```
+~~Зачеркнутый текст~~
+```
+~~Зачеркнутый текст (Strikethrough)~~
 
-## 物体
+Для выделения текста **`жирным`** или *`наклонным`* и их сочетания можно использовать комбинации `*` или `_`
 
-|syntax|preview|syntax|preview|syntax|preview|
-|:-------:|:---:|:------:|:-----:|:------:|:-----:|
-|`:bamboo:`|:bamboo:|`:gift_heart:`|:gift_heart:|`:dolls:`|:dolls:|
-|`:school_satchel:`|:school_satchel:|`:mortar_board:`|:mortar_board:|`:flags:`|:flags:|
-|`:fireworks:`|:fireworks:|`:sparkler:`|:sparkler:|`:wind_chime:`|:wind_chime:|
-|`:rice_scene:`|:rice_scene:|`:jack_o_lantern:`|:jack_o_lantern:|`:ghost:`|:ghost:|
-|`:santa:`|:santa:|`:christmas_tree:`|:christmas_tree:|`:gift:`|:gift:|
-|`:bell:`|:bell:|`:no_bell:`|:no_bell:|`:tanabata_tree:`|:tanabata_tree:|
-|`:tada:`|:tada:|`:confetti_ball:`|:confetti_ball:|`:balloon:`|:balloon:|
-|`:crystal_ball:`|:crystal_ball:|`:cd:`|:cd:|`:dvd:`|:dvd:|
-|`:floppy_disk:`|:floppy_disk:|`:camera:`|:camera:|`:video_camera:`|:video_camera:|
-|`:movie_camera:`|:movie_camera:|`:computer:`|:computer:|`:tv:`|:tv:|
-|`:iphone:`|:iphone:|`:phone:`|:phone:|`:telephone:`|:telephone:|
-|`:telephone_receiver:`|:telephone_receiver:|`:pager:`|:pager:|`:fax:`|:fax:|
-|`:minidisc:`|:minidisc:|`:vhs:`|:vhs:|`:sound:`|:sound:|
-|`:speaker:`|:speaker:|`:mute:`|:mute:|`:loudspeaker:`|:loudspeaker:|
-|`:mega:`|:mega:|`:hourglass:`|:hourglass:|`:hourglass_flowing_sand:`|:hourglass_flowing_sand:|
-|`:alarm_clock:`|:alarm_clock:|`:watch:`|:watch:|`:radio:`|:radio:|
-|`:satellite:`|:satellite:|`:loop:`|:loop:|`:mag:`|:mag:|
-|`:mag_right:`|:mag_right:|`:unlock:`|:unlock:|`:lock:`|:lock:|
-|`:lock_with_ink_pen:`|:lock_with_ink_pen:|`:closed_lock_with_key:`|:closed_lock_with_key:|`:key:`|:key:|
-|`:bulb:`|:bulb:|`:flashlight:`|:flashlight:|`:high_brightness:`|:high_brightness:|
-|`:low_brightness:`|:low_brightness:|`:electric_plug:`|:electric_plug:|`:battery:`|:battery:|
-|`:calling:`|:calling:|`:email:`|:email:|`:mailbox:`|:mailbox:|
-|`:postbox:`|:postbox:|`:bath:`|:bath:|`:bathtub:`|:bathtub:|
-|`:shower:`|:shower:|`:toilet:`|:toilet:|`:wrench:`|:wrench:|
-|`:nut_and_bolt:`|:nut_and_bolt:|`:hammer:`|:hammer:|`:seat:`|:seat:|
-|`:moneybag:`|:moneybag:|`:yen:`|:yen:|`:dollar:`|:dollar:|
-|`:pound:`|:pound:|`:euro:`|:euro:|`:credit_card:`|:credit_card:|
-|`:money_with_wings:`|:money_with_wings:|`:e-mail:`|:e-mail:|`:inbox_tray:`|:inbox_tray:|
-|`:outbox_tray:`|:outbox_tray:|`:envelope:`|:envelope:|`:incoming_envelope:`|:incoming_envelope:|
-|`:postal_horn:`|:postal_horn:|`:mailbox_closed:`|:mailbox_closed:|`:mailbox_with_mail:`|:mailbox_with_mail:|
-|`:mailbox_with_no_mail:`|:mailbox_with_no_mail:|`:door:`|:door:|`:smoking:`|:smoking:|
-|`:bomb:`|:bomb:|`:gun:`|:gun:|`:hocho:`|:hocho:|
-|`:pill:`|:pill:|`:syringe:`|:syringe:|`:page_facing_up:`|:page_facing_up:|
-|`:page_with_curl:`|:page_with_curl:|`:bookmark_tabs:`|:bookmark_tabs:|`:bar_chart:`|:bar_chart:|
-|`:chart_with_upwards_trend:`|:chart_with_upwards_trend:|`:chart_with_downwards_trend:`|:chart_with_downwards_trend:|`:scroll:`|:scroll:|
-|`:clipboard:`|:clipboard:|`:calendar:`|:calendar:|`:date:`|:date:|
-|`:card_index:`|:card_index:|`:file_folder:`|:file_folder:|`:open_file_folder:`|:open_file_folder:|
-|`:scissors:`|:scissors:|`:pushpin:`|:pushpin:|`:paperclip:`|:paperclip:|
-|`:black_nib:`|:black_nib:|`:pencil2:`|:pencil2:|`:straight_ruler:`|:straight_ruler:|
-|`:triangular_ruler:`|:triangular_ruler:|`:closed_book:`|:closed_book:|`:green_book:`|:green_book:|
-|`:blue_book:`|:blue_book:|`:orange_book:`|:orange_book:|`:notebook:`|:notebook:|
-|`:notebook_with_decorative_cover:`|:notebook_with_decorative_cover:|`:ledger:`|:ledger:|`:books:`|:books:|
-|`:bookmark:`|:bookmark:|`:microscope:`|:microscope:|`:telescope:`|:telescope:|
-|`:name_badge:`|:name_badge:|`:newspaper:`|:newspaper:|`:football:`|:football:|
-|`:basketball:`|:basketball:|`:soccer:`|:soccer:|`:baseball:`|:baseball:|
-|`:tennis:`|:tennis:|`:8ball:`|:8ball:|`:rugby_football:`|:rugby_football:|
-|`:bowling:`|:bowling:|`:golf:`|:golf:|`:mountain_bicyclist:`|:mountain_bicyclist:|
-|`:bicyclist:`|:bicyclist:|`:horse_racing:`|:horse_racing:|`:snowboarder:`|:snowboarder:|
-|`:swimmer:`|:swimmer:|`:surfer:`|:surfer:|`:ski:`|:ski:|
-|`:spades:`|:spades:|`:hearts:`|:hearts:|`:clubs:`|:clubs:|
-|`:diamonds:`|:diamonds:|`:gem:`|:gem:|`:ring:`|:ring:|
-|`:trophy:`|:trophy:|`:musical_score:`|:musical_score:|`:musical_keyboard:`|:musical_keyboard:|
-|`:violin:`|:violin:|`:space_invader:`|:space_invader:|`:video_game:`|:video_game:|
-|`:black_joker:`|:black_joker:|`:flower_playing_cards:`|:flower_playing_cards:|`:game_die:`|:game_die:|
-|`:dart:`|:dart:|`:mahjong:`|:mahjong:|`:clapper:`|:clapper:|
-|`:memo:`|:memo:|`:pencil:`|:pencil:|`:book:`|:book:|
-|`:art:`|:art:|`:microphone:`|:microphone:|`:headphones:`|:headphones:|
-|`:trumpet:`|:trumpet:|`:saxophone:`|:saxophone:|`:guitar:`|:guitar:|
-|`:shoe:`|:shoe:|`:sandal:`|:sandal:|`:high_heel:`|:high_heel:|
-|`:lipstick:`|:lipstick:|`:boot:`|:boot:|`:shirt:`|:shirt:|
-|`:tshirt:`|:tshirt:|`:necktie:`|:necktie:|`:womans_clothes:`|:womans_clothes:|
-|`:dress:`|:dress:|`:running_shirt_with_sash:`|:running_shirt_with_sash:|`:jeans:`|:jeans:|
-|`:kimono:`|:kimono:|`:bikini:`|:bikini:|`:ribbon:`|:ribbon:|
-|`:tophat:`|:tophat:|`:crown:`|:crown:|`:womans_hat:`|:womans_hat:|
-|`:mans_shoe:`|:mans_shoe:|`:closed_umbrella:`|:closed_umbrella:|`:briefcase:`|:briefcase:|
-|`:handbag:`|:handbag:|`:pouch:`|:pouch:|`:purse:`|:purse:|
-|`:eyeglasses:`|:eyeglasses:|`:fishing_pole_and_fish:`|:fishing_pole_and_fish:|`:coffee:`|:coffee:|
-|`:tea:`|:tea:|`:sake:`|:sake:|`:baby_bottle:`|:baby_bottle:|
-|`:beer:`|:beer:|`:beers:`|:beers:|`:cocktail:`|:cocktail:|
-|`:tropical_drink:`|:tropical_drink:|`:wine_glass:`|:wine_glass:|`:fork_and_knife:`|:fork_and_knife:|
-|`:pizza:`|:pizza:|`:hamburger:`|:hamburger:|`:fries:`|:fries:|
-|`:poultry_leg:`|:poultry_leg:|`:meat_on_bone:`|:meat_on_bone:|`:spaghetti:`|:spaghetti:|
-|`:curry:`|:curry:|`:fried_shrimp:`|:fried_shrimp:|`:bento:`|:bento:|
-|`:sushi:`|:sushi:|`:fish_cake:`|:fish_cake:|`:rice_ball:`|:rice_ball:|
-|`:rice_cracker:`|:rice_cracker:|`:rice:`|:rice:|`:ramen:`|:ramen:|
-|`:stew:`|:stew:|`:oden:`|:oden:|`:dango:`|:dango:|
-|`:egg:`|:egg:|`:bread:`|:bread:|`:doughnut:`|:doughnut:|
-|`:custard:`|:custard:|`:icecream:`|:icecream:|`:ice_cream:`|:ice_cream:|
-|`:shaved_ice:`|:shaved_ice:|`:birthday:`|:birthday:|`:cake:`|:cake:|
-|`:cookie:`|:cookie:|`:chocolate_bar:`|:chocolate_bar:|`:candy:`|:candy:|
-|`:lollipop:`|:lollipop:|`:honey_pot:`|:honey_pot:|`:apple:`|:apple:|
-|`:green_apple:`|:green_apple:|`:tangerine:`|:tangerine:|`:lemon:`|:lemon:|
-|`:cherries:`|:cherries:|`:grapes:`|:grapes:|`:watermelon:`|:watermelon:|
-|`:strawberry:`|:strawberry:|`:peach:`|:peach:|`:melon:`|:melon:|
-|`:banana:`|:banana:|`:pear:`|:pear:|`:pineapple:`|:pineapple:|
-|`:sweet_potato:`|:sweet_potato:|`:eggplant:`|:eggplant:|`:tomato:`|:tomato:|
-|`:corn:`|:corn:||||||
+```
+**Жирный текст (bold)**
+```
+**Жирный текст (bold)**
 
-## 地点
+```
+*Наклонный текст (italic)*
+```
+*Наклонный текст (italic)*
 
-|syntax|preview|syntax|preview|syntax|preview|
-|:-------:|:---:|:------:|:-----:|:------:|:-----:|
-|`:house:`|:house:|`:house_with_garden:`|:house_with_garden:|`:school:`|:school:|
-|`:office:`|:office:|`:post_office:`|:post_office:|`:hospital:`|:hospital:|
-|`:bank:`|:bank:|`:convenience_store:`|:convenience_store:|`:love_hotel:`|:love_hotel:|
-|`:hotel:`|:hotel:|`:wedding:`|:wedding:|`:church:`| :church:|
-|`:department_store:`|:department_store:|`:european_post_office:`|:european_post_office:|`:city_sunrise:`|:city_sunrise:|
-|`:city_sunset:`|:city_sunset:|`:japanese_castle:`|:japanese_castle:|`:european_castle:`|:european_castle:|
-|`:tent:`|:tent:|` :factory:`| :factory:|`:tokyo_tower:`|:tokyo_tower:|
-|`:japan:`|:japan:|`:mount_fuji:`|:mount_fuji:|`:sunrise_over_mountains:`|:sunrise_over_mountains:|
-|`:sunrise:`|:sunrise:|`:stars:`|:stars:|`:statue_of_liberty:`|:statue_of_liberty:|
-|`:bridge_at_night:`|:bridge_at_night:|`:carousel_horse:`|:carousel_horse:|`:rainbow:`|:rainbow:|
-|`:ferris_wheel:`|:ferris_wheel:|`:fountain:`|:fountain:|`:roller_coaster:`|:roller_coaster:|
-|`:ship:`|:ship:|` :speedboat:`| :speedboat:|` :boat:`| :boat:|
-|`:sailboat:`|:sailboat:|`:rowboat:`|:rowboat:|`:anchor:`|:anchor:|
-|`:rocket:`|:rocket:|`:airplane:`|:airplane:|`:helicopter:`|:helicopter:|
-|`:steam_locomotive:`|:steam_locomotive:|`:tram:`|:tram:|`:mountain_railway:`|:mountain_railway:|
-|`:bike:`|:bike:|`:aerial_tramway:`|:aerial_tramway:|`:suspension_railway:`|:suspension_railway:|
-|`:mountain_cableway:`|:mountain_cableway:|`:tractor:`|:tractor:|`:blue_car:`|:blue_car:|
-|`:oncoming_automobile:`|:oncoming_automobile:|`:car:`|:car:|` :red_car:`| :red_car:|
-|`:taxi:`|:taxi:|`:oncoming_taxi:`|:oncoming_taxi:|`:articulated_lorry:`|:articulated_lorry:|
-|`:bus:`|:bus:|`:oncoming_bus:`|:oncoming_bus:|`:rotating_light:`|:rotating_light:|
-|`:police_car:`|:police_car:|`:oncoming_police_car:`|:oncoming_police_car:|`:fire_engine:`|:fire_engine:|
-|`:ambulance:`|:ambulance:|`:minibus:`|:minibus:|` :truck:`| :truck:|
-|` :train:`| :train:|` :station:`| :station:|` :train2:`| :train2:|
-|`:bullettrain_front:`|:bullettrain_front:|` :bullettrain_side:`| :bullettrain_side:|` :light_rail:`| :light_rail:|
-|` :monorail:`| :monorail:|` :railway_car:`| :railway_car:|` :trolleybus:`| :trolleybus:|
-|`:ticket:`|:ticket:|` :fuelpump:`| :fuelpump:|` :vertical_traffic_light:`| :vertical_traffic_light:|
-|` :traffic_light:`| :traffic_light:|` :warning:`| :warning:|` :construction:`| :construction:|
-|`:beginner:`|:beginner:|` :atm:`| :atm:|` :slot_machine:`| :slot_machine:|
-|` :busstop:`| :busstop:|` :barber:`| :barber:|` :hotsprings:`| :hotsprings:|
-|` :checkered_flag:`| :checkered_flag:|` :crossed_flags:`| :crossed_flags:|` :izakaya_lantern:`| :izakaya_lantern:|
-|`:moyai:`|:moyai:|` :circus_tent:`| :circus_tent:|` :performing_arts:`| :performing_arts:|
-|` :round_pushpin:`| :round_pushpin:|` :triangular_flag_on_post:`| :triangular_flag_on_post:|` :jp:`| :jp:|
-|`:kr:`|:kr:|` :cn:`| :cn:|` :us:`| :us:|
-|` :fr:`| :fr:|`:es:`|:es:|` :it:`| :it:|
-|`:ru:`|:ru:|` :gb:`| :gb:|` :uk:`| :uk:|
-|`:de:`|:de:||||||
+```
+***Жирный наклонный текст (bold italic)***
+```
+***Жирный наклонный текст (bold italic)***
 
-## 符号
+```
+__Жирный текст (bold)__
+```
+__Жирный текст (bold)__
 
-|syntax|preview|syntax|preview|syntax|preview|
-|:-------:|:---:|:------:|:-----:|:------:|:-----:|
-|`:one:`|:one:|`:two:`|:two:|`:three:`|:three:|
-|`:four:`|:four:|`:five:`|:five:|` :six:`| :six:|
-|` :seven:`| :seven:|` :eight:`| :eight:|` :nine:`| :nine:|
-|` :keycap_ten:`| :keycap_ten:|` :1234:`| :1234:|` :zero:`| :zero:|
-|`:hash:`|:hash:|` :symbols:`| :symbols:|` :arrow_backward:`| :arrow_backward:|
-|` :arrow_down:`| :arrow_down:|` :arrow_forward:`| :arrow_forward:|` :arrow_left:`| :arrow_left:|
-|` :capital_abcd:`| :capital_abcd:|` :abcd:`| :abcd:|` :abc:`| :abc:|
-|`:arrow_lower_left:`|:arrow_lower_left:|` :arrow_lower_right:`| :arrow_lower_right:|` :arrow_right:`| :arrow_right:|
-|` :arrow_up:`| :arrow_up:|` :arrow_upper_left:`| :arrow_upper_left:|` :arrow_upper_right:`| :arrow_upper_right:|
-|`:arrow_double_down:`|:arrow_double_down:|` :arrow_double_up:`| :arrow_double_up:|` :arrow_down_small:`| :arrow_down_small:|
-|` :arrow_heading_down:`| :arrow_heading_down:|` :arrow_heading_up:`| :arrow_heading_up:|` :leftwards_arrow_with_hook:`| :leftwards_arrow_with_hook:|
-|`:arrow_right_hook:`|:arrow_right_hook:|` :left_right_arrow:`| :left_right_arrow:|` :arrow_up_down:`| :arrow_up_down:|
-|` :arrow_up_small:`| :arrow_up_small:|` :arrows_clockwise:`| :arrows_clockwise:|` :arrows_counterclockwise:`| :arrows_counterclockwise:|
-|` :rewind:`| :rewind:|` :fast_forward:`| :fast_forward:|` :information_source:`| :information_source:|
-|`:ok:`|:ok:|` :twisted_rightwards_arrows:`| :twisted_rightwards_arrows:|` :repeat:`| :repeat:|
-|` :repeat_one:`| :repeat_one:|` :new:`| :new:|` :top:`| :top:|
-|`:up:`|:up:|`:cool:`|:cool:|` :free:`| :free:|
-|`:ng:`|:ng:|`:cinema:`|:cinema:|` :koko:`| :koko:|
-|` :signal_strength:`| :signal_strength:|` :u5272:`| :u5272:|` :u5408:`| :u5408:|
-|` :u55b6:`| :u55b6:|` :u6307:`| :u6307:|` :u6708:`| :u6708:|
-|` :u6709:`| :u6709:|` :u6e80:`| :u6e80:|` :u7121:`| :u7121:|
-|` :u7533:`| :u7533:|` :u7a7a:`| :u7a7a:|` :u7981:`| :u7981:|
-|`:sa:`|:sa:|` :restroom:`| :restroom:|` :mens:`| :mens:|
-|` :womens:`| :womens:|` :baby_symbol:`| :baby_symbol:|` :no_smoking:`| :no_smoking:|
-|`:parking:`|:parking:|` :wheelchair:`| :wheelchair:|` :metro:`| :metro:|
-|` :baggage_claim:`| :baggage_claim:|` :accept:`| :accept:|` :wc:`| :wc:|
-|`:potable_water:`|:potable_water:|` :put_litter_in_its_place:`| :put_litter_in_its_place:|` :secret:`| :secret:|
-|` :congratulations:`| :congratulations:|` :m:`| :m:|` :passport_control:`| :passport_control:|
-|`:left_luggage:`|:left_luggage:|` :customs:`| :customs:|` :ideograph_advantage:`| :ideograph_advantage:|
-|` :cl:`| :cl:|` :sos:`| :sos:|` :id:`| :id:|
-|` :no_entry_sign:`| :no_entry_sign:|` :underage:`| :underage:|` :no_mobile_phones:`| :no_mobile_phones:|
-|` :do_not_litter:`| :do_not_litter:|` :non-potable_water:`| :non-potable_water:|` :no_bicycles:`| :no_bicycles:|
-|`:no_pedestrians:`|:no_pedestrians:|` :children_crossing:`| :children_crossing:|` :no_entry:`| :no_entry:|
-|` :eight_spoked_asterisk:`| :eight_spoked_asterisk:|` :eight_pointed_black_star:`| :eight_pointed_black_star:|` :heart_decoration:`| :heart_decoration:|
-|` :vs:`| :vs:|` :vibration_mode:`| :vibration_mode:|` :mobile_phone_off:`| :mobile_phone_off:|
-|` :chart:`| :chart:|` :currency_exchange:`| :currency_exchange:|` :aries:`| :aries:|
-|` :taurus:`| :taurus:|`:gemini:`|:gemini:|` :cancer:`| :cancer:|
-|`:leo:`|:leo:|` :virgo:`| :virgo:|` :libra:`| :libra:|
-|` :scorpius:`| :scorpius:|` :sagittarius:`| :sagittarius:|` :capricorn:`| :capricorn:|
-|` :aquarius:`| :aquarius:|` :pisces:`| :pisces:|` :ophiuchus:`| :ophiuchus:|
-|` :six_pointed_star:`| :six_pointed_star:|` :negative_squared_cross_mark:`| :negative_squared_cross_mark:|` :a:`| :a:|
-|`:b:`|:b:|` :ab:`| :ab:|` :o2:`| :o2:|
-|` :diamond_shape_with_a_dot_inside:`| :diamond_shape_with_a_dot_inside:|` :recycle:`| :recycle:|` :end:`| :end:|
-|` :on:`| :on:|` :soon:`| :soon:|` :clock1:`| :clock1:|
-|`:clock130:`|:clock130:|` :clock10:`| :clock10:|` :clock1030:`| :clock1030:|
-|` :clock11:`| :clock11:|` :clock1130:`| :clock1130:|` :clock12:`| :clock12:|
-|` :clock1230:`| :clock1230:|` :clock2:`| :clock2:|`:clock230:`|:clock230:|
-|` :clock3:`| :clock3:|` :clock330:`| :clock330:|` :clock4:`| :clock4:|
-|`:clock430:`|:clock430:|` :clock5:`| :clock5:|` :clock530:`| :clock530:|
-|`:clock6:`|:clock6:|` :clock630:`| :clock630:|` :clock7:`| :clock7:|
-|`:clock730:`|:clock730:|` :clock8:`| :clock8:|` :clock830:`| :clock830:|
-|` :clock9:`| :clock9:|`:clock930:`|:clock930:|` :heavy_dollar_sign:`| :heavy_dollar_sign:|
-|` :copyright:`| :copyright:|` :registered:`| :registered:|` :tm:`| :tm:|
-|`:x:`|:x:|`:heavy_exclamation_mark:`|:heavy_exclamation_mark:|`:bangbang:`|:bangbang:|
-|`:interrobang:`|:interrobang:|` :o:`| :o:|` :heavy_multiplication_x:`| :heavy_multiplication_x:|
-|` :heavy_plus_sign:`| :heavy_plus_sign:|` :heavy_minus_sign:`| :heavy_minus_sign:|`:heavy_division_sign:`|:heavy_division_sign:|
-|` :white_flower:`| :white_flower:|` :100:`| :100:|`:heavy_check_mark:`|:heavy_check_mark:|
-|`:ballot_box_with_check:`|:ballot_box_with_check:|` :radio_button:`| :radio_button:|` :link:`| :link:|
-|`:curly_loop:`|:curly_loop:|` :wavy_dash:`| :wavy_dash:|` :part_alternation_mark:`| :part_alternation_mark:|
-|`:trident:`|:trident:|`:black_large_square:`|:black_large_square:|` :white_large_square:`| :white_large_square:|
-|`:white_check_mark:`|:white_check_mark:|` :white_square_button:`| :white_square_button:|` :black_square_button:`| :black_square_button:|
-|` :black_circle:`| :black_circle:|` :white_circle:`| :white_circle:|` :red_circle:`| :red_circle:|
-|` :large_blue_circle:`| :large_blue_circle:|` :large_blue_diamond:`| :large_blue_diamond:|` :large_orange_diamond:`| :large_orange_diamond:|
-|` :small_blue_diamond:`| :small_blue_diamond:|` :small_orange_diamond:`| :small_orange_diamond:|` :small_red_triangle:`| :small_red_triangle:|
-|`:small_red_triangle_down:`|:small_red_triangle_down:|` :shipit:`| :shipit:||||
+```
+_Наклонный текст (italic)_
+```
+_Наклонный текст (italic)_
+
+```
+___Жирный наклонный текст (bold italic)___
+```
+___Жирный наклонный текст (bold italic)___
+
+```
+~~*__Тут странный текст__*~~
+```
+~~*__Тут странный текст__*~~
+    
+[:arrow_up:Оглавление](#Оглавление)
+____
+## Использование эмодзи (emoji)
+В самом тексте можно использовать эмодзи, например написать вот так:    
+:white_check_mark: Это уже сделано    
+:negative_squared_cross_mark: Я не буду это делать    
+:black_square_button: делать или не делать, вот в чем вопрос?    
+В оригинале это выглядит так (в конце строки четыре (4) пробела для того, чтобы был переход на новую строку):
+```
+:white_check_mark: Это уже сделано    
+:negative_squared_cross_mark: Я не буду это делать    
+:black_square_button: делать или не делать, вот в чем вопрос?    
+```
+
+Список работающих Эмодзи находится тут -> [emoji.md](https://github.com/GnuriaN/format-README.md/blob/master/emoji.md)    
+    
+[:arrow_up:Оглавление](#Оглавление)
+___
+## Использование цитирования в тексте
+```
+> Цитата (уровень 1)    
+> > Вложенная цитата (уровень 2)    
+> > > Вложенная цитата (уровень 3)    
+
+> > Продолжение цитаты (уровень 2)    
+
+> Продолжение цитаты (уровень 1)    
+```
+> Цитата (уровень 1)    
+> > Вложенная цитата (уровень 2)    
+> > > Вложенная цитата (уровень 3)    
+
+> > Продолжение цитаты (уровень 2)    
+
+> Продолжение цитаты (уровень 1)    
+
+Внешний вид, конечно, не очень, но может и пригодиться.
+
+[:arrow_up:Оглавление](#Оглавление)
+___
+## Подсветка кода
+
+Если нужно выделить слово или фразу внутри строки, то используются одинарные обратные кавычки (`):
+
+    Это `слово` будет выделено
+
+Для выделения в блоки - тройные:
+
+    ```
+        Здесь может быть
+        Ваша реклама
+    ```
+
+Дополнительно можно задавать язык кода внутри блока, указав его после первых трех кавычек:
+
+    ```html
+        <input type="text">
+    ```
+
+    ```css
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    ```
+
+    ```php
+        <?php phpinfo();?>
+    ```
+
+Пример блока для `C#`:
+
+```C#
+using MarkdownSharp;
+using MarkdownSharp.Extensions.Mal;
+
+Markdown mark = new Markdown();
+
+// Short link for MAL - 
+// http://myanimelist.net/people/413/Kitamura_Eri => mal://Kitamura_Eri
+mark.AddExtension(new Articles()); 
+mark.AddExtension(new Profile());
+
+mark.Transform(text);
+```
+
+Пример блока для `Python`:
+```Python
+from timeit import Timer
+
+tmp = "Python 3.2.2 (default, Jun 12 2011, 15:08:59) [MSC v.1500 32 bit (Intel)] on win32."
+
+def case1(): # А. инкрементальные конкатенации в цикле
+    s = ""
+    for i in range(10000):
+        s += tmp
+
+def case2(): # Б. через промежуточный список и метод join
+    s = []
+    for i in range(10000):
+        s.append(tmp)
+    s = "".join(s)
+
+def case3(): # В. списковое выражение и метод join
+    return "".join([tmp for i in range(10000)])
+
+def case4(): # Г. генераторное выражение и метод join
+    return "".join(tmp for i in range(10000))
+
+for v in range(1,5):
+    print (Timer("func()","from __main__ import case%s as func" % v).timeit(200))
+```
+    
+[:arrow_up:Оглавление](#Оглавление)
+___
+## Списки
+
+#### Маркированный
+Задать **маркированный** список можно несколькими символами `-`, `+` или `*`:
+```
+- Уровень списка 1. Пункт 1.
+- Уровень списка 1. Пункт 2.
+- Уровень списка 1. Пункт 3.
+```
+- Уровень списка 1. Пункт 1.
+- Уровень списка 1. Пункт 2.
+- Уровень списка 1. Пункт 3.
+
+```
++ Уровень списка 1. Пункт 1.
++ Уровень списка 1. Пункт 2.
++ Уровень списка 1. Пункт 3.
+```
++ Уровень списка 1. Пункт 1.
++ Уровень списка 1. Пункт 2.
++ Уровень списка 1. Пункт 3.
+
+```
+* Уровень списка 1. Пункт 1.
+* Уровень списка 1. Пункт 2.
+* Уровень списка 1. Пункт 3.
+```
+* Уровень списка 1. Пункт 1.
+* Уровень списка 1. Пункт 2.
+* Уровень списка 1. Пункт 3.
+
+Можно создавать многоуровневые списки. Каждый уровень отделяется **четырьмя** (4) пробелами:
+```
+- Уровень списка 1. Пункт 1.
+    - Уровень списка 2. Пункт 1.
+- Уровень списка 1. Пункт 2.
+    - Уровень списка 2. Пункт 1.
+    - Уровень списка 2. Пункт 2.
+- Уровень списка 1. Пункт 3.
+    - Уровень списка 2. Пункт 1.
+        - Уровень списка 3. Пункт 1.
+        - Уровень списка 3. Пункт 2.
+           - Уровень списка 4. Пункт 1.
+```
+- Уровень списка 1. Пункт 1.
+  - Уровень списка 2. Пункт 1.
+- Уровень списка 1. Пункт 2.
+    - Уровень списка 2. Пункт 1.
+    - Уровень списка 2. Пункт 2.
+- Уровень списка 1. Пункт 3.
+    - Уровень списка 2. Пункт 1.
+      - Уровень списка 3. Пункт 1.
+      - Уровень списка 3. Пункт 2.
+         - Уровень списка 4. Пункт 1.
+
+Каждый уровень отделяется двумя пробелами.
+
+#### Нумерованный
+Для Githib работа с нумерованными списками выглядит очень интересно. Каждый уровень отделяется **четырьмя** (4) пробелами:
+```
+1. Первый уровень 1
+    1. Второй уровень 1
+        1. Третий уровень 1
+            1. Четвертый уровень 1
+                1. Пятый уровень 1
+                    1. Шестой уровень
+                        1. Седьмой уровень
+                            1. Седьмой уровень
+2. Первый уровень 2
+2. Первый уровень (должно быть 3)
+4. Первый уровень 4
+```
+1. Первый уровень 1
+    1. Второй уровень 1
+        1. Третий уровень 1
+            1. Четвертый уровень 1
+                1. Пятый уровень 1
+                    1. Шестой уровень
+                        1. Седьмой уровень
+                            1. Седьмой уровень
+2. Первый уровень 2
+2. Первый уровень (должно быть 3)
+4. Первый уровень 4
+
+#### Смешанные списки
+При использовании смешанных списков нужно очень внимательно следить за нумерацией. Лучше, как и в нумерованных, использовать четыре (4) пробела для отделения уровня.
+```
+1. Первый уровень "нумерованный" - 1
+    * Второй уровень "маркер"
+        + Третий уровень "маркер"
+        - Третий уровень "маркер"
+        1. Третий уровень "нумерованный" - 1
+            1. Четвертый уровень "нумерованный" - 1
+                1. Пятый уровень "нумерованный" - 1
+                    1. Шестой уровень "нумерованный" - 1
+                        1. Седьмой уровень "нумерованный" - 1
+                        * Седьмой уровень "маркер"
+                        2. Седьмой уровень "нумерованный" - 1 (нарушена нумерация, новая нумерация 1)
+                        3. Седьмой уровень "нумерованный" - 1 (нарушена нумерация, новая нумерация 2)
+                            1. Восьмой уровень "нумерованный" - 1
+2. Первый уровень "нумерованный" - 2
+- Первый уровень "нумерованный" - 3
+4. Первый уровень "нумерованный" - 4 (нарушена нумерация, новая нумерация 1)
+5. Первый уровень "нумерованный" - 5 (нарушена нумерация, новая нумерация 2)
+```
+1. Первый уровень "нумерованный" - 1
+    * Второй уровень "маркер"
+        + Третий уровень "маркер"
+        - Третий уровень "маркер"
+        1. Третий уровень "нумерованный" - 1
+            1. Четвертый уровень "нумерованный" - 1
+                1. Пятый уровень "нумерованный" - 1
+                    1. Шестой уровень "нумерованный" - 1
+                        1. Седьмой уровень "нумерованный" - 1
+                        * Седьмой уровень "маркер"
+                        2. Седьмой уровень "нумерованный" - 2
+                        3. Седьмой уровень "нумерованный" - 3
+                            1. Восьмой уровень "нумерованный" - 1
+2. Первый уровень "нумерованный" - 2
+- Первый уровень "маркерный" - 3
+4. Первый уровень "нумерованный" - 4 (хотя по идее должен быть 3)
+5. Первый уровень "нумерованный" - 5 (хотя, по идее должен быть 3)
+
+#### Список задач
+(Task List)
+Можно создавать "Списки задач" для этого необходимо использовать `- [ ]` для поставленной задачи и `- [X]` для выполненной задачи.
+```
+- [X] Придумать внешний вид резюме
+- [ ] Написать основные категории
+- [X] Опубликовать
+
+```
+- [X] Придумать внешний вид резюме
+- [ ] Написать основные категории
+- [X] Опубликовать
+
+Также можно создавать многоуровневые списки задач. Каждый уровень отделяется **четырьмя** (4) пробелами:
+```
+- [X] Задача 1
+    - [X] Подзадача 1 для Задачи 1
+    - [X] Подзадача 2 для Задачи 1
+- [ ] Задача 2
+    - [X] Подзадача 1 для Задачи 2
+    - [ ] Подзадача 2 для Задачи 2
+- [ ] Задача 3
+    - [ ] Подзадача 1 для Задачи 3
+        - [ ] Подзадача 1 для Подзадача 1 для Задачи 3
+```
+- [X] Задача 1
+    - [X] Подзадача 1 для Задачи 1
+    - [X] Подзадача 2 для Задачи 1
+- [ ] Задача 2
+    - [X] Подзадача 1 для Задачи 2
+    - [ ] Подзадача 2 для Задачи 2
+- [ ] Задача 3
+    - [ ] Подзадача 1 для Задачи 3
+        - [ ] Подзадача 1 для Подзадача 1 для Задачи 3
+    
+[:arrow_up:Оглавление](#Оглавление) 
+___
+## Ссылки
+Либо просто вставить ссылку, либо дополнительно задать текст ссылки (пробела между скобками быть не должно):
+```
+Первый вариант вставки ссылок - это просто написать адрес сайта http://sabaka.net
+```
+Первый вариант вставки ссылок - это просто написать адрес сайта http://sabaka.net
+
+Второй вариант записывается так: `[текст ссылки](адрес ссылки)`
+```
+[sabaka.net](http://sabaka.net)
+```
+[sabaka.net](http://sabaka.net)
+    
+[Sabaka(DOT)Net]:http://sabaka.net    
+    
+[:arrow_up:Оглавление](#Оглавление)
+____
+## Вставка изображения
+```
+![Alt-текст](https://avatars1.githubusercontent.com/u/5384215?v=3&s=460 "Орк")
+```
+![Alt-текст](https://avatars1.githubusercontent.com/u/5384215?v=3&s=460 "Орк")
+
+### Дополнительно:
+#### Вставка ссылки с картинкой на ролик с YouTube
+Описание комбинации `[![Тут текст](адрес до картинки)](ссылка на страничку YouTube)`        
+Пример:        
+```[![Тут текст](https://img.youtube.com/vi/RHPYGwVQB2o/0.jpg)](https://youtu.be/RHPYGwVQB2o)```        
+Что мы увидим:        
+[![Тут текст](https://img.youtube.com/vi/RHPYGwVQB2o/0.jpg)](https://youtu.be/RHPYGwVQB2o)        
+        
+[:arrow_up:Оглавление](#Оглавление) 
+____
+## Вставка таблиц
+```
+| LEFT | CENTER | RIGHT |
+|----------------|:---------:|----------------:|
+| По левому краю | По центру | По правому краю |
+| текст | текст | текст |
+```
+| LEFT | CENTER | RIGHT |
+|----------------|:---------:|----------------:|
+| По левому краю | По центру | По правому краю |
+| текст | текст | текст |
+
+**Внимание:** Если в тексте таблицы нужно использовать символ "вертикальная черта - `|`", то в место него необходимо написать замену на комбинацию HTML-кода* `&#124;`, это нужно для того, чтобы таблица не потеряла ориентации.    
+*) - Можно использовать ASCII и/или UTF коды.
+
+**Пример:**
+```
+| Обозначение | Описание | Пример регулярного выражения|
+|----:|:----:|:----------|
+| literal | Строка содержит символьный литерал literal | foo |
+| re1&#124;re2 | Строка содержит регулярные выражения `rel` или `re2` | foo&#124;bar |
+```
+**Результат:**
+
+| Обозначение | Описание | Пример регулярного выражения|
+|----:|:----:|:----------|
+| literal | Строка содержит символьный литерал literal | foo |
+| re1&#124;re2 | Строка содержит регулярные выражения `rel` или `re2` | foo&#124;bar |
+
+[:arrow_up:Оглавление](#Оглавление) 
+____
+## Диаграммы Mermaid.js
+Появилась возможность вставлять диаграммы [Mermaid.js](https://mermaid-js.github.io/mermaid/#/)
+
+<pre>
+```mermaid
+... код диаграммы ...
+```
+</pre>
+Пример:
+<pre>
+```mermaid
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+```
+</pre>
+```mermaid
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+```
+Очень подробно на русском языке о диаграммах Mermaid.js: https://habr.com/ru/post/652867/ 
+
+[:arrow_up:Оглавление](#Оглавление) 
+____
