@@ -1,272 +1,362 @@
-2011-2019 Artsy Inc.
-
-## creative commons
-
-# Attribution 4.0 International
-
-Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal
-advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship.
-Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives
-no warranties regarding its licenses, any material licensed under their terms and conditions, or any related
-information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent
-possible.
-
-### Using Creative Commons Public Licenses
-
-Creative Commons public licenses provide a standard set of terms and conditions that creators and other rights
-holders may use to share original works of authorship and other material subject to copyright and certain other
-rights specified in the public license below. The following considerations are for informational purposes only, are
-not exhaustive, and do not form part of our licenses.
-
-- **Considerations for licensors:** Our public licenses are intended for use by those authorized to give the public
-  permission to use material in ways otherwise restricted by copyright and certain other rights. Our licenses are
-  irrevocable. Licensors should read and understand the terms and conditions of the license they choose before
-  applying it. Licensors should also secure all rights necessary before applying our licenses so that the public
-  can reuse the material as expected. Licensors should clearly mark any material not subject to the license. This
-  includes other CC-licensed material, or material used under an exception or limitation to copyright.
-  [More considerations for licensors](https://wiki.creativecommons.org/Considerations_for_licensors_and_licensees#Considerations_for_licensors).
-
-- **Considerations for the public:** By using one of our public licenses, a licensor grants the public permission
-  to use the licensed material under specified terms and conditions. If the licensor’s permission is not necessary
-  for any reason–for example, because of any applicable exception or limitation to copyright–then that use is not
-  regulated by the license. Our licenses grant only permissions under copyright and certain other rights that a
-  licensor has authority to grant. Use of the licensed material may still be restricted for other reasons,
-  including because others have copyright or other rights in the material. A licensor may make special requests,
-  such as asking that all changes be marked or described. Although not required by our licenses, you are encouraged
-  to respect those requests where reasonable.
-  [More considerations for the public](https://wiki.creativecommons.org/Considerations_for_licensors_and_licensees#Considerations_for_licensees).
-
-## Creative Commons Attribution 4.0 International Public License
-
-By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of
-this Creative Commons Attribution 4.0 International Public License ("Public License"). To the extent this Public
-License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance
-of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor
-receives from making the Licensed Material available under these terms and conditions.
-
-### Section 1 – Definitions.
-
-a. **Adapted Material** means material subject to Copyright and Similar Rights that is derived from or based upon
-the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or
-otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor.
-For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound
-recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a
-moving image.
-
-b. **Adapter's License** means the license You apply to Your Copyright and Similar Rights in Your contributions to
-Adapted Material in accordance with the terms and conditions of this Public License.
-
-c. **Copyright and Similar Rights** means copyright and/or similar rights closely related to copyright including,
-without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how
-the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section
-2(b)(1)-(2) are not Copyright and Similar Rights.
-
-d. **Effective Technological Measures** means those measures that, in the absence of proper authority, may not be
-circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December
-20, 1996, and/or similar international agreements.
-
-e. **Exceptions and Limitations** means fair use, fair dealing, and/or any other exception or limitation to
-Copyright and Similar Rights that applies to Your use of the Licensed Material.
-
-f. **Licensed Material** means the artistic or literary work, database, or other material to which the Licensor
-applied this Public License.
-
-g. **Licensed Rights** means the rights granted to You subject to the terms and conditions of this Public License,
-which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the
-Licensor has authority to license.
-
-h. **Licensor** means the individual(s) or entity(ies) granting rights under this Public License.
-
-i. **Share** means to provide material to the public by any means or process that requires permission under the
-Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination,
-communication, or importation, and to make material available to the public including in ways that members of the
-public may access the material from a place and at a time individually chosen by them.
-
-j. **Sui Generis Database Rights** means rights other than copyright resulting from Directive 96/9/EC of the
-European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or
-succeeded, as well as other essentially equivalent rights anywhere in the world.
-
-k. **You** means the individual or entity exercising the Licensed Rights under this Public License. Your has a
-corresponding meaning.
-
-### Section 2 – Scope.
-
-a. **_License grant._**
-
-1.  Subject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide,
-    royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the
-    Licensed Material to:
-
-    A. reproduce and Share the Licensed Material, in whole or in part; and
-
-    B. produce, reproduce, and Share Adapted Material.
-
-2.  **Exceptions and Limitations.** For the avoidance of doubt, where Exceptions and Limitations apply to Your use,
-    this Public License does not apply, and You do not need to comply with its terms and conditions.
-
-3.  **Term.** The term of this Public License is specified in Section 6(a).
-
-4.  **Media and formats; technical modifications allowed.** The Licensor authorizes You to exercise the Licensed
-    Rights in all media and formats whether now known or hereafter created, and to make technical modifications
-    necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from
-    making technical modifications necessary to exercise the Licensed Rights, including technical modifications
-    necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making
-    modifications authorized by this Section 2(a)(4) never produces Adapted Material.
-
-5.  **Downstream recipients.**
-
-    A. **Offer from the Licensor – Licensed Material.** Every recipient of the Licensed Material automatically
-    receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this
-    Public License.
-
-    B. **No downstream restrictions.** You may not offer or impose any additional or different terms or conditions
-    on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of
-    the Licensed Rights by any recipient of the Licensed Material.
-
-6.  **No endorsement.** Nothing in this Public License constitutes or may be construed as permission to assert or
-    imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or
-    granted official status by, the Licensor or others designated to receive attribution as provided in Section
-    3(a)(1)(A)(i).
-
-b. **_Other rights._**
-
-1.  Moral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity,
-    privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or
-    agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to
-    exercise the Licensed Rights, but not otherwise.
-
-2.  Patent and trademark rights are not licensed under this Public License.
-
-3.  To the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the
-    Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or
-    compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such
-    royalties.
-
-### Section 3 – License Conditions.
-
-Your exercise of the Licensed Rights is expressly made subject to the following conditions.
-
-a. **_Attribution._**
-
-1.  If You Share the Licensed Material (including in modified form), You must:
-
-    A. retain the following if it is supplied by the Licensor with the Licensed Material:
-
-    i. identification of the creator(s) of the Licensed Material and any others designated to receive attribution,
-    in any reasonable manner requested by the Licensor (including by pseudonym if designated);
-
-    ii. a copyright notice;
-
-    iii. a notice that refers to this Public License;
-
-    iv. a notice that refers to the disclaimer of warranties;
-
-    v. a URI or hyperlink to the Licensed Material to the extent reasonably practicable;
-
-    B. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and
-
-    C. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or
-    hyperlink to, this Public License.
-
-2.  You may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and
-    context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions
-    by providing a URI or hyperlink to a resource that includes the required information.
-
-3.  If requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the
-    extent reasonably practicable.
-
-4.  If You Share Adapted Material You produce, the Adapter's License You apply must not prevent recipients of the
-    Adapted Material from complying with this Public License.
-
-### Section 4 – Sui Generis Database Rights.
-
-Where the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:
-
-a. for the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or
-a substantial portion of the contents of the database;
-
-b. if You include all or a substantial portion of the database contents in a database in which You have Sui Generis
-Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents)
-is Adapted Material; and
-
-c. You must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of
-the database.
-
-For the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public
-License where the Licensed Rights include other Copyright and Similar Rights.
-
-### Section 5 – Disclaimer of Warranties and Limitation of Liability.
-
-a. **Unless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the
-Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the
-Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of
-title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects,
-accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of
-warranties are not allowed in full or in part, this disclaimer may not apply to You.**
-
-b. **To the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without
-limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive,
-exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed
-Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages.
-Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.**
-
-c. The disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that,
-to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.
-
-### Section 6 – Term and Termination.
-
-a. This Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail
-to comply with this Public License, then Your rights under this Public License terminate automatically.
-
-b. Where Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:
-
-1.  automatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of
-    the violation; or
-
-2.  upon express reinstatement by the Licensor.
-
-For the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for
-Your violations of this Public License.
-
-c. For the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions
-or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.
-
-d. Sections 1, 5, 6, 7, and 8 survive termination of this Public License.
-
-### Section 7 – Other Terms and Conditions.
-
-a. The Licensor shall not be bound by any additional or different terms or conditions communicated by You unless
-expressly agreed.
-
-b. Any arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate
-from and independent of the terms and conditions of this Public License.
-
-### Section 8 – Interpretation.
-
-a. For the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit,
-restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission
-under this Public License.
-
-b. To the extent possible, if any provision of this Public License is deemed unenforceable, it shall be
-automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed,
-it shall be severed from this Public License without affecting the enforceability of the remaining terms and
-conditions.
-
-c. No term or condition of this Public License will be waived and no failure to comply consented to unless
-expressly agreed to by the Licensor.
-
-d. Nothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any
-privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction
-or authority.
-
-> Creative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one
-> of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except
-> for the limited purpose of indicating that material is shared under a Creative Commons public license or as
-> otherwise permitted by the Creative Commons policies published at
-> [creativecommons.org/policies](https://creativecommons.org/policies), Creative Commons does not authorize the use
-> of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written
-> consent including, without limitation, in connection with any unauthorized modifications to any of its public
-> licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the
-> avoidance of doubt, this paragraph does not form part of the public licenses.
->
-> Creative Commons may be contacted at creativecommons.org
+<h1 align="center">Awesome GitHub Profile README
+<a href="https://www.producthunt.com/posts/awesome-github-profiles?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-awesome-github-profiles" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=277987&theme=light" alt="Awesome GitHub Profiles - Best curated list of developers readme, updated every 15 min | Product Hunt" style="width: 200px; height: 44px;" width="200" height="44" /></a></h1>
+<div align="center">
+<img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome Badge"/>
+<a href="https://arbeitnow.com/?utm_source=awesome-github-profile-readme"><img src="https://img.shields.io/static/v1?label=&labelColor=505050&message=arbeitnow&color=%230076D6&style=flat&logo=google-chrome&logoColor=%230076D6" alt="website"/></a>
+<!-- <img src="http://hits.dwyl.com/abhisheknaiidu/awesome-github-profile-readme.svg" alt="Hits Badge"/> -->
+<img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
+<a href="https://discord.gg/XTW52Kt"><img src="https://img.shields.io/discord/733027681184251937.svg?style=flat&label=Join%20Community&color=7289DA" alt="Join Community Badge"/></a>
+<a href="https://twitter.com/abhisheknaiidu" ><img src="https://img.shields.io/twitter/follow/abhisheknaiidu.svg?style=social" /> </a>
+<br>
+
+<i>A curated list of awesome Github Profile READMEs</i>
+
+<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/stargazers"><img src="https://img.shields.io/github/stars/abhisheknaiidu/awesome-github-profile-readme" alt="Stars Badge"/></a>
+<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/network/members"><img src="https://img.shields.io/github/forks/abhisheknaiidu/awesome-github-profile-readme" alt="Forks Badge"/></a>
+<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/pulls"><img src="https://img.shields.io/github/issues-pr/abhisheknaiidu/awesome-github-profile-readme" alt="Pull Requests Badge"/></a>
+<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/issues"><img src="https://img.shields.io/github/issues/abhisheknaiidu/awesome-github-profile-readme" alt="Issues Badge"/></a>
+<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/abhisheknaiidu/awesome-github-profile-readme?color=2b9348"></a>
+<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/blob/master/LICENSE"><img src="https://img.shields.io/github/license/abhisheknaiidu/awesome-github-profile-readme?color=2b9348" alt="License Badge"/></a>
+
+<img alt="Awesome GitHub Profile Readme" src="assets/agpr.gif"> </img>
+
+<i>Loved the project? Please consider [donating](https://paypal.me/abhisheknaiidu) to help it improve!</i>
+
+</div>
+
+### Contents:
+  - [Categories](#categories)
+      - [GitHub Actions 🤖](#github-actions-)
+      - [Game Mode 🚀](#game-mode-)
+      - [Code Mode 👨🏽‍💻](#code-mode-)
+      - [Dynamic Realtime 💫](#dynamic-realtime-)
+      - [A Little Bit of Everything 😃](#a-little-bit-of-everything-)
+      - [Descriptive 🗒](#descriptive-)
+      - [Simple but Innovative Ones 🤗](#simple-but-innovative-ones-)
+      - [Typing.. Mode 🎰](#typing-mode-)
+      - [Anime 👾](#anime-)
+      - [Minimalistic ✨](#minimalistic-)
+      - [GIFS 👻](#gifs-)
+      - [Just Images 🎭](#just-images-)
+      - [Badges 🎫](#badges-)
+      - [Fancy Fonts 🖋](#fancy-fonts-)
+      - [Icons 🎯](#icons-)
+      - [Retro 😎](#retro-)
+  - [Tools](#tools)
+  - [Articles](#articles)
+  - [Video Tutorials](#tutorials)
+  - [Contribute](#contribute)
+  - [License](#license)
+
+
+## Categories
+
+#### GitHub Actions 🤖
+- [Abhishek Naidu](https://github.com/abhisheknaiidu/abhisheknaiidu)
+- [Thomas Guibert](https://github.com/thmsgbrt/thmsgbrt)
+- [Brian Douglas](https://github.com/bdougie/bdougie)
+- [Shawn Wang](https://github.com/sw-yx/sw-yx)
+- [Simon Willison](https://github.com/simonw/simonw)
+- [Mike Coutermarsh](https://github.com/mscoutermarsh/mscoutermarsh)
+- [Michael Hoffmann (Mokkapps)](https://github.com/mokkapps/mokkapps)
+- [Athul Cyriac Ajay](https://github.com/athul/athul)
+- [Gautam Krishna R](https://github.com/gautamkrishnar/gautamkrishnar)
+- [Roald Nefs](https://github.com/roaldnefs/roaldnefs)
+- [Leo](https://github.com/mopig/mopig)
+- [Dhruv Jain](https://github.com/maddhruv/maddhruv)
+- [Erwin Lejeune](https://github.com/guilyx/guilyx)
+- [Jessica Lim](https://github.com/JessicaLim8/JessicaLim8)
+- [侑夕-Tw93](https://github.com/tw93/tw93)
+- [liununu](https://github.com/liununu/liununu)
+- [Filippo Rossi (qu4k)](https://github.com/qu4k/qu4k)
+- [Moe Poi ~](https://github.com/moepoi/moepoi)
+- [Elon Tang (blackcater)](https://github.com/blackcater/blackcater)
+- [Stanley Lim (Spiderpig86)](https://github.com/Spiderpig86/Spiderpig86)
+- [Akshit Garg (gargakshit)](https://github.com/gargakshit/gargakshit)
+- [Yufan You](https://github.com/ouuan/ouuan)
+- [Danny Koppenhagen](https://github.com/d-koppenhagen/d-koppenhagen)
+- [Vidya Bhandary](https://github.com/vidyabhandary/vidyabhandary)
+- [Rao Hai](https://github.com/RaoHai/RaoHai)
+- [Jatin Rao](https://github.com/jatin2003/jatin2003)
+- [teoxoy](https://github.com/teoxoy/teoxoy)
+- [Aral Roca](https://github.com/aralroca/aralroca)
+- [codeSTACKr](https://github.com/codestackr/codestackr)
+- [itgoyo](https://github.com/itgoyo/itgoyo)
+- [lifeparticle](https://github.com/lifeparticle/lifeparticle)
+
+#### Game Mode 🚀
+- [Tim Burgan](https://github.com/timburgan/timburgan)
+- [Ben Sampica](https://github.com/benjaminsampica/benjaminsampica)
+- [Kavish Hukmani](https://github.com/DoubleGremlin181/DoubleGremlin181)
+- [Jonathan Gin](https://github.com/JonathanGin52/JonathanGin52)
+- [Ross Williams](https://github.com/rossjrw/rossjrw)
+- [kylepls](https://github.com/kylepls/kylepls)
+- [Aaron Liu](https://github.com/HFO4/HFO4)
+- [marcizhu](https://github.com/marcizhu/marcizhu)
+
+#### Code Mode 👨🏽‍💻
+- [Thaiane Braga](https://github.com/Thaiane/Thaiane)
+- [Ash Baker](https://github.com/ashbakernz/ashbakernz)
+- [Anmol Singh](https://github.com/anmol098/anmol098)
+- [Kiho](https://github.com/monkindey/monkindey)
+- [Marton](https://github.com/martonlederer/martonlederer)
+- [Redowan Delowar](https://github.com/rednafi/rednafi)
+- [Zhenye Na](https://github.com/Zhenye-Na/Zhenye-Na)
+
+#### Dynamic Realtime 💫
+- [Kirill Feschenko](https://github.com/xcaq/xcaq)
+- [Anurag Hazra](https://github.com/anuraghazra/anuraghazra)
+- [DenverCoder1](https://github.com/DenverCoder1/DenverCoder1)
+- [Hemant Joshi](https://github.com/8bithemant/8bithemant)
+- [Kittinan](https://github.com/kittinan/kittinan)
+- [Andrew Novac](https://github.com/novatorem/novatorem)
+- [Johnny Villegas](https://github.com/C9-LinkRs/C9-LinkRs)
+- [Andrew Young](https://github.com/andyruwruw/andyruwruw)
+- [Rashmi Jadhav](https://github.com/rusty-sj/rusty-sj)
+- [andyruwruw](https://github.com/andyruwruw/andyruwruw)
+- [Jacob Colvin](https://github.com/MacroPower/MacroPower)
+- [Osman Durdağ](https://github.com/zumrudu-anka/zumrudu-anka)
+- [iampavangandhi](https://github.com/iampavangandhi/iampavangandhi)
+- [Dani Akash](https://github.com/daniakash/daniakash)
+- [Rahul Jha](https://github.com/rahul-jha98/rahul-jha98)
+- [Taehyun Hwang](https://github.com/HwangTaehyun/HwangTaehyun)
+
+#### A Little Bit of Everything 😃
+- [Raymond Li](https://github.com/Raymo111/Raymo111)
+- [Martin Heinz](https://github.com/MartinHeinz/MartinHeinz)
+- [Adam Alston](https://github.com/adamalston/adamalston)
+- [Rafnix Guzmán](https://github.com/rafnixg/rafnixg)
+- [Aditya Pal](https://github.com/sciencepal/sciencepal)
+- [Hedy Li](https://github.com/hedythedev/hedythedev)
+- [Xunzhuo](https://github.com/xunzhuo/xunzhuo)
+- [Khaleel Gibran](https://github.com/khalby786/khalby786)
+- [Apoorv Tyagi](https://github.com/apoorvtyagi/apoorvtyagi)
+- [CxyFreedom](https://github.com/cxyfreedom/cxyfreedom)
+- [Miller Camilo Vega](https://github.com/minoveaz/minoveaz)
+- [Abhishek Maira](https://github.com/AbhishekMaira10/AbhishekMaira10)
+- [Clayton Hamilton](https://github.com/claytonjhamilton/claytonjhamilton)
+- [Sy Rashid](https://github.com/syrashid/syrashid)
+- [Quin Knight](https://github.com/cheesits456/cheesits456)
+- [Jackyu-1999](https://github.com/Jackyu-1999/Jackyu-1999)
+- [Rak Laptudirm](https://github.com/raklaptudirm/raklaptudirm)
+- [Trini B](https://github.com/trinib/trinib)
+- [holic-x](https://github.com/holic-x/holic-x)
+
+#### Descriptive 🗒
+- [Filip Troníček](https://github.com/filiptronicek/filiptronicek)
+- [Garima Singh](https://github.com/garimasingh128/garimasingh128)
+- [lizheming](https://github.com/lizheming/lizheming)
+- [Nguyễn Hoàng Dương](https://github.com/you-create/you-create)
+- [Saksham Taneja](https://github.com/sakshamtaneja21/sakshamtaneja21)
+- [TheAbbie](https://github.com/theabbie/theabbie)
+- [Keshav Singh](https://github.com/keshavsingh4522/keshavsingh4522)
+- [Vidur Satija](https://github.com/vidursatija/vidursatija)
+- [Dani El-Ayyass](https://github.com/dayyass/dayyass)
+- [Nanra Sukedy](https://github.com/Nanra/Nanra)
+
+#### Simple but Innovative Ones 🤗
+- [Nate Moore](https://github.com/natemoo-re/natemoo-re)
+- [Jhey Tompkins](https://github.com/jh3y/jh3y)
+- [Waylon Walker](https://github.com/WaylonWalker/WaylonWalker)
+- [Vansh Kapoor](https://github.com/vanshkapoor/vanshkapoor)
+- [Harsh Kumar Khatri](https://github.com/harshkumarkhatri/harshkumarkhatri)
+- [Stephen Ajulu](https://github.com/stephenajulu/stephenajulu)
+- [Haany Ali](https://github.com/MarikIshtar007/MarikIshtar007)
+- [Anurag Singh](https://github.com/ashleymavericks/ashleymavericks)
+- [Rishit Dagli](https://github.com/Rishit-dagli/Rishit-dagli)
+- [Vinit Shahdeo](https://github.com/vinitshahdeo/vinitshahdeo/)
+- [Fatih Kadir Akın](https://github.com/f/f/)
+- [Lucas Vazquez](https://github.com/lucasvazq/lucasvazq)
+- [小弟调调™](https://github.com/jaywcjlove/jaywcjlove)
+- [alx365](https://github.com/alx365/alx365)
+- [Johnny Villegas](https://github.com/C9-LinkRs/C9-LinkRs)
+- [一缕殇流化隐半边冰霜](https://github.com/halfrost/halfrost)
+- [Srihari Kapu](https://github.com/sriharikapu/sriharikapu)
+- [vaaski](https://github.com/vaaski/vaaski)
+- [Arturs Smirnovs](https://github.com/arturssmirnovs/arturssmirnovs)
+- [Yash Sahijwani](https://github.com/Terabyte17/Terabyte17)
+- [Hemanth Kollipara](https://github.com/Defcon27/Defcon27)
+- [Tushar Mittal](https://github.com/techytushar/techytushar)
+- [Onimur](https://github.com/onimur/onimur)
+- [Bruno Tacca](https://github.com/brunotacca/brunotacca)
+- [Matthew Taylor](https://github.com/Wrapperup/Wrapperup)
+
+#### Typing.. Mode 🎰
+- [Mathieu Ledru](https://github.com/matyo91/matyo91)
+- [CyrisXD](https://github.com/CyrisXD/CyrisXD)
+- [Mpho Mphego](https://github.com/mmphego/mmphego)
+- [Abhinav Sharma](https://github.com/ABSphreak/ABSphreak)
+- [Mason Slover](https://github.com/MasonSlover/MasonSlover)
+- [SuperSupeng](https://github.com/SuperSupeng/SuperSupeng)
+
+#### Anime 👾
+- [Ing](https://github.com/innng/innng)
+- [edisonlee55](https://github.com/edisonlee55/edisonlee55)
+- [Ashutosh](https://github.com/Xx-Ashutosh-xX/Xx-Ashutosh-xX)
+- [Yukii](https://github.com/PrincessAkira/PrincessAkira)
+
+#### Minimalistic ✨
+- [Caneco](https://github.com/caneco/)
+- [Gift Egwuenu](https://github.com/lauragift21/lauragift21)
+- [Kelechi Precious Nwachukwu](https://github.com/PluckyPrecious/PluckyPrecious)
+- [Ghazi Khan](https://github.com/gkhan205)
+- [Pratik Kumar](https://github.com/pr2tik1/pr2tik1)
+- [Dennis Hartrampf](https://github.com/DennisHartrampf/DennisHartrampf)
+- [MrStanDu33](https://github.com/MrStanDu33/MrStanDu33)
+- [Jayraj Roshan](https://github.com/jayrajroshan/jayrajroshan)
+- [amxchang](https://github.com/amxchang/amxchang)
+- [ridermansb](https://github.com/Ridermansb/Ridermansb)
+- [Maximous Black](https://github.com/maximousblk/maximousblk)
+- [Alex Martin](https://github.com/AlexMartinFR/AlexMartinFR)
+- [ChungZH](https://github.com/ChungZH/ChungZH/)
+- [Orhun](https://github.com/orhun/orhun)
+- [Aveek Saha](https://github.com/Aveek-Saha/Aveek-Saha)
+- [Federico Dondi](https://github.com/federico-dondi)
+- [Zheeeng](https://github.com/Zheeeng/Zheeeng)
+- [TallGuyJenks](https://github.com/tallguyjenks/tallguyjenks)
+- [Stefanie Grunwald](https://github.com/moertel/moertel)
+- [Abdul Khaliq](https://github.com/kha7iq/kha7iq)
+
+#### GIFS 👻
+- [Pouya Saadeghi](https://github.com/saadeghi/saadeghi)
+- [Ari](https://github.com/ari-hacks/ari-hacks)
+- [Siv Ram Shastri](https://github.com/Prince-Shivaram/Prince-Shivaram)
+- [Shanu Mishra](https://github.com/Shanu1515/Shanu1515)
+- [Shubham Kumar](https://github.com/imskr/imskr)
+- [Duncan](https://github.com/dephraiim/dephraiim)
+- [Demartini](https://github.com/demartini/demartini)
+- [Sindre Sorhus](https://github.com/sindresorhus/sindresorhus)
+- [Pranjal Bhardwaj](https://github.com/Bhard27/Bhard27)
+- [Okan Koçyiğit](https://github.com/okankocyigit/okankocyigit)
+- [Raghav Khullar](https://github.com/RaghavK16/RaghavK16)
+- [xrkffgg](https://github.com/xrkffgg/xrkffgg)
+- [Kevin Cui](https://github.com/KevCui/KevCui)
+- [Muskan Rani](https://github.com/muskanrani/muskanrani)
+- [Rishav Anand](https://github.com/rishavanand/rishavanand)
+- [KelviNosse](https://github.com/KelviNosse/KelviNosse)
+- [nilfalse](https://github.com/nilfalse/nilfalse)
+- [Shahriar Shafin](https://github.com/ShahriarShafin/ShahriarShafin)
+- [Somnath Paul](https://github.com/SP-XD/SP-XD)
+- [Ksenia Morozova](https://github.com/kmoroz/kmoroz)
+
+#### Just Images 🎭
+- [Zack Krida](https://github.com/zackkrida/zackkrida)
+- [偏右](https://github.com/afc163/afc163)
+- [thewhiteh4t](https://github.com/thewhiteh4t/thewhiteh4t)
+- [Akash Rai](https://github.com/akasrai/akasrai)
+- [Oussama Bouchikhi](https://github.com/oussamabouchikhi/oussamabouchikhi)
+- [Daily Random Photo](https://github.com/dailyrandomphoto/dailyrandomphoto)
+
+#### Badges 🎫
+- [Harish Kumar S S](https://github.com/harish-sethuraman/harish-sethuraman)
+- [Anirudh Emmadi](https://github.com/aemmadi/aemmadi)
+- [Brendon Smith](https://github.com/br3ndonland/br3ndonland)
+- [Alwin Wang](https://github.com/alwinw/alwinw)
+- [Moshfiq Rony](https://github.com/moshfiqrony/moshfiqrony)
+- [Ileriayo Adebiyi](https://github.com/ileriayo/ileriayo)
+- [Samujjwaal Dey](https://github.com/samujjwaal/samujjwaal)
+- [Char-Al](https://github.com/char-al/char-al)
+- [Oka](https://github.com/Coordinate-Cat/Coordinate-Cat)
+- [Nikita Rusetskii](https://github.com/xtenzQ/xtenzQ)
+- [Raphael Ebner](https://github.com/rafi0101/rafi0101)
+
+#### Fancy Fonts 🖋
+- [xiaoluoboding](https://github.com/xiaoluoboding/xiaoluoboding)
+
+#### Icons 🎯
+- [Yuan Tang](https://github.com/terrytangyuan/terrytangyuan)
+- [Hussainweb](https://github.com/hussainweb/hussainweb)
+- [Peter Han](https://github.com/peterthehan/peterthehan)
+- [Thomas George Thomas](https://github.com/Thomas-George-T/Thomas-George-T)
+- [Derek Nguyen](https://github.com/dereknguyen269/dereknguyen269)
+- [Valentin Briand](https://github.com/vbriand/vbriand)
+
+#### Retro 😎
+- [Livio Brunner](https://github.com/BrunnerLivio/BrunnerLivio)
+- [Christian Petersen](https://github.com/fnky/fnky)
+
+## Tools
+- [Todoist Stats in Readme](https://github.com/abhisheknaiidu/todoist-readme) - Daily Todoist Stats on your Profile Readme
+- [Visitor Badge](https://visitor-badge.glitch.me/#docs) - Count visitors for your README.md, Issues, PRs in GitHub
+- [1990s style Visitor Counter](https://twitter.com/ryanlanciaux/status/1283755637126705152) - Add a 1990s style visitor counter with one line of markdown.
+- [Vistor Count](https://pufler.dev/git-badges/) - Count visitors for README.md that can be used with shields.io
+- [Shields Project](https://shields.io/) - Use Shields to create profile badges, compatible with Simple Icons
+- [Github Readme Stats](https://github.com/anuraghazra/github-readme-stats) - Get dynamically generated GitHub stats on your readmes
+- [Github Contributor Stats](https://github.com/HwangTaehyun/github-contributor-stats) - :fire: Get dynamically generated Github Contributor stats (repositories you really committed) on your readmes
+- [GitHub Streak Stats](https://github.com/DenverCoder1/github-readme-streak-stats) - 🔥 Stay motivated and show off your contribution streak! 🌟 Display your total contributions, current streak, and longest streak on your GitHub profile README
+- [Simple Icons](https://github.com/simple-icons/simple-icons#cdn-usage) -  SVG icons for popular brands for your README.md files
+- [Laravel GitHub Profile Visit Counter](https://github.com/caneco/laravel-github-profile-view-counter) - Add on your Laravel project a quick-badge to count your profile visits.
+- [Dev Metrics in Readme](https://github.com/athul/waka-readme) - [WakaTime](https://wakatime.com/) Weekly Metrics on your Profile Readme
+- [Profile Activity Generator](https://github.com/omidnikrah/profile-activity-generator) - Generate custom profile activity for your profile README
+- [Current UTC time](https://github.com/jojoee/jojoee) - Example code of server that can serve dynamic content on GitHub profile
+- [Github Activity in README](https://github.com/jamesgeorge007/github-activity-readme) - Updates `README.md` with the recent GitHub activity of a user
+- [Github Profile README Generator](https://github.com/rahuldkjain/github-profile-readme-generator) - This tool provides an easy way to create github profile readme with latest addons like `visitors count`, `github stats` etc.
+- [Dynamic Profile Page On Github](https://github.com/umutphp/github-action-dynamic-profile-page) - Get dynamically generated list of your commits (of the repositories that the action is configured) on GitHub profile readme.
+- [npm package downloads](https://github.com/maddhruv/github-readme-npm-downloads) - Show all of your npm packages and their total downloads
+- [All Dev Stats in Readme](https://github.com/anmol098/waka-readme-stats) - Are you an early 🐤 or a night 🦉? When are you most productive during the day? What languages you code in? And other stuff... Let's check out in your readme!
+- [Feedparser](https://pythonhosted.org/feedparser/) - Convenient processing of RSS files
+- [Profile README Widgets](https://github.com/marketplace/actions/profile-readme) - Add simple widgets to your profile readme.
+- [Spotify now playing card generator](https://github.com/kittinan/spotify-github-profile) - Generate your Spotify now playing card for your GitHub profile
+- [Markdown Badges](https://github.com/Ileriayo/markdown-badges) - Add badges to your profile.
+- [Latest Blog Posts and StackOverflow activity in readme](https://github.com/gautamkrishnar/blog-post-workflow) - Show your latest blog posts from any sources or StackOverflow activity on your GitHub profile/project readme automatically using the RSS feed using this Github Action
+- [GitHub Readme LinkedIn](https://github.com/soroushchehresa/github-readme-linkedin) - Get dynamically generated images from your LinkedIn profile on your GitHub readmes
+- [GitHub Readme Medium](https://github.com/omidnikrah/github-readme-medium) - Show your latest Medium article on your readmes!
+- [GitHub Readme StackOverflow](https://github.com/omidnikrah/github-readme-stackoverflow) - Dynamically generated your StackOverflow profile status on your GitHub readmes!
+- [StackOverflow Stats Badge](https://github.com/claytonjhamilton/stackoverflow-badge) - Display your stats with this Unique StackOverflow Badge!
+- [Github Profile README Generator](https://github.com/arturssmirnovs/github-profile-readme-generator) - This project allows you to create nice and simple github profile readme files.
+- [Profile Readme Stats](https://github.com/marketplace/actions/profile-readme-stats) - [Github Action] Showcase your github stats on your profile README.md
+- [README Jokes](https://github.com/ABSphreak/readme-jokes) - Random dev jokes in your GitHub README.
+- [GitHub Profile Trophy](https://github.com/ryo-ma/github-profile-trophy) - 🏆 Add dynamically generated GitHub Trophy on your readme
+- [Github Readme Twitter](https://github.com/gazf/github-readme-twitter) - Show your latest tweet on your readmes.
+- [Random Dev Memes](https://github.com/techytushar/random-memer) - Random dev memes to display on your GitHub README.
+- [GitHub Readme Quotes](https://github.com/PiyushSuthar/github-readme-quotes) - Dev quotes on your GitHub Profile Readme.
+- [GitHub Profilinator](https://github.com/rishavanand/github-profilinator) - This tool contains small GUI components that you can hook together to generate markdown for your perfect readme.
+- [PageSpeed score](https://github.com/ankurparihar/readme-pagespeed-insights) - Generate website's PageSpeed score in animated svg form which can be used in GitHub README
+- [Gitwar Profile Score](https://github.com/iampavangandhi/Gitwar) - Add your Github Profile Score in README.
+- [Header Images for Github Profile READMEs](https://github.com/khalby786/REHeader) - Generate header images for your GitHub profile READMEs with custom content
+- [YouTube Channel Stats](https://github.com/DenverCoder1/github-readme-youtube-stats) - 📺 Display number of subscribers on YouTube and/or your channel's view count as a badge
+- [Current Book Status from GoodReads](https://github.com/theFr1nge/goodreads-readme) - Add a card of the current book you are reading that automatically syncs with GoodReads to display your progress.
+- [Readme Typing SVG](https://github.com/DenverCoder1/readme-typing-svg) - :zap: Dynamically generated, customizable SVG that gives the appearance of typing and deleting text
+
+## Articles
+- ["How To Create A GitHub Profile README"](https://www.aboutmonica.com/blog/how-to-create-a-github-profile-readme) - *Monica Powell*
+- ["How to Stand Out on Github with Profile READMEs"](https://medium.com/better-programming/how-to-stand-out-on-github-with-profile-readmes-dfd2102a3490?source=friends_link&sk=61df9c4b63b329ad95528b8d7c00061f) - *Jessica Lim*
+- ["What's on your GitHub Profile"](https://dev.to/waylonwalker/what-s-on-your-github-profile-40p3) - *Waylon Walker*
+- ["3 Ways to Spice up your Github Profile README 🔥"](https://dev.to/jayehernandez/3-ways-to-spice-up-your-github-profile-readme-1276) - *Jaye Hernandez*
+- ["Dynamically Generated Github Stats For Your Profile ReadMe"](https://dev.to/anuraghazra/dynamically-generated-github-stats-for-your-profile-readme-o4g) - *Anurag Hazra*
+- ["How to create an awesome GIF for your GitHub Profile README"](https://dev.to/satvikchachra/how-to-add-an-awesome-readme-to-your-github-profile-361n) - *Satvik Chachra*
+- ["Create a special repository in your GitHub Profile 🔨, supported and unsupported features"](https://torrocus.com/blog/special-github-repository/) - *Alex Malaszkiewicz*
+- ["How to create a Github Profile README with Dynamic Github Stats"](https://codewithghazi.com/how-to-create-a-github-profile-readme-with-dynamic-github-stats/) - *Ghazi Khan*
+- ["How I Built A Self-Updating README On My Github Profile"](https://www.mokkapps.de/blog/how-i-built-a-self-updating-readme-on-my-git-hub-profile/) - *Michael Hoffmann (Mokkapps)*
+- ["Building a self-updating profile README for GitHub"](https://simonwillison.net/2020/Jul/10/self-updating-profile-readme/) - *Simon Willison*
+- ["How to create an interactive README for your GitHub profile"](https://kavishhukmani.me/github-profile-interactive-readme-tutorial/) - *Kavish Hukmani*
+- ["什么？Github 居然可以这么玩？"](https://zhuanlan.zhihu.com/p/161705999) - *Tw93*
+- ["Getting started with Markdown Badges"](https://dev.to/ileriayo/mardown-badges-2og0) - *Ileriayo Adebiyi*
+- ["Show your latest dev.to posts automatically on your GitHub profile readme"](https://dev.to/gautamkrishnar/show-your-latest-dev-to-posts-automatically-in-your-github-profile-readme-3nk8)  - *Gautam krishna R*
+- ["How I Built A Self-Updating README by Webhooks and Netlify Functions"](https://github.com/RaoHai/RaoHai/blob/master/How-I-Built-A-Self-Updating-README-by-Webhooks-and-Netlify-Functions.md/) - *Rao Hai*
+- ["Build a Stunning README For Your GitHub Profile"](https://towardsdatascience.com/build-a-stunning-readme-for-your-github-profile-9b80434fe5d7) - *Martin Heinz*
+- ["How I added my Spotify statistics to my GitHub readme 📜"](https://dev.to/gargakshit/how-i-added-my-spotify-statistics-to-my-github-readme-4jdd) - *Akshit Garg*
+- ["Static Readme Regeneration"](https://dev.to/aralroca/static-readme-regeneration-4pf2) - *Aral Roca*
+- ["How to Create a Self-Updating README.md for Your GitHub Profile"](https://medium.com/@th.guibert/how-to-create-a-self-updating-readme-md-for-your-github-profile-f8b05744ca91) - *Thomas Guibert*
+- ["一文玩转github主页"](https://blog.holic-x.com/wv-blog/post/7ad96a5d.html) - *holic-x*
+
+## Tutorials
+- ["Create Impressive GitHub Portfolio"](https://www.youtube.com/watch?v=dkE4mVhwMB4) - *MTECHVIRAL*
+- ["How To Create a Github Profile ReadMe"](https://www.youtube.com/watch?v=DOiGs2NiDbU) - *James Q Quick*
+- ["How to create a GitHub profile README"](https://www.youtube.com/watch?v=vND_UY7xk24) - *Code With Confidence*
+- ["How To Create A GitHub Profile README"](https://www.youtube.com/watch?v=Y1z7_GfEPiE) - *Program With Erik*
+- ["Next Level GitHub Profile README"](https://youtu.be/ECuqb5Tv9qI) - *codeSTACKr*
+
+## Contribute
+
+Contributions are always welcome!
+Please read the [contribution guidelines](contributing.md) first.
+
+## Special Thanks 🙇
+- [Zetao Zhuang](https://github.com/zzetao) for making the amazing site for this repo!
+
+## License
+
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, [Abhishek Naidu](https://abhisheknaidu.tech/) has waived all copyright and related or neighboring rights to this work.
