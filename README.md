@@ -1,13 +1,93 @@
-# DEPRECATED
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-## Announcement:
-As of November 18th, 2022, this repository is deprecated. The contents of this repository will remain available but we will no longer provide updates or accept new contributions and pull requests.
-We recommend you start [here] (https://docs.aws.amazon.com/freertos/latest/userguide/freertos-getting-started-modular.html) for creating a new project.
-If you have an existing FreeRTOS project based on this repository, see the [migration guide](https://docs.aws.amazon.com/freertos/latest/userguide/github-repo-migration.html). 
+# C extensions
+*.so
 
-Over the years, AWS has improved the modularity of the FreeRTOS libraries and repository structure to make it easier for you to build and update FreeRTOS-based projects. This repository deprecation aligns with some of these significant initiatives:
-*   We decomposed libraries to include them in their individual repositories and removed interdependencies between each library giving you the flexibility to choose the FreeRTOS libraries and project structure that suits your project and toolchain.
-*   We split libraries that are AWS dependent and FreeRTOS dependent into separate repositories giving you the option to mix and match libraries that are specific to your board and use case.
-*   We provided  feature stability, security patches, and critical bug fixes through the Long Term Support (LTS) libraries. 
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
 
-Have more questions? Post them in the [FreeRTOS forum](https://forums.freertos.org/).
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# IPython Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# dotenv
+.env
+
+# virtualenv
+venv/
+ENV/
+
+# Spyder project settings
+.spyderproject
+
+# Rope project settings
+.ropeproject
+
+.idea
+
+.DS_Store
