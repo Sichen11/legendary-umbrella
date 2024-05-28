@@ -1,87 +1,46 @@
-# ⚠️⚠️ DEPRECATED ⚠️⚠️
+# 项目背景
 
-Please go to the [Engineering wiki in Notion](https://www.notion.so/buffer/Engineering-Wiki-f34142d290304c35bebadf76cc9cc89e).
+蘑菇街能有今天的快速发展，得益于开源软件群雄崛起的大环境背景，我们一直对开源社区怀有感恩之情，因此也一直希望能为开源社区贡献一份力量。
 
----
+2013年我们蘑菇街从社区导购华丽转身时尚电商平台，为解决千万妹子和时尚卖家的沟通问题，我们开发了自己的即时通讯软件。既然已经有了用户使用的IM，为什么我们自己公司内部沟通还要用第三方的呢？因此就有了TT(TeamTalk)的雏形，现在蘑菇街内部的在线沟通全部通过TT来完成。随着TT功能的逐渐完善，我们决定把TT开源来回馈开源社区，希望国内的中小企业都能用上开源、免费、好用的IM工具！
 
-# Buffer Engineering Wiki
+# 项目介绍
+* 名称：TeamTalk
+* 官网：http://tt.mogu.io/
+* 开源协议：[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+* 定位：中小型企业用户，member >= 2
+* 特点：开源与产品并重
+* 功能：可靠的消息传递机制；支持文字、图片、语音等富文本信息；文件收发等	
 
-Welcome, friend! 👋 This is the Buffer Engineering Wiki. It's is a living, evolving project that exists to guide you through all the info you need to know to be a happy and productive Buffer Engineer™.
+# 项目框架
 
-It's a handy reference whether you're new, changing teams, or just like breaking down knowledge silos. 💥
 
-# Table of Contents
+麻雀虽小五脏俱全，本项目涉及到多个平台、多种语言，简单关系如下图：
+     
+![teamtalk架构图](http://s6.mogucdn.com/b7/pic/140921/7n6ih_ieygmzjsmiywezjwmmytambqhayde_514x551.jpg)
 
-💁 _In no particular order, please keep up to date and feel free to rearrange in your PRs_
-### Local Development
-_Get all setup to work on Buffer locally_ 
 
-* :octocat: [`buffer-dev`](https://github.com/bufferapp/buffer-dev)
+#### 服务端：
+     
+CppServer：TTCppServer工程，包括IM消息服务器、http服务器、文件传输服务器、文件存储服务器、登陆服务器
+java DB Proxy：TTJavaServer工程，承载着后台消息存储、redis等接口
+PHP server：TTPhpServer工程，teamtalk后台配置页面
 
-### Team Specific
-* [Data Team](/teams/data/README.md)
-* [Account Management](/teams/account-management/README.md)
-* [Publish](/teams/publish/README.md)
-* [Mobile](/teams/mobile/README.md)
-* [Systems](/teams/systems/README.md)
+#### 客户端：
 
-### Seeking Advice & Input
-* [How the Architecture Review process works](https://github.com/bufferapp/README/blob/master/architecture-review.md) 
+- mac：TTMacClient工程，mac客户端工程
+- iOS：TTIOSClient工程，IOS客户端工程
+- Android：TTAndroidClient工程，android客户端工程
+- Windows：TTWinClient工程，windows客户端工程
 
-### Engineering Leadership
-* [How Engineering Management Works at Buffer](https://github.com/bufferapp/README/tree/master/engineering-management)
-* [(All-Buffer)Code of Conduct](https://github.com/bufferapp/code-of-conduct)
-    
-### Buffer Web
-_The web app at buffer.com/app, API, static pages, and more!_
+* 语言：c++、objective-c、java、php
+* 系统环境：Linux、Windows，Mac, iOS, Android
 
-* :octocat: [`buffer-web`](https://github.com/bufferapp/buffer-web)
-* [Deployments](/deployments.md)
-* [Deployments for `buffer-web`](https://github.com/bufferapp/buffer-web/blob/master/docs/deploy.md)
-* [PHP Guidelines](https://github.com/bufferapp/buffer-web/blob/master/docs/php-guide.md) — Great doc by @josem on writing PHP in `buffer-web`
-* [PHP Testing](https://github.com/bufferapp/buffer-web/blob/master/docs/php-testing.md)
-* [Feature Flips](https://github.com/bufferapp/buffer-web/blob/master/docs/release-feature.md)
-* ️[buffer-web workers in k8s](/buffer-web-workers-kubernetes.md)
-* ️[Lifecycle of an update](https://paper.dropbox.com/doc/Lifecycle-of-an-update-4rUM5QNLWO4MpNimFpUPy)
-* [Editing files and making a PR directly on GitHub](/editing-on-github.md)
+# 代码下载
+-[地址](https://github.com/mogujie/TeamTalk)
 
-### Buffer Marketing
-_The home page at buffer.com, more static pages, salary calculator, and more!_
+# 交流
 
-* :octocat: [`buffer-marketing`](https://github.com/bufferapp/buffer-marketing)
-* Check out the README in `buffer-marketing` for some great documentation.
-
-### Blog
-_Our blogs, hosted on WPEngine._
-
-* [Wordpress Blogs](/wordpress-blogs.md)
-
-### Billing
-_Everything related to the Stripe API & Webhook and our billing logic._
-
-* [Billing API endpoint signatures](/billing/api-endpoints.md)
-
-### Open Source
-_Everything related to Open Source at Buffer_
-* [Buffer Open Source FAQ](/open-source-faq.md)
-
-### Meta
-* [Contributing to the Wiki](/CONTRIBUTING.md)
-* [Encryption Tool for this Wiki](/encryption-tool.md)
-
----
-
-## Contributing to the Wiki
-
-All contributions would be glorious. An out of date wiki is so much worse than the occasional misleading new contribution, so please **err on the side of sharing your knowledge**.
-
-Wikis are best when they're living and evolving. As an async, remote team, let's create a wiki that reflects our commitment to this way of work! 🌍
-
-👉 **[Read how to contribute right here](CONTRIBUTING.md)!**
-
-tl:dr;
-
-1. Be the change you want to see on the wiki ✨ Just **edit it directly** on Github ✏️
-1. Got more of a **suggestion** than an immediate change? Open a **Pull Request** 🙋🏽‍
-1. Not sure what the right info is, but you can see the current **docs are wrong**? Open an **issue** 🤔
-1. Got lots to share? Awesome!🦄 Work on this wiki **locally**: `$ git clone git@github.com:bufferapp/README.git`
+* qq交流群1：341273218(已满)
+* qq交流群2:437335108
+* 邮件交流：tt@mogujie.com
