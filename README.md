@@ -1,17 +1,16 @@
-<div align="center">
-	<br>
-	<a href="https://github.com/sindresorhus/css-in-readme-like-wat/blame/main/header.svg">
-		<img src="header.svg" width="800" height="400" alt="Click to see the source">
-	</a>
-	<br>
-</div>
+# Contribution Guidelines
 
+Please ensure your pull request adheres to the following guidelines:
 
+- Alphabetize your entry.
+- Search previous suggestions before making a new one, as yours may be a duplicate.
+- Suggested READMEs should be beautiful or stand out in some way.
+- Make an individual pull request for each suggestion.
+- New categories, or improvements to the existing categorization are welcome.
+- Keep descriptions short and simple, but descriptive.
+- Start the description with a capital and end with a full stop/period.
+- Check your spelling and grammar.
+- Make sure your text editor is set to remove trailing whitespace.
+- Use the `#readme` anchor for GitHub READMEs to link them directly
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-Explanation: https://css-tricks.com/custom-styles-in-github-readmes/
+Thank you for your suggestions!
