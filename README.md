@@ -1,247 +1,204 @@
-Markdown Cheatsheet<a name="TOP"></a>
-===================
-
-- - - - 
-# Heading 1 #
-
-    Markup :  # Heading 1 #
-
-    -OR-
-
-    Markup :  ============= (below H1 text)
-
-## Heading 2 ##
-
-    Markup :  ## Heading 2 ##
-
-    -OR-
-
-    Markup: --------------- (below H2 text)
-
-### Heading 3 ###
-
-    Markup :  ### Heading 3 ###
-
-#### Heading 4 ####
-
-    Markup :  #### Heading 4 ####
-
-
-Common text
-
-    Markup :  Common text
-
-_Emphasized text_
-
-    Markup :  _Emphasized text_ or *Emphasized text*
-
-~~Strikethrough text~~
-
-    Markup :  ~~Strikethrough text~~
-
-__Strong text__
-
-    Markup :  __Strong text__ or **Strong text**
-
-___Strong emphasized text___
-
-    Markup :  ___Strong emphasized text___ or ***Strong emphasized text***
-
-[Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
-
-    Markup :  [Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
-
-[heading-1](#heading-1 "Goto heading-1")
-    
-    Markup: [heading-1](#heading-1 "Goto heading-1")
-
-Table, like this one :
-
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-
-```
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-```
-
-Adding a pipe `|` in a cell :
-
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | \|
-
-```
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  |  \| 
-```
-
-Left, right and center aligned table
-
-Left aligned Header | Right aligned Header | Center aligned Header
-| :--- | ---: | :---:
-Content Cell  | Content Cell | Content Cell
-Content Cell  | Content Cell | Content Cell
-
-```
-Left aligned Header | Right aligned Header | Center aligned Header
-| :--- | ---: | :---:
-Content Cell  | Content Cell | Content Cell
-Content Cell  | Content Cell | Content Cell
-```
-
-`code()`
-
-    Markup :  `code()`
-
-```javascript
-    var specificLanguage_code = 
-    {
-        "data": {
-            "lookedUpPlatform": 1,
-            "query": "Kasabian+Test+Transmission",
-            "lookedUpItem": {
-                "name": "Test Transmission",
-                "artist": "Kasabian",
-                "album": "Kasabian",
-                "picture": null,
-                "link": "http://open.spotify.com/track/5jhJur5n4fasblLSCOcrTp"
-            }
-        }
-    }
-```
-
-    Markup : ```javascript
-             ```
-
-* Bullet list
-    * Nested bullet
-        * Sub-nested bullet etc
-* Bullet list item 2
-
-~~~
- Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
-
--OR-
-
- Markup : - Bullet list
-              - Nested bullet
-                  - Sub-nested bullet etc
-          - Bullet list item 2 
-~~~
-
-1. A numbered list
-    1. A nested numbered list
-    2. Which is numbered
-2. Which is numbered
-
-~~~
- Markup : 1. A numbered list
-              1. A nested numbered list
-              2. Which is numbered
-          2. Which is numbered
-~~~
-
-- [ ] An uncompleted task
-- [x] A completed task
-
-~~~
- Markup : - [ ] An uncompleted task
-          - [x] A completed task
-~~~
-
-- [ ] An uncompleted task
-    - [ ] A subtask
-
-~~~
- Markup : - [ ] An uncompleted task
-              - [ ] A subtask
-~~~
-
-> Blockquote
->> Nested blockquote
-
-    Markup :  > Blockquote
-              >> Nested Blockquote
-
-_Horizontal line :_
-- - - -
-
-    Markup :  - - - -
-
-_Image with alt :_
-
-![picture alt](http://via.placeholder.com/200x150 "Title is optional")
-
-    Markup : ![picture alt](http://via.placeholder.com/200x150 "Title is optional")
-
-Foldable text:
-
-<details>
-  <summary>Title 1</summary>
-  <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-</details>
-<details>
-  <summary>Title 2</summary>
-  <p>Content 2 Content 2 Content 2 Content 2 Content 2</p>
-</details>
-
-    Markup : <details>
-               <summary>Title 1</summary>
-               <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-             </details>
-
-```html
-<h3>HTML</h3>
-<p> Some HTML code here </p>
-```
-
-Link to a specific part of the page:
-
-[Go To TOP](#TOP)
-   
-    Markup : [text goes here](#section_name)
-              section_title<a name="section_name"></a>    
-
-Hotkey:
-
-<kbd>⌘F</kbd>
-
-<kbd>⇧⌘F</kbd>
-
-    Markup : <kbd>⌘F</kbd>
-
-Hotkey list:
-
-| Key | Symbol |
-| --- | --- |
-| Option | ⌥ |
-| Control | ⌃ |
-| Command | ⌘ |
-| Shift | ⇧ |
-| Caps Lock | ⇪ |
-| Tab | ⇥ |
-| Esc | ⎋ |
-| Power | ⌽ |
-| Return | ↩ |
-| Delete | ⌫ |
-| Up | ↑ |
-| Down | ↓ |
-| Left | ← |
-| Right | → |
-
-Emoji:
-
-:exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes at [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/)
-
-    Markup : Code appears between colons :EMOJICODE:
+{
+	"package": "package.json",
+	"blueprint": "blueprint.md",
+	"input": "blueprint.md",
+	"output": "README.md",
+	"text": "Use this readme generator to easily generate beautiful readme's like this one! Simply extend your <code>package.json</code> and create a readme blueprint. On Github, the README file is like the landing page of your website because it is the first thing visitors see. You want to make a good first impression.",
+	"logo": {
+		"src": "https://raw.githubusercontent.com/andreasbm/readme/master/assets/logo-shadow.png",
+		"width": 150,
+		"height": 150
+	},
+	"placeholder": [
+		"[[",
+		"]]"
+	],
+	"documentationConfig": {
+		"markdown": {
+			"titleLevel": 2
+		}
+	},
+	"ids": {
+		"github": "andreasbm/readme",
+		"npm": "@appnest/readme"
+	},
+	"badges": [
+		{
+			"alt": "Custom badge",
+			"url": "https://github.com/badges/shields",
+			"img": "https://img.shields.io/badge/custom-badge-f39f37.svg"
+		},
+		{
+			"alt": "Maintained",
+			"img": "https://img.shields.io/badge/Maintained%3F-yes-green.svg",
+			"url": "https://github.com/andreasbm/readme/graphs/commit-activity"
+		}
+	],
+	"bullets": {
+		"Simple": "Extremely simple to use - so simple that it almost feels like magic!",
+		"Powerful": "Customize almost everything - add your own templates and variables if you like",
+		"Awesome": "The tool you don't know you need before you have many different repositories that all need maintenance"
+	},
+	"featured": [
+		"[lit-translate](https://github.com/andreasbm/lit-translate)",
+		"[masonry-layout](https://github.com/andreasbm/masonry-layout)",
+		"[focus-trap](https://github.com/andreasbm/focus-trap)",
+		"[web-router](https://github.com/andreasbm/web-router)",
+		"[web-config](https://github.com/andreasbm/web-config)",
+		"[ts-lit-plugin](https://github.com/runem/ts-lit-plugin)",
+		"[blob](https://github.com/andreasbm/blob)"
+	],
+	"templates": [
+		{
+			"name": "install",
+			"template": "Run `npm install [[ ids.npm ]]' to install this library!"
+		}
+	],
+	"example": {
+		"command": "node_modules/.bin/readme generate"
+	},
+	"properties": [
+		[
+			"Attribute",
+			"Type",
+			"Description"
+		],
+		[
+			"**size**",
+			"'medium', 'large'",
+			"Determines the size"
+		],
+		[
+			"**active**",
+			"boolean",
+			"Whether the element is active or not"
+		]
+	],
+	"commandOptions": [
+		[
+			"Option",
+			"Type",
+			"Description"
+		],
+		[
+			"-c, --config",
+			"string",
+			"Path of the configuration file. Defaults to 'blueprint.json"
+		],
+		[
+			"-p, --package",
+			"string",
+			"Path of the 'package.json' file. Defaults to 'package.json'."
+		],
+		[
+			"--pkg.name",
+			"string",
+			"Name of the project. Used for the 'title' template."
+		],
+		[
+			"--pkg.contributors",
+			"{name: string; email: string; url: string; img: string; info: string[];}[]",
+			"Contributors of the project. Used for the 'contributors' template."
+		],
+		[
+			"--pkg.license",
+			"string",
+			"License kind. Used for the 'license' template."
+		],
+		[
+			"-o, --output",
+			"string",
+			"Path of the generated README file. Defaults to 'README.md'."
+		],
+		[
+			"-h, --help",
+			"",
+			"Display this help message."
+		],
+		[
+			"-i, --input",
+			"string",
+			"The blueprint. Defaults to 'blueprint.md'."
+		],
+		[
+			"--badges",
+			"{alt: string, url: string, img: string}[]",
+			"Badges. Used for the 'badges' template."
+		],
+		[
+			"--text",
+			"string",
+			"Text describing your project. Used for the 'description' template."
+		],
+		[
+			"--demo",
+			"string",
+			"Demo url for your project. Used for the 'description' template."
+		],
+		[
+			"--lineBreak",
+			"string",
+			"The linebreak used in the generation of the README file. Defaults to 'rn'"
+		],
+		[
+			"--tab",
+			"string",
+			"The tab used in the generation of the README file. Defaults to 't'"
+		],
+		[
+			"--placeholder",
+			"[string, string]",
+			"The placeholder syntax used when looking for templates in the blueprint. Defaults to '[\"{{\", \"}}\"]."
+		],
+		[
+			"--line",
+			"string",
+			"The line style of the titles. Can also be an URL. Defaults to 'colored'."
+		],
+		[
+			"--templates",
+			"{name: string, template: string}[]",
+			"User created templates."
+		],
+		[
+			"-s, --silent",
+			"boolean",
+			"Whether the console output from the command should be silent."
+		],
+		[
+			"-d, --dry",
+			"boolean",
+			"Whether the command should run as dry. If dry, the output file is notgenerated but outputted to the console instead."
+		],
+		[
+			"--headingPrefix",
+			"{[key: number]: string}",
+			"The prefix of the header tags. Defaults to '{1: \"➤ \", 2: \"➤ \"}'"
+		],
+		[
+			"--logo",
+			"{src: string; alt?: string; width?: number; height?: number;}",
+			"The logo information. Used for the 'logo' template."
+		],
+		[
+			"--contributorsPerRow",
+			"number",
+			"The amount of contributors pr row when using the 'contributors' template. Defaults to '6'"
+		],
+		[
+			"--documentationConfig",
+			"object",
+			"Configuration object for automatic documentation template."
+		],
+		[
+			"--extend",
+			"string",
+			"Path to another configuration object that should be extended."
+		],
+		[
+			"--checkLinks",
+			"boolean",
+			"Checks all links for aliveness after the README file has been generated."
+		]
+	]
+}
