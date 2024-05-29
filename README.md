@@ -1,63 +1,90 @@
-{
-  "name": "readme-md-generator",
-  "version": "1.0.0",
-  "description": "CLI that generates beautiful README.md files.",
-  "main": "src/index.js",
-  "bin": {
-    "readme": "src/index.js"
-  },
-  "dependencies": {
-    "boxen": "^4.0.0",
-    "date-fns": "^2.0.1",
-    "ejs": "^3.0.1",
-    "git-repo-name": "^1.0.1",
-    "inquirer": "~7.0.0",
-    "load-json-file": "^6.0.0",
-    "lodash": "^4.17.11",
-    "markdown-escape": "^1.0.2",
-    "node-fetch": "^2.6.0",
-    "ora": "4.0.3",
-    "yargs": "^15.0.1"
-  },
-  "devDependencies": {
-    "codecov": "^3.5.0",
-    "eslint": "^6.0.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.17.3",
-    "jest": "^24.8.0",
-    "prettier": "^1.17.1"
-  },
-  "scripts": {
-    "lint": "eslint src",
-    "prettier": "prettier \"**/*.{js,md,json}\"",
-    "prettier:check": "npm run prettier -- --check",
-    "prettier:fix": "npm run prettier -- --write",
-    "start": "node src/index.js",
-    "test": "jest",
-    "test:ci": "jest --coverage && codecov"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kefranabg/readme-md-generator.git"
-  },
-  "keywords": [
-    "readme",
-    "md",
-    "cli",
-    "generator",
-    "template"
-  ],
-  "author": "Franck Abgrall",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kefranabg/readme-md-generator/issues"
-  },
-  "homepage": "https://github.com/kefranabg/readme-md-generator#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@kefranabg"
-  },
-  "engines": {
-    "npm": ">=5.5.0",
-    "node": ">=9.3.0"
-  }
-}
+<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+	<foreignObject width="100%" height="100%">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<style>
+				@keyframes rotate {
+					0% {
+						transform: rotate(3deg);
+					}
+					100% {
+						transform: rotate(-3deg);
+					}
+				}
+
+				@keyframes gradientBackground {
+					0% {
+						background-position: 0% 50%;
+					}
+					50% {
+						background-position: 100% 50%;
+					}
+					100% {
+						background-position: 0% 50%;
+					}
+				}
+
+				@keyframes fadeIn {
+					0% {
+						opacity: 0;
+					}
+					66% {
+						opacity: 0;
+					}
+					100% {
+						opacity: 1;
+					}
+				}
+
+				.container {
+					font-family:
+						system-ui,
+						-apple-system,
+						'Segoe UI',
+						Roboto,
+						Helvetica,
+						Arial,
+						sans-serif,
+						'Apple Color Emoji',
+						'Segoe UI Emoji';
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					margin: 0;
+					width: 100%;
+					height: 400px;
+					background: linear-gradient(-45deg, #fc5c7d, #6a82fb, #05dfd7);
+					background-size: 600% 400%;
+					animation: gradientBackground 10s ease infinite;
+					border-radius: 10px;
+					color: white;
+					text-align: center;
+				}
+
+				h1 {
+					font-size: 50px;
+					line-height: 1.3;
+					letter-spacing: 5px;
+					text-transform: uppercase;
+					text-shadow:
+						0 1px 0 #efefef,
+						0 2px 0 #efefef,
+						0 3px 0 #efefef,
+						0 4px 0 #efefef,
+						0 12px 5px rgba(0, 0, 0, 0.1);
+					animation: rotate ease-in-out 1s infinite alternate;
+				}
+
+				p {
+					font-size: 20px;
+					text-shadow: 0 1px 0 #efefef;
+					animation: 5s ease 0s normal forwards 1 fadeIn;
+				}
+			</style>
+			<div class="container">
+				<h1>Made with HTML &amp; CSS<br/>not an animated GIF</h1>
+				<p>Click to see the source</p>
+			</div>
+		</div>
+	</foreignObject>
+</svg>
