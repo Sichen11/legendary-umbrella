@@ -1,7 +1,1 @@
-{
-  "plugins": {
-    "remark-title": {
-      "title": "IPFS Readme Standard"
-    }
-  }
-}
+web: vendor/bin/heroku-php-apache2 src/
