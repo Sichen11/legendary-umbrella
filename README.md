@@ -1,20 +1,17 @@
-The MIT License (MIT)
+source "http://rubygems.org"
+gemspec
 
-Copyright (c) 2014 Eugene Kalinin
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+gem "posix-spawn", :platforms => :ruby
+gem "redcarpet", :platforms => :ruby
+gem "kramdown", :platforms => :jruby
+gem "RedCloth"
+# using a tag version here because 0.18.3 was not published by the author to encourage users to upgrade.
+# however we want to bump up to this version since this has a security patch
+gem "commonmarker", git: "https://github.com/gjtorikian/commonmarker.git", tag: "v0.18.3"
+gem "rdoc", "~>3.6"
+gem "org-ruby", "= 0.9.9"
+gem "creole", "~>0.3.6"
+gem "wikicloth", "=0.8.3"
+gem "twitter-text", "~> 1.14"
+gem "asciidoctor", "~> 2.0.5"
+gem "rake"
