@@ -1,267 +1,67 @@
-Getting started with Markdown
-=============================
-
-
-- [Getting started with Markdown](#getting-started-with-markdown)
-- [Titles](#titles)
-- [Paragraph](#paragraph)
-- [List](#list)
-	- [List CheckBox](#list-checkbox)
-- [Link](#link)
-	- [Anchor links](#anchor-links)
-- [Blockquote](#blockquote)
-- [Image | GIF](#image--gif)
-- [Style Text](#style-text)
-	- [Italic](#italic)
-	- [Bold](#bold)
-	- [Strikethrough](#strikethrough)
-- [Code](#code)
-- [Email](#email)
-- [Table](#table)
-	- [Table Align](#table-align)
-    	- [Align Center](#align-center)
-    	- [Align Left](#align-left)
-    	- [Align Right](#align-right)
-- [Escape Characters](#escape-characters)
-- [Emoji](#emoji)
-- [Shields Badges](#Shields-Badges)
-- [Markdown Editor](#markdown-editor)
-- [Some links for more in depth learning](#some-links-for-more-in-depth-learning)
-
-----------------------------------
-
-# Titles 
-
-### Title 1
-### Title 2
-
-	Title 1
-	========================
-	Title 2 
-	------------------------
-
-# Title 1
-## Title 2
-### Title 3
-#### Title 4
-##### Title 5
-###### Title 6
-
-    # Title 1
-    ## Title 2
-    ### Title 3    
-    #### Title 4
-    ##### Title 5
-    ###### Title 6    
-
-# Paragraph
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit. Phasellus eleifend egestas diam, id tincidunt arcu dictum quis. Pellentesque eu dui tempus, tempus massa sed, eleifend tortor. Donec in sem in erat iaculis tincidunt. Fusce condimentum hendrerit turpis nec vehicula. Aliquam finibus nisi vel eros lobortis dictum. Etiam congue tortor libero, quis faucibus ligula gravida a. Suspendisse non pulvinar nisl. Sed malesuada, felis vitae consequat gravida, dui ligula suscipit ligula, nec elementum nulla sem vel dolor. Vivamus augue elit, venenatis non lorem in, volutpat placerat turpis. Nullam et libero at eros vulputate auctor. Duis sed pharetra lacus. Sed egestas ligula vitae libero aliquet, ac imperdiet est ullamcorper. Sed dapibus sem tempus eros dignissim, ac suscipit lectus dapibus. Proin sagittis diam vel urna volutpat, vel ullamcorper urna lobortis. Suspendisse potenti.
-
-Nulla varius risus sapien, nec fringilla massa facilisis sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc vel ornare erat, eget rhoncus lectus. Suspendisse interdum scelerisque molestie. Aliquam convallis consectetur lorem ut consectetur. Nullam massa libero, cursus et porta ac, consequat eget nibh. Sed faucibus nisl augue, non viverra justo sagittis venenatis.
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit. 
-    
-    Phasellus eleifend egestas diam, id tincidunt arcu dictum quis.
-
-# List 
-* Item 1;
-	* Item 1.1;
-* Item 2;
-	* Item 2.1;
-	* Item 2.2;
-* Item 3
-	* Item 3.1;
-		* Item 3.1.1;
-    
->      * Item 1;
->	      * Item 1.1;
->	    * Item 2;
->	     * Item 2.1;
->	     * Item 2.2;
->	    * Item 3
->		   * Item 3.1;
->			  * Item 3.1.1;
-
-## List CheckBox
-
- - [ ] Item A
- - [x] Item B
- - [x] Item C
- 
->     - [ ] Item A
->     - [x] Item B
->     - [x] Item C
-
-
-# Link
-[Google](https://www.google.com) - _Google | Youtube | Gmail | Maps | PlayStore | GoogleDrive_
-
-[Youtube](https://www.youtube.com) - _Enjoy videos and music you love, upload original content, and share it with friends, family, and the world on YouTube._
-
-[GitHub](https://github.com/fefong/markdown_readme#getting-started-with-markdown) - _Project_
+# WordPress Blogs
 
-		[Google](https://www.google.com) - _Google | Youtube | Gmail | Maps | PlayStore | GoogleDrive_
+## Theme
 
-## Anchor links
+### Theme Repository
 
-[Markdown - Summary](#Getting-started-with-Markdown)
+The theme repository houses the current theme as well as previous themes that Buffer has used over the years. **buffer-2016** is in use across each of the sites right now.
 
-[Markdown - Markdown Editor](#Markdown-Editor)
+https://github.com/bufferapp/buffer-blog-themes
 
-		[Markdown - Link](#Link)
+### buffer-2016
 
-# Blockquote
-> Lebenslangerschicksalsschatz: Lifelong Treasure of Destiny
+The 2016 theme is a single theme that has various template options available within the WordPress theme options allowing it to be tailored for each individual blog. Including different homepage templates called "newspaper" and "magazine".
 
-    > Lebenslangerschicksalsschatz: Lifelong Treasure of Destiny 
+buffer-2016 makes use of GULP and SASS to compile & minify scripts and CSS.
 
-# Image | GIF
-![myImage](https://media.giphy.com/media/XRB1uf2F9bGOA/giphy.gif)
-    
-    ![myImage](https://media.giphy.com/media/XRB1uf2F9bGOA/giphy.gif)
-    
-See more [Markdown Extras - Image Align](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#image-align)    
+### Previous Themes
+Previous themes made use of a base theme which was then overwritten by sub themes to customize them for each individual site.
 
-# Style Text
-### Italic
+Having one singular code base for each sites theme makes making changes across each of the blogs easier.
 
-*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.*
 
-     *Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.*
 
-### Bold
-**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.**
+## Plugins
 
-    **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.**
-    
-### Strikethrough
-~~strikethrough text~~
+Ideally we should explore plugins very carefully before installing them, running audits on installed plugins on a frequent basis to ensure we don't have any installed that aren't in use as well as ensuring upgrades are done to avoid security issues.
 
-    ~~strikethrough text~~
-    
-# Code
 
-```java
-public static void main(String[] args) {
-	//TODO
-}
-```
+## Hosting
 
->   \`\`\`java <br>
->   public static void main(String[] args) {<br>
->	    //TODO<br>
->	}<br>
->   \`\`\`<br>
+We have a number of WordPress blogs at Buffer. These are all hosted on WPEngine, using the same theme across each of the blogs.
 
-See more [Markdown Extras - Style Text](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#style-text)
+Right now WPEngine hosts...
+* [Social](http://blog.bufferapp.com/)
+* [Open](http://open.buffer.com/)
+* [Overflow](https://overflow.buffer.com/)
 
-# Email
-<email@email.com>
+We have additional sites setup within WPEngine which aren't currently in use. WPEngine allows us to host many installations of WordPress if we wish to expand our blog offering.
 
-    <email@email.com>
+### Deployments
 
-# Table
+WPEngine has its own GIT repository setup which allows you to push to their repositories to deploy to staging or production. Unfortunately this can lead to issues when themes/plugins are changed remotely within WordPress.
 
-|Column 1|Column 2|Column 3|
-|---|---|---|
-|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
-|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
+Instead we make use of GitHub for hosting the repository and use [DeployBot](http://buffer.deploybot.com/) to manage deployments to each of the blog environments. Right now these are set up to automatically deploy to each of the blog staging sites on merge to master and manual deployments are done to deploy to the production environments.
 
->\|Column 1|Column 2|Column 3|<br>
->\|---|---|---|<br>
->\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
->\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
+Previously deployments to production would be done in order of visitor numbers, starting with Overflow, then Open, before finally deploying to Social. DeployBot allows you to quickly rollback a change via their dashboard if required. For bigger changes you can also make use of the WPEngine backup points for extra security.
 
-## Table Align
+Deployments can also be triggered using Slack commands in #eng-deploys. These can be configured within DeployBot.
+* /deploy-social-blog-production
+* /deploy-social-blog-staging
+* /deploy-overflow-blog-production
+* /deploy-overflow-blog-staging
 
-## Align Center
+### Staging
+WPEngine offers a staging environment which can be used to test plugins & themes in the same setup as the production. Within the WPEngine dashboard you can trigger a sync between staging & production to test the latest content within the Staging environment.
 
-|Column 1|Column 2|Column 3|
-|:---:|:---:|:---:|
-|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
-|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
+* [Social](http://bufferblog.staging.wpengine.com/)
+* [Open](https://bufferopen.staging.wpengine.com/)
+* [Overflow](https://bufferdevs.staging.wpengine.com/)
 
->\|Column 1|Column 2|Column 3|<br>
->\|:---:|:---:|:---:|<br>
->\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
->\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
 
-## Align Left
+## Local Setup
+We have previously made use of MAMP to host WordPress locally. Depending on how familiar you are with Docker, you could also setup a Docker Image with a WordPress environment.
 
-|Column 1|Column 2|Column 3|
-|:---|:---|:---|
-|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
-|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
+You'll want the buffer-blog-themes repository checked out within the WordPress envirnment so the WordPress installation has access to the themes.
 
->\|Column 1|Column 2|Column 3|<br>
->\|:---|:---|:---|<br>
->\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
->\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
-
-## Align Right
-
-|Column 1|Column 2|Column 3|
-|---:|---:|---:|
-|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
-|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
-
->\|Column 1|Column 2|Column 3|<br>
->\|---:|---:|---:|<br>
->\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
->\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
-
-See more [Markdown Extras - Table](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table)
-* [Rownspan](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table---rowspan)
-* [Colspan](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table---colspan)
-
-# Escape Characters
-
-```
-\   backslash
-`   backtick
-*   asterisk
-_   underscore
-{}  curly braces
-[]  square brackets
-()  parentheses
-#   hash mark
-+   plus sign
--   minus sign (hyphen)
-.   dot
-!   exclamation mark
-```
-
-# Emoji
-
-* [Emoji](emoji.md#emoji);
-	* [People](emoji.md#people) - (:blush: ; :hushed: ; :shit:);
-	* [Nature](emoji.md#nature) - (:sunny: ; :snowman: ; :dog:);
-	* [Objects](emoji.md#objects) - (:file_folder: ; :computer: ; :bell:);
-	* [Places](emoji.md#places) - (:rainbow: ; :warning: ; :statue_of_liberty:);
-	* [Symbols](emoji.md#symbols) - (:cancer: ; :x: ; :shipit:);
-* [Kaomoji](emoji.md#kaomoji);
-* [Special-Symbols](emoji.md#special-symbols);
-	
-
-# Shields Badges
-
-:warning: _We are not responsible for this site_
-
-See more: [https://shields.io/](https://shields.io/)
-
-[![GitHub forks](https://img.shields.io/github/forks/fefong/markdown_readme)](https://github.com/fefong/markdown_readme/network)
-![Markdown](https://img.shields.io/badge/markdown-project-red)
-
-# Markdown Editor
-
-[StackEdit](https://stackedit.io) - _StackEdit’s Markdown syntax highlighting is unique. The refined text formatting of the editor helps you visualize the final rendering of your files._
-
-# Some links for more in depth learning
-
-:page_facing_up: [Markdown Extras](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#markdown---extras)
-
-:page_facing_up: [Wikipedia - Markdown](https://pt.wikipedia.org/wiki/Markdown)
-
-:page_facing_up: [Oficial](https://daringfireball.net/projects/markdown/)
-
-
+Once setup you can grab an export of the MySQL database from WPEngine via phpMyAdmin to work with real blog content.
