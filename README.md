@@ -1,17 +1,39 @@
-source "http://rubygems.org"
-gemspec
-
-gem "posix-spawn", :platforms => :ruby
-gem "redcarpet", :platforms => :ruby
-gem "kramdown", :platforms => :jruby
-gem "RedCloth"
-# using a tag version here because 0.18.3 was not published by the author to encourage users to upgrade.
-# however we want to bump up to this version since this has a security patch
-gem "commonmarker", git: "https://github.com/gjtorikian/commonmarker.git", tag: "v0.18.3"
-gem "rdoc", "~>3.6"
-gem "org-ruby", "= 0.9.9"
-gem "creole", "~>0.3.6"
-gem "wikicloth", "=0.8.3"
-gem "twitter-text", "~> 1.14"
-gem "asciidoctor", "~> 2.0.5"
-gem "rake"
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "esnext",
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": false,
+		"newLine": "LF",
+		"sourceMap": true,
+		"allowSyntheticDefaultImports": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"allowJs": false,
+		"alwaysStrict": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noEmitOnError": true,
+		"strictNullChecks": true,
+		"experimentalDecorators": true,
+		"declaration": true,
+		"lib": [
+			"es2015.promise",
+			"dom",
+			"scripthost",
+			"es7",
+			"es6",
+			"es2017",
+			"es2017.object",
+			"es2015.proxy",
+			"esnext",
+			"es2015"
+		],
+		"plugins": [
+			{
+				"name": "ts-lit-plugin"
+			}
+		]
+	}
+}
