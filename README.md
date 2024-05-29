@@ -1,25 +1,9 @@
-module.exports = {
-  root: true,
-  env: {
-    node: true,
-    jest: true
-  },
-  extends: ['airbnb-base', 'eslint:recommended'],
-  rules: {
-    semi: ['error', 'never'],
-    'no-use-before-define': ['error', { functions: false }],
-    'comma-dangle': 0,
-    'no-var': 2,
-    'prefer-const': 2,
-    'operator-linebreak': 0,
-    'no-confusing-arrow': 0,
-    'implicit-arrow-linebreak': 0,
-    indent: 0,
-    'no-param-reassign': 0,
-    'function-paren-newline': 0,
-    'arrow-parens': 0
-  },
-  parserOptions: {
-    parser: 'babel-eslint'
-  }
-}
+# Editing files and making a PR directly on GitHub 
+
+_Look ma, no local environment!_
+
+It's possible to make and propose changes in a PR on GitHub directly! No `bufer-dev` needed.
+
+**[📹 Watch the video here to learn how! <br><br><img src="http://img.youtube.com/vi/O-fHOHoL0Oo/maxresdefault.jpg" />](https://youtu.be/O-fHOHoL0Oo)**
+
+
