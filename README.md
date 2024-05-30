@@ -1,3 +1,4 @@
-#! /bin/bash
-
-cat spec.md
+{
+  "singleQuote": true,
+  "semi": false
+}
