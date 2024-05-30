@@ -1,17 +1,35 @@
-autopep8==1.6.0
-certifi==2020.6.20
-chardet==3.0.4
-click==7.1.2
-Flask==1.1.4
-gunicorn==20.1.0
-idna==2.10
-itsdangerous==1.1.0
-Jinja2==2.11.3
-MarkupSafe==2.0.1
-pycodestyle==2.8.0
-python-dotenv==0.14.0
-requests==2.24.0
-toml==0.10.2
-urllib3==1.25.11
-Werkzeug==1.0.1
-colorthief==0.2.1
+from setuptools import setup
+
+def readme():
+    return '''
+readme2tex
+==========
+
+Renders LaTeX for Github Readmes.
+  
+See https://github.com/leegao/readme2tex/
+'''
+
+setup(name='readme2tex',
+      version='0.0.1b3',
+      description='Render LaTeX within your Github Readmes',
+      long_description=readme(),
+      url='http://github.com/leegao/readme2tex',
+      author='Lee Gao',
+      author_email='lg342@cornell.edu',
+      license='MIT',
+      packages=['readme2tex'],
+      classifiers=[
+          'Development Status :: 3 - Alpha',
+          'License :: OSI Approved :: MIT License',
+          'Programming Language :: Python :: 2.7',
+          'Topic :: Text Processing :: Markup :: LaTeX',
+      ],
+      keywords='github readme markdown latex tex equations math svg markup',
+      install_requires=[
+          'markdown',
+          'pygments',
+          'cairosvg==1.0.22',
+      ],
+      include_package_data=True,
+      zip_safe=False)
