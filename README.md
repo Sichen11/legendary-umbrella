@@ -1,1 +1,2 @@
-dist/* linguist-vendored=false
+*.md linguist-detectable=true
+*.md linguist-documentation=false
