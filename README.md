@@ -1,12 +1,16 @@
-{
-  "name": "Readme Typing SVG",
-  "description": "⚡ Dynamically generated, customizable SVG that gives the appearance of typing and deleting text. Typing SVGs can be used as a bio on your Github profile readme or repository.",
-  "repository": "https://github.com/DenverCoder1/readme-typing-svg/",
-  "keywords": ["github", "dynamic", "readme", "typing", "svg", "profile"],
-  "formation": {
-    "web": {
-      "quantity": 1,
-      "size": "free"
-    }
-  }
-}
+import "dotenv/config";
+import statsCard from "./api/index.js";
+import repoCard from "./api/pin.js";
+import langCard from "./api/top-langs.js";
+import wakatimeCard from "./api/wakatime.js";
+import gistCard from "./api/gist.js";
+import express from "express";
+
+const app = express();
+app.listen(process.env.port || 9000);
+
+app.get("/", statsCard);
+app.get("/pin", repoCard);
+app.get("/top-langs", langCard);
+app.get("/wakatime", wakatimeCard);
+app.get("/gist", gistCard);
