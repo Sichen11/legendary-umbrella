@@ -1,247 +1,218 @@
-Markdown Cheatsheet<a name="TOP"></a>
-===================
+## 4.0.2 - 2023-10-10
+* Add support for .mdx files in markdown
 
-- - - - 
-# Heading 1 #
+## 4.0.1 - 2022-03-07
+* Update to commonmarker 0.18.3; There isn't a version on RubyGems for this, so this is pointing to a [tag version on GitHub](https://github.com/gjtorikian/commonmarker/blob/v0.18.3/commonmarker.gemspec)
 
-    Markup :  # Heading 1 #
+## 4.0.0 - 2021-03-31
 
-    -OR-
+* Drop support for Python 2 in RST rendering [#1456](https://github.com/github/markup/pull/1456)
 
-    Markup :  ============= (below H1 text)
+## 3.0.5 - 2020-11-12
 
-## Heading 2 ##
+* Add commonmarker_exts to commonmarker options [#1268](https://github.com/github/markup/pull/1268)
+* Check whether filename is set when rendering Asciidoc. [#1290](https://github.com/github/markup/pull/1290)
 
-    Markup :  ## Heading 2 ##
+## 3.0.4 - 2019-04-03
 
-    -OR-
+* Expose options in #render_s [#1249](https://github.com/github/markup/pull/1249)
+* Upgrade to Asciidoctor 2.0.x [#1264](https://github.com/github/markup/pull/1264)
 
-    Markup: --------------- (below H2 text)
+## 3.0.3 - 2018-12-17
 
-### Heading 3 ###
+* Temporarily remove support for POD6 [#1248](https://github.com/github/markup/pull/1248)
 
-    Markup :  ### Heading 3 ###
+## 3.0.2 - 2018-12-12
 
-#### Heading 4 ####
+* Add support for POD6 [#1173](https://github.com/github/markup/pull/1173)
 
-    Markup :  #### Heading 4 ####
+## 3.0.1 - 2018-10-19
 
+* Remove linguist-detected RMarkdown files from the Markdown renderer [#1237](https://github.com/github/markup/pull/1237)
 
-Common text
+## 3.0.0 - 2018-10-18
 
-    Markup :  Common text
+* Allow passing options through to CommonMarker [#1236](https://github.com/github/markup/pull/1236)
+* Symlink option is now a keyword arg [#1236](https://github.com/github/markup/pull/1236)
 
-_Emphasized text_
+## 2.0.2 - 2018-10-15
 
-    Markup :  _Emphasized text_ or *Emphasized text*
+* Don't render rmd files as Markdown [#1235](https://github.com/github/markup/pull/1235)
 
-~~Strikethrough text~~
+## 2.0.1 - 2018-06-29
 
-    Markup :  ~~Strikethrough text~~
+* Create anchor for every =item directive in POD files [#1165](https://github.com/github/markup/pull/1165)
 
-__Strong text__
+## 2.0.0 - 2018-01-31
 
-    Markup :  __Strong text__ or **Strong text**
+* Remove filesystem access [#1157](https://github.com/github/markup/pull/1157)
 
-___Strong emphasized text___
+## 1.7.0 - 2018-01-30
 
-    Markup :  ___Strong emphasized text___ or ***Strong emphasized text***
+### Changed
 
-[Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
+* Updates for Linguist v6 [#1139](https://github.com/github/markup/pull/1139)
+* Update to Nokogiri ~> 1.8; drop support for Ruby 2.0 [#1156](https://github.com/github/markup/pull/1156)
 
-    Markup :  [Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
+## 1.6.2 - 2017-11-27
 
-[heading-1](#heading-1 "Goto heading-1")
-    
-    Markup: [heading-1](#heading-1 "Goto heading-1")
+### Changed
 
-Table, like this one :
+* Only report basename in usage [#1131](https://github.com/github/markup/pull/1131)
+* rest2html parameter signature fix [#1082](https://github.com/github/markup/pull/1082)
 
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+## 1.6.1 - 2017-07-25
 
-```
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-```
+### Changed
 
-Adding a pipe `|` in a cell :
+* Added support for highlight directive in rST [#925](https://github.com/github/markup/pull/925)
+* Fixes to documentation and code style [#1009](https://github.com/github/markup/pull/1009) [#1071](https://github.com/github/markup/pull/1071) [#1087](https://github.com/github/markup/pull/1087)
+* Test against newer Ruby versions [#1086](https://github.com/github/markup/pull/1086)
+* Upgrade to Asciidoctor 1.5.6.1 [#1088](https://github.com/github/markup/pull/1088)
 
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | \|
+## 1.6.0 - 2017-04-03
 
-```
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  |  \| 
-```
+### Changed
 
-Left, right and center aligned table
+* Added filename argument to all renderers for additional context
+* Removed superfluous `rinku` dependency [#1035](https://github.com/github/markup/pull/1035)
+* Enable source-to-source navigation for `.adoc` AsciiDoc files, plus additional attributes passed through [#1039](https://github.com/github/markup/pull/1039) and [#1041](https://github.com/github/markup/pull/1041)
 
-Left aligned Header | Right aligned Header | Center aligned Header
-| :--- | ---: | :---:
-Content Cell  | Content Cell | Content Cell
-Content Cell  | Content Cell | Content Cell
+## 1.5.0 - 2017-03-27
 
-```
-Left aligned Header | Right aligned Header | Center aligned Header
-| :--- | ---: | :---:
-Content Cell  | Content Cell | Content Cell
-Content Cell  | Content Cell | Content Cell
-```
+### Added
 
-`code()`
+* Re-introduce [#537](https://github.com/github/markup/pull/537) to detect language of markup document
+  However `github-linguist` is optional and this gem will fallback to extensions for detection.
 
-    Markup :  `code()`
-
-```javascript
-    var specificLanguage_code = 
-    {
-        "data": {
-            "lookedUpPlatform": 1,
-            "query": "Kasabian+Test+Transmission",
-            "lookedUpItem": {
-                "name": "Test Transmission",
-                "artist": "Kasabian",
-                "album": "Kasabian",
-                "picture": null,
-                "link": "http://open.spotify.com/track/5jhJur5n4fasblLSCOcrTp"
-            }
-        }
-    }
-```
-
-    Markup : ```javascript
-             ```
-
-* Bullet list
-    * Nested bullet
-        * Sub-nested bullet etc
-* Bullet list item 2
+[Full changelog](https://github.com/github/markup/compare/v1.4.9...v1.5.0)
 
-~~~
- Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
-
--OR-
-
- Markup : - Bullet list
-              - Nested bullet
-                  - Sub-nested bullet etc
-          - Bullet list item 2 
-~~~
-
-1. A numbered list
-    1. A nested numbered list
-    2. Which is numbered
-2. Which is numbered
-
-~~~
- Markup : 1. A numbered list
-              1. A nested numbered list
-              2. Which is numbered
-          2. Which is numbered
-~~~
-
-- [ ] An uncompleted task
-- [x] A completed task
-
-~~~
- Markup : - [ ] An uncompleted task
-          - [x] A completed task
-~~~
-
-- [ ] An uncompleted task
-    - [ ] A subtask
-
-~~~
- Markup : - [ ] An uncompleted task
-              - [ ] A subtask
-~~~
-
-> Blockquote
->> Nested blockquote
-
-    Markup :  > Blockquote
-              >> Nested Blockquote
-
-_Horizontal line :_
-- - - -
-
-    Markup :  - - - -
-
-_Image with alt :_
-
-![picture alt](http://via.placeholder.com/200x150 "Title is optional")
-
-    Markup : ![picture alt](http://via.placeholder.com/200x150 "Title is optional")
-
-Foldable text:
-
-<details>
-  <summary>Title 1</summary>
-  <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-</details>
-<details>
-  <summary>Title 2</summary>
-  <p>Content 2 Content 2 Content 2 Content 2 Content 2</p>
-</details>
-
-    Markup : <details>
-               <summary>Title 1</summary>
-               <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-             </details>
-
-```html
-<h3>HTML</h3>
-<p> Some HTML code here </p>
-```
-
-Link to a specific part of the page:
-
-[Go To TOP](#TOP)
-   
-    Markup : [text goes here](#section_name)
-              section_title<a name="section_name"></a>    
-
-Hotkey:
-
-<kbd>⌘F</kbd>
-
-<kbd>⇧⌘F</kbd>
-
-    Markup : <kbd>⌘F</kbd>
-
-Hotkey list:
-
-| Key | Symbol |
-| --- | --- |
-| Option | ⌥ |
-| Control | ⌃ |
-| Command | ⌘ |
-| Shift | ⇧ |
-| Caps Lock | ⇪ |
-| Tab | ⇥ |
-| Esc | ⎋ |
-| Power | ⌽ |
-| Return | ↩ |
-| Delete | ⌫ |
-| Up | ↑ |
-| Down | ↓ |
-| Left | ← |
-| Right | → |
-
-Emoji:
-
-:exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes at [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/)
-
-    Markup : Code appears between colons :EMOJICODE:
+## 1.4.9 - 2017-03-27
+
+### Changed
+
+* Reverted [#537](https://github.com/github/markup/pull/537) to avoid extra dependencies
+
+[Full changelog](https://github.com/github/markup/compare/v1.4.8...v1.4.9)
+
+## 1.3.3 (2015-02-17)
+
+* Address a slight typo with `POSIX` [#456](https://github.com/github/markup/pull/456)
+
+[Full changelog](https://github.com/github/markup/compare/v1.3.2...v1.3.3)
+
+## 1.3.2 (2015-02-17)
+
+* RST: Output code instead of tt for inline literals [#370](https://github.com/github/markup/pull/370)
+* RST: Add IDs to headers so that `.. contents` works with `.. sectnum` [#391](https://github.com/github/markup/pull/391)
+
+[Full changelog](https://github.com/github/markup/compare/v1.3.1...v1.3.2)
+
+## 1.3.1 (2014-11-13)
+
+* Fix name error when trying to use newer versions of RedCarpet [#387](https://github.com/github/markup/pull/387)
+
+[Full changelog](https://github.com/github/markup/compare/v1.3.0...v1.3.1)
+
+## 1.3.0 (2014-09-11)
+
+* Extend the field limit for tables to 50 characters for RST [#306](https://github.com/github/markup/pull/306)
+* Add `.mkdn` as a supported markdown extension [#308](https://github.com/github/markup/pull/308)
+* Upgrade wikicloth to 0.8.1 [#317](https://github.com/github/markup/pull/317)
+* Force encoding of posix-spawn output [#338](https://github.com/github/markup/pull/338)
+* Add `.rmd` as a supported markdown extension [#343](https://github.com/github/markup/pull/343)
+
+[Full changelog](https://github.com/github/markup/compare/v1.2.1...v1.3.0)
+
+## 1.2.1 (2014-04-23)
+
+* Disable RST warnings [#290](https://github.com/github/markup/pull/290)
+
+[Full changelog](https://github.com/github/markup/compare/v1.2.0...v1.2.1)
+
+## 1.1.1 (2014-04-03)
+
+* Upgrade to org-ruby 0.9.1
+* Set default encoding to UTF-8 for Python 2
+
+## 1.1.0 (2014-03-10)
+
+* Raise GitHub::Markup::CommandError if external command exits with a non-zero status.
+* Remove support for literate Haskell (see #266)
+
+## 0.5.1 (2010-09-30)
+
+* Support relative path links in rdoc
+
+## 0.5.0 (2010-07-07)
+
+* Added creole support
+
+## 0.4.0 (2010-04-23)
+
+* Removed man page support until it's ready.
+
+## 0.3.3 (2010-03-29)
+
+* UTF-8 works with ReST now.
+
+## 0.3.2 (2010-03-25)
+
+* Improved test runner
+* Forgive ReST problems that aren't user errors.
+
+## 0.3.1 (2010-03-22)
+
+* Add .rst.txt extension
+* Fix ASCII encoding error while using print u'\u010c' non-ASCII char and similar.
+
+## 0.3.0 (2010-03-11)
+
+* man rendering
+* `github-markup` command line runner
+
+## 0.2.2 (2010-02-09)
+
+* pod fixes from Ricardo Signes
+
+## 0.2.1 (2010-01-25)
+
+* ReST fixes from Michael Jones
+
+## 0.2.0 (2010-01-10)
+
+* org-mode support
+
+## 0.1.7 (2009-11-17)
+
+* Ditch asciidoc2html, call asciidoc directly
+
+## 0.1.6 (2009-11-17)
+
+* mdown
+
+## 0.1.5 (2009-11-17)
+
+* Actually, if we can't render a thing then don't. Not once, not never.
+
+## 0.1.4 (2009-11-17)
+
+* Bugfix: Missing commands return the input (instead of nothing)
+
+## 0.1.3 (2009-11-02)
+
+* Strip the INDEX comments from POD
+
+## 0.1.2 (2009-11-02)
+
+* Renamed to `github-markup`
+* Bugfix: POD rendering works now, not just index
+
+## 0.1.1 (2009-11-02)
+
+* Added `GitHub::Markup.can_render?` helper.
+* Bugfix: Actually check file extensions
+
+## 0.1.0 (2009-11-02)
+
+* First release
