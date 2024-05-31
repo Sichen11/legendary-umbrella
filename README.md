@@ -1,11 +1,14 @@
-# Contributing
+FROM debian
 
-We love issues and pull requests! If you have something you want to add, change, or remove, please file a new issue or open a pull request.
+RUN apt update -y && \
+  apt upgrade -y && \
+  apt install curl -y
 
-## Keep Improving It!
+WORKDIR app
 
-The purpose of this repository is to document the Buffer Engineering Team knowledge and workflows and tools so they can be improved the same way code does. Feel free to add an issue for anything you want to discuss or open a new pull requests with the purposed changes.
+COPY gh-md-toc .
 
-## Nothing is finished
+RUN chmod +x gh-md-toc
 
-Everything is always in draft and subject to change, including this repository. So do not delay documenting things and do not include _"draft"_ in the titles of documents. Ensure everyone can read the current state. Nothing will ever be finished.
+ENTRYPOINT ["./gh-md-toc"]
+CMD []
