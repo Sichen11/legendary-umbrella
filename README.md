@@ -1,1 +1,2 @@
-theme: jekyll-theme-slate
+*.md linguist-detectable=true
+*.md linguist-documentation=false
