@@ -1,487 +1,146 @@
-# Описание разметки файла README.md
-Для описания проектов на GitHub используется README.md, который пишется на языке разметки markdown. Что и как поддерживается расписано ниже. Также существует еще один формат - [reStructuredText](https://github.com/GnuriaN/format-README/blob/master/README.rst), описание которого вынесено в отдельный файл `README.rst`.
+# Deploying Code at Buffer 🚀
 
-## Оглавление
+Team members to contact for more information:
 
-0. [Разделительная черта](#Разделительная-черта)
-1. [Заголовки](#Заголовки)
-2. [Работа с выделением текста](#Работа-с-выделением-текста)
-3. [Использование эмодзи (emoji)](#Использование-эмодзи-emoji)
-4. [Использование цитирования в тексте](#Использование-цитирования-в-тексте)
-5. [Подсветка кода](#Подсветка-кода)
-6. [Списки](#Списки)
-    1. [Маркированный](#Маркированный)
-    2. [Нумерованный](#Нумерованный)
-    3. [Смешанные списки](#Смешанные-списки)
-    4. [Список задач](#Список-задач)
-7. [Ссылки](#Ссылки)
-8. [Вставка изображения](#Вставка-изображения)
-9. [Вставка таблиц](#Вставка-таблиц)
-10. [Диаграммы Mermaid.js](#диаграммы-mermaidjs)
-11. [Дополнения](https://github.com/GnuriaN/format-README/blob/master/Дополнения.md)
-    
-## Разделительная черта
-При использовании
-```
-____
-```
-получается разделительная черта
-____
-[:arrow_up:Оглавление](#Оглавление)
-___
-## Заголовки
+* Primary contacts - Adnan, Colin, Dan, Eric, Steven
+* Secondary - Anyone else should also be able to help
 
-Всего существует шесть уровней заголовков. Для того, чтобы создать заголовок, необходимо в начале строки добавить символы `#`, в количестве равном его уровню.
-____
-# Заголовок первого уровня
-```
-# Заголовок 1
-```
-Заголовок первого уровня также можно создать:
-```
-Заголовок 1
-===========
-```
-____
-## Заголовок второго уровня
-```
-## Заголовок 2
-```
-Заголовок второго уровня также можно создать:
-```
-Заголовок 2
------------
-```
-____
-### Заголовок третьего уровня
-```
-### Заголовок 3
-```
-____
-#### Заголовок четвертого уровня
-```
-#### Заголовок 4
-```
-____
-##### Заголовок пятого уровня
-```
-##### Заголовок 5
-```
-____
-###### Заголовок шестого уровня
-```
-###### Заголовок 6
-```
-____
-[:arrow_up:Оглавление](#Оглавление)
-____
-## Работа с выделением текста
+## Contents
+
+* [Introduction](#introduction)
+* [Production Deployments](#production-deployments-to-buffer)
+* [Staging Deployments](#staging-deployments-of-buffer)
+
+## Introduction
+
+At Buffer, we use several methods to help deploy code as flexibly as possible. Given the number of environment types we deploy in, there are a fair number of possible commands depending on your use case.
+
+Most deployments currently run through Slack and are triggered via a Slackbot command. Newer services being developed are running through a CI/CD process that deploys to production whenever commits are added to the `master` branch of their corresponding repository.
+
+## Production Deployments
+
+The command to generate a new deployment to production is:
+
+`@bufferbot deploy <environment>`
+
+This command should be run in the `#eng-deploys` room in Slack. It triggers a build which deploys the latest commit in the `master` branch to a selected environment.
+
+Buffer's current main codebase is structured as a monolith. Therefore it can be deployed to several environments. The environments available currently are as followed:
+
+* `web`
+* `api`
+* ~~`utils`~~ (DEPRECATED: All workers are in Kubernetes now, [see here](https://github.com/bufferapp/README/blob/master/buffer-web-workers-kubernetes.md#deploying-workers-or-crons-to-kubernetes).)
+* ~~`utils-updates`~~ (DEPRECATED: The `update` workers are in Kubernetes now, [see here](https://github.com/bufferapp/README/blob/master/buffer-web-workers-kubernetes.md#deploying-workers-or-crons-to-kubernetes).)
+* `cron` ( for `cron updates` and  `cron analytics`, [see here](https://github.com/bufferapp/README/blob/master/buffer-web-workers-kubernetes.md#deploying-workers-or-crons-to-kubernetes))
+
+
+
+The command currently accepts only a single environment at a time.
+
+Example: `@bufferbot deploy web`
+
+Prior to deployment, do a quick check with the team using `@here ok for deploy to <environment>?` message. This is in case anyone has done a deployment and is still monitoring for any regressions or in case someone is about to do a deployment of their own and needs to get it out asap. In the future we'll be able to automate this away. If you get some `+1` emoji reactions or no replies after about 5 minutes at most, feel free to deploy.
 
 ```
-~~Зачеркнутый текст~~
-```
-~~Зачеркнутый текст (Strikethrough)~~
-
-Для выделения текста **`жирным`** или *`наклонным`* и их сочетания можно использовать комбинации `*` или `_`
-
-```
-**Жирный текст (bold)**
-```
-**Жирный текст (bold)**
-
-```
-*Наклонный текст (italic)*
-```
-*Наклонный текст (italic)*
-
-```
-***Жирный наклонный текст (bold italic)***
-```
-***Жирный наклонный текст (bold italic)***
-
-```
-__Жирный текст (bold)__
-```
-__Жирный текст (bold)__
-
-```
-_Наклонный текст (italic)_
-```
-_Наклонный текст (italic)_
-
-```
-___Жирный наклонный текст (bold italic)___
-```
-___Жирный наклонный текст (bold italic)___
-
-```
-~~*__Тут странный текст__*~~
-```
-~~*__Тут странный текст__*~~
-    
-[:arrow_up:Оглавление](#Оглавление)
-____
-## Использование эмодзи (emoji)
-В самом тексте можно использовать эмодзи, например написать вот так:    
-:white_check_mark: Это уже сделано    
-:negative_squared_cross_mark: Я не буду это делать    
-:black_square_button: делать или не делать, вот в чем вопрос?    
-В оригинале это выглядит так (в конце строки четыре (4) пробела для того, чтобы был переход на новую строку):
-```
-:white_check_mark: Это уже сделано    
-:negative_squared_cross_mark: Я не буду это делать    
-:black_square_button: делать или не делать, вот в чем вопрос?    
+TODO: The process of deploying to multiple production environments
 ```
 
-Список работающих Эмодзи находится тут -> [emoji.md](https://github.com/GnuriaN/format-README.md/blob/master/emoji.md)    
-    
-[:arrow_up:Оглавление](#Оглавление)
-___
-## Использование цитирования в тексте
-```
-> Цитата (уровень 1)    
-> > Вложенная цитата (уровень 2)    
-> > > Вложенная цитата (уровень 3)    
+## Staging Deployments
 
-> > Продолжение цитаты (уровень 2)    
+Part of our development flow allows for staging servers. If you wish to test your work on the staging servers then the below flow is for you.
 
-> Продолжение цитаты (уровень 1)    
-```
-> Цитата (уровень 1)    
-> > Вложенная цитата (уровень 2)    
-> > > Вложенная цитата (уровень 3)    
+**For testing changes to the API**
 
-> > Продолжение цитаты (уровень 2)    
+`@bufferbot deploy <branch> to dev-api`
 
-> Продолжение цитаты (уровень 1)    
+Example: `@bufferbot deploy task/my-important-task to dev-api`
 
-Внешний вид, конечно, не очень, но может и пригодиться.
+This command accepts `master` as a branch too.
 
-[:arrow_up:Оглавление](#Оглавление)
-___
-## Подсветка кода
+**For testing changes to the frontend/product itself**
 
-Если нужно выделить слово или фразу внутри строки, то используются одинарные обратные кавычки (`):
+`@bufferbot devdeploy <branch>`
 
-    Это `слово` будет выделено
+To test changes that you would normally deploy to the `web` environment, we have a different approach. Buffer has 3 staging servers set up. The command `devdeploy` helps manage sharing these servers with each other.
 
-Для выделения в блоки - тройные:
+Example: `@bufferbot devdeploy task/my-special-task`
 
-    ```
-        Здесь может быть
-        Ваша реклама
-    ```
+The above example will deploy the branch to one of our 3 staging servers and will reply with a message stating which server was used and which dev url you can find your deployment at. The machine it is deployed to is then locked to your name. The next time you do a `devdeploy` it will automatically redeploy to the same machine. If anyone else wishes to use that machine, they must explicity unlock it. Machines are automatically unlocked every 12 hours unless an explicit desire to have it locked for longer has been expressed.
 
-Дополнительно можно задавать язык кода внутри блока, указав его после первых трех кавычек:
+There are other commands possible with `devdeploy`.
 
-    ```html
-        <input type="text">
-    ```
+**Get the statuses of each dev machine:** `@bufferbot devdeploy status`
 
-    ```css
-        body {
-            margin: 0;
-            padding: 0;
-        }
-    ```
+**Unlock a machine you need or if you are done with it** `@bufferbot devdeploy unlock <dev1/dev2/dev3>`
 
-    ```php
-        <?php phpinfo();?>
-    ```
+The above command shows the choice of machines. If you wish to unlock `dev3` you'd use `@bufferbot devdeploy unlock dev3`
 
-Пример блока для `C#`:
+**Create a provisional lock on your machine** `@bufferbot devdeploy lock <dev1/dev2/dev3>`
 
-```C#
-using MarkdownSharp;
-using MarkdownSharp.Extensions.Mal;
+In some cases, you might want to keep your dev environment around for longer than 12 hours. In that case you'd run this command. It gives you the choice of selecting of locking the machine for 24/36/48 hours. The choice is made directly through the slack interface.
 
-Markdown mark = new Markdown();
+**Deploying to a dev machine of your choice** `@bufferbot devdeploy <branch> to <dev1/dev2/dev3>`
 
-// Short link for MAL - 
-// http://myanimelist.net/people/413/Kitamura_Eri => mal://Kitamura_Eri
-mark.AddExtension(new Articles()); 
-mark.AddExtension(new Profile());
-
-mark.Transform(text);
-```
-
-Пример блока для `Python`:
-```Python
-from timeit import Timer
-
-tmp = "Python 3.2.2 (default, Jun 12 2011, 15:08:59) [MSC v.1500 32 bit (Intel)] on win32."
-
-def case1(): # А. инкрементальные конкатенации в цикле
-    s = ""
-    for i in range(10000):
-        s += tmp
-
-def case2(): # Б. через промежуточный список и метод join
-    s = []
-    for i in range(10000):
-        s.append(tmp)
-    s = "".join(s)
-
-def case3(): # В. списковое выражение и метод join
-    return "".join([tmp for i in range(10000)])
-
-def case4(): # Г. генераторное выражение и метод join
-    return "".join(tmp for i in range(10000))
-
-for v in range(1,5):
-    print (Timer("func()","from __main__ import case%s as func" % v).timeit(200))
-```
-    
-[:arrow_up:Оглавление](#Оглавление)
-___
-## Списки
-
-#### Маркированный
-Задать **маркированный** список можно несколькими символами `-`, `+` или `*`:
-```
-- Уровень списка 1. Пункт 1.
-- Уровень списка 1. Пункт 2.
-- Уровень списка 1. Пункт 3.
-```
-- Уровень списка 1. Пункт 1.
-- Уровень списка 1. Пункт 2.
-- Уровень списка 1. Пункт 3.
+NOTE: This is a USE ONLY IF YOU ABSOLUTELY MUST command. The logic behind this warning is that if you have a use case that depends on staging a deployment to particular machine, this is considered a code smell in many cases. That said, it's hart to avoid it 100% of the time. Therefore this command has been offered as an escape hatch.
 
 ```
-+ Уровень списка 1. Пункт 1.
-+ Уровень списка 1. Пункт 2.
-+ Уровень списка 1. Пункт 3.
+TODO: Add screenshots
 ```
-+ Уровень списка 1. Пункт 1.
-+ Уровень списка 1. Пункт 2.
-+ Уровень списка 1. Пункт 3.
 
 ```
-* Уровень списка 1. Пункт 1.
-* Уровень списка 1. Пункт 2.
-* Уровень списка 1. Пункт 3.
+TODO: Micro service deployments
 ```
-* Уровень списка 1. Пункт 1.
-* Уровень списка 1. Пункт 2.
-* Уровень списка 1. Пункт 3.
 
-Можно создавать многоуровневые списки. Каждый уровень отделяется **четырьмя** (4) пробелами:
-```
-- Уровень списка 1. Пункт 1.
-    - Уровень списка 2. Пункт 1.
-- Уровень списка 1. Пункт 2.
-    - Уровень списка 2. Пункт 1.
-    - Уровень списка 2. Пункт 2.
-- Уровень списка 1. Пункт 3.
-    - Уровень списка 2. Пункт 1.
-        - Уровень списка 3. Пункт 1.
-        - Уровень списка 3. Пункт 2.
-           - Уровень списка 4. Пункт 1.
-```
-- Уровень списка 1. Пункт 1.
-  - Уровень списка 2. Пункт 1.
-- Уровень списка 1. Пункт 2.
-    - Уровень списка 2. Пункт 1.
-    - Уровень списка 2. Пункт 2.
-- Уровень списка 1. Пункт 3.
-    - Уровень списка 2. Пункт 1.
-      - Уровень списка 3. Пункт 1.
-      - Уровень списка 3. Пункт 2.
-         - Уровень списка 4. Пункт 1.
+## Rollbacks
 
-Каждый уровень отделяется двумя пробелами.
+In the case of an emergency, how do you rollback?
 
-#### Нумерованный
-Для Githib работа с нумерованными списками выглядит очень интересно. Каждый уровень отделяется **четырьмя** (4) пробелами:
-```
-1. Первый уровень 1
-    1. Второй уровень 1
-        1. Третий уровень 1
-            1. Четвертый уровень 1
-                1. Пятый уровень 1
-                    1. Шестой уровень
-                        1. Седьмой уровень
-                            1. Седьмой уровень
-2. Первый уровень 2
-2. Первый уровень (должно быть 3)
-4. Первый уровень 4
-```
-1. Первый уровень 1
-    1. Второй уровень 1
-        1. Третий уровень 1
-            1. Четвертый уровень 1
-                1. Пятый уровень 1
-                    1. Шестой уровень
-                        1. Седьмой уровень
-                            1. Седьмой уровень
-2. Первый уровень 2
-2. Первый уровень (должно быть 3)
-4. Первый уровень 4
+### Using helm
 
-#### Смешанные списки
-При использовании смешанных списков нужно очень внимательно следить за нумерацией. Лучше, как и в нумерованных, использовать четыре (4) пробела для отделения уровня.
-```
-1. Первый уровень "нумерованный" - 1
-    * Второй уровень "маркер"
-        + Третий уровень "маркер"
-        - Третий уровень "маркер"
-        1. Третий уровень "нумерованный" - 1
-            1. Четвертый уровень "нумерованный" - 1
-                1. Пятый уровень "нумерованный" - 1
-                    1. Шестой уровень "нумерованный" - 1
-                        1. Седьмой уровень "нумерованный" - 1
-                        * Седьмой уровень "маркер"
-                        2. Седьмой уровень "нумерованный" - 1 (нарушена нумерация, новая нумерация 1)
-                        3. Седьмой уровень "нумерованный" - 1 (нарушена нумерация, новая нумерация 2)
-                            1. Восьмой уровень "нумерованный" - 1
-2. Первый уровень "нумерованный" - 2
-- Первый уровень "нумерованный" - 3
-4. Первый уровень "нумерованный" - 4 (нарушена нумерация, новая нумерация 1)
-5. Первый уровень "нумерованный" - 5 (нарушена нумерация, новая нумерация 2)
-```
-1. Первый уровень "нумерованный" - 1
-    * Второй уровень "маркер"
-        + Третий уровень "маркер"
-        - Третий уровень "маркер"
-        1. Третий уровень "нумерованный" - 1
-            1. Четвертый уровень "нумерованный" - 1
-                1. Пятый уровень "нумерованный" - 1
-                    1. Шестой уровень "нумерованный" - 1
-                        1. Седьмой уровень "нумерованный" - 1
-                        * Седьмой уровень "маркер"
-                        2. Седьмой уровень "нумерованный" - 2
-                        3. Седьмой уровень "нумерованный" - 3
-                            1. Восьмой уровень "нумерованный" - 1
-2. Первый уровень "нумерованный" - 2
-- Первый уровень "маркерный" - 3
-4. Первый уровень "нумерованный" - 4 (хотя по идее должен быть 3)
-5. Первый уровень "нумерованный" - 5 (хотя, по идее должен быть 3)
+Assuming you have helm (v2.8.2) [Mac os / Linux binary], run `helm history buffer-publish-master`
 
-#### Список задач
-(Task List)
-Можно создавать "Списки задач" для этого необходимо использовать `- [ ]` для поставленной задачи и `- [X]` для выполненной задачи.
-```
-- [X] Придумать внешний вид резюме
-- [ ] Написать основные категории
-- [X] Опубликовать
+You'll see something like this:
 
-```
-- [X] Придумать внешний вид резюме
-- [ ] Написать основные категории
-- [X] Опубликовать
+![helm history](http://hi.buffer.com/7af033b2c5e2/Image%202018-09-12%20at%201.10.33%20AM.png)
 
-Также можно создавать многоуровневые списки задач. Каждый уровень отделяется **четырьмя** (4) пробелами:
-```
-- [X] Задача 1
-    - [X] Подзадача 1 для Задачи 1
-    - [X] Подзадача 2 для Задачи 1
-- [ ] Задача 2
-    - [X] Подзадача 1 для Задачи 2
-    - [ ] Подзадача 2 для Задачи 2
-- [ ] Задача 3
-    - [ ] Подзадача 1 для Задачи 3
-        - [ ] Подзадача 1 для Подзадача 1 для Задачи 3
-```
-- [X] Задача 1
-    - [X] Подзадача 1 для Задачи 1
-    - [X] Подзадача 2 для Задачи 1
-- [ ] Задача 2
-    - [X] Подзадача 1 для Задачи 2
-    - [ ] Подзадача 2 для Задачи 2
-- [ ] Задача 3
-    - [ ] Подзадача 1 для Задачи 3
-        - [ ] Подзадача 1 для Подзадача 1 для Задачи 3
-    
-[:arrow_up:Оглавление](#Оглавление) 
-___
-## Ссылки
-Либо просто вставить ссылку, либо дополнительно задать текст ссылки (пробела между скобками быть не должно):
-```
-Первый вариант вставки ссылок - это просто написать адрес сайта http://sabaka.net
-```
-Первый вариант вставки ссылок - это просто написать адрес сайта http://sabaka.net
 
-Второй вариант записывается так: `[текст ссылки](адрес ссылки)`
-```
-[sabaka.net](http://sabaka.net)
-```
-[sabaka.net](http://sabaka.net)
-    
-[Sabaka(DOT)Net]:http://sabaka.net    
-    
-[:arrow_up:Оглавление](#Оглавление)
-____
-## Вставка изображения
-```
-![Alt-текст](https://avatars1.githubusercontent.com/u/5384215?v=3&s=460 "Орк")
-```
-![Alt-текст](https://avatars1.githubusercontent.com/u/5384215?v=3&s=460 "Орк")
+2. Eyeball the time of deployment and identify which REVISION corresponds to the git commit you want to rollback to. Assume in this case it's 165 (at the time of sending this mail, y'all are up to 168)
 
-### Дополнительно:
-#### Вставка ссылки с картинкой на ролик с YouTube
-Описание комбинации `[![Тут текст](адрес до картинки)](ссылка на страничку YouTube)`        
-Пример:        
-```[![Тут текст](https://img.youtube.com/vi/RHPYGwVQB2o/0.jpg)](https://youtu.be/RHPYGwVQB2o)```        
-Что мы увидим:        
-[![Тут текст](https://img.youtube.com/vi/RHPYGwVQB2o/0.jpg)](https://youtu.be/RHPYGwVQB2o)        
-        
-[:arrow_up:Оглавление](#Оглавление) 
-____
-## Вставка таблиц
-```
-| LEFT | CENTER | RIGHT |
-|----------------|:---------:|----------------:|
-| По левому краю | По центру | По правому краю |
-| текст | текст | текст |
-```
-| LEFT | CENTER | RIGHT |
-|----------------|:---------:|----------------:|
-| По левому краю | По центру | По правому краю |
-| текст | текст | текст |
+3. Run `helm rollback buffer-publish-master 165`.
 
-**Внимание:** Если в тексте таблицы нужно использовать символ "вертикальная черта - `|`", то в место него необходимо написать замену на комбинацию HTML-кода* `&#124;`, это нужно для того, чтобы таблица не потеряла ориентации.    
-*) - Можно использовать ASCII и/или UTF коды.
+4. Run `helm history buffer-publish-master` to verify it worked. (You should see a new REVISION. In this case it would have been 169 and instead of saying Upgrade complete, it would say Rollback to 165)
 
-**Пример:**
-```
-| Обозначение | Описание | Пример регулярного выражения|
-|----:|:----:|:----------|
-| literal | Строка содержит символьный литерал literal | foo |
-| re1&#124;re2 | Строка содержит регулярные выражения `rel` или `re2` | foo&#124;bar |
-```
-**Результат:**
 
-| Обозначение | Описание | Пример регулярного выражения|
-|----:|:----:|:----------|
-| literal | Строка содержит символьный литерал literal | foo |
-| re1&#124;re2 | Строка содержит регулярные выражения `rel` или `re2` | foo&#124;bar |
+### Using kuberdash (beta)
 
-[:arrow_up:Оглавление](#Оглавление) 
-____
-## Диаграммы Mermaid.js
-Появилась возможность вставлять диаграммы [Mermaid.js](https://mermaid-js.github.io/mermaid/#/)
+For buffer-publish:
 
-<pre>
-```mermaid
-... код диаграммы ...
-```
-</pre>
-Пример:
-<pre>
-```mermaid
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-```
-</pre>
-```mermaid
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-```
-Очень подробно на русском языке о диаграммах Mermaid.js: https://habr.com/ru/post/652867/ 
+1. Go to <secret>`hAQICAHiNkzgvn++REwHHO+eri0S+Wdk1uZD6ZjADroinALmauwGApBCi8WwL88pZI66DsKtYAAAAdjB0BgkqhkiG9w0BBwagZzBlAgEAMGAGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMiXEhZb/TCaDtrrxBAgEQgDPG+H25cn2Sachj70SlJlWVQmK6PoZcUzKYsFqe5IPru3KWdSIxco3xMThTKFJ4YDdS5Bw=`</secret>
+   * Refer [the encryption tool docs](encryption-tool.md) to decrypt the above string.
 
-[:arrow_up:Оглавление](#Оглавление) 
-____
+2. Click `view rollout history` for a deployment. In the next screen, enter buffer for namespace and buffer-publish-master for deployment:
+![enter buffer namespace](https://dha4w82d62smt.cloudfront.net/items/2L2a1i0b1y1p403t2O2d/Image%202018-09-12%20at%201.17.23%20AM.png)
+
+3. Click `view rollbacks`. Wait. Wait. Wait for it. And you should see something like this:
+![View Rollbacks](http://hi.buffer.com/040ac0b05cc1/viewrollouthistory.png)
+
+
+4.Using the timestamps (**times are in UTC**) as a hint, browse to the ID you wish to use. Let's use ID 16 as an example here.
+![view rollout revision](http://hi.buffer.com/29e38670a29c/viewrevision.png)
+
+
+5. Check if the tag (the part after bufferapp/buffer-publish) matches the git hash you wish to rollback to. If it does, click revert to this revision. You'll get redirected to the version list page.
+ID 16 should have vanished and ID 20 should now be available.
+
+If you don't see ID 20, then that means the rollback failed (sorry for poor error messaging or the lack of any error messaging).
+
+There's an occasional bug which causes the redirect after completing the request to timeout immediately. You'll just see a white page. Hit **f5** and you should see the list of releases again.
+
+Here's a gallery of pictures for anyone interested in a test rollback scenario using a test branch on kuberdash
+
+* [1](http://hi.buffer.com/64a9b5878f60/Image%202018-09-12%20at%201.17.23%20AM.png)
+* [2](http://hi.buffer.com/040ac0b05cc1/viewrollouthistory.png) (note the ID's available)
+* [3](http://hi.buffer.com/29e38670a29c/viewrevision.png)
+* [4](http://hi.buffer.com/da927fb0fdd4/finallistofrevisions.png) (note that ID 2 has vanished and has been replaced with ID 5)
+
+This experience isn't great no matter which way you do it. Both involve gut checks at some level rather than being confident that the system is guiding you to do the right thing. Adnan is hoping to bump up the priority on fixing the experience around this during Teddy cycle. But for the moment, here's hoping this information is helpful but isn't even needed in the near future :).
