@@ -1,27 +1,42 @@
-# Readme Template 📜
+Welcome to the list of awesome GitHub profile readme templates and thanks for considering to contribute. Contributions are welcome so we can tap into the collection of best Github profile readmes' in one place.
 
-Bem-vindo(a) ao **Readme Template**! Aqui você encontrará uma variedade de modelos de readme para usar em seus repositórios e perfil no GitHub. Explore nossa coleção de templates e encontre aquele que melhor se adequa ao seu projeto. Comece agora mesmo e deixe o seu readme brilhar!
+Please [open a pull request](https://github.com/themlphdstudent/awesome-github-profile-readme-templates/pulls) if you would like to contribute new or improve existing readme. If you would like to comment on or discuss content but don't have concrete changes yet, please [open an issue](https://github.com/themlphdstudent/awesome-github-profile-readme-templates/issues).
 
-## Templates de perfil ☕️
+This is a curated list so the goal is not to collect all possible resources but collect the ones which are most helpful, provide a unique perspective, or are of special significance.
 
-Diga adeus aos perfis sem graça. Com nossos **[templates de perfil](https://github.com/iuricode/readme-template/tree/main/perfil)**, você terá um readme de perfil íncrivel. Com cores vibrantes,imagens surpreendentes e outros elementos visuais cativantes.
+## How to contribute:
 
-## Templates de repositório 🎉
+- Step 1: Fork this repository.
 
-Documente seus projetos com nossos exemplos de **[templates de repositório](https://github.com/iuricode/readme-template/tree/main/repositorio)** incríveis. Esses templates abrangem diversas seções essenciais, incluindo descrição, instalação, uso, contribuição e licença.
+- Step 2: Clone the repository in your local machine.
 
-## Status e badges shields 🦄
+- Step 3: Create a new branch.
 
-Aperfeiçoe o seu perfil e os seus repositórios adicionando **[cards de status](https://github.com/iuricode/readme-template/tree/main/cards-status/readme.md)** e **[badges shields](https://github.com/iuricode/readme-template/tree/main/badges-shields/readme.md)** ao seu readme. Esses cards proporcionam uma visão aprimorada e detalhada das informações relevantes, tornando o seu perfil e os seus projetos ainda mais impressionantes.
+- Step 4: Create a new markdown file. Your file name should be your GitHub username.
+```
+- File name should be username.md 
+```
+- Step 5: Copy and Paste your GitHub profile readme content in the new file. Put file in **templates**
 
-## Formatações avançadas 🔥
+- Step 6: At the end of the file add the following content with appropriate changes.
 
-Melhore seus readmes adicionando interações com as **[formatações avançadas.](https://github.com/iuricode/readme-template/tree/main/avancado/readme.md)**
+  - Add line break using this command `------`
+  - Credit: `[username](https://github.com/username)`
+  - Last Edited on: Date when you edited this file. The date must be in DD/MM/YYYY format.
 
-## Contribuição ✨
+- Step 7: Add your name and filename in **\_sidebar.md** like this
 
-Ajude a comunidade tornando este projeto ainda mais incrível. Leia como contribuir clicando **[aqui](https://github.com/iuricode/readme-template/blob/main/CONTRIBUTING.md)** e a **[licença](https://github.com/iuricode/readme-template/blob/main/LICENSE.md)**. Estou convencido de que juntos alcançaremos coisas incríveis!
+```
+- [username](/templates/username.md)
+```
 
-## Aprenda desenvolvimento frontend ❤️
+- Step 8: Save the file and commit your changes with the proper message. Your message must contain your username.
+```
+- Example Message : Added template for username: <username>
+```
 
-Este repositório é um projeto gratuito para a comunidade de desenvolvedores, mas você pode me ajudar comprando o meu ebook "**[eFront - Estudando frontend do zero](https://iuricode.com/efront)**" se estiver interessado em aprender ou melhorar suas habilidades de desenvolvimento frontend. A sua compra me ajuda a produzir e fornecer mais conteúdo gratuito para a comunidade. Adquira agora e comece sua jornada no desenvolvimento frontend.
+- Step 9: Push your commit to GitHub.
+
+- Step 10: Submit a Pull Request.
+
+- Step 11: All Done.
