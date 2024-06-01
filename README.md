@@ -1,1 +1,1 @@
-web: gunicorn --workers=1 api.spotify:app
+theme: jekyll-theme-slate
