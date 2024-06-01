@@ -1,3 +1,3 @@
-open_collective: standard-readme
-github: RichardLitt
-patreon: richlitt
+include README.rst
+include README.md
+include LICENSE
