@@ -1,23 +1,36 @@
-# Compiled class file
-*.class
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions;
 
-# Log file
-*.log
+  const blogPostTemplate = require.resolve(`./src/templates/blogTemplate.js`);
 
-# BlueJ files
-*.ctxt
+  const result = await graphql(`
+    {
+      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000) {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `);
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+  // Handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
+  }
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.slug,
+      component: blogPostTemplate,
+      context: {
+        // additional data can be passed via context
+        slug: node.frontmatter.slug,
+      },
+    });
+  });
+};
