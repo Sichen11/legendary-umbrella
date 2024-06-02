@@ -1,46 +1,67 @@
-# 项目背景
+# WordPress Blogs
 
-蘑菇街能有今天的快速发展，得益于开源软件群雄崛起的大环境背景，我们一直对开源社区怀有感恩之情，因此也一直希望能为开源社区贡献一份力量。
+## Theme
 
-2013年我们蘑菇街从社区导购华丽转身时尚电商平台，为解决千万妹子和时尚卖家的沟通问题，我们开发了自己的即时通讯软件。既然已经有了用户使用的IM，为什么我们自己公司内部沟通还要用第三方的呢？因此就有了TT(TeamTalk)的雏形，现在蘑菇街内部的在线沟通全部通过TT来完成。随着TT功能的逐渐完善，我们决定把TT开源来回馈开源社区，希望国内的中小企业都能用上开源、免费、好用的IM工具！
+### Theme Repository
 
-# 项目介绍
-* 名称：TeamTalk
-* 官网：http://tt.mogu.io/
-* 开源协议：[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
-* 定位：中小型企业用户，member >= 2
-* 特点：开源与产品并重
-* 功能：可靠的消息传递机制；支持文字、图片、语音等富文本信息；文件收发等	
+The theme repository houses the current theme as well as previous themes that Buffer has used over the years. **buffer-2016** is in use across each of the sites right now.
 
-# 项目框架
+https://github.com/bufferapp/buffer-blog-themes
+
+### buffer-2016
+
+The 2016 theme is a single theme that has various template options available within the WordPress theme options allowing it to be tailored for each individual blog. Including different homepage templates called "newspaper" and "magazine".
+
+buffer-2016 makes use of GULP and SASS to compile & minify scripts and CSS.
+
+### Previous Themes
+Previous themes made use of a base theme which was then overwritten by sub themes to customize them for each individual site.
+
+Having one singular code base for each sites theme makes making changes across each of the blogs easier.
 
 
-麻雀虽小五脏俱全，本项目涉及到多个平台、多种语言，简单关系如下图：
-     
-![teamtalk架构图](http://s6.mogucdn.com/b7/pic/140921/7n6ih_ieygmzjsmiywezjwmmytambqhayde_514x551.jpg)
+
+## Plugins
+
+Ideally we should explore plugins very carefully before installing them, running audits on installed plugins on a frequent basis to ensure we don't have any installed that aren't in use as well as ensuring upgrades are done to avoid security issues.
 
 
-#### 服务端：
-     
-CppServer：TTCppServer工程，包括IM消息服务器、http服务器、文件传输服务器、文件存储服务器、登陆服务器
-java DB Proxy：TTJavaServer工程，承载着后台消息存储、redis等接口
-PHP server：TTPhpServer工程，teamtalk后台配置页面
+## Hosting
 
-#### 客户端：
+We have a number of WordPress blogs at Buffer. These are all hosted on WPEngine, using the same theme across each of the blogs.
 
-- mac：TTMacClient工程，mac客户端工程
-- iOS：TTIOSClient工程，IOS客户端工程
-- Android：TTAndroidClient工程，android客户端工程
-- Windows：TTWinClient工程，windows客户端工程
+Right now WPEngine hosts...
+* [Social](http://blog.bufferapp.com/)
+* [Open](http://open.buffer.com/)
+* [Overflow](https://overflow.buffer.com/)
 
-* 语言：c++、objective-c、java、php
-* 系统环境：Linux、Windows，Mac, iOS, Android
+We have additional sites setup within WPEngine which aren't currently in use. WPEngine allows us to host many installations of WordPress if we wish to expand our blog offering.
 
-# 代码下载
--[地址](https://github.com/mogujie/TeamTalk)
+### Deployments
 
-# 交流
+WPEngine has its own GIT repository setup which allows you to push to their repositories to deploy to staging or production. Unfortunately this can lead to issues when themes/plugins are changed remotely within WordPress.
 
-* qq交流群1：341273218(已满)
-* qq交流群2:437335108
-* 邮件交流：tt@mogujie.com
+Instead we make use of GitHub for hosting the repository and use [DeployBot](http://buffer.deploybot.com/) to manage deployments to each of the blog environments. Right now these are set up to automatically deploy to each of the blog staging sites on merge to master and manual deployments are done to deploy to the production environments.
+
+Previously deployments to production would be done in order of visitor numbers, starting with Overflow, then Open, before finally deploying to Social. DeployBot allows you to quickly rollback a change via their dashboard if required. For bigger changes you can also make use of the WPEngine backup points for extra security.
+
+Deployments can also be triggered using Slack commands in #eng-deploys. These can be configured within DeployBot.
+* /deploy-social-blog-production
+* /deploy-social-blog-staging
+* /deploy-overflow-blog-production
+* /deploy-overflow-blog-staging
+
+### Staging
+WPEngine offers a staging environment which can be used to test plugins & themes in the same setup as the production. Within the WPEngine dashboard you can trigger a sync between staging & production to test the latest content within the Staging environment.
+
+* [Social](http://bufferblog.staging.wpengine.com/)
+* [Open](https://bufferopen.staging.wpengine.com/)
+* [Overflow](https://bufferdevs.staging.wpengine.com/)
+
+
+## Local Setup
+We have previously made use of MAMP to host WordPress locally. Depending on how familiar you are with Docker, you could also setup a Docker Image with a WordPress environment.
+
+You'll want the buffer-blog-themes repository checked out within the WordPress envirnment so the WordPress installation has access to the themes.
+
+Once setup you can grab an export of the MySQL database from WPEngine via phpMyAdmin to work with real blog content.
