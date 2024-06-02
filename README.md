@@ -1,2 +1,5 @@
-*.md linguist-detectable=true
-*.md linguist-documentation=false
+const babelOptions = {
+  presets: ['babel-preset-gatsby'],
+};
+
+module.exports = require('babel-jest').createTransformer(babelOptions);
