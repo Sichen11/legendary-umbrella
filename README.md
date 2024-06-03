@@ -1,110 +1,421 @@
-# Contributing to [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)
+#!/usr/bin/env bash
 
-We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
+#
+# Steps:
+#
+#  1. Download corresponding html file for some README.md:
+#       curl -s $1
+#
+#  2. Discard rows where no substring 'user-content-' (github's markup):
+#       awk '/user-content-/ { ...
+#
+#  3.1 Get last number in each row like ' ... </span></a>sitemap.js</h1'.
+#      It's a level of the current header:
+#       substr($0, length($0), 1)
+#
+#  3.2 Get level from 3.1 and insert corresponding number of spaces before '*':
+#       sprintf("%*s", (level-1)*'"$nb_spaces"', "")
+#
+#  4. Find head's text and insert it inside "* [ ... ]":
+#       substr($0, match($0, /a>.*<\/h/)+2, RLENGTH-5)
+#
+#  5. Find anchor and insert it inside "(...)":
+#       substr($0, match($0, "href=\"[^\"]+?\" ")+6, RLENGTH-8)
+#
 
--   Reporting [an issue](https://github.com/anuraghazra/github-readme-stats/issues/new?assignees=&labels=bug&template=bug_report.yml).
--   [Discussing](https://github.com/anuraghazra/github-readme-stats/discussions) the current state of the code.
--   Submitting [a fix](https://github.com/anuraghazra/github-readme-stats/compare).
--   Proposing [new features](https://github.com/anuraghazra/github-readme-stats/issues/new?assignees=&labels=enhancement&template=feature_request.yml).
--   Becoming a maintainer.
+gh_toc_version="0.10.0"
 
-## All Changes Happen Through Pull Requests
+gh_user_agent="gh-md-toc v$gh_toc_version"
 
-Pull requests are the best way to propose changes. We actively welcome your pull requests:
+#
+# Download rendered into html README.md by its url.
+#
+#
+gh_toc_load() {
+    local gh_url=$1
 
-1.  Fork the repo and create your branch from `master`.
-2.  If you've added code that should be tested, add some tests' examples.
-3.  If you've changed APIs, update the documentation.
-4.  Issue that pull request!
+    if type curl &>/dev/null; then
+        curl --user-agent "$gh_user_agent" -s "$gh_url"
+    elif type wget &>/dev/null; then
+        wget --user-agent="$gh_user_agent" -qO- "$gh_url"
+    else
+        echo "Please, install 'curl' or 'wget' and try again."
+        exit 1
+    fi
+}
 
-## Under the hood of github-readme-stats
+#
+# Converts local md file into html by GitHub
+#
+# -> curl -X POST --data '{"text": "Hello world github/linguist#1 **cool**, and #1!"}' https://api.github.com/markdown
+# <p>Hello world github/linguist#1 <strong>cool</strong>, and #1!</p>'"
+gh_toc_md2html() {
+    local gh_file_md=$1
+    local skip_header=$2
 
-Interested in diving deeper into understanding how github-readme-stats works?
+    URL=https://api.github.com/markdown/raw
 
-[Bohdan](https://github.com/Bogdan-Lyashenko) wrote a fantastic in-depth post about it, check it out:
+    if [ -n "$GH_TOC_TOKEN" ]; then
+        TOKEN=$GH_TOC_TOKEN
+    else
+        TOKEN_FILE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/token.txt"
+        if [ -f "$TOKEN_FILE" ]; then
+            TOKEN="$(cat "$TOKEN_FILE")"
+        fi
+    fi
+    if [ -n "${TOKEN}" ]; then
+        AUTHORIZATION="Authorization: token ${TOKEN}"
+    fi
 
-**[Under the hood of github-readme-stats project](https://codecrumbs.io/library/github-readme-stats)**
+    local gh_tmp_file_md=$gh_file_md
+    if [ "$skip_header" = "yes" ]; then
+        if grep -Fxq "<!--te-->" "$gh_src"; then
+          # cut everything before the toc
+          gh_tmp_file_md=$gh_file_md~~
+          sed '1,/<!--te-->/d' "$gh_file_md" > "$gh_tmp_file_md"
+        fi
+    fi
 
-## Local Development
+    # echo $URL 1>&2
+    OUTPUT=$(curl -s \
+        --user-agent "$gh_user_agent" \
+        --data-binary @"$gh_tmp_file_md" \
+        -H "Content-Type:text/plain" \
+        -H "$AUTHORIZATION" \
+        "$URL")
 
-To run & test github-readme-stats, you need to follow a few simple steps:-
-_(make sure you already have a [Vercel](https://vercel.com/) account)_
+    rm -f "${gh_file_md}~~"
 
-1.  Install [Vercel CLI](https://vercel.com/download).
-2.  Fork the repository and clone the code to your local machine.
-3.  Run `npm install` in the repository root.
-4.  Run the command `vercel` in the root and follow the steps there.
-5.  Run the command `vercel dev` to start a development server at <http://localhost:3000>.
-6.  The cards will then be available from this local endpoint (i.e. `http://localhost:3000/api?username=anuraghazra`).
+    if [ "$?" != "0" ]; then
+        echo "XXNetworkErrorXX"
+    fi
+    if [ "$(echo "${OUTPUT}" | awk '/API rate limit exceeded/')" != "" ]; then
+        echo "XXRateLimitXX"
+    else
+        echo "${OUTPUT}"
+    fi
+}
 
-> [!NOTE]\
-> You can debug the package code in [Vscode](https://code.visualstudio.com/) by using the [Node.js: Attach to process](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_setting-up-an-attach-configuration) debug option. You can also debug any tests using the [VSCode Jest extension](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest). For more information, see https://github.com/jest-community/vscode-jest/issues/912.
 
-## Themes Contribution
+#
+# Is passed string url
+#
+gh_is_url() {
+    case $1 in
+        https* | http*)
+            echo "yes";;
+        *)
+            echo "no";;
+    esac
+}
 
-We're currently paused addition of new themes to decrease maintenance efforts. All pull requests related to new themes will be closed.
+#
+# TOC generator
+#
+gh_toc(){
+    local gh_src=$1
+    local gh_src_copy=$1
+    local gh_ttl_docs=$2
+    local need_replace=$3
+    local no_backup=$4
+    local no_footer=$5
+    local indent=$6
+    local skip_header=$7
 
-> [!NOTE]\
-> If you are considering contributing your theme just because you are using it personally, then instead of adding it to our theme collection, you can use card [customization options](./readme.md#customization).
+    if [ "$gh_src" = "" ]; then
+        echo "Please, enter URL or local path for a README.md"
+        exit 1
+    fi
 
-## Translations Contribution
 
-GitHub Readme Stats supports multiple languages, if we are missing your language, you can contribute it! You can check the currently supported languages [here](./readme.md#available-locales).
+    # Show "TOC" string only if working with one document
+    if [ "$gh_ttl_docs" = "1" ]; then
 
-To contribute your language you need to edit the [src/translations.js](./src/translations.js) file and add new property to each object where the key is the language code in [ISO 639-1 standard](https://www.andiamo.co.uk/resources/iso-language-codes/) and the value is the translated string.
+        echo "Table of Contents"
+        echo "================="
+        echo ""
+        gh_src_copy=""
 
-## Any contributions you make will be under the MIT Software License
+    fi
 
-In short, when you submit changes, your submissions are understood to be under the same [MIT License](https://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
+    if [ "$(gh_is_url "$gh_src")" == "yes" ]; then
+        gh_toc_load "$gh_src" | gh_toc_grab "$gh_src_copy" "$indent"
+        if [ "${PIPESTATUS[0]}" != "0" ]; then
+            echo "Could not load remote document."
+            echo "Please check your url or network connectivity"
+            exit 1
+        fi
+        if [ "$need_replace" = "yes" ]; then
+            echo
+            echo "!! '$gh_src' is not a local file"
+            echo "!! Can't insert the TOC into it."
+            echo
+        fi
+    else
+        local rawhtml
+        rawhtml=$(gh_toc_md2html "$gh_src" "$skip_header")
+        if [ "$rawhtml" == "XXNetworkErrorXX" ]; then
+             echo "Parsing local markdown file requires access to github API"
+             echo "Please make sure curl is installed and check your network connectivity"
+             exit 1
+        fi
+        if [ "$rawhtml" == "XXRateLimitXX" ]; then
+             echo "Parsing local markdown file requires access to github API"
+             echo "Error: You exceeded the hourly limit. See: https://developer.github.com/v3/#rate-limiting"
+             TOKEN_FILE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/token.txt"
+             echo "or place GitHub auth token here: ${TOKEN_FILE}"
+             exit 1
+        fi
+        local toc
+        toc=`echo "$rawhtml" | gh_toc_grab "$gh_src_copy" "$indent"`
+        echo "$toc"
+        if [ "$need_replace" = "yes" ]; then
+            if grep -Fxq "<!--ts-->" "$gh_src" && grep -Fxq "<!--te-->" "$gh_src"; then
+                echo "Found markers"
+            else
+                echo "You don't have <!--ts--> or <!--te--> in your file...exiting"
+                exit 1
+            fi
+            local ts="<\!--ts-->"
+            local te="<\!--te-->"
+            local dt
+            dt=$(date +'%F_%H%M%S')
+            local ext=".orig.${dt}"
+            local toc_path="${gh_src}.toc.${dt}"
+            local toc_createdby="<!-- Created by https://github.com/ekalinin/github-markdown-toc -->"
+            local toc_footer
+            toc_footer="<!-- Added by: `whoami`, at: `date` -->"
+            # http://fahdshariff.blogspot.ru/2012/12/sed-mutli-line-replacement-between-two.html
+            # clear old TOC
+            sed -i"${ext}" "/${ts}/,/${te}/{//!d;}" "$gh_src"
+            # create toc file
+            echo "${toc}" > "${toc_path}"
+            if [ "${no_footer}" != "yes" ]; then
+                echo -e "\n${toc_createdby}\n${toc_footer}\n" >> "$toc_path"
+            fi
 
-## Report issues/bugs using GitHub's [issues](https://github.com/anuraghazra/github-readme-stats/issues)
+            # insert toc file
+            if ! sed --version > /dev/null 2>&1; then
+                sed -i "" "/${ts}/r ${toc_path}" "$gh_src"
+            else
+                sed -i "/${ts}/r ${toc_path}" "$gh_src"
+            fi
+            echo
+            if [ "${no_backup}" = "yes" ]; then
+                rm "$toc_path" "$gh_src$ext"
+            fi
+            echo "!! TOC was added into: '$gh_src'"
+            if [ -z "${no_backup}" ]; then
+                echo "!! Origin version of the file: '${gh_src}${ext}'"
+                echo "!! TOC added into a separate file: '${toc_path}'"
+        fi
+            echo
+        fi
+    fi
+}
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/anuraghazra/github-readme-stats/issues/new/choose); it's that easy!
+#
+# Grabber of the TOC from rendered html
+#
+# $1 - a source url of document.
+#      It's need if TOC is generated for multiple documents.
+# $2 - number of spaces used to indent.
+#
+gh_toc_grab() {
 
-## Frequently Asked Questions (FAQs)
+    href_regex="/href=\"[^\"]+?\"/"
+    common_awk_script='
+                     modified_href = ""
+                     split(href, chars, "")
+                     for (i=1;i <= length(href); i++) {
+                         c = chars[i]
+                         res = ""
+                         if (c == "+") {
+                             res = " "
+                         } else {
+                             if (c == "%") {
+                                 res = "\\x"
+                             } else {
+                                 res = c ""
+                             }
+                         }
+                         modified_href = modified_href res
+                    }
+                    print sprintf("%*s", (level-1)*'"$2"', "") "* [" text "](" gh_url  modified_href ")"
+                    '
+    if [ "`uname -s`" == "OS/390" ]; then
+        grepcmd="pcregrep -o"
+        echoargs=""
+        awkscript='{
+                     level = substr($0, 3, 1)
+                     text = substr($0, match($0, /<\/span><\/a>[^<]*<\/h/)+11, RLENGTH-14)
+                     href = substr($0, match($0, '$href_regex')+6, RLENGTH-7)
+                     '"$common_awk_script"'
+                }'
+    else
+        grepcmd="grep -Eo"
+        echoargs="-e"
+        awkscript='{
+                     level = substr($0, 3, 1)
+                     text = substr($0, match($0, /">.*<\/h/)+2, RLENGTH-5)
+                     href = substr($0, match($0, '$href_regex')+6, RLENGTH-7)
+                     '"$common_awk_script"'
+                }'
+    fi
 
-**Q:** How to hide Jupyter Notebook?
+    # if closed <h[1-6]> is on the new line, then move it on the prev line
+    # for example:
+    #   was: The command <code>foo1</code>
+    #        </h1>
+    #   became: The command <code>foo1</code></h1>
+    sed -e ':a' -e 'N' -e '$!ba' -e 's/\n<\/h/<\/h/g' |
 
-> **Ans:** &hide=jupyter%20notebook
+    # Sometimes a line can start with <span>. Fix that.
+    sed -e ':a' -e 'N' -e '$!ba' -e 's/\n<span/<span/g' |
 
-**Q:** I could not figure out how to deploy on my own Vercel instance
+    # find strings that corresponds to template
+    $grepcmd '<h.*class="heading-element".*</a' |
 
-> **Ans:**
->
-> -   docs: <https://github.com/anuraghazra/github-readme-stats/#deploy-on-your-own-vercel-instance>
-> -   YT tutorial by codeSTACKr: <https://www.youtube.com/watch?v=n6d4KHSKqGk&feature=youtu.be&t=107>
+    # remove code tags
+    sed 's/<code>//g' | sed 's/<\/code>//g' |
 
-**Q:** Language Card is incorrect
+    # remove g-emoji
+    sed 's/<g-emoji[^>]*[^<]*<\/g-emoji> //g' |
 
-> **Ans:** Please read all the related issues/comments before opening any issues regarding language card stats:
->
-> -   <https://github.com/anuraghazra/github-readme-stats/issues/136#issuecomment-665164174>
->
-> -   <https://github.com/anuraghazra/github-readme-stats/issues/136#issuecomment-665172181>
+    # now all rows are like:
+    #   <h1 class="heading-element">title</h1><a href="..."><span>..</span></a>
+    # format result line
+    #   * $0 - whole string
+    #   * last element of each row: "</hN" where N in (1,2,3,...)
+    echo $echoargs "$(awk -v "gh_url=$1" "$awkscript")"
+}
 
-**Q:** How to count private stats?
+        # perl -lpE 's/(\[[^\]]*\]\()(.*?)(\))/my ($pre, $in, $post)=($1, $2, $3) ; $in =~ s{\+}{ }g; $in =~ s{%}{\\x}g; $pre.$in.$post/ems')"
 
-> **Ans:** We can only count public commits & we cannot access any other private info of any users, so it's not possible. The only way to count your personal private stats is to deploy on your own instance & use your own PAT (Personal Access Token)
+#
+# Returns filename only from full path or url
+#
+gh_toc_get_filename() {
+    echo "${1##*/}"
+}
 
-### Bug Reports
+show_version() {
+    echo "$gh_toc_version"
+    echo
+    echo "os:     `uname -s`"
+    echo "arch:   `uname -m`"
+    echo "kernel: `uname -r`"
+    echo "shell:  `$SHELL --version`"
+    echo
+    for tool in curl wget grep awk sed; do
+        printf "%-5s: " $tool
+        if type $tool &>/dev/null; then
+            $tool --version | head -n 1
+        else
+            echo "not installed"
+        fi
+    done
+}
 
-**Great Bug Reports** tend to have:
+show_help() {
+    local app_name
+    app_name=$(basename "$0")
+    echo "GitHub TOC generator ($app_name): $gh_toc_version"
+    echo ""
+    echo "Usage:"
+    echo "  $app_name [options] src [src]   Create TOC for a README file (url or local path)"
+    echo "  $app_name -                     Create TOC for markdown from STDIN"
+    echo "  $app_name --help                Show help"
+    echo "  $app_name --version             Show version"
+    echo ""
+    echo "Options:"
+    echo "  --indent <NUM>      Set indent size. Default: 3."
+    echo "  --insert            Insert new TOC into original file. For local files only. Default: false."
+    echo "                      See https://github.com/ekalinin/github-markdown-toc/issues/41 for details."
+    echo "  --no-backup         Remove backup file. Set --insert as well. Default: false."
+    echo "  --hide-footer       Do not write date & author of the last TOC update. Set --insert as well. Default: false."
+    echo "  --skip-header       Hide entry of the topmost headlines. Default: false."
+    echo "                      See https://github.com/ekalinin/github-markdown-toc/issues/125 for details."
+    echo ""
+}
 
--   A quick summary and/or background
--   Steps to reproduce
-    -   Be specific!
-    -   Share the snapshot, if possible.
-    -   GitHub Readme Stats' live link
--   What actually happens
--   What you expected would happen
--   Notes (possibly including why you think this might be happening or stuff you tried that didn't work)
+#
+# Options handlers
+#
+gh_toc_app() {
+    local need_replace="no"
+    local indent=3
 
-People _love_ thorough bug reports. I'm not even kidding.
+    if [ "$1" = '--help' ] || [ $# -eq 0 ] ; then
+        show_help
+        return
+    fi
 
-### Feature Request
+    if [ "$1" = '--version' ]; then
+        show_version
+        return
+    fi
 
-**Great Feature Requests** tend to have:
+    if [ "$1" = '--indent' ]; then
+        indent="$2"
+        shift 2
+    fi
 
--   A quick idea summary
--   What & why do you want to add the specific feature
--   Additional context like images, links to resources to implement the feature, etc.
+    if [ "$1" = "-" ]; then
+        if [ -z "$TMPDIR" ]; then
+            TMPDIR="/tmp"
+        elif [ -n "$TMPDIR" ] && [ ! -d "$TMPDIR" ]; then
+            mkdir -p "$TMPDIR"
+        fi
+        local gh_tmp_md
+        if [ "`uname -s`" == "OS/390" ]; then
+            local timestamp
+            timestamp=$(date +%m%d%Y%H%M%S)
+            gh_tmp_md="$TMPDIR/tmp.$timestamp"
+        else
+            gh_tmp_md=$(mktemp "$TMPDIR/tmp.XXXXXX")
+        fi
+        while read -r input; do
+            echo "$input" >> "$gh_tmp_md"
+        done
+        gh_toc_md2html "$gh_tmp_md" | gh_toc_grab "" "$indent"
+        return
+    fi
+
+    if [ "$1" = '--insert' ]; then
+        need_replace="yes"
+        shift
+    fi
+
+    if [ "$1" = '--no-backup' ]; then
+        need_replace="yes"
+        no_backup="yes"
+        shift
+    fi
+
+    if [ "$1" = '--hide-footer' ]; then
+        need_replace="yes"
+        no_footer="yes"
+        shift
+    fi
+
+    if [ "$1" = '--skip-header' ]; then
+        skip_header="yes"
+        shift
+    fi
+
+
+    for md in "$@"
+    do
+        echo ""
+        gh_toc "$md" "$#" "$need_replace" "$no_backup" "$no_footer" "$indent" "$skip_header"
+    done
+
+    echo ""
+    echo "<!-- Created by https://github.com/ekalinin/github-markdown-toc -->"
+}
+
+#
+# Entry point
+#
+gh_toc_app "$@"
