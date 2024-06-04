@@ -1,236 +1,187 @@
-# 规范
+<!-- markdownlint-disable MD033 MD041 -->
+<p align="center">
+  <h3 align="center">⌨️ Readme Typing SVG</h3>
+</p>
 
-一个兼容的 README 必须满足下面列出的所有需求。
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?lines=Type+messages+everywhere!;Add+a+bio+to+your+profile!;Add+a+description+to+your+repo!;Make+your+readme+stand+out!&font=Fira%20Code&center=true&width=380&height=50&duration=4000&pause=1000" alt="Example Usage - README Typing SVG">
+</p>
 
+<p align="center">
+  <a href="https://github.com/search?q=extension%3Amd+%22https+readme+typing+svg%22&type=Code" alt="Users" title="Repo users">
+    <img src="https://freshidea.com/jonah/app/github-search-results/readme-typing-svg/index.php"/></a>
+  <a href="https://discord.gg/fPrdqh3Zfu" alt="Discord" title="Dev Pro Tips Discussion & Support Server">
+    <img src="https://img.shields.io/discord/819650821314052106?color=7289DA&logo=discord&logoColor=white&style=for-the-badge"/></a>
+</p>
+<!-- markdownlint-enable MD033 -->
 
-> 注意: 标准自述文件是为开放源码库设计的。 尽管它[以前](README.cn.md#背景)是为 Node 和 npm 项目制作的，但它也适用于其他语言的库和包管理器。
+## ⚡ Quick setup
 
-**要求:**
-  - 被叫做 README.md (大写).
-  - 如果项目支持 i18n，文件名必须相应地命名: `README.de.md`,  `de` 是 BCP 47语言标记. 对于命名，优先考虑语言的非区域子标记. 如果只有一个 README，并且语言不是英语，那么文本中允许使用不同的语言，而无需指定 BCP 标记: 例如: `README.md`  如果没有语言 README 的话，可以用德语  `README.md`. 在有多种语言的地方,README.md 是留给英语的.
-  - 做一个正确的 Markdown 文件.
-  - 部分必须按照下面给出的顺序显示。可以省略选择部分.
-  - 除非另有说明，部分必须有下面列出的标题。 如果 README 是另一种语言，则必须将标题翻译成该语言.
-  - 不能包含失效的链接.
-  - 如果有代码示例，那么它们的连接方式应该与项目其余部分的代码连接方式相同.
+1. Copy-paste the markdown below into your GitHub profile README
+2. Replace the value after `?lines=` with your text. Separate lines of text with semicolons and use `+` or `%20` for spaces.
+3. Adjust the width parameter (see below) to fit the full width of your text.
 
-## 目录
+```md
+[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://git.io/typing-svg)
+```
 
-_注意: 这只是规范的建议，并没有为任何符合规范的文档定义或强制要求使用术语。_
+4. Star the repo 😄
 
-- [段落](#段落)
-  - [标题](#标题)
-  - [横幅](#横幅)
-  - [徽章](#徽章)
-  - [简短描述](#简短描述)
-  - [长描述](#长描述)
-  - [目录](#目录-1)
-  - [安全](#安全)
-  - [背景](#背景)
-  - [安装](#安装)
-  - [用法](#用法)
-  - [额外部分](#额外部分)
-  - [API](#api)
-  - [维护者](#维护者)
-  - [致谢](#致谢)
-  - [如何贡献](#如何贡献)
-  - [许可证](#许可证)
-- [定义](#定义)
+## ⚙ Demo site
 
-## 段落
+Here you can easily customize your Typing SVG with a live preview.
 
-### 标题
-**状态:** 必须
+<https://readme-typing-svg.demolab.com/demo/>
 
+[![Demo Site](https://user-images.githubusercontent.com/20955511/183703055-42ec8754-d84c-414f-8132-a02974224aa1.gif "Demo Site")](https://readme-typing-svg.demolab.com/demo/)
 
-**要求:**
+## 🚀 Example usage
 
-- 标题必须与仓库、文件夹和包管理器名称相匹配——或者用斜体和括号表示的相关副标题。 例如:
+Below are links to profiles where you can see Readme Typing SVGs in action!
 
-  ```markdown
-  # Standard Readme Style _(standard-readme)_
-  ```
-  如果任何文件夹、仓库或包管理器名称不匹配，必须在“长描述”中附注说明原因。
+[![Jonah Lawrence](https://github.com/DenverCoder1.png?size=60)](https://github.com/DenverCoder1 "Jonah Lawrence on GitHub")
+[![Jini by Rentalz.com](https://i.imgur.com/TtuoKCs.png)](https://jini.rentalz.com/ "Jini by Rentalz.com")
+[![Waren Gonzaga](https://github.com/warengonzaga.png?size=60)](https://github.com/warengonzaga "Waren Gonzaga on GitHub")
+[![8BitJonny](https://github.com/8BitJonny.png?size=60)](https://github.com/8BitJonny "8BitJonny on GitHub")
+[![Aditya Raute](https://github.com/adityaraute.png?size=60)](https://github.com/adityaraute "Aditya Raute on GitHub")
+[![Shiva Sankeerth Reddy](https://github.com/ShivaSankeerth.png?size=60)](https://github.com/ShivaSankeerth "Shiva Sankeerth Reddy on GitHub")
+[![Tarun Kamboj](https://github.com/Tarun-Kamboj.png?size=60)](https://github.com/Tarun-Kamboj "Tarun Kamboj on GitHub")
+[![T.A.Vignesh](https://github.com/tavignesh.png?size=60)](https://github.com/tavignesh "T.A.Vignesh on GitHub")
+[![William J. Ghelfi](https://github.com/trumbitta.png?size=60)](https://github.com/trumbitta "William J. Ghelfi on GitHub")
+[![Mano Bharathi M](https://i.imgur.com/Audc6L9.png)](https://github.com/ManoBharathi93 "Mano Bharathi M on GitHub")
+[![Shivam Yadav](https://github.com/sudoshivam.png?size=60)](https://github.com/sudoshivam "Shivam Yadav on GitHub")
+[![Pratik Pingale](https://github.com/PROxZIMA.png?size=60)](https://github.com/PROxZIMA "Pratik Pingale on GitHub")
+[![Vydr'Oz](https://github.com/VydrOz.png?size=60)](https://github.com/VydrOz "Vydr'Oz on GitHub")
+[![Caroline Heloíse](https://github.com/Carol42.png?size=60)](https://github.com/Carol42 "Caroline Heloíse on GitHub")
+[![PriyanshK09](https://github.com/PriyanshK09.png?size=60)](https://github.com/PriyanshK09 "PriyanshK09 on GitHub")
+[![Thakur Ballary](https://github.com/thakurballary.png?size=60)](https://github.com/thakurballary "Thakur Ballary on GitHub")
+[![NiceSapien](https://github.com/nicesapien.png?size=60)](https://github.com/nicesapien "NiceSapien on GitHub")
+[![Manthan Ank](https://github.com/manthanank.png?size=60)](https://github.com/manthanank "Manthan Ank on GitHub")
+[![Ronny Coste](https://github.com/lertsoft.png?size=60)](https://github.com/lertsoft "Ronny Coste on GitHub")
+[![Vishal Beep](https://github.com/vishal-beep136.png?size=60)](https://github.com/Vishal-beep136 "Vishal Beep on GitHub")
+[![wiz64](https://github.com/wiz64.png?size=60)](https://github.com/wiz64 "wiz64 on GitHub")
+[![Aquarian Blake](https://github.com/Aquarius-blake.png?size=60)](https://github.com/Aquarius-blake "Aquarian Blake on GitHub")
+[![D3vil0p3r](https://github.com/D3vil0p3r.png?size=60)](https://github.com/D3vil0p3r "D3vil0p3r on GitHub")
+[![EliusHHimel](https://github.com/EliusHHimel.png?size=60)](https://github.com/EliusHHimel "EliusHHimel on GitHub")
+[![jcs090218](https://github.com/jcs090218.png?size=60)](https://github.com/jcs090218 "jcs090218 on GitHub")
+[![Rishabh2804](https://github.com/Rishabh2804.png?size=60)](https://github.com/Rishabh2804 "Rishabh2804 on GitHub")
+[![shalinibhatt](https://github.com/shalinibhatt.png?size=60)](https://github.com/shalinibhatt "shalinibhatt on GitHub")
+[![UlisesAlexanderAM](https://github.com/UlisesAlexanderAM.png?size=60)](https://github.com/UlisesAlexanderAM "UlisesAlexanderAM on GitHub")
+[![SpookyJelly](https://github.com/SpookyJelly.png?size=60)](https://github.com/SpookyJelly "SpookyJelly on GitHub")
+[![cfcife](https://github.com/cfcife.png?size=60)](https://github.com/cfcife "cfcife on GitHub")
+[![majidtdeni666](https://github.com/majidtdeni666.png?size=60)](https://github.com/majidtdeni666 "majidtdeni666 on GitHub")
+[![GalexY727](https://github.com/galexy727.png?size=60)](https://github.com/galexy727 "GalexY727 on GitHub")
+[![HectorSaldes](https://github.com/HectorSaldes.png?size=60)](https://github.com/HectorSaldes "HectorSaldes on GitHub")
+[![Ash-codes18](https://github.com/Ash-codes18.png?size=60)](https://github.com/Ash-codes18 "Ash-codes18 on GitHub")
+[![Maagnitude](https://github.com/Maagnitude.png?size=60)](https://github.com/Maagnitude "Maagnitude on GitHub")
+[![cracker911181](https://github.com/cracker911181.png?size=60)](https://github.com/cracker911181 "cracker911181 on GitHub")
+[![quiet-node](https://github.com/quiet-node.png?size=60)](https://github.com/quiet-node "quiet-node on GitHub")
+[![kaustubh43](https://github.com/kaustubh43.png?size=60)](https://github.com/kaustubh43 "kaustubh43 on GitHub")
+[![kaisunoo](https://github.com/kaisunoo.png?size=60)](https://github.com/kaisunoo "kaisunoo on GitHub")
+[![meyer-pidiache](https://github.com/meyer-pidiache.png?size=60)](https://github.com/meyer-pidiache "Meyer Pidiache on GitHub")
+[![jeremiahseun](https://github.com/jeremiahseun.png?size=60)](https://github.com/jeremiahseun "Jeremiah Erinola on GitHub")
+[![Purushottam Anand](https://github.com/creativepuru.png?size=60)](https://github.com/creativepuru "Purushottam Anand 🇮🇳 on GitHub ☕")
+[![Greg Chism](https://github.com/Gchism94.png?size=60)](https://github.com/Gchism94 "Greg Chism 🤘 on GitHub")
+[![turbomaster95](https://github.com/turbomaster95.png?size=60)](https://github.com/turbomaster95 "turbomaster95 🗿 🇮🇳 on GitHub ☕")
+[![K1rsN7](https://github.com/K1rsN7.png?size=60)](https://github.com/K1rsN7 "K1rsN7 on GitHub💪")
+[![codesbyahsen](https://github.com/codesbyahsen.png?size=60)](https://github.com/codesbyahsen "AHSEN ALEE on GitHub")
+[![Freddywhest](https://github.com/Freddywhest.png?size=60)](https://github.com/Freddywhest "Alfred Nti on GitHub")
+[![Shiro-cha](https://github.com/Shiro-cha.png?size=60)](https://github.com/Shiro-cha "Shiro Yukami on Github")
+[![Abid-Nafi](https://github.com/MohammedAbidNafi.png?size=60)](https://github.com/MohammedAbidNafi "Abid Nafi on Github")
+[![Srijan-Baniyal](https://github.com/Srijan-Baniyal.png?size=60)](https://github.com/Srijan-Baniyal "Srijan Baniyal on Github")
+[![BrunoOliveiraS](https://github.com/BrunoOliveiraS.png?size=60)](https://github.com/BrunoOliveiraS "Bruno Oliveira on Github")
+[![zidk](https://github.com/zidk.png?size=60)](https://github.com/zidk "Pablo Gonzalez on Github")
+[![tshr-d-dragon](https://github.com/tshr-d-dragon.png?size=60)](https://github.com/tshr-d-dragon "Tushar Patil on Github")
+[![v-pun215](https://github.com/v-pun215.png?size=60)](https://github.com/v-pun215 "Vihaan Pundir on Github")
+[![DeveshYadav13](https://github.com/DeveshYadav13.png?size=60)](https://github.com/DeveshYadav13 "Devesh Yadav on Github")
+[![HauseMasterZ](https://github.com/HauseMasterZ.png?size=60)](https://github.com/HauseMasterZ "HauseMaster on Github")
+[![hyskoniho](https://github.com/hyskoniho.png?size=60)](https://github.com/hyskoniho "hyskoniho on Github")
+[![elvisisvan](https://github.com/elvisisvan.png?size=60)](https://github.com/elvisisvan "elvisisvan on Github")
+[![Nquenan](https://github.com/Nquenan.png?size=60)](https://github.com/Nquenan "Nquenan on Github")
+[![akhilnev](https://github.com/akhilnev.png?size=60)](https://github.com/akhilnev "Akhilesh Nevatia on Github")
+[![mannysoft](https://github.com/mannysoft.png?size=60)](https://github.com/mannysoft "Manny Isles on Github")
+[![LinThitHtwe](https://github.com/LinThitHtwe.png?size=60)](https://github.com/LinThitHtwe "LinThitHtwe on Github")
+[![Elio-Aliaj](https://github.com/Elio-Aliaj.png?size=60)](https://github.com/Elio-Aliaj "Elio-Aliaj on Github")
+[![MehmetBozkir](https://github.com/MehmetBozkir.png?size=60)](https://github.com/MehmetBozkir "MehmetBozkir on Github")
+[![presentformyfriends](https://github.com/presentformyfriends.png?size=60)](https://github.com/presentformyfriends "presentformyfriends on Github")
+[![Ad7amstein](https://github.com/Ad7amstein.png?size=60)](https://github.com/Ad7amstein "Ad7amstein on Github")
+[![LakshmanKishore](https://github.com/LakshmanKishore.png?size=60)](https://github.com/LakshmanKishore "LakshmanKishore on Github")
+[![mateusadada](https://github.com/mateusadada.png?size=60)](https://github.com/mateusadada "mateusadada on Github")
+[![fasakinhenry](https://github.com/fasakinhenry.png?size=60)](https://github.com/fasakinhenry "fasakinhenry on Github")
+[![YousifAbozid](https://github.com/YousifAbozid.png?size=60)](https://github.com/YousifAbozid "YousifAbozid on Github")
+[![SuSheng13T](https://github.com/SuSheng13T.png?size=60)](https://github.com/SuSheng13T "SuSheng13T on Github")
+[![hheinsoee](https://github.com/hheinsoee.png?size=60)](https://github.com/hheinsoee "hheinsoee on Github")
+[![lucmsilva651](https://github.com/lucmsilva651.png?size=60)](https://github.com/lucmsilva651 "lucmsilva651 on Github")
 
-**建议:**
+Feel free to [open a PR](https://github.com/DenverCoder1/readme-typing-svg/issues/21#issue-870549556) and add yours!
 
-- 应该是有据可循的
+## 🔧 Options
 
-### 横幅
-**状态:** 可选
+|  Parameter   |                                   Details                                   |  Type   |               Example               |
+| :----------: | :-------------------------------------------------------------------------: | :-----: | :---------------------------------: |
+|   `lines`    |       Text to display with lines separated by `;` and `+` for spaces        | string  | `First+line;Second+line;Third+line` |
+|   `height`   |             Height of the output SVG in pixels (default: `50`)              | integer |         Any positive number         |
+|   `width`    |             Width of the output SVG in pixels (default: `400`)              | integer |         Any positive number         |
+|    `size`    |                     Font size in pixels (default: `20`)                     | integer |         Any positive number         |
+|    `font`    |                     Font family (default: `monospace`)                      | string  |     Any font from Google Fonts      |
+|   `color`    |                    Color of the text (default: `36BCF7`)                    | string  |  Hex code without # (eg. `F724A9`)  |
+| `background` |             Background color of the text (default: `00000000`)              | string  |  Hex code without # (eg. `FEFF4C`)  |
+|   `center`   |    `true` to center text or `false` for left aligned (default: `false`)     | boolean |          `true` or `false`          |
+|  `vCenter`   |  `true` to center vertically or `false`(default) to align above the center  | boolean |          `true` or `false`          |
+| `multiline`  |  `true` to wrap lines or `false` to retype on one line (default: `false`)   | boolean |          `true` or `false`          |
+|  `duration`  | Duration of the printing of a single line in milliseconds (default: `5000`) | integer |         Any positive number         |
+|   `pause`    |     Duration of the pause between lines in milliseconds (default: `0`)      | integer |       Any non-negative number       |
+|   `repeat`   |  `true` to loop around to the first line after the last (default: `true`)   | boolean |          `true` or `false`          |
+| `separator`  |     Separator used between lines in the lines parameter (default: `;`)      | string  |        `;`, `;;`, `/`, etc.         |
 
-**要求:**
-- 不能有自己的标题
-- 必须链接到当前存储库中的本地映像
-- 必须直接出现在标题后面
+## 📤 Deploying it on your own
 
-### 徽章
-**Status:** 可选.
+If you can, it is preferable to host the files on your own server.
 
-**要求:**
-- 不能有自己的标题
-- 必须用换行符分隔
+Doing this can lead to better uptime and more control over customization (you can modify the code for your usage).
 
-**建议:**
-- 使用 http://shields.io 或类似的服务来创建和托管图像
-- 添加 Standard Readme badge 徽章.
+You can deploy the PHP files on any website server with PHP installed or as a Heroku app.
 
-### 简短描述
-**状态:** 必须
+### Step-by-step instructions for deploying to Heroku
 
-**要求:**
-- 不能有自己的标题
-- 必须少于120个字符
-- 不能以 `>` 开始
--  一定是在它自己的行上
-- 必须符合包管理器的`描述`字段
--  必须符合 GitHub 的描述(如果在 GitHub 上)
+1. Sign in to **Heroku** or create a new account at <https://heroku.com>
+2. Click the "Deploy to Heroku" button below
 
-**建议:**
-- 使用[gh-description](https://github.com/RichardLitt/gh-description) 描述设置并获取 GitHub 描述
-- 使用`npm show . description` 来展示本地的描述 [npm](https://npmjs.com) 包
+[![Deploy](https://www.herokucdn.com/deploy/button.svg "Deploy to Heroku")](https://heroku.com/deploy?template=https://github.com/DenverCoder1/readme-typing-svg/tree/main)
 
-### 长描述
-**状态:** 可选
+3. On the page that comes up, click **"Deploy App"** at the end of the form
+4. Once the app is deployed, click **"Manage App"** to go to the dashboard
+5. Scroll down to the **Domains** section in the settings to find the URL you will use in place of `readme-typing-svg.demolab.com`
 
-**要求:**
-- 不能有自己的标题
-- 如果任何文件夹、存储库或包管理器名称不匹配，则必须在这里说明原因。 看标题部分
+## 🤗 Contributing
 
-**建议:**
-- 如果太长，考虑移动到背景部分。
-- 包含构建储存库的主要原因。
+Contributions are welcome! Feel free to open an issue or submit a pull request if you have a way to improve this project.
 
-- “这应该大致地描述你的模块，通常只有几个段落; 模块的例程或方法的更多细节，冗长的代码示例，或其他深入的材料应该在随后的章节中给出。
-  理想情况下，对您的模块稍微熟悉的人应该能够刷新他们的记忆，而不必按下“页面向下”键。 当你的读者继续阅读文档时，他们应该会接收到越来越多的知识。”
+Make sure your request is meaningful and you have tested the app locally before submitting a pull request.
 
-  ~ [Kirrily "Skud" Robert, perlmodstyle](http://perldoc.perl.org/perlmodstyle.html)
+Refer to [CONTRIBUTING.md](/CONTRIBUTING.md) for more details on contributing, installing requirements, and running the application.
 
-### 目录
-**状态:** 必需的; 对于小于100行的 README 可选。
-**要求:**
-- 必须链接到文件中的所有 Markdown 部分
-- 必须从下一节开始，不要包括标题或目录标题
-- 必须至少有一个深度: 必须捕获所有 `##` 标题
+## 🙋‍♂️ Support
 
-**建议:**
-- 可以捕获第三个和第四个深度标题。如果是长目录，这些是可选的.
+💙 If you like this project, give it a ⭐ and share it with friends!
 
-### 安全
-**状态:** 可选.
+<!-- markdownlint-disable MD033 -->
+<p align="left">
+  <a href="https://www.youtube.com/channel/UCipSxT7a3rn81vGLw9lqRkg?sub_confirmation=1"><img alt="Youtube" title="Youtube" src="https://img.shields.io/badge/-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white"/></a>
+  <a href="https://github.com/sponsors/DenverCoder1"><img alt="Sponsor with Github" title="Sponsor with Github" src="https://img.shields.io/badge/-Sponsor-ea4aaa?style=for-the-badge&logo=github&logoColor=white"/></a>
+</p>
+<!-- markdownlint-enable MD033 -->
 
-**要求:**
-- 如果需要强调安全问题，可以在这里，否则应该在`额外`部分.
+[☕ Buy me a coffee](https://ko-fi.com/jlawrence)
 
-### 背景
-**状态:** 可选
+---
 
-**要求:**
-- 包含动机.
-- 包含抽象依赖关系.
-- 包含知识来源: `可参见`也很合适.
+Made with ❤️ and PHP
 
-### 安装
-**状态:** 默认情况下是必需的，文档存储库是可选的.
+<!-- markdownlint-disable MD033 -->
 
-**要求:**
-- 说明如何安装的代码块
+<a href="https://heroku.com/"><img alt="Powered by Heroku" title="Powered by Heroku" src="https://img.shields.io/badge/-Powered%20by%20Heroku-6567a5?style=for-the-badge&logo=heroku&logoColor=white"/></a>
 
-**子段落:**
-- 如果有不寻常的依赖项或依赖项，必须手动安装
+<!-- markdownlint-enable MD033 -->
 
-**建议:**
--链接到编程语言的必备站点: [npmjs](https://npmjs.com), [godocs](https://godoc.org),等等.
-- 包括安装所需的任何系统特定信息.
-- 一个`更新`部分对大多数软件包都很有用, 如果用户可以使用多个版本.
-
-###  用法
-**状态:** 默认情况下是必需的，文档存储库是可选的.
-
-**要求:**
-- 说明常用用法的代码块.
-- 如果 CLI 兼容，则代码块指示通用用法.
-- 如果可导入，则指示导入功能和用法的代码块.
-
-**建议:**
-- `CLI`. 如果 CLI 功能存在，则需要.
-
-**建议:**
-- 涵盖可能影响使用的基本选项: 例如，如果是 JavaScript，则涵盖 promises / callbacks，此处为 ES6
-- 如果相关，指向一个可运行的文件以获取使用代码
-
-### 额外部分
-**状态:** 可选.
-
-**要求:**
-- 没有.
-
-**建议:**
-- 这不应该被称为额外部分.  这是一个包含0个或更多部分的空间，每个部分都必须有自己的标题
-- 这应该包含任何其他相关的部分,放在用法之后, API 之前.
-- 具体来说，就是, 安全部分如果没有重要到可以放在上面的话，这个部分应该在这里.
-
-### API
-**状态:** 可选
-
-**要求:**
-- 描述暴露出的功能和对象.
-
-**建议:**
-- 描述签名、返回类型、回调和事件.
-- 指明不容易理解的类型.
-- 描述注意事项.
-- 如果使用外部 API 生成器(比如 go-doc、 js-doc 等等) ，请指向外部 API.md 文件. 这可能是该节中的唯一项，如果存在的话
-
-### 维护者
-**状态:** 可选.
-
-**要求:**
-- 一定要叫维护者
-- 列出存储库的维护人员，以及与他们联系的一种方式(例如 GitHub 链接或电子邮件).
-
-**建议:**
-- 这应该是一个负责项目方向的人员名单。 这不应该是拥有访问权限的每个人，比如整个组织，应该被展示的人是负责存储库的指导和维护的人
-- 列出过去的维护人员对于属性和分类都有好处.
-
-### 致谢
-**状态:** 可选.
-
-**要求:**
-- 一定要叫做 致谢 或者 感谢.
-
-**建议:**
-- 说明对项目的开发有重要帮助的任何人或任何事情
-- 标明公共链接，如果适用的话
-
-### 如何贡献
-**状态:** 必需.
-
-**要求:**
-- 说明用户可以提问的地方.
-- 说明是否接受 PR .
-- 列出贡献的所有要求; 例如，在提交时有一个签名.
-
-**建议:**
-- 链接到`如何贡献文件`--如果有的话
-- 尽可能友好
-- 链接到 GitHub issues 区域.
--  链接到行为守则. `如何贡献规范`通常位于贡献部分或文档中,或者位于整个组织的其他位置，因此可能不需要在每个存储库中包含整个文件。 但是，强烈建议始终链接到规范位置，无论它位于何处.
-- 这里也欢迎列出贡献者的子段落.
-
-### 许可证
-**状态:** 必须
-
-**要求:**
-- 声明许可证全名或标识符, 参考[SPDX](https://spdx.org/licenses/) 许可证列表上的. 对于未授权的存储库, 添加 `UNLICENSED`. 更多详情，请参见 `SEE LICENSE IN <filename>`  并链接到许可文件. (这些要求是从 [npm](https://docs.npmjs.com/files/package.json#license)继承过来的).
-- 声明许可证持有人.
-- 一定是最后一部分.
-
-**建议:**
-- 链接到本地存储库中较长的许可证文件
-
-## 定义
-
-_提供这些定义是为了澄清上面使用的任何术语._
-
-- **文档存储库: 没有任何功能代码的存储库**
+This project uses [Twemoji](https://github.com/twitter/twemoji), published under the [CC-BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)
