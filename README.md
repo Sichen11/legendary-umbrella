@@ -1,24 +1,10 @@
-This file describes the directories found at the root of the FreeRTOS
-distribution.
+&nbsp;<div align="center">
+  [![Spotify](https://novatorem.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff)](https://open.spotify.com/user/omnitenebris)
+</div>
 
-demos:
-Contains a set of pre-configured demo projects for various target platforms.
-The projects in the demos directory build the libraries from the lib directory.
-
-doc:
-Contains Doxygen configuration, and board qualification guide.
-
-freertos_kernel:
-Contains FreeRTOS kernel distribution.
-
-libraries:
-Contains standard libraries, AWS libraries, and third-party libraries.
-
-projects:
-Contains IDE project files.
-
-tests:
-Contains Unity framework and test runner.
-
-vendors:
-Contains platform-specific ports, SDKs, and tools.
+&nbsp;<div align="center">
+  [Fork](https://github.com/novatorem/novatorem/blob/main/SetUp.md) this [unlicensed](https://choosealicense.com/licenses/unlicense/) repository to recreate!<br><br>
+  [![Linkedin](https://img.shields.io/badge/linked-in-369?style=flat-square&logo=linkedin&logoColor=white&color=blue)](https://www.linkedin.com/in/andrew-novac)
+  [![E-Mail](https://img.shields.io/badge/email-reveal-2a8?style=flat-square&logo=gmail&logoColor=white)](https://mail.novac.dev/)
+  [![Visits](https://komarev.com/ghpvc/?username=novatorem&logo=GitHub&label=github%20visits&color=336699&logoColor=white&style=flat-square)](https://github.com/novatorem)
+</div>
