@@ -1,16 +1,19 @@
-.vercel
-.env
-node_modules
-*.lock
-.idea/
-coverage
-benchmarks
-vercel_token
-
-# IDE
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
-*.code-workspace
-
-.vercel
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/forbid-prop-types": 0
+  },
+  "ignorePatterns": ["**/*.test.js"]
+}
