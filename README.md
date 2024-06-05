@@ -1,3 +1,3 @@
-include README.rst
-include README.md
-include LICENSE
+#! /bin/bash
+
+cat spec.md
