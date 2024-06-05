@@ -1,90 +1,30 @@
-<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
-	<foreignObject width="100%" height="100%">
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<style>
-				@keyframes rotate {
-					0% {
-						transform: rotate(3deg);
-					}
-					100% {
-						transform: rotate(-3deg);
-					}
-				}
+require File.expand_path("../lib/github-markup", __FILE__)
 
-				@keyframes gradientBackground {
-					0% {
-						background-position: 0% 50%;
-					}
-					50% {
-						background-position: 100% 50%;
-					}
-					100% {
-						background-position: 0% 50%;
-					}
-				}
+Gem::Specification.new do |s|
+  s.name          = "github-markup"
+  s.version       = GitHub::Markup::VERSION
+  s.summary       = "The code GitHub uses to render README.markup"
+  s.description   = <<~DESC
+    This gem is used by GitHub to render any fancy markup such as Markdown,
+    Textile, Org-Mode, etc. Fork it and add your own!
+  DESC
+  s.authors       = ["Chris Wanstrath"]
+  s.email         = "chris@ozmm.org"
+  s.homepage      = "https://github.com/github/markup"
+  s.license       = "MIT"
 
-				@keyframes fadeIn {
-					0% {
-						opacity: 0;
-					}
-					66% {
-						opacity: 0;
-					}
-					100% {
-						opacity: 1;
-					}
-				}
+  s.files         = `git ls-files`.split($\)
+  s.files        += Dir['vendor/**/*']
+  s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
+  s.require_paths = %w[lib]
 
-				.container {
-					font-family:
-						system-ui,
-						-apple-system,
-						'Segoe UI',
-						Roboto,
-						Helvetica,
-						Arial,
-						sans-serif,
-						'Apple Color Emoji',
-						'Segoe UI Emoji';
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					margin: 0;
-					width: 100%;
-					height: 400px;
-					background: linear-gradient(-45deg, #fc5c7d, #6a82fb, #05dfd7);
-					background-size: 600% 400%;
-					animation: gradientBackground 10s ease infinite;
-					border-radius: 10px;
-					color: white;
-					text-align: center;
-				}
-
-				h1 {
-					font-size: 50px;
-					line-height: 1.3;
-					letter-spacing: 5px;
-					text-transform: uppercase;
-					text-shadow:
-						0 1px 0 #efefef,
-						0 2px 0 #efefef,
-						0 3px 0 #efefef,
-						0 4px 0 #efefef,
-						0 12px 5px rgba(0, 0, 0, 0.1);
-					animation: rotate ease-in-out 1s infinite alternate;
-				}
-
-				p {
-					font-size: 20px;
-					text-shadow: 0 1px 0 #efefef;
-					animation: 5s ease 0s normal forwards 1 fadeIn;
-				}
-			</style>
-			<div class="container">
-				<h1>Made with HTML &amp; CSS<br/>not an animated GIF</h1>
-				<p>Click to see the source</p>
-			</div>
-		</div>
-	</foreignObject>
-</svg>
+  s.add_development_dependency 'rake', '~> 12'
+  s.add_development_dependency 'activesupport', '~> 4.0'
+  s.add_development_dependency 'minitest', '~> 5.4', '>= 5.4.3'
+  s.add_development_dependency 'html-pipeline', '~> 1.0'
+  s.add_development_dependency 'sanitize', '>= 4.6.3'
+  s.add_development_dependency 'nokogiri', '~> 1.8.1'
+  s.add_development_dependency 'nokogiri-diff', '~> 0.2.0'
+  s.add_development_dependency "github-linguist", ">= 7.1.3"
+end
