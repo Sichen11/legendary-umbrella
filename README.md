@@ -1,14 +1,7 @@
 {
-  "functions": {
-    "api/*.js": {
-      "memory": 128,
-      "maxDuration": 10
+  "plugins": {
+    "remark-title": {
+      "title": "IPFS Readme Standard"
     }
-  },
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "https://github.com/anuraghazra/github-readme-stats"
-    }
-  ]
+  }
 }
