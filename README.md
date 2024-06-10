@@ -1,143 +1,435 @@
+- [Home](/)
 
-# Awesome README [![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome#readme)
-> A curated list of awesome READMEs
-> <img src="icon.png" align="right"/>
+  - 0
+    - [0ssinsight](/templates/0ssinsight-widget.md)
+    - [0xabdulkhalid](/templates/0xabdulkhalid.md)
+  - 1
+    - [100rabhcsmc](/templates/100rabhcsmc.md)
+    - [1010nishant](/templates/1010nishantx.md)
+    - [1999azzar](/templates/1999azzar.md)
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+    - [7oSkaaa](/templates/7oSkaaa.md)
+  - 8
+  - 9
+  - A
 
-Elements in beautiful READMEs include, but are not limited to:
+    - [aaditkamat](/templates/aaditkamat.md)
+    - [aastha12](/templates/aastha12.md)
+    - [aayushi-droid](/templates/aayushi-droid.md)
+    - [abdoachhoubi](/templates/abdoachhoubi.md)
+    - [abhigyantrips](/templates/abhigyantrips.md)
+    - [abhinavdubeyad9](/templates/abhinavdubeyad9.md)
+    - [abhisheknaiidu](/templates/abhisheknaiidu.md)
+    - [ABSphreak](/templates/ABSphreak.md)
+    - [acervenky](/templates/acervenky.md)
+    - [Adam-pw](/templates/Adam-pw.md)
+    - [adamalston](/templates/adamalston.md)
+    - [Aditya664](/templates/Aditya664.md)
+    - [afc163](/templates/afc163.md)
+    - [Ahmad-shaikh575](/templates/Ahmad-shaikh575.md)
+    - [Ahmed Fathy](/templates/AhmedFathyDev.md)
+    - [Akash-chowrasia](/templates/Akash-chowrasia.md)
+    - [akasrai](/templates/akasrai.md)
+    - [AkhilGKrishnan](/templates/AkhilGKrishnan.md)
+    - [akshitagupta15june](/templates/akshitagupta15june.md)
+    - [AkuraDiary](/templates/AkuraDiary.md)
+    - [Alamin2731](/templates/alamin2731.md)
+    - [Aleksey-Voko](/templates/Aleksey-Voko.md)
+    - [AlexMartinFR](/templates/AlexMartinFR.md)
+    - [aliashfak178](/templates/aliashfak178.md)
+    - [aman-atg](/templates/aman-atg.md)
+    - [amardeepkesharwani](/templates/amardeepkesharwani.md)
+    - [amxchang](/templates/amxchang.md)
+    - [AnderMendoza](https://github.com/andermendoza)
+    - [andyruwruw](/templates/andyruwruw.md)
+    - [AnhellO](/templates/AnhellO.md)
+    - [ANii693](/templates/ANii693.md)
+    - [ankitwarbhe](/templates/ankitwarbhe.md)
+    - [anmol098](/templates/anmol098.md)
+    - [anonfaded](/templates/anonfaded.md)
+    - [anuraghazra](/templates/anuraghazra.md)
+    - [AnushkaWijegoonawardana97](/templates/AnushkaWijegoonawardana97.md)
+    - [ApoorvTyagi](/templates/ApoorvTyagi.md)
+    - [ApurvShah007](/templates/ApurvShah007.md)
+    - [arshadakl](https://github.com/arshadakl)
+    - [arjunMee](/templates/arjunMee.md)
+    - [arjunsingh27](/templates/arjunsingh27.md)
+    - [Aryagm](/templates/Aryagm.md)
+    - [aryasoni98](/templates/aryasoni98.md)
+    - [ashbakernz](/templates/ashbakernz.md)
+    - [ashleymavericks](/templates/ashleymavericks.md)
+    - [ashrafkm](/templates/ashrafkm.md)
+    - [ASovindu](/templates/ASovindu.md)
+    - [aveek-saha](/templates/aveek-saha.md)
+    - [Austinae](/templates/Austinae.md)
+    - [AvidCoder101](/templates/AvidCoder101.md)
+    - [avinash-218](/templates/avinash-218.md)
+    - [avneesh0612](/templates/avneesh0612.md)
+    - [AVS1508](/templates/AVS1508.md)
+    - [azizovrafael](/templates/azizovrafael.md)
+    - [al3sha9](/templates/al3sha9.md)
+    - [Aneal07](/templates/Aneal07.md)
+    - [ashu-guo](/templates/ashu-guo.md)
+  - B
+    - [bindian0509](/templates/bindian0509)
+    - [b4dcat404](/templates/b4dcat404.md)
+    - [BaseMax](/templates/BaseMax.md)
+    - [Berkeli](/templates/Berkeli.md)
+    - [bdougie](/templates/bdougie.md)
+    - [Bgstatic](/templates/Bgstatic.md)
+    - [Bhargavi-hash](/templates/Bhargavi-hash.md)
+    - [bhaveshlohana](/templates/bhaveshlohana.md)
+    - [bhumikatewary](/templates/bhumikatewary.md)
+    - [billpwchan](/templates/billpwchan.md)
+    - [Birunthaban](/templates/Birunthaban.md)
 
-images, screenshots, GIFs, text formatting, etc.
-   
-## Examples
+    - [blue-1ms](/templates/blue-1ms.md)
+    - [blueset](/templates/blueset.md)
+    - [bornmay](/templates/bornmay.md)
+    - [Bouaskaoun](/templates/Bouaskaoun.md)
+    - [BrantLauro](/templates/BrantLauro.md)
+    - [BRdhanani](/templates/BRdhanani.md)
+    - [bugahontas](/templates/bugahontas.md)
+    - [brightkut](/templates/brightkut.md)
+    - [beyzaerf](/templates/beyzaerf.md)
+  - C
+    - [Candida18](/templates/Candida18.md)
+    - [caneco](/templates/caneco.md)
+    - [cdthomp1](/templates/cdthomp1.md)
+    - [chaitanya-pratap-singh](/templates/chaitanya-pratap-singh.md)
+    - [chakravarthi-v](/templates/chakravarthi-v.md)
+    - [chinmay29hub](/templates/chinmay29hub.md)
+    - [chiphuyen](/templates/chiphuyen.md)
+    - [choubari](/templates/choubari.md)
+    - [ChungZH](/templates/ChungZH.md)
+    - [codeoxygen](/templates/codeoxygen.md)
+    - [codediaz](/templates/codediaz.md)
+    - [coderjojo](/templates/coderjojo.md)
+    - [CodeWhiteWeb](/templates/CodeWhiteWeb.md)
+    - [coding-ai](/templates/coding-ai.md)
+    - [CyrisXD](/templates/CyrisXD.md)
+  - D
+    - [Daenges](/templates/Daenges.md)
+    - [danieldanielecki](/templates/danieldanielecki.md)
+    - [dart-coder](/templates/dart-coder.md)
+    - [DataOnATangent](/templates/DataOnATangent.md)
+    - [Davekibh](/templates/Davekibh.md)
+    - [deep5050](/templates/deep5050.md)
+    - [Deepshikhayadav](/templates/Deepshikhayadav.md)
+    - [Delta456](/templates/Delta456.md)
+    - [DennisHartrampf](/templates/DennisHartrampf.md)
+    - [DenverCoder1](/templates/DenverCoder1.md)
+    - [dereknguyen269](/templates/dereknguyen269.md)
+    - [dev-akshat](/templates/dev-akshat.md)
+    - [devboyarif](/templates/devboyarif.md)
+    - [devSouvik](/templates/devSouvik.md)
+    - [dexprexxtion](/templates/dexprexxtion.md)
+    - [DHANOLA](/templates/DHANOLA.md)
+    - [dinhanhthi](/templates/dinhanhthi.md)
+    - [DinhKhai0201](/templates/DinhKhai0201.md)
+    - [DiptoChakrabarty](/templates/DiptoChakrabarty.md)
+    - [divyanshojha99](/templates/divyanshojha99.md)
+    - [donPabloNow](/templates/donPabloNow.md)
+    - [Dum6o](/templates/Dum6o.md)
+    - [durgeshsamariya](/templates/durgeshsamariya.md)
+  - E
+    - [ebrugulec](/templates/ebrugulec.md)
+    - [edgycoder](/templates/edgycoder.md)
+    - [edisonlee55](/templates/edisonlee55.md)
+    - [Elanza-48](/templates/Elanza-48.md)
+    - [EmmadiDivyaSrujana](/templates/EmmadiDivyaSrujana.md)
+    - [emrahsariboz](/templates/emrahsariboz.md)
+    - [ElioChiu](/templates/ElioChiu.md)
+  - F
+    - [FahimFBA](/templates/FahimFBA.md)
+    - [federicocomoglio](/templates/federicocomoglio.md)
+    - [felippegh](/templates/felippegh.md)
+    - [ferdiozer](/templates/ferdiozer.md)
+    - [FeryaelJustice](/templates/FeryaelJustice.md)
+    - [filiptronicek](/templates/filiptronicek.md)
+    - [francojimenezcopati](/templates/francojimenezcopati.md)
+    - [furkandeveloper](/templates/furkandeveloper.md)
+  - G
+    - [gabrlcj](/templates/gabrlcj.md)
+    - [garbinmarcelo](/templates/garbinmarcelo.md)
+    - [gkhan205](/templates/gkhan205.md)
+    - [guilyx](/templates/guilyx.md)
+  - H
+    - [halfrost](/templates/halfrost.md)
+    - [harshkumarkhatri](/templates/harshkumarkhatri.md)
+    - [hashfx](/templates/hashfx.md)
+    - [hendrasob](/templates/hendrasob.md)
+    - [hgdsandakalum](/templates/hgdsandakalum.md)
+    - [hhpr98](/templates/hhpr98.md)
+    - [hijal](/templates/hijal.md)
+    - [HridoyHazard](/templates/HridoyHazard.md)
+    - [hrnbot](/templates/hrnbot.md)
+    - [hrugved06](/templates/hrugved06.md)
+    - [hxrii](/templates/hxrii.md)
+    - [henrymedeiros](/templates/henrymedeiros.md)
+    - [hungpham3112](https://github.com/hungpham3112)
+  - I
+    - [I-am-vishalmaurya](/templates/I-am-vishalmaurya.md)
+    - [iahsanujunda](/templates/iahsanujunda.md)
+    - [iamirulofficial](/templates/iamirulofficial.md)
+    - [IhChowdhury](/templates/IhChowdhury.md)
+    - [imakash3011](/templates/imakash3011.md)
+    - [imanmalekian31](/templates/imanmalekian31.md)
+    - [innng](/templates/innng.md)
+    - [Isha2103](/templates/Isha2103.md)
+    - [israelhp](/templates/israelhp.md)
+    - [israelias](/templates/israelias.md)
+    - [IsratIJK](/templates/IsratIJK.md)
+    - [itsmeshibintmz](/templates/itsmeshibintmz.md)
+    - [Iwi4a](/templates/Iwi4a.md)
+    - [iscpatricio92](/templates/iscpatricio92.md)
+  - J
+    - [jacquelineatae](/templates/jacquelineatae.md)
+    - [Jaivardhan Bhola](/templates/jaivardhan-bhola.md)
+    - [Jas-Script](/templates/Jas-Script.md)
+    - [jatin2003](/templates/jatin2003.md)
+    - [jay078](/templates/jay078.md)
+    - [JayantGoel001](/templates/JayantGoel001.md)
+    - [JaydeepYadav](/templates/JaydeepYadav.md)
+    - [jayehernandez](/templates/jayehernandez.md)
+    - [jaypavasiya](/templates/jaypavasiya.md)
+    - [jayrajroshan](/templates/jayrajroshan.md)
+    - [jeffdevx](/templates/jeffdevx.md)
+    - [JessicaLim8](/templates/JessicaLim8.md)
+    - [jewdev](/templates/jewdev.md)
+    - [jlengstorf](/templates/jlengstorf.md)
+    - [joetancy](/templates/joetancy.md)
+    - [Josuerv99](/templates/Josuerv99.md)
+    - [JoykishanSharma](/templates/JoykishanSharma.md)
+    - [jrmydix](/templates/jrmydix.md)
+    - [jy1263](/templates/jy1263.md)
+  - K
+    - [kaburelabs](/templates/kaburelabs.md)
+    - [kaizoku-oh](/templates/kaizoku-oh.md)
+    - [KasRoudra](/templates/KasRoudra.md)
+    - [Kathryn-Jie](/templates/Kathryn-Jie.md)
+    - [Kaustav](/templates/Kaustav.md)
+    - [keshavsingh4522](/templates/keshavsingh4522.md)
+    - [KevinPatel04](/templates/KevinPatel04.md)
+    - [khalby786](/templates/khalby786.md)
+    - [Khushi0321](/templates/Khushi0321.md)
+    - [Kingsky1t](/templates/Kingsky1t.md)
+    - [Kiran1689](/templates/Kiran1689.md)
+    - [klee1611](/templates/klee1611.md)
+    - [kmhmubin](/templates/kmhmubin.md)
+    - [KunalRaghav](/templates/KunalRaghav.md)
+  - L
+    - [LachlanDev](/templates/LachlanDev.md)
+    - [lauragift21](/templates/lauragift21.md)
+    - [LeandraOliveiraS](/templates/LeandraOliveiraS.md)
+    - [LexxFade](/templates/LexxFade.md)
+    - [lia0wang](/templates/lia0wang.md)
+    - [linitio](/templates/linitio.md)
+    - [lostgirljourney](/templates/lostgirljourney.md)
+  - M
 
-- [ai/size-limit](https://github.com/ai/size-limit#readme) - Project logo, clear description, screenshot, step-by-step installing instructions.
-- [aimeos/aimeos-typo3](https://github.com/aimeos/aimeos-typo3#readme) - Project logo. Clear description of what the project does. Demo screenshot. TOC for easy navigation. Easy installation and setup sections with screenshots. Links for further reading.
-- [ajeetdsouza/zoxide](https://github.com/ajeetdsouza/zoxide#readme) - Badges, project GIF, concise description, quick links, stepwise installation instructions.
-- [alichtman/shallow-backup](https://github.com/alichtman/shallow-backup#readme) - Clear description of what the project does. GIF Demo. TOC for easy navigation. Badges. Links for further reading. Simple install instructions.
-- [alichtman/stronghold](https://github.com/alichtman/stronghold#readme) - Project logo. Clear description of what the project does. GIF Demo. TOC for easy navigation. Badges. Links for further reading. Simple install instructions.
-- [amitmerchant1990/electron-markdownify](https://github.com/amitmerchant1990/electron-markdownify#readme) - Project logo. Minimalist description of what it is. GIF demo of the project. Key features. How to install guide. Credits.
-- [amplication/amplication](https://github.com/amplication/amplication#readme) - Clear project logo. Brief explanation. All features explained. Clean documentation. Useful links (website, docs, discord). List of contributors with their pictures and usernames.
-- [anfederico/Clairvoyant](https://github.com/anfederico/Clairvoyant#readme) - Multiple badges. Clean logo. Simple install instructions. Clear overview of the project accompanied by a schematic. GIF demo. Extensive code examples.
-- [ankitwasankar/mftool-java](https://github.com/ankitwasankar/mftool-java#readme) - Project logo with a short display of what can be achieved with it, TOC for easy navigation, important badges, clean installation guide, and multiple code snippets showing how to use the functionality.
-- [antoinezanardi/werewolves-assistant-api-next](https://github.com/antoinezanardi/werewolves-assistant-api-next#readme) - Project logo. Badges. Concise description. TOC for easy navigation. Simple install instructions and various sections. Clean project with code coverage, CI, and many other features.
-- [AntonioFalcaoJr/EventualShop](https://github.com/AntonioFalcaoJr/EventualShop#readme) - The project has a logo and well-defined sections such as: information about the project, the architectural solution, along with reference links such as articles, videos, and documentation. It explains how to run the project in different environments (development and production). It has documented load tests, it also describes which technologies are used, and it has diagrams for the archetype.
-- [aregtech/areg-sdk](https://github.com/aregtech/areg-sdk#readme) - Logo. Multiple info and statistics badges. List of contributors and stargazers with pictures. TOC and "Back to top" links for easy navigation. Headlines with graphics. Topic hide/show menu. Project description and philosophy. Clone and integration instructions. Quick build with multiple tools. Tools configuration instructions. Reference to examples and Demo projects. Reference to use cases. References to guidance and Wiki pages. Links with badges to contact. Links with badges to share project in social network.
-- [Armync/Arminc-AutoExec](https://github.com/ArmynC/ArminC-AutoExec/#readme) - Rich Markdown functions, modern layout, clear description and compliant with the recommended community standards.
-- [athityakumar/colorls](https://github.com/athityakumar/colorls#readme) - Multiple badges. Clean screenshots. Simple install instructions. TOC for easy navigation. Good contributor guidelines.
-- [ccostan/Home-AssistantConfig](https://github.com/CCOSTAN/Home-AssistantConfig#readme) - Project Banner. Badges. Easy navigation.
-- [choojs/choo](https://github.com/choojs/choo#readme) - Badges, clean, clear. Beautiful little menu above the fold with useful links. An FAQ inside of it for the main questions. Backers. Good language.
-- [chroline/well_app](https://github.com/chroline/well_app#readme) - Features attention-grabbing project thumbnail with clean badges, as well as download information and quick navigation links. Organized into multiple descriptive sections, each of which have a title with a yellow emoji. Includes details about the project itself, as well as the technologies used and how to contribute.
-- [create-go-app/cli](https://github.com/create-go-app/cli#readme) - Clean project logo. Useful badges (version, code style, test cover, docs). Clear readme with quickstart, understandable installation and usage manual, video screencast, ToC with well-documented project features (with a demo recording of the work in the terminal), project philosophy notes ("the why another"), most frequently asked questions, and more.
-- [Day8/re-frame](https://github.com/Day8/re-frame#readme) - Badges, logo, TOC, etc. Stands out by being a giant, well-written essay about the tech, how to use it, the philosophy behind it, and how it fits into the greater ecosystem.
-- [dbt-labs/dbt-core](https://github.com/dbt-labs/dbt-core#readme) - Project banner, super clear description (friendly to people brand new to the product), screenshot of the docs the tool generates, and concise links to other comprehensive pages explaining Getting Started, Joining the dbt Community, Bug Reports, Code Contribution, and Code of Conduct
-- [dowjones/react-dropdown-tree-select](https://github.com/dowjones/react-dropdown-tree-select#readme) - Clear readme with GIF screenshot for quick demo. Multiple badges, concise ToC, online playground, storybook, detailed description and more.
-- [easybase/easybase-react](https://github.com/easybase/easybase-react#readme) - Project banner and logo. Badges. Expandable walkthrough sections. Concise description and purpose. TOC for easy navigation. GIFs for installation demo. Multiple informative visuals.
-- [emalderson/thephish](https://github.com/emalderson/ThePhish#readme) - Project logo, informative badges, useful TOC, clear description, screenshots, step-by-step installation and configuration guide, contributor guidelines, code of conduct, UML diagrams, coherent tags, issue and pull request templates, well-documented and well-commented code, examples.
-- [github-changelog-generator/github-changelog-generator](https://github.com/github-changelog-generator/github-changelog-generator#readme) - TOC for easy navigation. Concise project description. Installation and usage sections. Output example. Great feature overview. List of alternatives. FAQ.
-- [gitpoint/git-point](https://github.com/gitpoint/git-point#readme) - Clear description. Project Logo. App Store logos. TOC. Clean screenshots. List of features. Detailed installation process. Landing Page.
-- [gofiber/fiber](https://github.com/gofiber/fiber#readme) - Clean project logo. Useful badges and links (languages switcher, code style, test cover, docs, Discord channel). Clear description of what the project does with quickstart, benchmark charts, well-documented code examples (with the ability to hide long content), project philosophy notes ("the why of project"), tables with project addons, list of contributors, star growth statistics, and more.
-- [gowebly/gowebly](https://github.com/gowebly/gowebly#readme) - Clean project banner with logo. Useful badges and links (languages switcher, test cover, docs). Clear description of what the project does with quickstart, understandable feature list, links to the introduction video and article, well-documented CLI command examples, project philosophy notes ("motivation to create"), tables with project components, links to addons and helpers, list of stargazers, and more.
-- [Hexworks/Zircon](https://github.com/Hexworks/zircon#readme) - Dogfood in readme. Clear description of what the project does. Demo screenshot. TOC for easy navigation. Easy installation and setup sections with screenshots. Links for further reading.
-- [httpie/httpie](https://github.com/httpie/httpie#readme) - Description of what the project does. Demo screenshots. Project logo. TOC for easy navigation. Build badges. Quick and simple installation and usage sections. Includes an examples section.
-- [hywax/mafl](https://github.com/hywax/mafl#readme) - Project logo. Clear description of what the project does. TOC for easy navigation. Usage code samples.
-- [IgorAntun/node-chat](https://github.com/IgorAntun/node-chat#readme) - Project screenshot. Informative badges. Clear description. Easy installation/use instructions. Live demo.
-- [iharsh234/WebApp](https://github.com/iharsh234/WebApp#readme) - Project landing page. Clear description of what the project does. Demo screenshot. Simple install and usage sections. Includes an examples section with common uses and a mobile demo section.
-- [iterative/dvc](https://github.com/iterative/dvc#readme) - ReStructuredText format example, PyPi compatible. Logo, custom website-like menu. Smooth how-it-works animation. Badges. Nice contribution section with the hall-of-fame.
-- [ivanperez-keera/Yampa](https://github.com/ivanperez-keera/Yampa#readme) - Clear description. Feature list. TOC for easy navigation. Simple install instructions. Usage code samples. Project samples with GIFs and links to app stores. Documentation and publications. Clear development / contribution rules.
-- [karan/joe](https://github.com/karan/joe#readme) - Project logo. Clear description of what the project does. GIF demo. Easy install and usage sections.
-- [kopach/karma-sabarivka-reporter](https://github.com/kopach/karma-sabarivka-reporter#readme) - Project logo. Useful badges, clear readme with screenshots for quick demo. Concise ToC.
-- [L0garithmic/FastColabCopy](https://github.com/L0garithmic/FastColabCopy#readme) - Project logo. Minimalist description. Badges. GIF demo. About The Project. How To Use. Examples. Credits. Additional Examples.
-- [ma-shamshiri/Human-Activity-Recognition](https://github.com/ma-shamshiri/Human-Activity-Recognition#readme) - Beautiful table of contents. Project logo. Animated project banner. Complete project folder structure. Clear description of what the project does. Nice contributors’ section. Easy navigation.
-- [ma-shamshiri/Pacman-Game](https://github.com/ma-shamshiri/Pacman-Game#readme) - Beautiful table of contents. Project logo. Animated project banner. Suitable GIFs to display each part of the project. Complete list of project files in the repo along with their function. Complete execution instruction.
-- [ma-shamshiri/Spam-Detector](https://github.com/ma-shamshiri/Spam-Detector#readme) - Complete project file description. Project logo. Animated project banner. Concise project description. Clear execution instruction.
-- [MananTank/radioactive-state](https://github.com/MananTank/radioactive-state#readme) - Badges (version, downloads, coverage, size), Twitter Intent, Project Logo, Feature list, Motivation, Installation, Example with GIFs, Emojis, Collapsible Sections, Live Demos, API detailed usage, FAQs, Chat link.
-- [Martinsos/edlib](https://github.com/Martinsos/edlib#readme) - Informative badges (build, version, publication). Concise description. Feature list. TOC. Screenshots. Concise instructions with examples for building and including in your project. Common code examples to get you started quickly.
-- [NASA/ogma](https://github.com/NASA/ogma#readme) - Clear description. Feature list. Demo GIFs. Simple install instructions. Usage code samples. TOC for easy navigation.
-- [nhn/tui.editor](https://github.com/nhn/tui.editor#readme) - Project logo. Clear overview of project features with a demo GIF. Badges. TOC for easy navigation. Colorful icons in front of titles.
-- [NSRare/NSGIF](https://github.com/NSRare/NSGIF#readme) - Project logo. GIF Demo. Usage artwork. Usage code samples.
-- [Owloops/updo](https://github.com/owloops/updo#readme) - Well-structured, visually appealing, and provides comprehensive information about the tool, from its purpose and features to installation and usage, in a clear and user-friendly manner.
-- [php-censor/php-censor](https://github.com/php-censor/php-censor#readme) - Multiple badges, project logo, screenshots, step-by-step installing and upgrading instructions, TOC for easy navigation.
-- [PostHog/posthog](https://github.com/PostHog/posthog#readme) - Custom-made section icons, demo GIF, deploy button, profile images for contributors, concise, clear structure, project logo.
-- [priyavrat-misra/xrays-and-gradcam](https://github.com/priyavrat-misra/xrays-and-gradcam#readme) - TOC for easy navigation. Clear introduction of what the project does. Complete list of all files in the repo and what their function is. Usage section. Clean and concise tables.
-- [React on lambda](https://github.com/sultan99/react-on-lambda#readme) - Project logo, comics to present the main idea, badges, examples with code snippets, demo projects, api documentations, editor configurations.
-- [React Parallax Tilt](https://github.com/mkosir/react-parallax-tilt#readme) - GIF demo. Multiple badges. Feature list. Great live demo with code examples. Easy to follow instructions for local development set up.
-- [Rebilly/redoc](https://github.com/Redocly/redoc#readme) - Multiple badges, project logo, live demo link, GIF-animations of the key features, TL;DR usage.
-- [refinedev/refine](https://github.com/refinedev/refine#readme) - Clean project logo. Brief description at top. Multiple badges. Usage description and examples. Use cases and demo links. Screenshots. Key Features. Contributors. Stargazers. Contribution guidelines.
-- [release-it/release-it](https://github.com/release-it/release-it#readme) - Clear overview of project features with a demo GIF. Badges. Expandable TOC. Usage description and examples. Contribution guidelines. Detailed releases.
-- [rstacruz/hicat](https://github.com/rstacruz/hicat#readme) - GIF demo. Easy installation and setup sections with screenshots. Build badges. Great examples of use cases.
-- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts#readme) - Clean project logo. Brief description at top. Sankey diagram, quick links, badges, OS specific icons, TOC, detailed release changelog.
-- [sebyddd/SDVersion](https://github.com/sebyddd/SDVersion#readme) - Project logo. Build badges. Documentation structuring for multiple programming languages. Usage examples.
-- [serpro69/kotlin-faker](https://github.com/serpro69/kotlin-faker#readme) - Project logo. Badges. Concise description and clear getting-started instructions with a link to the full documentation website. Test, build and contributing guidelines. Licence info.
-- [shama/gaze](https://github.com/shama/gaze#readme) - Project logo. Concise description. Feature list. Usage section. FAQ. Great API documentation. Release history.
-- [sidneycadot/oeis](https://github.com/sidneycadot/oeis#readme) - Overview. List of required dependencies. Complete list of all files in the repo and what their function is. Visual graph of how it all ties together.
-- [sindresorhus/pageres](https://github.com/sindresorhus/pageres#readme) - Project logo. Clear description of what the project does. Build badges. Demo screenshot. Simple install and usage sections. Includes an examples section with common uses.
-- [skydio/revup](https://github.com/Skydio/revup#readme) - Project logo. Animated GIF demo + GIFs for major stages of the step-by-step tutorial. Concise explanation, installation instructions, and contribution section. 
-- [Slackadays/Clipboard](https://github.com/Slackadays/Clipboard#readme) - Project logo. Build and test/coverage badges. Transition from plain description to people-oriented description. Animated GIF showing usage. Custom banners for clearly laid out sections. Custom text assets for headers. Immediate call to action with Quick Start section. Consistent and easy to read command names and signatures. Three immediate options for getting help provided. Easter eggs provided for the detail-oriented.
-- [sourcerer-io/sourcerer-app](https://github.com/sourcerer-io/sourcerer-app#readme) - Clean animated screenshot. Customized call to action badge. Usage showcase.
-- [sr6033/lterm](https://github.com/sr6033/lterm#readme) - Clean logo using characters. Brief updates on development. Detailed contribution guidelines. Contribution suggestions.
-- [Stack-in-a-box/triumphmayflowerclub.com](https://github.com/Stack-in-a-box/triumphmayflowerclub.com#readme) - Stands-out because, while only a simple website, it is presented as a very open project for lesser-experienced developers to cut their teeth on, with a friendly, inclusive tone and accessible set-up instructions. Includes many common elements found in other beautiful READMEs.
-- [stevenfoncken/multitool-for-spotify-php](https://github.com/stevenfoncken/multitool-for-spotify-php#readme) - Concise introduction description. Clear overview of features. Why-section with easter egg (heading). Informative badges. Clear disclaimer. Step-by-step setup instructions. Expandable TOC. Headlines with emojis. Detailed usage section. Shortlinks at top. Back-to-top link in footer. Credits to third-party code/libraries.
-- [sulu/sulu](https://github.com/sulu/sulu#readme) - Project logo, useful badges, clear instructions on where to find more information and report bugs, GIF screenshots, nice use of emoticons.
-- [supunlakmal/thismypc](https://github.com/supunlakmal/thismypc#readme) - Project logo. Useful badges. Web site URL. Screenshot. GIF step-by-step instructions for installation. Project folder structure.
-- [teles/array-mixer](https://github.com/teles/array-mixer#readme) - Clean project logo, badges. Table of contents. Contributing section. Many illustrated examples.
-- [thelounge/thelounge](https://github.com/thelounge/thelounge#readme) - Project logo. Useful badges and links (website, docs, demo). Screenshot. Feature list. Step-by-step instructions for installation, development, and testing. Link to the contributing guide. Good mobile summary.
-- [themerdev/themer](https://github.com/themerdev/themer#readme) - Project logo. Visual description (flowchart) of what the project does. Build badges. TOC. Demo screenshot. Concise install and usage sections, including common workflows. Colorful previews.
-- [vhesener/Closures](https://github.com/vhesener/Closures#readme) - Project logo, cognitive funnel, animated examples. Color coordinated. Clean documentation.
-- [xnbox/DeepfakeHTTP](https://github.com/xnbox/DeepfakeHTTP#readme) - Original hero section. Clear navigation. Minimalist design. Appendices.
-- [zenml-io/zenml](https://github.com/zenml-io/zenml#readme) - Clean project logo. Useful TOC. Clear code examples amongst feature list. Quickstart example.
-
-
-## Articles
-
-- ["Art of Readme - Learn the art of writing quality READMEs."](https://github.com/hackergrrl/art-of-readme#readme) - *Stephen Whitmore*
-- ["Elegant READMEs"](https://www.yegor256.com/2019/04/23/elegant-readme.html) - *Yegor Bugayenko*
-- ["How To Write A Great README"](https://thoughtbot.com/blog/how-to-write-a-great-readme) - *Caleb Thompson (thoughtbot)*
-- ["Readme Driven Development"](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html) - *Tom Preston-Werner*
-- ["Top ten reasons why I won’t use your open source project"](https://changelog.com/posts/top-ten-reasons-why-i-wont-use-your-open-source-project) - *Adam Stacoviak*
-- ["What I learned from an old GitHub project that won 3,000 Stars in a Week"](https://www.freecodecamp.org/news/what-i-learned-from-an-old-github-project-that-won-3-000-stars-in-a-week-628349a5ee14/) - *KyuWoo Choi*
-
-## Tools
-
-- [Amazing GitHub Template](https://github.com/dec0dOS/amazing-github-template#readme) - Useful README.md, LICENSE, CONTRIBUTING.md, CODE_OF_CONDUCT.md, SECURITY.md, GitHub Issues, Pull Requests and Actions templates to jumpstart your projects.
-- [Common Readme](https://github.com/hackergrrl/common-readme#readme) - A common readme style for Node. Includes a guide and a readme generator.
-- [Feedmereadmes](https://github.com/lappleapple/feedmereadmes#readme) - README editing and project analysis/feedback.
-- [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats#readme) - Dynamically generated customizable GitHub cards for README. Stats, extra pins, top languages and WakaTime.
-- [Hall-of-fame](https://github.com/sourcerer-io/hall-of-fame#readme) - Helps show recognition to repo contributors on README. Features new/trending/top contributors. Updates every hour.
-- [Make a README](https://www.makeareadme.com/) - A guide to writing READMEs. Includes an editable template with live Markdown rendering.
-- [README best practices](https://github.com/jehna/readme-best-practices#readme) - A place to copy-paste your README.md from
-- [readme-md-generator](https://github.com/kefranabg/readme-md-generator#readme) - A CLI that generates beautiful README.md files
-- [Readme.so](https://readme.so/) - A simple editor that allows you to quickly add and customize all the sections you need for your project's readme.
-- [READMINE](https://github.com/mhucka/readmine) - A thorough, clear and self-describing README file template for software projects; copy it and edit it as needed.
-- [StackEdit](https://stackedit.io/) - A user-friendly online editor that allows you to quickly customize all the sections you need for your project's readme.
-- [Standard Readme](https://github.com/RichardLitt/standard-readme#readme) - A standard README style specification. Has a generator to help create spec-compliant READMEs, too.
-- [user-statistician](https://github.com/cicirello/user-statistician) - A GitHub Action that generates SVG of detailed GitHub user activity for profile readmes. 
-- [Zalando's README Template](https://github.com/zalando/zalando-howto-open-source/blob/master/READMEtemplate.md#readme) - Simple template to help you cover all the basics.
-
-## Creating GIFs
-
-Embedding an animated gif in your README quickly demonstrates what your project does and catches the reader's eye. Here are a few programs that can help you quickly create gifs for your project:
-
-- [Gifski](https://github.com/sindresorhus/Gifski#readme) - **FREE** - More vivid colors than the rest, but still keep size low.
-- [Giphy Capture](https://giphy.com/apps/giphycapture) - **FREE** - Easy to upload to giphy.com, slightly annoying UX.
-- [LICEcap](https://www.cockos.com/licecap/) - **FREE** - Less intuitive, more features.
-- [Peek](https://github.com/phw/peek#readme) - **FREE** - Simple and easy to use for Linux users.
-- [Recordit](https://recordit.co/) - **FREE** - Simple, clean UI, but auto-uploads to Recordit.
-- [ScreenToGif](https://github.com/NickeManarin/ScreenToGif/) - **FREE** - Open source, customizable UI and easily editable GIFs, easy to get started.
-- [terminalizer](https://github.com/faressoft/terminalizer) - **FREE** - Record your terminal and generate animated gif images or share a web player.
-- [ttystudio](https://github.com/chjj/ttystudio#readme) - **FREE** - For commandline tools, a terminal-to-gif recorder minus the headaches.
-- [vhs](https://github.com/charmbracelet/vhs) - **FREE** - Generate beautiful terminal gifs with a simple scripting language
-
-## Get Feedback
-
-- [feedmereadmes](https://github.com/LappleApple/feedmereadmes#readme) - Free README editing+feedback to make your open-source projects grow. See the README maturity model to help you keep going.
-- [maintainer.io](https://maintainer.io/) - Free README standardization and feedback, if you click on 'Book an audit'.
-
-## Contribute
-
-Contributions are always welcome!
-Please read the [contribution guidelines](contributing.md) first.
-
-## License
-
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
-
-To the extent possible under law, [Matias Singers](https://mts.io) has waived all copyright and related or neighboring rights to this work.
+    - [M0nica](/templates/M0nica.md)
+    - [MaartenGr](/templates/MaartenGr.md)
+    - [mahiiverse1](/templates/mahiiverse1.md)
+    - [mahmoudmiehob](/templates/mahmoudmiehob.md)
+    - [maneprajakta](/templates/maneprajakta.md)
+    - [mani-barathi](/templates/mani-barathi.md)
+    - [manojuppala](/templates/manojuppala.md)
+    - [manumanoj0010](/templates/manumanoj0010.md)
+    - [manvimadan12](/templates/manvimadan12.md)
+    - [marcos-inja](/templates/marcos-inja.md)
+    - [MarikIshtar007](/templates/MarikIshtar007.md)
+    - [martonlederer](/templates/martonlederer.md)
+    - [MasonSlover](/templates/MasonSlover.md)
+    - [MR-Addict](/templates/MR-Addict.md)
+    - [matheusfelipeog](/templates/matheusfelipeog.md)
+    - [matyo91](/templates/matyo91.md)
+    - [maximousblk](/templates/maximousblk.md)
+    - [mazarafa](/templates/mazarafa.md)
+    - [mdeboute](/templates/mdeboute.md)
+    - [MikeOwino](/templates/MikeOwino.md)
+    - [mmphego](/templates/mmphego.md)
+    - [Mogakamo](/templates/Mogakamo.md)
+    - [monkindey](/templates/monkindey.md)
+    - [mostlypanda](/templates/mostlypanda.md)
+    - [mrabro](https://github.com/mrabro)
+    - [Mr-maike](/templates/Mr-maike.md)
+    - [MrBlueBird2](/templates/MrBlueBird2.md)
+    - [MrStanDu33](/templates/MrStanDu33.md)
+    - [ms314006](/templates/ms314006.md)
+    - [MUHAMMADFAIZANHAIDAR](/templates/MUHAMMADFAIZANHAIDAR.md)
+    - [Mahdiiye](/templates/Mahdiiye.md)
+    - [MarciaGabrielle](/templates/MarciaGabrielle.md)
+    - [mubin-khalid](/templates/mubin-khalid.md)
+    - [Mo-Alsehli](/templates/Mo-Alsehli.md)
+    - [mr-mib](/templates/mr-mib.md)
+  - N
+    - [naisofly](/templates/naisofly.md)
+    - [nasreekar](/templates/nasreekar.md)
+    - [NavodyaPasqual](/templates/NavodyaPasqual.md)
+    - [Niefee](/templates/Niefee.md)
+    - [Niko-Cloud](/templates/Niko-Cloud.md)
+    - [Nishant1500](/templates/Nishant1500.md)
+    - [Nishant1500](/templates/Nishant1500.md)
+    - [nitindahiya199](/templates/nitindahiya199.md)
+    - [Nneji123](/templates/Nneji123.md)
+    - [nouveau-riche](/templates/nouveau-riche.md)
+    - [novatorem](/templates/novatorem.md)
+    - [nuhmanpk](/templates/nuhmanpk.md)
+    - [Null3000](/templates/null3000.md)
+    - [N3dal](/templates/N3dal.md)
+  - O
+    - [oHTGo](/templates/oHTGo.md)
+    - [OmkarPathak](/templates/OmkarPathak.md)
+    - [orhun](/templates/orhun.md)
+    - [oribendetcx](/templates/oribendetcx.md)
+  - P
+    - [p-w](/templates/p-w.md)
+    - [Parply](/templates/Parply.md)
+    - [paulj1989](/templates/paulj1989.md)
+    - [pavstar619](/templates/pavstar619.md)
+    - [pedromlsreis](/templates/pedromlsreis.md)
+    - [Pepyn0](/templates/Pepyn0.md)
+    - [phuocantd](/templates/phuocantd.md)
+    - [piyushxbajaj](/templates/piyushxbajaj.md)
+    - [pkkulhari](/templates/pkkulhari.md)
+    - [PluckyPrecious](/templates/PluckyPrecious.md)
+    - [pmbechard](/templates/pmbechard.md)
+    - [pr2tik1](/templates/pr2tik1.md)
+    - [pranshu05](/templates/pranshu05.md)
+    - [prathimacode-hub](/templates/prathimacode-hub.md)
+    - [prathmesh16](/templates/prathmesh16.md)
+    - [pratik-kale20](/templates/pratik-kale20.md)
+    - [preccrep](/templates/preccrep.md)
+    - [progdagi](/templates/progdagi.md)
+    - [PrudhviGNV](/templates/PrudhviGNV.md)
+    - [pulkit-30](/templates/pulkit-30.md)
+    - [PushpneetSingh](/templates/PushpneetSingh.md)
+    - [PrasannaBrabourame](/templates/prasannabrabourame.md)
+  - Q
+  - R
+    - [rafnixg](/templates/rafnixg.md)
+    - [rahulkarda](/templates/rahulkarda.md)
+    - [RahulMahesh62](/templates/RahulMahesh62.md)
+    - [RaviSolanki27](/templates/RaviSolanki27.md)
+    - [ray0emma](/templates/ray0emma.md)
+    - [reddyprasade](/templates/reddyprasade.md)
+    - [rednafi](/templates/rednafi.md)
+    - [regchiu](/templates/regchiu.md)
+    - [ridermansb](/templates/ridermansb.md)
+    - [rishabh7795](/templates/rishabh7795.md)
+    - [Rishit-dagli](/templates/Rishit-dagli.md)
+    - [rock12231](/templates/rock12231.md)
+    - [roshanlam](/templates/roshanlam.md)
+    - [ruthrootz](/templates/ruthrootz.md)
+  - S
+    - [Sabihashaik](/templates/Sabihashaik.md)
+    - [sahil2128](/templates/sahil2128.md)
+    - [sajidul-kabir](/templates/sajidul-kabir.md)
+    - [sambhav2612](/templates/sambhav2612.md)
+    - [sameer1604](/templates/sameer1604.md)
+    - [sanket9006](/templates/sanket9006.md)
+    - [Sanskarjaiswal2001](/templates/Sanskarjaiswal2001.md)
+    - [sanskarsahu](/templates/DSmark.md)
+    - [Sarath-PM](/templates/sarath-pm.md)
+    - [sauravchamoli17](/templates/sauravchamoli17.md)
+    - [SayantaniDeb](/templates/SayantaniDeb.md)
+    - [sebaF96](/templates/sebaF96.md)
+    - [shamimsikder](/templates/shamimsikder.md)
+    - [shaan71845](/templates/shaan71845.md)
+    - [sharannyobasu](/templates/sharannyobasu.md)
+    - [shaurya-src](/templates/shaurya-src.md)
+    - [Shourya742](/templates/Shourya742.md)
+    - [shravanatirtha](/templates/shravanatirtha.md)
+    - [Shreya549](/templates/Shreya549.md)
+    - [Shwetang550](/templates/Shwetang550.md)
+    - [sidbelbase](/templates/sidbelbase.md)
+    - [sisodiya2421](/templates/sisodiya2421.md)
+    - [SmanthBajjuri07](/templates/SmanthBajjuri07.md)
+    - [smir45](/templates/smir45.md)
+    - [smkamranqadri](/templates/smkamranqadri.md)
+    - [soham4abc](/templates/soham4abc.md)
+    - [soilshubham](/templates/soilshubham.md)
+    - [sourabmaity](/templates/sourabmaity.md)
+    - [Sreevishnu-ux](/templates/Sreevishnu-ux.md)
+    - [sriharikapu](/templates/sriharikapu.md)
+    - [SrishtiSinghD](/templates/SrishtiSinghD.md)
+    - [stephenajulu](/templates/stephenajulu.md)
+    - [stkeky](/templates/stkeky.md)
+    - [SubhadeepZilong](/templates/SubhadeepZilong.md)
+    - [sudip-mondal-2002](/templates/sudip-mondal-2002.md)
+    - [sudiptog81](/templates/sudiptog81.md)
+    - [Sumanth-Talluri](/templates/Sumanth-Talluri.md)
+    - [SumanthBajjuri07](/templates/SumanthBajjuri07.md)
+    - [SuperSupeng](/templates/SuperSupeng.md)
+    - [suzel](/templates/suzel.md)
+    - [sxoxgxi](/templates/sxoxgxi.md)
+    - [syedammar111](/templates/syedammar111.md)
+    - [Sophie Nguyen](/templates/SophieNguyen113.md)
+    - [StefanosSt](/templates/StefanosSt.md)
+    - [shmjade](/templates/shmjade.md)
+    - [supuna97](/templates/supuna97.md)
+  - T
+    - [Taabannn](/templates/Taabannn.md)
+    - [Tahanima](/templates/Tahanima.md)
+    - [tanaytoshniwal](/templates/tanaytoshniwal.md)
+    - [tanyagupta0201](/templates/tanyagupta0201.md)
+    - [TanZng](/templates/TanZng.md)
+    - [taulantxhakli](/templates/taulantxhakli.md)
+    - [techytushar](/templates/techytushar.md)
+    - [TekyaygilFethi](/templates/TekyaygilFethi.md)
+    - [Thaiane](/templates/Thaiane.md)
+    - [theabbie](/templates/theabbie.md)
+    - [thesaravanakumar](/templates/thesaravanakumar.md)
+    - [thmsgbrt](/templates/thmsgbrt.md)
+    - [Thomas-George-T](/templates/Thomas-George-T.md)
+    - [thomasbnt](/templates/thomasbnt.md)
+    - [thompsonemerson](/templates/thompsonemerson.md)
+    - [thuanpham2311](/templates/thuanpham2311.md)
+    - [tienhuynh-tn](/templates/tienhuynh-tn.md)
+    - [timburgan](/templates/timburgan.md)
+    - [tonynguyenit18](/templates/tonynguyenit18.md)
+    - [trinib](/templates/trinib.md)
+    - [thenuka99](/templates/thenuka99.md)
+  - U
+    - [uannabi](/templates/uannabi.md)
+    - [UjwalKandi](/templates/UjwalKandi.md)
+    - [ustavosoriano](/templates/ustavosoriano.md)
+    - [UjjwalSharma01](/templates/UjjwalSharma01.md)
+  - V
+    - [VatanAgnihotri](/templates/VatanAgnihotri.md) 
+    - [vanzasetia](/templates/vanzasetia.md)
+    - [VatanaChhorn](/templates/VatanaChhorn.md)
+    - [vimalverma558](/templates/vimalverma558.md)
+    - [VinayakBector2002](/templates/VinayakBector2002.md)
+    - [viralbhadeshiya](/templates/viralbhadeshiya.md)
+    - [vishwasnavadak](/templates/vishwasnavadak.md)
+    - [VisualBean](/templates/VisualBean.md)
+  - W
+    - [WangNingkai](/templates/WangNingkai.md)
+    - [WarenGonzaga](/templates/WarenGonzaga.md)
+    - [WaylonWalker](/templates/WaylonWalker.md)
+    - [weltonfelix](/templates/weltonfelix.md)
+    - [windard](/templates/windard.md)
+    - [wyattowalsh](/templates/wyattowalsh.md)
+  - X
+    - [xcaq](/templates/xcaq.md)
+    - [xiaoluoboding](/templates/xiaoluoboding.md)
+    - [Xx-Ashutosh-xX](/templates/Xx-Ashutosh-xX.md)
+  - Y
+    - [YasPHP](/templates/YasPHP.md)
+    - [Yogesh](/templates/vibrantfix.md)
+    - [yuebaix](/templates/yuebaix.md)
+    - [yzhao062](/templates/yzhao062.md)
+    - [YasinAlhadi](/templates/YasinAlhadi.md)
+  - Z
+    - [ZamranxD](/templates/ZamranxD.md)
+    - [zeeid](https://github.com/zeeid)
+    - [zillastar](/templates/zillastar.md)
+    - [zjayers](/templates/zjayers.md)
+    - [zmcx16](/templates/zmcx16.md)
