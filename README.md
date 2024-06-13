@@ -1,56 +1,126 @@
-<img align="center" src="https://raw.githubusercontent.com/saviomartin/saviomartin/master/assets/banner.gif"/>
+# Using the encryption tool (bufcrypt)
 
-<img align="center" src="https://github.com/saviomartin/saviomartin/blob/master/assets/about.png?raw=true"/>
+`bufcrypt encrypt "mysupersecret"`
 
-- 🔭 I’m currently working on NodeJs
-- 🌱 I’m currently learning Backend
-- 💬 Ask me anything about Frontend
-- 📫 How to reach me: saviomartin2020@gmail.com
-- 😄 My website: https://savio.works/
-- ⚡ Fun fact: I'm comming to teen
+`AQICAH******************************************************************************************************************cFrAlYeM`
 
-<img align="center" src="https://github.com/saviomartin/saviomartin/blob/master/assets/connect.png?raw=true"/>
+## Contents
 
-- <a href="https://www.instagram.com/teen_developer/"><img src="https://img.shields.io/badge/instagram%20@teen_developer-DD2476?style=for-the-badge&logo=instagram&logoColor=white"/></a>
-- <a href="https://www.instagram.com/teen_developer/"><img src="https://img.shields.io/badge/facebook%20@saviomartin.1694-344E86?style=for-the-badge&logo=facebook&logoColor=white"/></a>
-- <a href="https://www.instagram.com/teen_developer/"><img src="https://img.shields.io/badge/twitter%20@saviomartin3-0D95E8?style=for-the-badge&logo=twitter&logoColor=white"/></a>
-- <a href="https://savio.works/"><img height="30px" src="https://img.shields.io/badge/My%20Website:%20savio.works-8E2DE2?style=for-the-badge&logo=google%20chrome&logoColor=white"/></a>
+* [Before you use the tool](#before-you-use-the-tool)
+* [Installation and usage](#installation-and-usage)
+  * [Installation](#installation)
+  * [Usage](#usage)
+* [Intro and motivation](#intro-and-motivation)
+  * [How bufcrypt helps with documentation](#how-bufcrypt-helps-with-documentation)
+* [How to use bufcrypt in documentation](#how-bufcrypt-helps-with-documentation)
 
-<img align="center" src="https://github.com/saviomartin/saviomartin/blob/master/assets/skills.png?raw=true">
+## Before you use the tool
 
-![HTML5](https://img.shields.io/badge/html%205-grey?style=for-the-badge&logo=html5&logoColor=white&labelColor=8E2DE2)
-![CSS3](https://img.shields.io/badge/css%203-grey?style=for-the-badge&logo=css3&logoColor=white&labelColor=8E2DE2)
-![Sass](https://img.shields.io/badge/sass-grey?style=for-the-badge&logo=sass&logoColor=white&labelColor=8E2DE2)
-![JavaScript](https://img.shields.io/badge/-JavaScript-grey?style=for-the-badge&logo=javascript&logoColor=white&labelColor=8E2DE2)
-<br>
-![bootstrap](https://img.shields.io/badge/-bootstrap-grey?style=for-the-badge&logo=bootstrap&logoColor=white&labelColor=8E2DE2)
-![materializecss](https://img.shields.io/badge/Materialize%20css-grey?style=for-the-badge&logo=google&logoColor=white&labelColor=8E2DE2)
-![node](https://img.shields.io/badge/-node-grey?style=for-the-badge&logo=node.js&logoColor=white&labelColor=8E2DE2)
-![php](https://img.shields.io/badge/-php-grey?style=for-the-badge&logo=php&logoColor=white&labelColor=8E2DE2)
-<br>
-![mongodb](https://img.shields.io/badge/-mongodb-grey?style=for-the-badge&logo=mongodb&logoColor=white&labelColor=8E2DE2)
-![firebase](https://img.shields.io/badge/-firebase-grey?style=for-the-badge&logo=firebase&logoColor=white&labelColor=8E2DE2)
-![git](https://img.shields.io/badge/-git-grey?style=for-the-badge&logo=git&logoColor=white&labelColor=8E2DE2)
-![github](https://img.shields.io/badge/-github-grey?style=for-the-badge&logo=github&logoColor=white&labelColor=8E2DE2)
-<br>
-![python](https://img.shields.io/badge/-python-grey?style=for-the-badge&logo=python&logoColor=white&labelColor=8E2DE2)
-![jquery](https://img.shields.io/badge/-jquery-grey?style=for-the-badge&logo=jquery&logoColor=white&labelColor=8E2DE2)
-![MarkDown](https://img.shields.io/badge/-Markdown-grey?style=for-the-badge&logo=Markdown&logoColor=white&labelColor=8E2DE2)
-![git](https://img.shields.io/badge/-git-grey?style=for-the-badge&logo=git&logoColor=white&labelColor=8E2DE2)
+You'll need an AWS key setup on your machine to use the `bufcrypt` encryption
+tool. Additionally the key will need permission to access the KMS key used.
+Ping Adnan to help you get setup with this if you need it.
+
+## Installation and usage
+
+### Installation
+
+1. Download the script from this repo and place it in `/usr/local/bin/bufcrypt`. 
+  * Use `chmod +x /usr/local/bin/bufcrypt` to make it executable.
+  * You may need to use `sudo` for this step depending on your local
+    environment.
+2. Run `bufcrypt help` to view the command documentation.
+3. Run `bufcrypt encrypt "MYSECRET"` to test it out. You should receive the
+   garbled text that looks like the stuff shown above.
+4. Copy the value that showed up in your terminal and run `bufcrypt decrypt
+   "paste-the-value-between-quotes"`.
+5. You should get `MYSECRET` as a result.
+
+### Usage
+
+**Encrypting single lines of text**
+
+`bufcrypt encrypt "senstive info goes here"`
 
 
-<img align="center" src="https://github.com/saviomartin/saviomartin/blob/master/assets/git.png?raw=true"/>
+**Encrypting multiple lines of text**
 
-<img src="https://github-readme-stats.vercel.app/api?username=saviomartin&show_icons=true&theme=radical&title_color=8E2DE2&text_color=fff&icon_color=8E2DE2">
+```
+bufcrypt encrypt "my sensitive info
+goes
+on multiple lines"
+```
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=saviomartin&theme=radical&title_color=8E2DE2&text_color=fff)
+You can achieve the above by just typing and hitting enter to get a new line.
+The terminal will allow any number of new lines until it receives a closing
+quotation mark
 
-<img src="https://github.com/saviomartin/saviomartin/blob/master/assets/repo.png?raw=true">
+**Decrypting**
 
-![Repo 1](https://github-readme-stats.vercel.app/api/pin/?username=saviomartin&repo=sprintnote&show_icons=true&theme=radical&title_color=8E2DE2&text_color=fff&icon_color=8E2DE2)
-![Repo 2](https://github-readme-stats.vercel.app/api/pin/?username=saviomartin&repo=covid-chatbot&show_icons=true&theme=radical&title_color=8E2DE2&text_color=fff&icon_color=8E2DE2)
+`bufcrypt decrypt "paste-the-encrypted-text-here"`
 
-<p align="center">
-<img src="https://visitor-badge.laobi.icu/badge?page_id=saviomartin" id="counter">
-</p>
-⭐️ From [saviomartin](https://github.com/saviomartin)
+**Encrypting a file**
+
+`bufcrypt encryptfile "~/.aws/credentials.backup"`
+
+---
+
+**NOTE:** `bufcrypt help` will always carry the most up to date documentation of the
+command. This file is in sync at the time of this writing but might fall behind
+at times. Please refer to `bufcrypt help` as the primary documentation source
+for usage of the command.
+
+
+## Intro and Motivation
+
+The encryption tool (henceforth referred to as `bufcrypt`) is a small shell
+script that uses AWS KMS for ecnrypting small chunks of text. The limit is
+currently capped at 4096 bits and will be increased in the near future. The
+script will also change to become a binary will allow even binary files to be
+encrypted.
+
+Bufcrypt was create to allow us to encrypt values that you need to share via
+slack or other insecure channels **if needed**. This is especially useful if you
+need to share sensitive information such as AWS keys or login details to an app
+with the whole team. It is more convenient than sharing it via multiple one time
+secrets. Instead you can use a single ecnrypted value which can be safely pasted
+into channels such as slack or email.
+
+### How `bufcrypt` helps with documentation
+
+For the purpose of documentation, bufcrypt is used to encrypt sensitive
+information that goes into our documenation.
+
+Sensitive information here is any info that we would avoid sharing in public.
+This includes IP addresses, certain commands, SQL structures such as column
+names of tables, and internal application subdomain information.
+
+**This should not be used as way to share volatile information such as API
+secret tokens inside our documentation. That information MUST remain outside of
+the docs regardless of it being encrypted or not.**
+
+A good measuring stick would be, "can an attacker immediately or effortlessly do
+something malicious with this information?". If the answer is Yes, it is
+volatile. If no, it's probably information that can be encrypted and placed in
+the docs.
+
+
+## How to use `bufcrypt` in documentation
+
+Once you have your encrypted value, to add it to the documentation, please enter
+the value between `<secret></secret>` tags. 
+
+If my encrpted value is `908454j3h319u0ashujhufhafa=/134o2urf1+` for example,
+I'd use
+
+`<secret>908454j3h319u0ashujhufhafa=/134o2urf1+</secret>` inside the docs when
+editing it. The final displayed markdown renders the value as normal (without
+the <secret> tag being visible)
+
+The reason for using `<secret>` is that in the future, we'll have a tool to
+automatically read the documentation and re-encrypt values with rotated keys.
+Having it between `<secret>` tags will make it easier to detect secrets and
+rotate them.
+
+There will be additional safeguards for this so don't worry if you forgot to use
+the `<secret>` tag. We'll be trying to have as many safeguards as possible for
+this.
