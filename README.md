@@ -1,126 +1,76 @@
-# Using the encryption tool (bufcrypt)
+# Contributor Covenant Code of Conduct
 
-`bufcrypt encrypt "mysupersecret"`
+## Our Pledge
 
-`AQICAH******************************************************************************************************************cFrAlYeM`
+In the interest of fostering an open and welcoming environment, we as
+contributors and maintainers pledge to making participation in our project and
+our community a harassment-free experience for everyone, regardless of age, body
+size, disability, ethnicity, sex characteristics, gender identity and expression,
+level of experience, education, socio-economic status, nationality, personal
+appearance, race, religion, or sexual identity and orientation.
 
-## Contents
+## Our Standards
 
-* [Before you use the tool](#before-you-use-the-tool)
-* [Installation and usage](#installation-and-usage)
-  * [Installation](#installation)
-  * [Usage](#usage)
-* [Intro and motivation](#intro-and-motivation)
-  * [How bufcrypt helps with documentation](#how-bufcrypt-helps-with-documentation)
-* [How to use bufcrypt in documentation](#how-bufcrypt-helps-with-documentation)
+Examples of behavior that contributes to creating a positive environment
+include:
 
-## Before you use the tool
+- Using welcoming and inclusive language
+- Being respectful of differing viewpoints and experiences
+- Gracefully accepting constructive criticism
+- Focusing on what is best for the community
+- Showing empathy towards other community members
 
-You'll need an AWS key setup on your machine to use the `bufcrypt` encryption
-tool. Additionally the key will need permission to access the KMS key used.
-Ping Adnan to help you get setup with this if you need it.
+Examples of unacceptable behavior by participants include:
 
-## Installation and usage
+- The use of sexualized language or imagery and unwelcome sexual attention or
+  advances
+- Trolling, insulting/derogatory comments, and personal or political attacks
+- Public or private harassment
+- Publishing others' private information, such as a physical or electronic
+  address, without explicit permission
+- Other conduct which could reasonably be considered inappropriate in a
+  professional setting
 
-### Installation
+## Our Responsibilities
 
-1. Download the script from this repo and place it in `/usr/local/bin/bufcrypt`. 
-  * Use `chmod +x /usr/local/bin/bufcrypt` to make it executable.
-  * You may need to use `sudo` for this step depending on your local
-    environment.
-2. Run `bufcrypt help` to view the command documentation.
-3. Run `bufcrypt encrypt "MYSECRET"` to test it out. You should receive the
-   garbled text that looks like the stuff shown above.
-4. Copy the value that showed up in your terminal and run `bufcrypt decrypt
-   "paste-the-value-between-quotes"`.
-5. You should get `MYSECRET` as a result.
+Project maintainers are responsible for clarifying the standards of acceptable
+behavior and are expected to take appropriate and fair corrective action in
+response to any instances of unacceptable behavior.
 
-### Usage
+Project maintainers have the right and responsibility to remove, edit, or
+reject comments, commits, code, wiki edits, issues, and other contributions
+that are not aligned to this Code of Conduct, or to ban temporarily or
+permanently any contributor for other behaviors that they deem inappropriate,
+threatening, offensive, or harmful.
 
-**Encrypting single lines of text**
+## Scope
 
-`bufcrypt encrypt "senstive info goes here"`
+This Code of Conduct applies both within project spaces and in public spaces
+when an individual is representing the project or its community. Examples of
+representing a project or community include using an official project e-mail
+address, posting via an official social media account, or acting as an appointed
+representative at an online or offline event. Representation of a project may be
+further defined and clarified by project maintainers.
 
+## Enforcement
 
-**Encrypting multiple lines of text**
+Instances of abusive, harassing, or otherwise unacceptable behavior may be
+reported by contacting the project team at rahuldkjain@gmail.com. All
+complaints will be reviewed and investigated and will result in a response that
+is deemed necessary and appropriate to the circumstances. The project team is
+obligated to maintain confidentiality with regard to the reporter of an incident.
+Further details of specific enforcement policies may be posted separately.
 
-```
-bufcrypt encrypt "my sensitive info
-goes
-on multiple lines"
-```
+Project maintainers who do not follow or enforce the Code of Conduct in good
+faith may face temporary or permanent repercussions as determined by other
+members of the project's leadership.
 
-You can achieve the above by just typing and hitting enter to get a new line.
-The terminal will allow any number of new lines until it receives a closing
-quotation mark
+## Attribution
 
-**Decrypting**
+This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
+available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
-`bufcrypt decrypt "paste-the-encrypted-text-here"`
+[homepage]: https://www.contributor-covenant.org
 
-**Encrypting a file**
-
-`bufcrypt encryptfile "~/.aws/credentials.backup"`
-
----
-
-**NOTE:** `bufcrypt help` will always carry the most up to date documentation of the
-command. This file is in sync at the time of this writing but might fall behind
-at times. Please refer to `bufcrypt help` as the primary documentation source
-for usage of the command.
-
-
-## Intro and Motivation
-
-The encryption tool (henceforth referred to as `bufcrypt`) is a small shell
-script that uses AWS KMS for ecnrypting small chunks of text. The limit is
-currently capped at 4096 bits and will be increased in the near future. The
-script will also change to become a binary will allow even binary files to be
-encrypted.
-
-Bufcrypt was create to allow us to encrypt values that you need to share via
-slack or other insecure channels **if needed**. This is especially useful if you
-need to share sensitive information such as AWS keys or login details to an app
-with the whole team. It is more convenient than sharing it via multiple one time
-secrets. Instead you can use a single ecnrypted value which can be safely pasted
-into channels such as slack or email.
-
-### How `bufcrypt` helps with documentation
-
-For the purpose of documentation, bufcrypt is used to encrypt sensitive
-information that goes into our documenation.
-
-Sensitive information here is any info that we would avoid sharing in public.
-This includes IP addresses, certain commands, SQL structures such as column
-names of tables, and internal application subdomain information.
-
-**This should not be used as way to share volatile information such as API
-secret tokens inside our documentation. That information MUST remain outside of
-the docs regardless of it being encrypted or not.**
-
-A good measuring stick would be, "can an attacker immediately or effortlessly do
-something malicious with this information?". If the answer is Yes, it is
-volatile. If no, it's probably information that can be encrypted and placed in
-the docs.
-
-
-## How to use `bufcrypt` in documentation
-
-Once you have your encrypted value, to add it to the documentation, please enter
-the value between `<secret></secret>` tags. 
-
-If my encrpted value is `908454j3h319u0ashujhufhafa=/134o2urf1+` for example,
-I'd use
-
-`<secret>908454j3h319u0ashujhufhafa=/134o2urf1+</secret>` inside the docs when
-editing it. The final displayed markdown renders the value as normal (without
-the <secret> tag being visible)
-
-The reason for using `<secret>` is that in the future, we'll have a tool to
-automatically read the documentation and re-encrypt values with rotated keys.
-Having it between `<secret>` tags will make it easier to detect secrets and
-rotate them.
-
-There will be additional safeguards for this so don't worry if you forgot to use
-the `<secret>` tag. We'll be trying to have as many safeguards as possible for
-this.
+For answers to common questions about this code of conduct, see
+https://www.contributor-covenant.org/faq
