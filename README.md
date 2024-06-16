@@ -1,342 +1,421 @@
-{
-  "name": "standard-readme-spec",
-  "version": "1.2.2",
-  "lockfileVersion": 1,
-  "requires": true,
-  "dependencies": {
-    "ansi-escapes": {
-      "version": "1.4.0",
-      "resolved": "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-1.4.0.tgz",
-      "integrity": "sha1-06ioOzGapneTZisT52HHkRQiMG4="
-    },
-    "ansi-regex": {
-      "version": "2.1.1",
-      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
-      "integrity": "sha1-w7M6te42DYbg5ijwRorn7yfWVN8="
-    },
-    "ansi-styles": {
-      "version": "2.2.1",
-      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.1.tgz",
-      "integrity": "sha1-tDLdM1i2NM914eRmQ2gkBTPB3b4="
-    },
-    "babel-polyfill": {
-      "version": "6.23.0",
-      "resolved": "https://registry.npmjs.org/babel-polyfill/-/babel-polyfill-6.23.0.tgz",
-      "integrity": "sha1-g2TKYt+Or7gwSZ9pkXdGbDsDSZ0=",
-      "requires": {
-        "babel-runtime": "^6.22.0",
-        "core-js": "^2.4.0",
-        "regenerator-runtime": "^0.10.0"
-      }
-    },
-    "babel-runtime": {
-      "version": "6.26.0",
-      "resolved": "https://registry.npmjs.org/babel-runtime/-/babel-runtime-6.26.0.tgz",
-      "integrity": "sha1-llxwWGaOgrVde/4E/yM3vItWR/4=",
-      "requires": {
-        "core-js": "^2.4.0",
-        "regenerator-runtime": "^0.11.0"
-      },
-      "dependencies": {
-        "regenerator-runtime": {
-          "version": "0.11.1",
-          "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz",
-          "integrity": "sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg=="
-        }
-      }
-    },
-    "chalk": {
-      "version": "1.1.3",
-      "resolved": "https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz",
-      "integrity": "sha1-qBFcVeSnAv5NFQq9OHKCKn4J/Jg=",
-      "requires": {
-        "ansi-styles": "^2.2.1",
-        "escape-string-regexp": "^1.0.2",
-        "has-ansi": "^2.0.0",
-        "strip-ansi": "^3.0.0",
-        "supports-color": "^2.0.0"
-      }
-    },
-    "chardet": {
-      "version": "0.4.2",
-      "resolved": "https://registry.npmjs.org/chardet/-/chardet-0.4.2.tgz",
-      "integrity": "sha1-tUc7M9yXxCTl2Y3IfVXU2KKci/I="
-    },
-    "cli-cursor": {
-      "version": "2.1.0",
-      "resolved": "https://registry.npmjs.org/cli-cursor/-/cli-cursor-2.1.0.tgz",
-      "integrity": "sha1-s12sN2R5+sw+lHR9QdDQ9SOP/LU=",
-      "requires": {
-        "restore-cursor": "^2.0.0"
-      }
-    },
-    "cli-width": {
-      "version": "2.2.1",
-      "resolved": "https://registry.npmjs.org/cli-width/-/cli-width-2.2.1.tgz",
-      "integrity": "sha512-GRMWDxpOB6Dgk2E5Uo+3eEBvtOOlimMmpbFiKuLFnQzYDavtLFY3K5ona41jgN/WdRZtG7utuVSVTL4HbZHGkw=="
-    },
-    "core-js": {
-      "version": "2.6.12",
-      "resolved": "https://registry.npmjs.org/core-js/-/core-js-2.6.12.tgz",
-      "integrity": "sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ=="
-    },
-    "encoding": {
-      "version": "0.1.13",
-      "resolved": "https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz",
-      "integrity": "sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==",
-      "requires": {
-        "iconv-lite": "^0.6.2"
-      },
-      "dependencies": {
-        "iconv-lite": {
-          "version": "0.6.2",
-          "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.2.tgz",
-          "integrity": "sha512-2y91h5OpQlolefMPmUlivelittSWy0rP+oYVpn6A7GwVHNE8AWzoYOBNmlwks3LobaJxgHCYZAnyNo2GgpNRNQ==",
-          "requires": {
-            "safer-buffer": ">= 2.1.2 < 3.0.0"
-          }
-        }
-      }
-    },
-    "escape-string-regexp": {
-      "version": "1.0.5",
-      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
-      "integrity": "sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ="
-    },
-    "external-editor": {
-      "version": "2.2.0",
-      "resolved": "https://registry.npmjs.org/external-editor/-/external-editor-2.2.0.tgz",
-      "integrity": "sha512-bSn6gvGxKt+b7+6TKEv1ZycHleA7aHhRHyAqJyp5pbUFuYYNIzpZnQDk7AsYckyWdEnTeAnay0aCy2aV6iTk9A==",
-      "requires": {
-        "chardet": "^0.4.0",
-        "iconv-lite": "^0.4.17",
-        "tmp": "^0.0.33"
-      }
-    },
-    "figures": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/figures/-/figures-2.0.0.tgz",
-      "integrity": "sha1-OrGi0qYsi/tDGgyUy3l6L84nyWI=",
-      "requires": {
-        "escape-string-regexp": "^1.0.5"
-      }
-    },
-    "has-ansi": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz",
-      "integrity": "sha1-NPUEnOHs3ysGSa8+8k5F7TVBbZE=",
-      "requires": {
-        "ansi-regex": "^2.0.0"
-      }
-    },
-    "iconv-lite": {
-      "version": "0.4.24",
-      "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz",
-      "integrity": "sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==",
-      "requires": {
-        "safer-buffer": ">= 2.1.2 < 3"
-      }
-    },
-    "inquirer": {
-      "version": "3.0.6",
-      "resolved": "https://registry.npmjs.org/inquirer/-/inquirer-3.0.6.tgz",
-      "integrity": "sha1-4EqqnQW3o8ubD0B9BDdfBEcZA0c=",
-      "requires": {
-        "ansi-escapes": "^1.1.0",
-        "chalk": "^1.0.0",
-        "cli-cursor": "^2.1.0",
-        "cli-width": "^2.0.0",
-        "external-editor": "^2.0.1",
-        "figures": "^2.0.0",
-        "lodash": "^4.3.0",
-        "mute-stream": "0.0.7",
-        "run-async": "^2.2.0",
-        "rx": "^4.1.0",
-        "string-width": "^2.0.0",
-        "strip-ansi": "^3.0.0",
-        "through": "^2.3.6"
-      }
-    },
-    "is-fullwidth-code-point": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
-      "integrity": "sha1-o7MKXE8ZkYMWeqq5O+764937ZU8="
-    },
-    "is-stream": {
-      "version": "1.1.0",
-      "resolved": "https://registry.npmjs.org/is-stream/-/is-stream-1.1.0.tgz",
-      "integrity": "sha1-EtSj3U5o4Lec6428hBc66A2RykQ="
-    },
-    "lodash": {
-      "version": "4.17.19",
-      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.19.tgz",
-      "integrity": "sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ=="
-    },
-    "mimic-fn": {
-      "version": "1.2.0",
-      "resolved": "https://registry.npmjs.org/mimic-fn/-/mimic-fn-1.2.0.tgz",
-      "integrity": "sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ=="
-    },
-    "minimist": {
-      "version": "1.2.0",
-      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz",
-      "integrity": "sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ="
-    },
-    "mute-stream": {
-      "version": "0.0.7",
-      "resolved": "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.7.tgz",
-      "integrity": "sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s="
-    },
-    "node-fetch": {
-      "version": "1.6.3",
-      "resolved": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.6.3.tgz",
-      "integrity": "sha1-3CNO3WSJmC1Y6PDbT2lQKavNjAQ=",
-      "requires": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      }
-    },
-    "object-assign": {
-      "version": "4.1.1",
-      "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
-      "integrity": "sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM="
-    },
-    "onetime": {
-      "version": "2.0.1",
-      "resolved": "https://registry.npmjs.org/onetime/-/onetime-2.0.1.tgz",
-      "integrity": "sha1-BnQoIw/WdEOyeUsiu6UotoZ5YtQ=",
-      "requires": {
-        "mimic-fn": "^1.0.0"
-      }
-    },
-    "opencollective": {
-      "version": "1.0.3",
-      "resolved": "https://registry.npmjs.org/opencollective/-/opencollective-1.0.3.tgz",
-      "integrity": "sha1-ruY3K8KBRFg2kMPKja7PwSDdDvE=",
-      "requires": {
-        "babel-polyfill": "6.23.0",
-        "chalk": "1.1.3",
-        "inquirer": "3.0.6",
-        "minimist": "1.2.0",
-        "node-fetch": "1.6.3",
-        "opn": "4.0.2"
-      }
-    },
-    "opencollective-postinstall": {
-      "version": "2.0.3",
-      "resolved": "https://registry.npmjs.org/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz",
-      "integrity": "sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q=="
-    },
-    "opn": {
-      "version": "4.0.2",
-      "resolved": "https://registry.npmjs.org/opn/-/opn-4.0.2.tgz",
-      "integrity": "sha1-erwi5kTf9jsKltWrfyeQwPAavJU=",
-      "requires": {
-        "object-assign": "^4.0.1",
-        "pinkie-promise": "^2.0.0"
-      }
-    },
-    "os-tmpdir": {
-      "version": "1.0.2",
-      "resolved": "https://registry.npmjs.org/os-tmpdir/-/os-tmpdir-1.0.2.tgz",
-      "integrity": "sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ="
-    },
-    "pinkie": {
-      "version": "2.0.4",
-      "resolved": "https://registry.npmjs.org/pinkie/-/pinkie-2.0.4.tgz",
-      "integrity": "sha1-clVrgM+g1IqXToDnckjoDtT3+HA="
-    },
-    "pinkie-promise": {
-      "version": "2.0.1",
-      "resolved": "https://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.1.tgz",
-      "integrity": "sha1-ITXW36ejWMBprJsXh3YogihFD/o=",
-      "requires": {
-        "pinkie": "^2.0.0"
-      }
-    },
-    "regenerator-runtime": {
-      "version": "0.10.5",
-      "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz",
-      "integrity": "sha1-M2w+/BIgrc7dosn6tntaeVWjNlg="
-    },
-    "restore-cursor": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/restore-cursor/-/restore-cursor-2.0.0.tgz",
-      "integrity": "sha1-n37ih/gv0ybU/RYpI9YhKe7g368=",
-      "requires": {
-        "onetime": "^2.0.0",
-        "signal-exit": "^3.0.2"
-      }
-    },
-    "run-async": {
-      "version": "2.4.1",
-      "resolved": "https://registry.npmjs.org/run-async/-/run-async-2.4.1.tgz",
-      "integrity": "sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ=="
-    },
-    "rx": {
-      "version": "4.1.0",
-      "resolved": "https://registry.npmjs.org/rx/-/rx-4.1.0.tgz",
-      "integrity": "sha1-pfE/957zt0D+MKqAP7CfmIBdR4I="
-    },
-    "safer-buffer": {
-      "version": "2.1.2",
-      "resolved": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
-      "integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg=="
-    },
-    "signal-exit": {
-      "version": "3.0.3",
-      "resolved": "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.3.tgz",
-      "integrity": "sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA=="
-    },
-    "string-width": {
-      "version": "2.1.1",
-      "resolved": "https://registry.npmjs.org/string-width/-/string-width-2.1.1.tgz",
-      "integrity": "sha512-nOqH59deCq9SRHlxq1Aw85Jnt4w6KvLKqWVik6oA9ZklXLNIOlqg4F2yrT1MVaTjAqvVwdfeZ7w7aCvJD7ugkw==",
-      "requires": {
-        "is-fullwidth-code-point": "^2.0.0",
-        "strip-ansi": "^4.0.0"
-      },
-      "dependencies": {
-        "ansi-regex": {
-          "version": "3.0.0",
-          "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-3.0.0.tgz",
-          "integrity": "sha1-7QMXwyIGT3lGbAKWa922Bas32Zg="
-        },
-        "strip-ansi": {
-          "version": "4.0.0",
-          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-4.0.0.tgz",
-          "integrity": "sha1-qEeQIusaw2iocTibY1JixQXuNo8=",
-          "requires": {
-            "ansi-regex": "^3.0.0"
-          }
-        }
-      }
-    },
-    "strip-ansi": {
-      "version": "3.0.1",
-      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
-      "integrity": "sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8=",
-      "requires": {
-        "ansi-regex": "^2.0.0"
-      }
-    },
-    "supports-color": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz",
-      "integrity": "sha1-U10EXOa2Nj+kARcIRimZXp3zJMc="
-    },
-    "through": {
-      "version": "2.3.8",
-      "resolved": "https://registry.npmjs.org/through/-/through-2.3.8.tgz",
-      "integrity": "sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU="
-    },
-    "tmp": {
-      "version": "0.0.33",
-      "resolved": "https://registry.npmjs.org/tmp/-/tmp-0.0.33.tgz",
-      "integrity": "sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==",
-      "requires": {
-        "os-tmpdir": "~1.0.2"
-      }
-    }
-  }
+#!/usr/bin/env bash
+
+#
+# Steps:
+#
+#  1. Download corresponding html file for some README.md:
+#       curl -s $1
+#
+#  2. Discard rows where no substring 'user-content-' (github's markup):
+#       awk '/user-content-/ { ...
+#
+#  3.1 Get last number in each row like ' ... </span></a>sitemap.js</h1'.
+#      It's a level of the current header:
+#       substr($0, length($0), 1)
+#
+#  3.2 Get level from 3.1 and insert corresponding number of spaces before '*':
+#       sprintf("%*s", (level-1)*'"$nb_spaces"', "")
+#
+#  4. Find head's text and insert it inside "* [ ... ]":
+#       substr($0, match($0, /a>.*<\/h/)+2, RLENGTH-5)
+#
+#  5. Find anchor and insert it inside "(...)":
+#       substr($0, match($0, "href=\"[^\"]+?\" ")+6, RLENGTH-8)
+#
+
+gh_toc_version="0.10.0"
+
+gh_user_agent="gh-md-toc v$gh_toc_version"
+
+#
+# Download rendered into html README.md by its url.
+#
+#
+gh_toc_load() {
+    local gh_url=$1
+
+    if type curl &>/dev/null; then
+        curl --user-agent "$gh_user_agent" -s "$gh_url"
+    elif type wget &>/dev/null; then
+        wget --user-agent="$gh_user_agent" -qO- "$gh_url"
+    else
+        echo "Please, install 'curl' or 'wget' and try again."
+        exit 1
+    fi
 }
+
+#
+# Converts local md file into html by GitHub
+#
+# -> curl -X POST --data '{"text": "Hello world github/linguist#1 **cool**, and #1!"}' https://api.github.com/markdown
+# <p>Hello world github/linguist#1 <strong>cool</strong>, and #1!</p>'"
+gh_toc_md2html() {
+    local gh_file_md=$1
+    local skip_header=$2
+
+    URL=https://api.github.com/markdown/raw
+
+    if [ -n "$GH_TOC_TOKEN" ]; then
+        TOKEN=$GH_TOC_TOKEN
+    else
+        TOKEN_FILE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/token.txt"
+        if [ -f "$TOKEN_FILE" ]; then
+            TOKEN="$(cat "$TOKEN_FILE")"
+        fi
+    fi
+    if [ -n "${TOKEN}" ]; then
+        AUTHORIZATION="Authorization: token ${TOKEN}"
+    fi
+
+    local gh_tmp_file_md=$gh_file_md
+    if [ "$skip_header" = "yes" ]; then
+        if grep -Fxq "<!--te-->" "$gh_src"; then
+          # cut everything before the toc
+          gh_tmp_file_md=$gh_file_md~~
+          sed '1,/<!--te-->/d' "$gh_file_md" > "$gh_tmp_file_md"
+        fi
+    fi
+
+    # echo $URL 1>&2
+    OUTPUT=$(curl -s \
+        --user-agent "$gh_user_agent" \
+        --data-binary @"$gh_tmp_file_md" \
+        -H "Content-Type:text/plain" \
+        -H "$AUTHORIZATION" \
+        "$URL")
+
+    rm -f "${gh_file_md}~~"
+
+    if [ "$?" != "0" ]; then
+        echo "XXNetworkErrorXX"
+    fi
+    if [ "$(echo "${OUTPUT}" | awk '/API rate limit exceeded/')" != "" ]; then
+        echo "XXRateLimitXX"
+    else
+        echo "${OUTPUT}"
+    fi
+}
+
+
+#
+# Is passed string url
+#
+gh_is_url() {
+    case $1 in
+        https* | http*)
+            echo "yes";;
+        *)
+            echo "no";;
+    esac
+}
+
+#
+# TOC generator
+#
+gh_toc(){
+    local gh_src=$1
+    local gh_src_copy=$1
+    local gh_ttl_docs=$2
+    local need_replace=$3
+    local no_backup=$4
+    local no_footer=$5
+    local indent=$6
+    local skip_header=$7
+
+    if [ "$gh_src" = "" ]; then
+        echo "Please, enter URL or local path for a README.md"
+        exit 1
+    fi
+
+
+    # Show "TOC" string only if working with one document
+    if [ "$gh_ttl_docs" = "1" ]; then
+
+        echo "Table of Contents"
+        echo "================="
+        echo ""
+        gh_src_copy=""
+
+    fi
+
+    if [ "$(gh_is_url "$gh_src")" == "yes" ]; then
+        gh_toc_load "$gh_src" | gh_toc_grab "$gh_src_copy" "$indent"
+        if [ "${PIPESTATUS[0]}" != "0" ]; then
+            echo "Could not load remote document."
+            echo "Please check your url or network connectivity"
+            exit 1
+        fi
+        if [ "$need_replace" = "yes" ]; then
+            echo
+            echo "!! '$gh_src' is not a local file"
+            echo "!! Can't insert the TOC into it."
+            echo
+        fi
+    else
+        local rawhtml
+        rawhtml=$(gh_toc_md2html "$gh_src" "$skip_header")
+        if [ "$rawhtml" == "XXNetworkErrorXX" ]; then
+             echo "Parsing local markdown file requires access to github API"
+             echo "Please make sure curl is installed and check your network connectivity"
+             exit 1
+        fi
+        if [ "$rawhtml" == "XXRateLimitXX" ]; then
+             echo "Parsing local markdown file requires access to github API"
+             echo "Error: You exceeded the hourly limit. See: https://developer.github.com/v3/#rate-limiting"
+             TOKEN_FILE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/token.txt"
+             echo "or place GitHub auth token here: ${TOKEN_FILE}"
+             exit 1
+        fi
+        local toc
+        toc=`echo "$rawhtml" | gh_toc_grab "$gh_src_copy" "$indent"`
+        echo "$toc"
+        if [ "$need_replace" = "yes" ]; then
+            if grep -Fxq "<!--ts-->" "$gh_src" && grep -Fxq "<!--te-->" "$gh_src"; then
+                echo "Found markers"
+            else
+                echo "You don't have <!--ts--> or <!--te--> in your file...exiting"
+                exit 1
+            fi
+            local ts="<\!--ts-->"
+            local te="<\!--te-->"
+            local dt
+            dt=$(date +'%F_%H%M%S')
+            local ext=".orig.${dt}"
+            local toc_path="${gh_src}.toc.${dt}"
+            local toc_createdby="<!-- Created by https://github.com/ekalinin/github-markdown-toc -->"
+            local toc_footer
+            toc_footer="<!-- Added by: `whoami`, at: `date` -->"
+            # http://fahdshariff.blogspot.ru/2012/12/sed-mutli-line-replacement-between-two.html
+            # clear old TOC
+            sed -i"${ext}" "/${ts}/,/${te}/{//!d;}" "$gh_src"
+            # create toc file
+            echo "${toc}" > "${toc_path}"
+            if [ "${no_footer}" != "yes" ]; then
+                echo -e "\n${toc_createdby}\n${toc_footer}\n" >> "$toc_path"
+            fi
+
+            # insert toc file
+            if ! sed --version > /dev/null 2>&1; then
+                sed -i "" "/${ts}/r ${toc_path}" "$gh_src"
+            else
+                sed -i "/${ts}/r ${toc_path}" "$gh_src"
+            fi
+            echo
+            if [ "${no_backup}" = "yes" ]; then
+                rm "$toc_path" "$gh_src$ext"
+            fi
+            echo "!! TOC was added into: '$gh_src'"
+            if [ -z "${no_backup}" ]; then
+                echo "!! Origin version of the file: '${gh_src}${ext}'"
+                echo "!! TOC added into a separate file: '${toc_path}'"
+        fi
+            echo
+        fi
+    fi
+}
+
+#
+# Grabber of the TOC from rendered html
+#
+# $1 - a source url of document.
+#      It's need if TOC is generated for multiple documents.
+# $2 - number of spaces used to indent.
+#
+gh_toc_grab() {
+
+    href_regex="/href=\"[^\"]+?\"/"
+    common_awk_script='
+                     modified_href = ""
+                     split(href, chars, "")
+                     for (i=1;i <= length(href); i++) {
+                         c = chars[i]
+                         res = ""
+                         if (c == "+") {
+                             res = " "
+                         } else {
+                             if (c == "%") {
+                                 res = "\\x"
+                             } else {
+                                 res = c ""
+                             }
+                         }
+                         modified_href = modified_href res
+                    }
+                    print sprintf("%*s", (level-1)*'"$2"', "") "* [" text "](" gh_url  modified_href ")"
+                    '
+    if [ "`uname -s`" == "OS/390" ]; then
+        grepcmd="pcregrep -o"
+        echoargs=""
+        awkscript='{
+                     level = substr($0, 3, 1)
+                     text = substr($0, match($0, /<\/span><\/a>[^<]*<\/h/)+11, RLENGTH-14)
+                     href = substr($0, match($0, '$href_regex')+6, RLENGTH-7)
+                     '"$common_awk_script"'
+                }'
+    else
+        grepcmd="grep -Eo"
+        echoargs="-e"
+        awkscript='{
+                     level = substr($0, 3, 1)
+                     text = substr($0, match($0, /">.*<\/h/)+2, RLENGTH-5)
+                     href = substr($0, match($0, '$href_regex')+6, RLENGTH-7)
+                     '"$common_awk_script"'
+                }'
+    fi
+
+    # if closed <h[1-6]> is on the new line, then move it on the prev line
+    # for example:
+    #   was: The command <code>foo1</code>
+    #        </h1>
+    #   became: The command <code>foo1</code></h1>
+    sed -e ':a' -e 'N' -e '$!ba' -e 's/\n<\/h/<\/h/g' |
+
+    # Sometimes a line can start with <span>. Fix that.
+    sed -e ':a' -e 'N' -e '$!ba' -e 's/\n<span/<span/g' |
+
+    # find strings that corresponds to template
+    $grepcmd '<h.*class="heading-element".*</a' |
+
+    # remove code tags
+    sed 's/<code>//g' | sed 's/<\/code>//g' |
+
+    # remove g-emoji
+    sed 's/<g-emoji[^>]*[^<]*<\/g-emoji> //g' |
+
+    # now all rows are like:
+    #   <h1 class="heading-element">title</h1><a href="..."><span>..</span></a>
+    # format result line
+    #   * $0 - whole string
+    #   * last element of each row: "</hN" where N in (1,2,3,...)
+    echo $echoargs "$(awk -v "gh_url=$1" "$awkscript")"
+}
+
+        # perl -lpE 's/(\[[^\]]*\]\()(.*?)(\))/my ($pre, $in, $post)=($1, $2, $3) ; $in =~ s{\+}{ }g; $in =~ s{%}{\\x}g; $pre.$in.$post/ems')"
+
+#
+# Returns filename only from full path or url
+#
+gh_toc_get_filename() {
+    echo "${1##*/}"
+}
+
+show_version() {
+    echo "$gh_toc_version"
+    echo
+    echo "os:     `uname -s`"
+    echo "arch:   `uname -m`"
+    echo "kernel: `uname -r`"
+    echo "shell:  `$SHELL --version`"
+    echo
+    for tool in curl wget grep awk sed; do
+        printf "%-5s: " $tool
+        if type $tool &>/dev/null; then
+            $tool --version | head -n 1
+        else
+            echo "not installed"
+        fi
+    done
+}
+
+show_help() {
+    local app_name
+    app_name=$(basename "$0")
+    echo "GitHub TOC generator ($app_name): $gh_toc_version"
+    echo ""
+    echo "Usage:"
+    echo "  $app_name [options] src [src]   Create TOC for a README file (url or local path)"
+    echo "  $app_name -                     Create TOC for markdown from STDIN"
+    echo "  $app_name --help                Show help"
+    echo "  $app_name --version             Show version"
+    echo ""
+    echo "Options:"
+    echo "  --indent <NUM>      Set indent size. Default: 3."
+    echo "  --insert            Insert new TOC into original file. For local files only. Default: false."
+    echo "                      See https://github.com/ekalinin/github-markdown-toc/issues/41 for details."
+    echo "  --no-backup         Remove backup file. Set --insert as well. Default: false."
+    echo "  --hide-footer       Do not write date & author of the last TOC update. Set --insert as well. Default: false."
+    echo "  --skip-header       Hide entry of the topmost headlines. Default: false."
+    echo "                      See https://github.com/ekalinin/github-markdown-toc/issues/125 for details."
+    echo ""
+}
+
+#
+# Options handlers
+#
+gh_toc_app() {
+    local need_replace="no"
+    local indent=3
+
+    if [ "$1" = '--help' ] || [ $# -eq 0 ] ; then
+        show_help
+        return
+    fi
+
+    if [ "$1" = '--version' ]; then
+        show_version
+        return
+    fi
+
+    if [ "$1" = '--indent' ]; then
+        indent="$2"
+        shift 2
+    fi
+
+    if [ "$1" = "-" ]; then
+        if [ -z "$TMPDIR" ]; then
+            TMPDIR="/tmp"
+        elif [ -n "$TMPDIR" ] && [ ! -d "$TMPDIR" ]; then
+            mkdir -p "$TMPDIR"
+        fi
+        local gh_tmp_md
+        if [ "`uname -s`" == "OS/390" ]; then
+            local timestamp
+            timestamp=$(date +%m%d%Y%H%M%S)
+            gh_tmp_md="$TMPDIR/tmp.$timestamp"
+        else
+            gh_tmp_md=$(mktemp "$TMPDIR/tmp.XXXXXX")
+        fi
+        while read -r input; do
+            echo "$input" >> "$gh_tmp_md"
+        done
+        gh_toc_md2html "$gh_tmp_md" | gh_toc_grab "" "$indent"
+        return
+    fi
+
+    if [ "$1" = '--insert' ]; then
+        need_replace="yes"
+        shift
+    fi
+
+    if [ "$1" = '--no-backup' ]; then
+        need_replace="yes"
+        no_backup="yes"
+        shift
+    fi
+
+    if [ "$1" = '--hide-footer' ]; then
+        need_replace="yes"
+        no_footer="yes"
+        shift
+    fi
+
+    if [ "$1" = '--skip-header' ]; then
+        skip_header="yes"
+        shift
+    fi
+
+
+    for md in "$@"
+    do
+        echo ""
+        gh_toc "$md" "$#" "$need_replace" "$no_backup" "$no_footer" "$indent" "$skip_header"
+    done
+
+    echo ""
+    echo "<!-- Created by https://github.com/ekalinin/github-markdown-toc -->"
+}
+
+#
+# Entry point
+#
+gh_toc_app "$@"
