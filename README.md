@@ -1,46 +1,228 @@
-# 项目背景
+## 5.0.1 - 2024-06-17
+* Bump activesupport from 4.0 to 7.1.3.4
 
-蘑菇街能有今天的快速发展，得益于开源软件群雄崛起的大环境背景，我们一直对开源社区怀有感恩之情，因此也一直希望能为开源社区贡献一份力量。
+## 5.0.0 - 2024-06-17
+* Drop support for Ruby versions < 3
+* Bump nokogiri from 1.8.1 to 1.16.5
+* Bump nokogiri-diff from 0.2.0 to 0.3.0
+* Bump rdoc from 3.6 to 6.7.0
+* Update CommandImplementation to better support large files (affecting RST and POD6 rendering)
 
-2013年我们蘑菇街从社区导购华丽转身时尚电商平台，为解决千万妹子和时尚卖家的沟通问题，我们开发了自己的即时通讯软件。既然已经有了用户使用的IM，为什么我们自己公司内部沟通还要用第三方的呢？因此就有了TT(TeamTalk)的雏形，现在蘑菇街内部的在线沟通全部通过TT来完成。随着TT功能的逐渐完善，我们决定把TT开源来回馈开源社区，希望国内的中小企业都能用上开源、免费、好用的IM工具！
+## 4.0.2 - 2023-10-10
+* Add support for .mdx files in markdown
 
-# 项目介绍
-* 名称：TeamTalk
-* 官网：http://tt.mogu.io/
-* 开源协议：[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
-* 定位：中小型企业用户，member >= 2
-* 特点：开源与产品并重
-* 功能：可靠的消息传递机制；支持文字、图片、语音等富文本信息；文件收发等	
+## 4.0.1 - 2022-03-07
+* Update to commonmarker 0.18.3; There isn't a version on RubyGems for this, so this is pointing to a [tag version on GitHub](https://github.com/gjtorikian/commonmarker/blob/v0.18.3/commonmarker.gemspec)
 
-# 项目框架
+## 4.0.0 - 2021-03-31
 
+* Drop support for Python 2 in RST rendering [#1456](https://github.com/github/markup/pull/1456)
 
-麻雀虽小五脏俱全，本项目涉及到多个平台、多种语言，简单关系如下图：
-     
-![teamtalk架构图](http://s6.mogucdn.com/b7/pic/140921/7n6ih_ieygmzjsmiywezjwmmytambqhayde_514x551.jpg)
+## 3.0.5 - 2020-11-12
 
+* Add commonmarker_exts to commonmarker options [#1268](https://github.com/github/markup/pull/1268)
+* Check whether filename is set when rendering Asciidoc. [#1290](https://github.com/github/markup/pull/1290)
 
-#### 服务端：
-     
-CppServer：TTCppServer工程，包括IM消息服务器、http服务器、文件传输服务器、文件存储服务器、登陆服务器
-java DB Proxy：TTJavaServer工程，承载着后台消息存储、redis等接口
-PHP server：TTPhpServer工程，teamtalk后台配置页面
+## 3.0.4 - 2019-04-03
 
-#### 客户端：
+* Expose options in #render_s [#1249](https://github.com/github/markup/pull/1249)
+* Upgrade to Asciidoctor 2.0.x [#1264](https://github.com/github/markup/pull/1264)
 
-- mac：TTMacClient工程，mac客户端工程
-- iOS：TTIOSClient工程，IOS客户端工程
-- Android：TTAndroidClient工程，android客户端工程
-- Windows：TTWinClient工程，windows客户端工程
+## 3.0.3 - 2018-12-17
 
-* 语言：c++、objective-c、java、php
-* 系统环境：Linux、Windows，Mac, iOS, Android
+* Temporarily remove support for POD6 [#1248](https://github.com/github/markup/pull/1248)
 
-# 代码下载
--[地址](https://github.com/mogujie/TeamTalk)
+## 3.0.2 - 2018-12-12
 
-# 交流
+* Add support for POD6 [#1173](https://github.com/github/markup/pull/1173)
 
-* qq交流群1：341273218(已满)
-* qq交流群2:437335108
-* 邮件交流：tt@mogujie.com
+## 3.0.1 - 2018-10-19
+
+* Remove linguist-detected RMarkdown files from the Markdown renderer [#1237](https://github.com/github/markup/pull/1237)
+
+## 3.0.0 - 2018-10-18
+
+* Allow passing options through to CommonMarker [#1236](https://github.com/github/markup/pull/1236)
+* Symlink option is now a keyword arg [#1236](https://github.com/github/markup/pull/1236)
+
+## 2.0.2 - 2018-10-15
+
+* Don't render rmd files as Markdown [#1235](https://github.com/github/markup/pull/1235)
+
+## 2.0.1 - 2018-06-29
+
+* Create anchor for every =item directive in POD files [#1165](https://github.com/github/markup/pull/1165)
+
+## 2.0.0 - 2018-01-31
+
+* Remove filesystem access [#1157](https://github.com/github/markup/pull/1157)
+
+## 1.7.0 - 2018-01-30
+
+### Changed
+
+* Updates for Linguist v6 [#1139](https://github.com/github/markup/pull/1139)
+* Update to Nokogiri ~> 1.8; drop support for Ruby 2.0 [#1156](https://github.com/github/markup/pull/1156)
+
+## 1.6.2 - 2017-11-27
+
+### Changed
+
+* Only report basename in usage [#1131](https://github.com/github/markup/pull/1131)
+* rest2html parameter signature fix [#1082](https://github.com/github/markup/pull/1082)
+
+## 1.6.1 - 2017-07-25
+
+### Changed
+
+* Added support for highlight directive in rST [#925](https://github.com/github/markup/pull/925)
+* Fixes to documentation and code style [#1009](https://github.com/github/markup/pull/1009) [#1071](https://github.com/github/markup/pull/1071) [#1087](https://github.com/github/markup/pull/1087)
+* Test against newer Ruby versions [#1086](https://github.com/github/markup/pull/1086)
+* Upgrade to Asciidoctor 1.5.6.1 [#1088](https://github.com/github/markup/pull/1088)
+
+## 1.6.0 - 2017-04-03
+
+### Changed
+
+* Added filename argument to all renderers for additional context
+* Removed superfluous `rinku` dependency [#1035](https://github.com/github/markup/pull/1035)
+* Enable source-to-source navigation for `.adoc` AsciiDoc files, plus additional attributes passed through [#1039](https://github.com/github/markup/pull/1039) and [#1041](https://github.com/github/markup/pull/1041)
+
+## 1.5.0 - 2017-03-27
+
+### Added
+
+* Re-introduce [#537](https://github.com/github/markup/pull/537) to detect language of markup document
+  However `github-linguist` is optional and this gem will fallback to extensions for detection.
+
+[Full changelog](https://github.com/github/markup/compare/v1.4.9...v1.5.0)
+
+## 1.4.9 - 2017-03-27
+
+### Changed
+
+* Reverted [#537](https://github.com/github/markup/pull/537) to avoid extra dependencies
+
+[Full changelog](https://github.com/github/markup/compare/v1.4.8...v1.4.9)
+
+## 1.3.3 (2015-02-17)
+
+* Address a slight typo with `POSIX` [#456](https://github.com/github/markup/pull/456)
+
+[Full changelog](https://github.com/github/markup/compare/v1.3.2...v1.3.3)
+
+## 1.3.2 (2015-02-17)
+
+* RST: Output code instead of tt for inline literals [#370](https://github.com/github/markup/pull/370)
+* RST: Add IDs to headers so that `.. contents` works with `.. sectnum` [#391](https://github.com/github/markup/pull/391)
+
+[Full changelog](https://github.com/github/markup/compare/v1.3.1...v1.3.2)
+
+## 1.3.1 (2014-11-13)
+
+* Fix name error when trying to use newer versions of RedCarpet [#387](https://github.com/github/markup/pull/387)
+
+[Full changelog](https://github.com/github/markup/compare/v1.3.0...v1.3.1)
+
+## 1.3.0 (2014-09-11)
+
+* Extend the field limit for tables to 50 characters for RST [#306](https://github.com/github/markup/pull/306)
+* Add `.mkdn` as a supported markdown extension [#308](https://github.com/github/markup/pull/308)
+* Upgrade wikicloth to 0.8.1 [#317](https://github.com/github/markup/pull/317)
+* Force encoding of posix-spawn output [#338](https://github.com/github/markup/pull/338)
+* Add `.rmd` as a supported markdown extension [#343](https://github.com/github/markup/pull/343)
+
+[Full changelog](https://github.com/github/markup/compare/v1.2.1...v1.3.0)
+
+## 1.2.1 (2014-04-23)
+
+* Disable RST warnings [#290](https://github.com/github/markup/pull/290)
+
+[Full changelog](https://github.com/github/markup/compare/v1.2.0...v1.2.1)
+
+## 1.1.1 (2014-04-03)
+
+* Upgrade to org-ruby 0.9.1
+* Set default encoding to UTF-8 for Python 2
+
+## 1.1.0 (2014-03-10)
+
+* Raise GitHub::Markup::CommandError if external command exits with a non-zero status.
+* Remove support for literate Haskell (see #266)
+
+## 0.5.1 (2010-09-30)
+
+* Support relative path links in rdoc
+
+## 0.5.0 (2010-07-07)
+
+* Added creole support
+
+## 0.4.0 (2010-04-23)
+
+* Removed man page support until it's ready.
+
+## 0.3.3 (2010-03-29)
+
+* UTF-8 works with ReST now.
+
+## 0.3.2 (2010-03-25)
+
+* Improved test runner
+* Forgive ReST problems that aren't user errors.
+
+## 0.3.1 (2010-03-22)
+
+* Add .rst.txt extension
+* Fix ASCII encoding error while using print u'\u010c' non-ASCII char and similar.
+
+## 0.3.0 (2010-03-11)
+
+* man rendering
+* `github-markup` command line runner
+
+## 0.2.2 (2010-02-09)
+
+* pod fixes from Ricardo Signes
+
+## 0.2.1 (2010-01-25)
+
+* ReST fixes from Michael Jones
+
+## 0.2.0 (2010-01-10)
+
+* org-mode support
+
+## 0.1.7 (2009-11-17)
+
+* Ditch asciidoc2html, call asciidoc directly
+
+## 0.1.6 (2009-11-17)
+
+* mdown
+
+## 0.1.5 (2009-11-17)
+
+* Actually, if we can't render a thing then don't. Not once, not never.
+
+## 0.1.4 (2009-11-17)
+
+* Bugfix: Missing commands return the input (instead of nothing)
+
+## 0.1.3 (2009-11-02)
+
+* Strip the INDEX comments from POD
+
+## 0.1.2 (2009-11-02)
+
+* Renamed to `github-markup`
+* Bugfix: POD rendering works now, not just index
+
+## 0.1.1 (2009-11-02)
+
+* Added `GitHub::Markup.can_render?` helper.
+* Bugfix: Actually check file extensions
+
+## 0.1.0 (2009-11-02)
+
+* First release
