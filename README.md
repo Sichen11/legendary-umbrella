@@ -1,97 +1,46 @@
-# `buffer-web` workers and cron in Kubernetes
+# 项目背景
 
-We are transitionning `buffer-web` utils workers to k8s (Kubernetes). Here what you'll need to know to make changes to those workers.
+蘑菇街能有今天的快速发展，得益于开源软件群雄崛起的大环境背景，我们一直对开源社区怀有感恩之情，因此也一直希望能为开源社区贡献一份力量。
 
-Team members to contact for more information:
-* Primary contacts - Eric, Colin
+2013年我们蘑菇街从社区导购华丽转身时尚电商平台，为解决千万妹子和时尚卖家的沟通问题，我们开发了自己的即时通讯软件。既然已经有了用户使用的IM，为什么我们自己公司内部沟通还要用第三方的呢？因此就有了TT(TeamTalk)的雏形，现在蘑菇街内部的在线沟通全部通过TT来完成。随着TT功能的逐渐完善，我们决定把TT开源来回馈开源社区，希望国内的中小企业都能用上开源、免费、好用的IM工具！
 
-## Contents
+# 项目介绍
+* 名称：TeamTalk
+* 官网：http://tt.mogu.io/
+* 开源协议：[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+* 定位：中小型企业用户，member >= 2
+* 特点：开源与产品并重
+* 功能：可靠的消息传递机制；支持文字、图片、语音等富文本信息；文件收发等	
 
-* [List of workers in k8s](#list-of-workers-in-k8s)
-* [List of crons in k8s](#list-of-crons-in-k8s)
-* [Deploy workers/crons to k8s](#deploying-workers-or-crons-to-kubernetes)
-* [Architecture](#architecture)
-* [Code specific to k8s](#code-specific-to-k8s)
-* [Run k8s workers locally](#run-k8s-workers-locally)
-* [Production Deployments](#production-deployments)
-
-## List of workers in k8s
-| Worker name | deployment key | Description|
-| --- | --- | --- |
-| analytics | worker-analytics | Update analytics
-| elasticsearch-indexer | worker-elasticsearch-indexer | Index profiles/users/updates in elasticsearch
-| email | worker-email | ???
-| gnip analytics | worker-gnip-analytics | Process GNIP analytics for a given twitter profile
-| link | worker-link | increment the buffer button
-| patch-records | worker-patch-record | "patch" the image fields for updates with the correct data structure
-| picture | worker-picture | Process images
-| push | worker-push | ???
-| quick-analytics | worker-quick-analytics | Update analytics
-| s3-cleanup | worker-s3-cleanup | ???
-| service | worker-service | ???
-| signup | worker-signup | Add complimentary information to user after the signup process
-| stripe-webhook | worker-stripe-webhook | ???
-| tweet-backfill | worker-tweet-backfill | ?
-| twitter-friends | worker-twitter-friends | Index in the twitter friend elasticsearch cluster
-| update | worker-update | Use to send updates from our users
-| update-migration | worker-update-migration | ???
-| user-cleanup | worker-user-cleanup | clean users information after they leave buffer
-| weekly-email-digest | worker-eweekly-email-digestmail | Send weekly email stats to our users
+# 项目框架
 
 
-## List of crons in k8s
-| Cron name | deployment key | Description|
-| --- | --- | --- |
-| queue-analytics | cron-analytics | Send all due analytics to the analytics queue
-| queue-scheduled-updates | cron-updates | Send all due updates to the sqs updates queue (The update workers will process the queue later on)
+麻雀虽小五脏俱全，本项目涉及到多个平台、多种语言，简单关系如下图：
+     
+![teamtalk架构图](http://s6.mogucdn.com/b7/pic/140921/7n6ih_ieygmzjsmiywezjwmmytambqhayde_514x551.jpg)
 
 
-## Deploying workers or crons to kubernetes
+#### 服务端：
+     
+CppServer：TTCppServer工程，包括IM消息服务器、http服务器、文件传输服务器、文件存储服务器、登陆服务器
+java DB Proxy：TTJavaServer工程，承载着后台消息存储、redis等接口
+PHP server：TTPhpServer工程，teamtalk后台配置页面
 
-Take the deployment key [of the worker](#list-of-workers-in-k8s) or [crons](#list-of-crons-in-k8s) you want to target, and do:
-```
-    @bufferbot servicedeploy [deployment key]
-```
+#### 客户端：
 
-For example to deploy to the update worker:
-```
-    @bufferbot servicedeploy worker-update
-```
+- mac：TTMacClient工程，mac客户端工程
+- iOS：TTIOSClient工程，IOS客户端工程
+- Android：TTAndroidClient工程，android客户端工程
+- Windows：TTWinClient工程，windows客户端工程
 
-Then you can check the workers has been properly deployed by checking the age of the worker:
-```
-    kubectl get pods -n workers
-```
+* 语言：c++、objective-c、java、php
+* 系统环境：Linux、Windows，Mac, iOS, Android
 
-## Architecture
+# 代码下载
+-[地址](https://github.com/mogujie/TeamTalk)
 
-To put it in a simple way, we put the `buffer-web` repo in a docker container and run the workers in k8s. [Here the Dockerfile used in production](https://github.com/bufferapp/buffer-web/blob/master/Dockerfile.workers). We use the [official PHP 5.6.31](https://github.com/bufferapp/dockerfiles/blob/master/php56-cli/Dockerfile) image, that uses itself `Debian 8.9 (jessie)`.
+# 交流
 
-Each worker has its own kubernetes deployment file located in the kube repo, under `kube/us-east1.buffer-k8s.com/workers`. Reach anyone in the system team to have access to it!
-
-In SQS, the new queue name [has the `_k8s` suffix appened](https://github.com/bufferapp/buffer-web/blob/4eda46cb62a18f9285eab93e33100d7133e92cfc/shared/libraries/Workers/Worker.php#L81-L83) to its previous name. For instance, instead of `update` queue, it will be `update_k8s`
-
-## Code specific to k8s
-We set the  [`ENV_KUBERNETES`](https://github.com/bufferapp/buffer-web/blob/37348b9f59c675f420ea7099fd2ed9d0758e4844/Dockerfile.workers#L10
-) environnment variable to specify the code that is specific to kubernetes. Here the handy link to see [how it's used](https://github.com/bufferapp/buffer-web/search?utf8=%E2%9C%93&q=ENV_KUBERNETES&type=).
-
-## Run k8s workers locally
-
-Use `buffer-dev` to starts the worker :
-
-- `./dev web-worker start worker_name`
-- `./dev web-worker tail worker_name`
-- `./dev web-worker stop worker_name`
-
-If you have modified the `Dockerfile.local.worker`, please make sure to `./dev rebuild web-worker` the dev environment.
-
-Note: This way is better than the `./dev worker` command  because it reflects the exact same container as production. 🐳🐳🐳
-
-
-## Production Deployments 
-
-To deploy to production :
-
-`@bufferbot servicedeploy [deployment-key]`
-
-Note:  You'll probably change some library/models that will affect utils, web or api environnments. In that case, you should aslo deploy to those environnments. Just ask in #eng-deploys if you're unsure :) 
+* qq交流群1：341273218(已满)
+* qq交流群2:437335108
+* 邮件交流：tt@mogujie.com
