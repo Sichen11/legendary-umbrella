@@ -1,267 +1,87 @@
-Getting started with Markdown
-=============================
+# ⚠️⚠️ DEPRECATED ⚠️⚠️
 
+Please go to the [Engineering wiki in Notion](https://www.notion.so/buffer/Engineering-Wiki-f34142d290304c35bebadf76cc9cc89e).
 
-- [Getting started with Markdown](#getting-started-with-markdown)
-- [Titles](#titles)
-- [Paragraph](#paragraph)
-- [List](#list)
-	- [List CheckBox](#list-checkbox)
-- [Link](#link)
-	- [Anchor links](#anchor-links)
-- [Blockquote](#blockquote)
-- [Image | GIF](#image--gif)
-- [Style Text](#style-text)
-	- [Italic](#italic)
-	- [Bold](#bold)
-	- [Strikethrough](#strikethrough)
-- [Code](#code)
-- [Email](#email)
-- [Table](#table)
-	- [Table Align](#table-align)
-    	- [Align Center](#align-center)
-    	- [Align Left](#align-left)
-    	- [Align Right](#align-right)
-- [Escape Characters](#escape-characters)
-- [Emoji](#emoji)
-- [Shields Badges](#Shields-Badges)
-- [Markdown Editor](#markdown-editor)
-- [Some links for more in depth learning](#some-links-for-more-in-depth-learning)
+---
 
-----------------------------------
+# Buffer Engineering Wiki
 
-# Titles 
+Welcome, friend! 👋 This is the Buffer Engineering Wiki. It's is a living, evolving project that exists to guide you through all the info you need to know to be a happy and productive Buffer Engineer™.
 
-### Title 1
-### Title 2
+It's a handy reference whether you're new, changing teams, or just like breaking down knowledge silos. 💥
 
-	Title 1
-	========================
-	Title 2 
-	------------------------
+# Table of Contents
 
-# Title 1
-## Title 2
-### Title 3
-#### Title 4
-##### Title 5
-###### Title 6
+💁 _In no particular order, please keep up to date and feel free to rearrange in your PRs_
+### Local Development
+_Get all setup to work on Buffer locally_ 
 
-    # Title 1
-    ## Title 2
-    ### Title 3    
-    #### Title 4
-    ##### Title 5
-    ###### Title 6    
+* :octocat: [`buffer-dev`](https://github.com/bufferapp/buffer-dev)
 
-# Paragraph
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit. Phasellus eleifend egestas diam, id tincidunt arcu dictum quis. Pellentesque eu dui tempus, tempus massa sed, eleifend tortor. Donec in sem in erat iaculis tincidunt. Fusce condimentum hendrerit turpis nec vehicula. Aliquam finibus nisi vel eros lobortis dictum. Etiam congue tortor libero, quis faucibus ligula gravida a. Suspendisse non pulvinar nisl. Sed malesuada, felis vitae consequat gravida, dui ligula suscipit ligula, nec elementum nulla sem vel dolor. Vivamus augue elit, venenatis non lorem in, volutpat placerat turpis. Nullam et libero at eros vulputate auctor. Duis sed pharetra lacus. Sed egestas ligula vitae libero aliquet, ac imperdiet est ullamcorper. Sed dapibus sem tempus eros dignissim, ac suscipit lectus dapibus. Proin sagittis diam vel urna volutpat, vel ullamcorper urna lobortis. Suspendisse potenti.
+### Team Specific
+* [Data Team](/teams/data/README.md)
+* [Account Management](/teams/account-management/README.md)
+* [Publish](/teams/publish/README.md)
+* [Mobile](/teams/mobile/README.md)
+* [Systems](/teams/systems/README.md)
 
-Nulla varius risus sapien, nec fringilla massa facilisis sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc vel ornare erat, eget rhoncus lectus. Suspendisse interdum scelerisque molestie. Aliquam convallis consectetur lorem ut consectetur. Nullam massa libero, cursus et porta ac, consequat eget nibh. Sed faucibus nisl augue, non viverra justo sagittis venenatis.
+### Seeking Advice & Input
+* [How the Architecture Review process works](https://github.com/bufferapp/README/blob/master/architecture-review.md) 
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit. 
+### Engineering Leadership
+* [How Engineering Management Works at Buffer](https://github.com/bufferapp/README/tree/master/engineering-management)
+* [(All-Buffer)Code of Conduct](https://github.com/bufferapp/code-of-conduct)
     
-    Phasellus eleifend egestas diam, id tincidunt arcu dictum quis.
+### Buffer Web
+_The web app at buffer.com/app, API, static pages, and more!_
 
-# List 
-* Item 1;
-	* Item 1.1;
-* Item 2;
-	* Item 2.1;
-	* Item 2.2;
-* Item 3
-	* Item 3.1;
-		* Item 3.1.1;
-    
->      * Item 1;
->	      * Item 1.1;
->	    * Item 2;
->	     * Item 2.1;
->	     * Item 2.2;
->	    * Item 3
->		   * Item 3.1;
->			  * Item 3.1.1;
+* :octocat: [`buffer-web`](https://github.com/bufferapp/buffer-web)
+* [Deployments](/deployments.md)
+* [Deployments for `buffer-web`](https://github.com/bufferapp/buffer-web/blob/master/docs/deploy.md)
+* [PHP Guidelines](https://github.com/bufferapp/buffer-web/blob/master/docs/php-guide.md) — Great doc by @josem on writing PHP in `buffer-web`
+* [PHP Testing](https://github.com/bufferapp/buffer-web/blob/master/docs/php-testing.md)
+* [Feature Flips](https://github.com/bufferapp/buffer-web/blob/master/docs/release-feature.md)
+* ️[buffer-web workers in k8s](/buffer-web-workers-kubernetes.md)
+* ️[Lifecycle of an update](https://paper.dropbox.com/doc/Lifecycle-of-an-update-4rUM5QNLWO4MpNimFpUPy)
+* [Editing files and making a PR directly on GitHub](/editing-on-github.md)
 
-## List CheckBox
+### Buffer Marketing
+_The home page at buffer.com, more static pages, salary calculator, and more!_
 
- - [ ] Item A
- - [x] Item B
- - [x] Item C
- 
->     - [ ] Item A
->     - [x] Item B
->     - [x] Item C
+* :octocat: [`buffer-marketing`](https://github.com/bufferapp/buffer-marketing)
+* Check out the README in `buffer-marketing` for some great documentation.
 
+### Blog
+_Our blogs, hosted on WPEngine._
 
-# Link
-[Google](https://www.google.com) - _Google | Youtube | Gmail | Maps | PlayStore | GoogleDrive_
+* [Wordpress Blogs](/wordpress-blogs.md)
 
-[Youtube](https://www.youtube.com) - _Enjoy videos and music you love, upload original content, and share it with friends, family, and the world on YouTube._
+### Billing
+_Everything related to the Stripe API & Webhook and our billing logic._
 
-[GitHub](https://github.com/fefong/markdown_readme#getting-started-with-markdown) - _Project_
+* [Billing API endpoint signatures](/billing/api-endpoints.md)
 
-		[Google](https://www.google.com) - _Google | Youtube | Gmail | Maps | PlayStore | GoogleDrive_
+### Open Source
+_Everything related to Open Source at Buffer_
+* [Buffer Open Source FAQ](/open-source-faq.md)
 
-## Anchor links
+### Meta
+* [Contributing to the Wiki](/CONTRIBUTING.md)
+* [Encryption Tool for this Wiki](/encryption-tool.md)
 
-[Markdown - Summary](#Getting-started-with-Markdown)
+---
 
-[Markdown - Markdown Editor](#Markdown-Editor)
+## Contributing to the Wiki
 
-		[Markdown - Link](#Link)
+All contributions would be glorious. An out of date wiki is so much worse than the occasional misleading new contribution, so please **err on the side of sharing your knowledge**.
 
-# Blockquote
-> Lebenslangerschicksalsschatz: Lifelong Treasure of Destiny
+Wikis are best when they're living and evolving. As an async, remote team, let's create a wiki that reflects our commitment to this way of work! 🌍
 
-    > Lebenslangerschicksalsschatz: Lifelong Treasure of Destiny 
+👉 **[Read how to contribute right here](CONTRIBUTING.md)!**
 
-# Image | GIF
-![myImage](https://media.giphy.com/media/XRB1uf2F9bGOA/giphy.gif)
-    
-    ![myImage](https://media.giphy.com/media/XRB1uf2F9bGOA/giphy.gif)
-    
-See more [Markdown Extras - Image Align](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#image-align)    
+tl:dr;
 
-# Style Text
-### Italic
-
-*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.*
-
-     *Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.*
-
-### Bold
-**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.**
-
-    **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.**
-    
-### Strikethrough
-~~strikethrough text~~
-
-    ~~strikethrough text~~
-    
-# Code
-
-```java
-public static void main(String[] args) {
-	//TODO
-}
-```
-
->   \`\`\`java <br>
->   public static void main(String[] args) {<br>
->	    //TODO<br>
->	}<br>
->   \`\`\`<br>
-
-See more [Markdown Extras - Style Text](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#style-text)
-
-# Email
-<email@email.com>
-
-    <email@email.com>
-
-# Table
-
-|Column 1|Column 2|Column 3|
-|---|---|---|
-|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
-|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
-
->\|Column 1|Column 2|Column 3|<br>
->\|---|---|---|<br>
->\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
->\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
-
-## Table Align
-
-## Align Center
-
-|Column 1|Column 2|Column 3|
-|:---:|:---:|:---:|
-|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
-|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
-
->\|Column 1|Column 2|Column 3|<br>
->\|:---:|:---:|:---:|<br>
->\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
->\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
-
-## Align Left
-
-|Column 1|Column 2|Column 3|
-|:---|:---|:---|
-|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
-|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
-
->\|Column 1|Column 2|Column 3|<br>
->\|:---|:---|:---|<br>
->\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
->\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
-
-## Align Right
-
-|Column 1|Column 2|Column 3|
-|---:|---:|---:|
-|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
-|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
-
->\|Column 1|Column 2|Column 3|<br>
->\|---:|---:|---:|<br>
->\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
->\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
-
-See more [Markdown Extras - Table](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table)
-* [Rownspan](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table---rowspan)
-* [Colspan](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table---colspan)
-
-# Escape Characters
-
-```
-\   backslash
-`   backtick
-*   asterisk
-_   underscore
-{}  curly braces
-[]  square brackets
-()  parentheses
-#   hash mark
-+   plus sign
--   minus sign (hyphen)
-.   dot
-!   exclamation mark
-```
-
-# Emoji
-
-* [Emoji](emoji.md#emoji);
-	* [People](emoji.md#people) - (:blush: ; :hushed: ; :shit:);
-	* [Nature](emoji.md#nature) - (:sunny: ; :snowman: ; :dog:);
-	* [Objects](emoji.md#objects) - (:file_folder: ; :computer: ; :bell:);
-	* [Places](emoji.md#places) - (:rainbow: ; :warning: ; :statue_of_liberty:);
-	* [Symbols](emoji.md#symbols) - (:cancer: ; :x: ; :shipit:);
-* [Kaomoji](emoji.md#kaomoji);
-* [Special-Symbols](emoji.md#special-symbols);
-	
-
-# Shields Badges
-
-:warning: _We are not responsible for this site_
-
-See more: [https://shields.io/](https://shields.io/)
-
-[![GitHub forks](https://img.shields.io/github/forks/fefong/markdown_readme)](https://github.com/fefong/markdown_readme/network)
-![Markdown](https://img.shields.io/badge/markdown-project-red)
-
-# Markdown Editor
-
-[StackEdit](https://stackedit.io) - _StackEdit’s Markdown syntax highlighting is unique. The refined text formatting of the editor helps you visualize the final rendering of your files._
-
-# Some links for more in depth learning
-
-:page_facing_up: [Markdown Extras](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#markdown---extras)
-
-:page_facing_up: [Wikipedia - Markdown](https://pt.wikipedia.org/wiki/Markdown)
-
-:page_facing_up: [Oficial](https://daringfireball.net/projects/markdown/)
-
-
+1. Be the change you want to see on the wiki ✨ Just **edit it directly** on Github ✏️
+1. Got more of a **suggestion** than an immediate change? Open a **Pull Request** 🙋🏽‍
+1. Not sure what the right info is, but you can see the current **docs are wrong**? Open an **issue** 🤔
+1. Got lots to share? Awesome!🦄 Work on this wiki **locally**: `$ git clone git@github.com:bufferapp/README.git`
