@@ -1,45 +1,89 @@
-# Contributing to Artsy README
+# Project Name
+> Outline a brief description of your project.
+> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
-This project is work of [many contributors](https://github.com/artsy/README/graphs/contributors).
+## Table of Contents
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Screenshots](#screenshots)
+* [Setup](#setup)
+* [Usage](#usage)
+* [Project Status](#project-status)
+* [Room for Improvement](#room-for-improvement)
+* [Acknowledgements](#acknowledgements)
+* [Contact](#contact)
+<!-- * [License](#license) -->
 
-If you work at [Artsy](https://www.artsy.net), you're encouraged to submit
-[pull requests](https://github.com/artsy/README/pulls), [propose and discuss
-issues](https://github.com/artsy/README/issues).
 
-If you don't work at Artsy, we would love for you to [ask us a question or highlight
-an issue](https://github.com/artsy/README/issues) in our processes, check out
-[our Engineering blog](https://artsy.github.io) or [maybe even consider working with
-us](https://www.artsy.net/jobs) :)
+## General Information
+- Provide general information about your project here.
+- What problem does it (intend to) solve?
+- What is the purpose of your project?
+- Why did you undertake it?
+<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
-## Editing README
 
-You can edit files via the GitHub interface if you're just trying to quickly make a change. If you want to make a
-change that is a bit more nuanced, you can clone the repo and set it up with:
+## Technologies Used
+- Tech 1 - version 1.0
+- Tech 2 - version 2.0
+- Tech 3 - version 3.0
 
-```sh
-git clone https://github.com/artsy/README.git
-cd README
-yarn install
 
-code .
-```
+## Features
+List the ready features here:
+- Awesome feature 1
+- Awesome feature 2
+- Awesome feature 3
 
-## Helpful Automation
 
-This repo has some useful automation set up for it to generate tables of contents. This is implemented in
-[`scripts/create-readmes.ts`](scripts/create-readmes.ts), which handles:
+## Screenshots
+![Example screenshot](./img/screenshot.png)
+<!-- If you have screenshots you'd like to share, include them here. -->
 
-- Creating a summary `README.md` for each section of docs
-- Providing an overview of the section in the root `README.md`
-- Enables running [doctoc](https://github.com/thlorenz/doctoc#readme) on any file with `<!-- START doctoc`
 
-This script runs on every commit, so we'll always ensure all the table of contents are up-to-date.
+## Setup
+What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
-Each markdown file in a section uses [yaml front-matter](https://jekyllrb.com/docs/frontmatter/) to add a
-description and title to the document, which are used to generate a `README.md` for each section.
+Proceed to describe how to install / setup one's local environment / get started with the project.
 
-Each section has a `summary.json` which describes the section for the root `README.md`.
 
-Adding a new folder, or markdown file into a section will generate `[TODO]` items which will appear as comments in
-a pull request when you `git push` or on CI. This is implemented using [Danger](https://danger.systems) in
-[`dangerfile.ts`](/dangerfile.ts).
+## Usage
+How does one go about using it?
+Provide various use cases and code examples here.
+
+`write-your-code-here`
+
+
+## Project Status
+Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+
+
+## Room for Improvement
+Include areas you believe need improvement / could be improved. Also add TODOs for future development.
+
+Room for improvement:
+- Improvement to be done 1
+- Improvement to be done 2
+
+To do:
+- Feature to be added 1
+- Feature to be added 2
+
+
+## Acknowledgements
+Give credit here.
+- This project was inspired by...
+- This project was based on [this tutorial](https://www.example.com).
+- Many thanks to...
+
+
+## Contact
+Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+
+
+<!-- Optional -->
+<!-- ## License -->
+<!-- This project is open source and available under the [... License](). -->
+
+<!-- You don't have to include all sections - just the one's relevant to your project -->
