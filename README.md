@@ -1,6 +1,3 @@
-{
-  "trailingComma": "all",
-  "useTabs": false,
-  "endOfLine": "auto",
-  "proseWrap": "always"
-}
+include README.rst
+include README.md
+include LICENSE
