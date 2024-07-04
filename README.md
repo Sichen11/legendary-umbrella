@@ -1,342 +1,285 @@
-{
-  "name": "standard-readme-spec",
-  "version": "1.2.2",
-  "lockfileVersion": 1,
-  "requires": true,
-  "dependencies": {
-    "ansi-escapes": {
-      "version": "1.4.0",
-      "resolved": "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-1.4.0.tgz",
-      "integrity": "sha1-06ioOzGapneTZisT52HHkRQiMG4="
-    },
-    "ansi-regex": {
-      "version": "2.1.1",
-      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
-      "integrity": "sha1-w7M6te42DYbg5ijwRorn7yfWVN8="
-    },
-    "ansi-styles": {
-      "version": "2.2.1",
-      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.1.tgz",
-      "integrity": "sha1-tDLdM1i2NM914eRmQ2gkBTPB3b4="
-    },
-    "babel-polyfill": {
-      "version": "6.23.0",
-      "resolved": "https://registry.npmjs.org/babel-polyfill/-/babel-polyfill-6.23.0.tgz",
-      "integrity": "sha1-g2TKYt+Or7gwSZ9pkXdGbDsDSZ0=",
-      "requires": {
-        "babel-runtime": "^6.22.0",
-        "core-js": "^2.4.0",
-        "regenerator-runtime": "^0.10.0"
-      }
-    },
-    "babel-runtime": {
-      "version": "6.26.0",
-      "resolved": "https://registry.npmjs.org/babel-runtime/-/babel-runtime-6.26.0.tgz",
-      "integrity": "sha1-llxwWGaOgrVde/4E/yM3vItWR/4=",
-      "requires": {
-        "core-js": "^2.4.0",
-        "regenerator-runtime": "^0.11.0"
-      },
-      "dependencies": {
-        "regenerator-runtime": {
-          "version": "0.11.1",
-          "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz",
-          "integrity": "sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg=="
+# readme2tex
+Renders LaTeX for Github Readmes
+
+<p align="center"><img alt="$$&#10;\huge\text{Hello \LaTeX}&#10;$$" src="svgs/d27ecd9d6334c7a020001926c8000801.png?invert_in_darkmode" align=middle width="159.690135pt" height="30.925785pt"/></p>
+
+<p align="center"><img alt="\begin{tikzpicture}&#10;\newcounter{density}&#10;\setcounter{density}{20}&#10;    \def\couleur{blue}&#10;    \path[coordinate] (0,0)  coordinate(A)&#10;                ++( 60:6cm) coordinate(B)&#10;                ++(-60:6cm) coordinate(C);&#10;    \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) -- cycle;&#10;    \foreach \x in {1,...,15}{%&#10;        \pgfmathsetcounter{density}{\thedensity+10}&#10;        \setcounter{density}{\thedensity}&#10;        \path[coordinate] coordinate(X) at (A){};&#10;        \path[coordinate] (A) -- (B) coordinate[pos=.15](A)&#10;                            -- (C) coordinate[pos=.15](B)&#10;                            -- (X) coordinate[pos=.15](C);&#10;        \draw[fill=\couleur!\thedensity] (A)--(B)--(C)--cycle;&#10;    }&#10;\end{tikzpicture}" src="svgs/a00f34be6b1ce8e4820c9852c5e6163e.png" align=middle width="281.2887pt" height="243.69345pt"/></p>
+
+<sub>**Make sure that pdflatex is installed on your system.**</sub>
+
+----------------------------------------
+
+`readme2tex` is a Python script that "texifies" your readme. It takes in Github Markdown and
+replaces anything enclosed between dollar signs with rendered <img alt="$\text{\LaTeX}$" src="svgs/c068b57af6b6fa949824f73dcb828783.png?invert_in_darkmode" align=middle width="42.05817pt" height="22.407pt"/>.
+
+In addition, while other Github TeX renderers tend to give a jumpy look to the compiled text, 
+<p align="center">
+<img src="http://i.imgur.com/XSV1rPw.png?1" width=500/>
+</p>
+
+`readme2tex` ensures that inline mathematical expressions
+are properly aligned with the rest of the text to give a more natural look to the document. For example,
+this formula <img alt="$\frac{dy}{dx}$" src="svgs/24a7d013bfb0af0838f476055fc6e1ef.png?invert_in_darkmode" align=middle width="14.297415pt" height="30.58869pt"/> is preprocessed so that it lines up at the correct baseline for the text.
+This is the one salient feature of this package compared to the others out there.
+
+### Installation
+
+Make sure that you have Python 2.7 or above and `pip` installed. In addition, you'll need to have the programs `latex` 
+and `dvisvgm` on your `PATH`. In addition, you'll need to pre-install the `geometry` package in <img alt="$\text{\LaTeX}$" src="svgs/c068b57af6b6fa949824f73dcb828783.png?invert_in_darkmode" align=middle width="42.05817pt" height="22.407pt"/>.
+
+To install `readme2tex`, you'll need to run
+
+```bash
+sudo pip install readme2tex
+```
+
+or, if you want to try out the bleeding edge,
+
+```bash
+git clone https://github.com/leegao/readme2tex
+cd readme2tex
+python setup.py develop
+```
+
+To compile `INPUT.md` and render all of its formulas, run
+
+```bash
+python -m readme2tex --output README.md INPUT.md
+```
+
+If you want to do this automatically for every commit of INPUT.md, you can use the `--add-git-hook` command once to
+set up the post-commit hook, like so
+
+```bash
+git stash --include-untracked
+git branch svgs # if this isn't already there
+
+python -m readme2tex --output README.md --branch svgs --usepackage tikz INPUT.md --add-git-hook
+
+# modify INPUT.md
+
+git add INPUT.md
+git commit -a -m "updated readme"
+
+git stash pop
+```
+
+and every `git commit` that touches `INPUT.md` from now on will allow you to automatically run `readme2tex` on it, saving
+you from having to remember how `readme2tex` works. The caveat is that if you use a GUI to interact with git, things
+might get a bit wonky. In particular, `readme2tex` will just assume that you're fine with all of the changes and won't
+prompt you for verification like it does on the terminal.
+
+<p align="center">
+<a href="https://asciinema.org/a/2am62r2x2udg1zqyb6r3kpm1i"><img src="https://asciinema.org/a/2am62r2x2udg1zqyb6r3kpm1i.png" width=600/></a>
+</p>
+
+You can uninstall the hook by deleting `.git/hooks/post-commit`. See `python -m readme2tex --help` for a list
+of what you can do in `readme2tex`.
+
+### Examples:
+
+Here's a display level formula
+<p align="center"><img alt="$$&#10;\frac{n!}{k!(n-k)!} = {n \choose k}&#10;$$" src="svgs/32737e0a8d5a4cf32ba3ab1b74902ab7.png?invert_in_darkmode" align=middle width="127.89183pt" height="39.30498pt"/></p>
+
+The code that was used to render this formula is just
+
+    $$
+    \frac{n!}{k!(n-k)!} = {n \choose k}
+    $$
+
+<sub>*Note: you can escape \$ so that they don't render.*</sub>
+
+Here's an inline formula. 
+
+> It is well known that if <img alt="$ax^2 + bx + c =0$" src="svgs/162f63774d8a882cc15ae1301cfd8ac0.png?invert_in_darkmode" align=middle width="119.01186pt" height="26.70657pt"/>, then <img alt="$x = \frac{-b \pm \sqrt{b^2- 4ac}}{2a}$" src="svgs/584fa2612b78129d140fb208e9d76ae9.png?invert_in_darkmode" align=middle width="112.3584pt" height="33.20526pt"/>.
+
+The code that was used to render this is:
+
+    It is well known that if $ax^2 + bx + c = 0$, then $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.
+
+Notice that the formulas line up with the baseline of the text, even when the height of these two images are different.
+
+Sometimes, you might run into formulas that are bottom-heavy, like <img alt="$x^2\sum\limits_{3^{n^{n^{n}}}}$" src="svgs/4cb4ead947a07837121937c807973436.png?invert_in_darkmode" align=middle width="47.639295pt" height="37.03194pt"/>. Here, `readme2tex`
+can compute the correct offset to align this formula to the baseline of your paragraph of text as well.
+
+#### Tikz (Courtesy of http://www.texample.net/)
+
+Did you notice the picture at the top of this page? That was also generated by <img alt="$\text{\LaTeX}$" src="svgs/c068b57af6b6fa949824f73dcb828783.png?invert_in_darkmode" align=middle width="42.05817pt" height="22.407pt"/>. `readme2tex` is capable of
+handling Tikz code. For reference, the picture
+
+<p align="center"><img alt="\begin{tikzpicture}&#10;\newcounter{density}&#10;\setcounter{density}{20}&#10;    \def\couleur{red}&#10;    \path[coordinate] (0,0)  coordinate(A)&#10;                ++( 60:6cm) coordinate(B)&#10;                ++(-60:6cm) coordinate(C);&#10;    \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) -- cycle;&#10;    \foreach \x in {1,...,15}{%&#10;        \pgfmathsetcounter{density}{\thedensity+10}&#10;        \setcounter{density}{\thedensity}&#10;        \path[coordinate] coordinate(X) at (A){};&#10;        \path[coordinate] (A) -- (B) coordinate[pos=.15](A)&#10;                            -- (C) coordinate[pos=.15](B)&#10;                            -- (X) coordinate[pos=.15](C);&#10;        \draw[fill=\couleur!\thedensity] (A)--(B)--(C)--cycle;&#10;    }&#10;\end{tikzpicture}" src="svgs/522cbfbc866df378cb95b2ef083131b2.png" align=middle width="281.2887pt" height="243.69345pt"/></p>
+
+is given by the tikz code
+
+    \begin{tikzpicture}
+    \newcounter{density}
+    \setcounter{density}{20}
+        \def\couleur{red}
+        \path[coordinate] (0,0)  coordinate(A)
+                    ++( 60:6cm) coordinate(B)
+                    ++(-60:6cm) coordinate(C);
+        \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) -- cycle;
+        \foreach \x in {1,...,15}{%
+            \pgfmathsetcounter{density}{\thedensity+10}
+            \setcounter{density}{\thedensity}
+            \path[coordinate] coordinate(X) at (A){};
+            \path[coordinate] (A) -- (B) coordinate[pos=.15](A)
+                                -- (C) coordinate[pos=.15](B)
+                                -- (X) coordinate[pos=.15](C);
+            \draw[fill=\couleur!\thedensity] (A)--(B)--(C)--cycle;
         }
-      }
-    },
-    "chalk": {
-      "version": "1.1.3",
-      "resolved": "https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz",
-      "integrity": "sha1-qBFcVeSnAv5NFQq9OHKCKn4J/Jg=",
-      "requires": {
-        "ansi-styles": "^2.2.1",
-        "escape-string-regexp": "^1.0.2",
-        "has-ansi": "^2.0.0",
-        "strip-ansi": "^3.0.0",
-        "supports-color": "^2.0.0"
-      }
-    },
-    "chardet": {
-      "version": "0.4.2",
-      "resolved": "https://registry.npmjs.org/chardet/-/chardet-0.4.2.tgz",
-      "integrity": "sha1-tUc7M9yXxCTl2Y3IfVXU2KKci/I="
-    },
-    "cli-cursor": {
-      "version": "2.1.0",
-      "resolved": "https://registry.npmjs.org/cli-cursor/-/cli-cursor-2.1.0.tgz",
-      "integrity": "sha1-s12sN2R5+sw+lHR9QdDQ9SOP/LU=",
-      "requires": {
-        "restore-cursor": "^2.0.0"
-      }
-    },
-    "cli-width": {
-      "version": "2.2.1",
-      "resolved": "https://registry.npmjs.org/cli-width/-/cli-width-2.2.1.tgz",
-      "integrity": "sha512-GRMWDxpOB6Dgk2E5Uo+3eEBvtOOlimMmpbFiKuLFnQzYDavtLFY3K5ona41jgN/WdRZtG7utuVSVTL4HbZHGkw=="
-    },
-    "core-js": {
-      "version": "2.6.12",
-      "resolved": "https://registry.npmjs.org/core-js/-/core-js-2.6.12.tgz",
-      "integrity": "sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ=="
-    },
-    "encoding": {
-      "version": "0.1.13",
-      "resolved": "https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz",
-      "integrity": "sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==",
-      "requires": {
-        "iconv-lite": "^0.6.2"
-      },
-      "dependencies": {
-        "iconv-lite": {
-          "version": "0.6.2",
-          "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.2.tgz",
-          "integrity": "sha512-2y91h5OpQlolefMPmUlivelittSWy0rP+oYVpn6A7GwVHNE8AWzoYOBNmlwks3LobaJxgHCYZAnyNo2GgpNRNQ==",
-          "requires": {
-            "safer-buffer": ">= 2.1.2 < 3.0.0"
-          }
-        }
-      }
-    },
-    "escape-string-regexp": {
-      "version": "1.0.5",
-      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
-      "integrity": "sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ="
-    },
-    "external-editor": {
-      "version": "2.2.0",
-      "resolved": "https://registry.npmjs.org/external-editor/-/external-editor-2.2.0.tgz",
-      "integrity": "sha512-bSn6gvGxKt+b7+6TKEv1ZycHleA7aHhRHyAqJyp5pbUFuYYNIzpZnQDk7AsYckyWdEnTeAnay0aCy2aV6iTk9A==",
-      "requires": {
-        "chardet": "^0.4.0",
-        "iconv-lite": "^0.4.17",
-        "tmp": "^0.0.33"
-      }
-    },
-    "figures": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/figures/-/figures-2.0.0.tgz",
-      "integrity": "sha1-OrGi0qYsi/tDGgyUy3l6L84nyWI=",
-      "requires": {
-        "escape-string-regexp": "^1.0.5"
-      }
-    },
-    "has-ansi": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz",
-      "integrity": "sha1-NPUEnOHs3ysGSa8+8k5F7TVBbZE=",
-      "requires": {
-        "ansi-regex": "^2.0.0"
-      }
-    },
-    "iconv-lite": {
-      "version": "0.4.24",
-      "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz",
-      "integrity": "sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==",
-      "requires": {
-        "safer-buffer": ">= 2.1.2 < 3"
-      }
-    },
-    "inquirer": {
-      "version": "3.0.6",
-      "resolved": "https://registry.npmjs.org/inquirer/-/inquirer-3.0.6.tgz",
-      "integrity": "sha1-4EqqnQW3o8ubD0B9BDdfBEcZA0c=",
-      "requires": {
-        "ansi-escapes": "^1.1.0",
-        "chalk": "^1.0.0",
-        "cli-cursor": "^2.1.0",
-        "cli-width": "^2.0.0",
-        "external-editor": "^2.0.1",
-        "figures": "^2.0.0",
-        "lodash": "^4.3.0",
-        "mute-stream": "0.0.7",
-        "run-async": "^2.2.0",
-        "rx": "^4.1.0",
-        "string-width": "^2.0.0",
-        "strip-ansi": "^3.0.0",
-        "through": "^2.3.6"
-      }
-    },
-    "is-fullwidth-code-point": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
-      "integrity": "sha1-o7MKXE8ZkYMWeqq5O+764937ZU8="
-    },
-    "is-stream": {
-      "version": "1.1.0",
-      "resolved": "https://registry.npmjs.org/is-stream/-/is-stream-1.1.0.tgz",
-      "integrity": "sha1-EtSj3U5o4Lec6428hBc66A2RykQ="
-    },
-    "lodash": {
-      "version": "4.17.19",
-      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.19.tgz",
-      "integrity": "sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ=="
-    },
-    "mimic-fn": {
-      "version": "1.2.0",
-      "resolved": "https://registry.npmjs.org/mimic-fn/-/mimic-fn-1.2.0.tgz",
-      "integrity": "sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ=="
-    },
-    "minimist": {
-      "version": "1.2.0",
-      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz",
-      "integrity": "sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ="
-    },
-    "mute-stream": {
-      "version": "0.0.7",
-      "resolved": "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.7.tgz",
-      "integrity": "sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s="
-    },
-    "node-fetch": {
-      "version": "1.6.3",
-      "resolved": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.6.3.tgz",
-      "integrity": "sha1-3CNO3WSJmC1Y6PDbT2lQKavNjAQ=",
-      "requires": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      }
-    },
-    "object-assign": {
-      "version": "4.1.1",
-      "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
-      "integrity": "sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM="
-    },
-    "onetime": {
-      "version": "2.0.1",
-      "resolved": "https://registry.npmjs.org/onetime/-/onetime-2.0.1.tgz",
-      "integrity": "sha1-BnQoIw/WdEOyeUsiu6UotoZ5YtQ=",
-      "requires": {
-        "mimic-fn": "^1.0.0"
-      }
-    },
-    "opencollective": {
-      "version": "1.0.3",
-      "resolved": "https://registry.npmjs.org/opencollective/-/opencollective-1.0.3.tgz",
-      "integrity": "sha1-ruY3K8KBRFg2kMPKja7PwSDdDvE=",
-      "requires": {
-        "babel-polyfill": "6.23.0",
-        "chalk": "1.1.3",
-        "inquirer": "3.0.6",
-        "minimist": "1.2.0",
-        "node-fetch": "1.6.3",
-        "opn": "4.0.2"
-      }
-    },
-    "opencollective-postinstall": {
-      "version": "2.0.3",
-      "resolved": "https://registry.npmjs.org/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz",
-      "integrity": "sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q=="
-    },
-    "opn": {
-      "version": "4.0.2",
-      "resolved": "https://registry.npmjs.org/opn/-/opn-4.0.2.tgz",
-      "integrity": "sha1-erwi5kTf9jsKltWrfyeQwPAavJU=",
-      "requires": {
-        "object-assign": "^4.0.1",
-        "pinkie-promise": "^2.0.0"
-      }
-    },
-    "os-tmpdir": {
-      "version": "1.0.2",
-      "resolved": "https://registry.npmjs.org/os-tmpdir/-/os-tmpdir-1.0.2.tgz",
-      "integrity": "sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ="
-    },
-    "pinkie": {
-      "version": "2.0.4",
-      "resolved": "https://registry.npmjs.org/pinkie/-/pinkie-2.0.4.tgz",
-      "integrity": "sha1-clVrgM+g1IqXToDnckjoDtT3+HA="
-    },
-    "pinkie-promise": {
-      "version": "2.0.1",
-      "resolved": "https://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.1.tgz",
-      "integrity": "sha1-ITXW36ejWMBprJsXh3YogihFD/o=",
-      "requires": {
-        "pinkie": "^2.0.0"
-      }
-    },
-    "regenerator-runtime": {
-      "version": "0.10.5",
-      "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz",
-      "integrity": "sha1-M2w+/BIgrc7dosn6tntaeVWjNlg="
-    },
-    "restore-cursor": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/restore-cursor/-/restore-cursor-2.0.0.tgz",
-      "integrity": "sha1-n37ih/gv0ybU/RYpI9YhKe7g368=",
-      "requires": {
-        "onetime": "^2.0.0",
-        "signal-exit": "^3.0.2"
-      }
-    },
-    "run-async": {
-      "version": "2.4.1",
-      "resolved": "https://registry.npmjs.org/run-async/-/run-async-2.4.1.tgz",
-      "integrity": "sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ=="
-    },
-    "rx": {
-      "version": "4.1.0",
-      "resolved": "https://registry.npmjs.org/rx/-/rx-4.1.0.tgz",
-      "integrity": "sha1-pfE/957zt0D+MKqAP7CfmIBdR4I="
-    },
-    "safer-buffer": {
-      "version": "2.1.2",
-      "resolved": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
-      "integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg=="
-    },
-    "signal-exit": {
-      "version": "3.0.3",
-      "resolved": "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.3.tgz",
-      "integrity": "sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA=="
-    },
-    "string-width": {
-      "version": "2.1.1",
-      "resolved": "https://registry.npmjs.org/string-width/-/string-width-2.1.1.tgz",
-      "integrity": "sha512-nOqH59deCq9SRHlxq1Aw85Jnt4w6KvLKqWVik6oA9ZklXLNIOlqg4F2yrT1MVaTjAqvVwdfeZ7w7aCvJD7ugkw==",
-      "requires": {
-        "is-fullwidth-code-point": "^2.0.0",
-        "strip-ansi": "^4.0.0"
-      },
-      "dependencies": {
-        "ansi-regex": {
-          "version": "3.0.0",
-          "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-3.0.0.tgz",
-          "integrity": "sha1-7QMXwyIGT3lGbAKWa922Bas32Zg="
-        },
-        "strip-ansi": {
-          "version": "4.0.0",
-          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-4.0.0.tgz",
-          "integrity": "sha1-qEeQIusaw2iocTibY1JixQXuNo8=",
-          "requires": {
-            "ansi-regex": "^3.0.0"
-          }
-        }
-      }
-    },
-    "strip-ansi": {
-      "version": "3.0.1",
-      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
-      "integrity": "sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8=",
-      "requires": {
-        "ansi-regex": "^2.0.0"
-      }
-    },
-    "supports-color": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz",
-      "integrity": "sha1-U10EXOa2Nj+kARcIRimZXp3zJMc="
-    },
-    "through": {
-      "version": "2.3.8",
-      "resolved": "https://registry.npmjs.org/through/-/through-2.3.8.tgz",
-      "integrity": "sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU="
-    },
-    "tmp": {
-      "version": "0.0.33",
-      "resolved": "https://registry.npmjs.org/tmp/-/tmp-0.0.33.tgz",
-      "integrity": "sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==",
-      "requires": {
-        "os-tmpdir": "~1.0.2"
-      }
-    }
-  }
-}
+    \end{tikzpicture}
+
+We can see a few other examples, such as this graphical proof of the Pythagorean Theorem.
+
+<p align="center"><img alt="\begin{tikzpicture}&#10;\newcommand{\pythagwidth}{3cm}&#10;\newcommand{\pythagheight}{2cm}&#10;  \coordinate [label={below right:$A$}] (A) at (0, 0);&#10;  \coordinate [label={above right:$B$}] (B) at (0, \pythagheight);&#10;  \coordinate [label={below left:$C$}] (C) at (-\pythagwidth, 0);&#10;&#10;  \coordinate (D1) at (-\pythagheight, \pythagheight + \pythagwidth);&#10;  \coordinate (D2) at (-\pythagheight - \pythagwidth, \pythagwidth);&#10;&#10;  \draw [very thick] (A) -- (C) -- (B) -- (A);&#10;&#10;  \newcommand{\ranglesize}{0.3cm}&#10;  \draw (A) -- ++ (0, \ranglesize) -- ++ (-\ranglesize, 0) -- ++ (0, -\ranglesize);&#10;&#10;  \draw [dashed] (A) -- node [below] {$b$} ++ (-\pythagwidth, 0)&#10;            -- node [right] {$b$} ++ (0, -\pythagwidth)&#10;            -- node [above] {$b$} ++ (\pythagwidth, 0)&#10;            -- node [left]  {$b$} ++ (0, \pythagwidth);&#10;&#10;  \draw [dashed] (A) -- node [right] {$c$} ++ (0, \pythagheight)&#10;            -- node [below] {$c$} ++ (\pythagheight, 0)&#10;            -- node [left]  {$c$} ++ (0, -\pythagheight)&#10;            -- node [above] {$c$} ++ (-\pythagheight, 0);&#10;&#10;  \draw [dashed] (C) -- node [above left]  {$a$} (B)&#10;                     -- node [below left]  {$a$} (D1)&#10;                     -- node [below right] {$a$} (D2)&#10;                     -- node [above right] {$a$} (C);&#10;\end{tikzpicture}" src="svgs/e148d2d3bb31215788cc03f9b472e5ba.png?invert_in_darkmode" align=middle width="328.0695pt" height="374.83545pt"/></p>
+
+How about a few snowflakes?
+
+<p align="center"><img alt="\begin{center}&#10;\usetikzlibrary{lindenmayersystems}&#10;&#10;\pgfdeclarelindenmayersystem{A}{&#10;    \rule{F -&gt; FF[+F][-F]}&#10;}&#10;&#10;\pgfdeclarelindenmayersystem{B}{&#10;    \rule{F -&gt; ffF[++FF][--FF]}&#10;}&#10;&#10;\pgfdeclarelindenmayersystem{C}{&#10;    \symbol{G}{\pgflsystemdrawforward}&#10;    \rule{F -&gt; F[+F][-F]FG[+F][-F]FG}&#10;}&#10;&#10;\pgfdeclarelindenmayersystem{D}{&#10;    \symbol{G}{\pgflsystemdrawforward}&#10;    \symbol{H}{\pgflsystemdrawforward}&#10;    \rule{F -&gt; H[+HG][-HG]G}&#10;    \rule{G -&gt; HF}&#10;}&#10;&#10;\tikzset{&#10;    type/.style={l-system={#1, axiom=F,order=3,step=4pt,angle=60},&#10;      blue, opacity=0.4, line width=.5mm, line cap=round   &#10;    },&#10;}&#10;&#10;\newcommand\drawsnowflake[2][scale=0.2]{&#10;    \tikz[#1]&#10;    \foreach \a in {0,60,...,300}  {&#10;    \draw[rotate=\a,#2] l-system;&#10;    };&#10;}&#10;&#10;\foreach \width in {.2,.4,...,.8} &#10;{  \drawsnowflake[scale=0.3]{type=A, line width=\width mm} }&#10;&#10;\foreach \width in {.2,.4,...,.8} &#10;{  \drawsnowflake[scale=0.38]{type=A, l-system={angle=90}, line width=\width mm} }    &#10;&#10;\foreach \width in {.2,.4,...,.8} &#10;{  \drawsnowflake[scale=0.3]{type=B, line width=\width mm} }&#10;&#10;\foreach \width in {.2,.4,...,.8} &#10;{  \drawsnowflake{type=B, l-system={angle=30}, line width=\width mm} }&#10;&#10;\drawsnowflake[scale=0.24]{type=C, l-system={order=2}, line width=0.2mm}&#10;\drawsnowflake[scale=0.25]{type=C, l-system={order=2}, line width=0.4mm}&#10;\drawsnowflake[scale=0.25]{type=C, l-system={order=2,axiom=fF}, line width=0.2mm}&#10;\drawsnowflake[scale=0.32]{type=C, l-system={order=2,axiom=---fff+++F}, line width=0.2mm}&#10;&#10;\drawsnowflake[scale=0.38]{type=D, l-system={order=4,angle=60,axiom=GF}, line width=0.7mm}&#10;\drawsnowflake[scale=0.38]{type=D, l-system={order=4,angle=60,axiom=GfF}, line width=0.7mm}&#10;\drawsnowflake[scale=0.38]{type=D, l-system={order=4,angle=60,axiom=FG}, line width=0.7mm}&#10;\drawsnowflake[scale=0.38]{type=D, l-system={order=4,angle=60,axiom=FfG}, line width=0.7mm}&#10;\end{center}" src="svgs/eb57748cb91d08bfc997b0d70f7f2774.png?invert_in_darkmode" align=middle width="284.7009pt" height="343.2924pt"/></p>
+
+### Usage
+
+    python -m readme2tex --output README.md [READOTHER.md]
+
+It will then look for a file called `readother.md` and compile it down to a readable Github-ready
+document.
+
+In addition, you can specify other arguments to `render.py`, such as:
+
+* `--readme READOTHER.md` The raw readme to process. Defaults to `READOTHER.md`.
+* `--output README.md` The processed readme.md file. Defaults to `README_GH.md`.
+* `--usepackage tikz` Addition packages to use during <img alt="$\text{\LaTeX}$" src="svgs/c068b57af6b6fa949824f73dcb828783.png?invert_in_darkmode" align=middle width="42.05817pt" height="22.407pt"/> compilation. You can specify this multiple times.
+* `--svgdir svgs/` The directory to store the output svgs. The default is `svgs/`
+* `--branch master` *Experimental* Which branch to store the svgs into, the default is just master.
+* `--username username` Your github username. This is optional, and `render.py` will try to infer this for you.
+* `--project project` The current github project. This is also optional.
+* `--nocdn` Ticking this will use relative paths for the output images. Defaults to False.
+* `--htmlize` Ticking this will output a `md.html` file so you can preview what the output looks like. Defaults to False.
+* `--valign` Ticking this will use the `valign` trick (detailed below) instead. See the caveats section for tradeoffs.
+* `--rerender` Ticking this will force a recompilation of all <img alt="$\text{\LaTeX}$" src="svgs/c068b57af6b6fa949824f73dcb828783.png?invert_in_darkmode" align=middle width="42.05817pt" height="22.407pt"/> formulas even if they are already cached.
+* `--bustcache` Ticking this will ensure that Github renews its image cache. Github may sometimes take up to an hour for changed images to reappear. This is usually not necessary unless you've made stylistic changes.
+* `--add-git-hook` Ticking this will generate a post-commit hook for git that runs readme2tex with the rest of the specified arguments after each `git commit`.
+* `--pngtrick` Ticking this will generate `png` files instead of `svgs` for the formulas.
+
+My usual workflow is to create a secondary branch just for the compiled svgs. You can accomplish this via
+
+    python -m readme2tex --branch svgs --output README.md
+
+However, be careful with this command, since it will switch over to the `svgs` branch without any input from you.
+
+#### Relative Paths
+
+If you're on a private repository or you want to, for whatever reason, use relative paths to resolve your images, you can
+do so by using the combination
+
+    python -m readme2tex --branch master --nocdn --pngtrick ...
+
+which will output `pngs` relative to your `README.md`.
+
+Due to security considerations, Github will not resolve `svgs` relatively, which means that private repositories will
+be locked out of the usual `svg` workflow. Using the `--branch master --nocdn --pngtrick` combination will get around
+this restriction.
+
+### Troubleshooting
+
+#### Tikz
+
+If your Tikz drawings don't show up, there's a good chance that you either don't have Ghostscript installed or
+`dvisvgm` isn't picking it up for whatever reason. This is most likely to happen on some installations of TexLive
+on OSX.
+
+Check to see if `ps` is included in the list when you run
+
+```bash
+# dvisvgm -l
+bgcolor    background color special
+color      complete support of color specials
+dvisvgm    special set for embedding raw SVG snippets
+em         line drawing statements of the emTeX special set
+html       hyperref specials
+pdf        pdfTeX font map specials
+ps         dvips PostScript specials <<<
+tpic       TPIC specials
+```
+
+If not, try installing it (either `apt-get`, `yum`, or `brew`). Furthermore, if you are on OSX, make sure to add the
+following to your `~/.bash_profile`
+
+```bash
+export LIBGS=/usr/local/lib/libgs.dylib
+```
+
+where `/usr/local/lib/libgs.dylib` is the location where `libgs.dylib` is installed.
+
+#### I'm seeing weird formatting from time to time.
+
+Make sure that if you have a `<p>...</p>` tag somewhere, you leave at least one blank line after the closing tag.
+
+#### I ran `--add-git-hook`, but the post-commit hook isn't running after committing.
+
+```bash
+chmod +x .git/hooks/post-commit
+```
+
+#### I raw `readme2tex` and got strange image srcs or got images that won't resolve
+
+Try running `readme2tex` with
+
+```bash
+python -m readme2tex ... --username GITHUB_USERNAME  --project PROJECT_NAME
+```
+
+#### I ran `readme2tex` and got a traceback somewhere.
+
+Unfortunately, this script still has a few kinks and bugs that I need to iron out. In the mean time, if the `pypi` releases
+aren't working for you, you should switch over to the development version to see if the bugs have been squashed:
+
+```bash
+git clone https://github.com/leegao/readme2tex
+cd readme2tex
+python setup.py develop
+```
+
+### Technical Tricks
+
+#### How can you tell where the baseline of an image is?
+
+By prepending every inline formula with an anchor. During post-processing, we can isolate the anchor, which
+is fixed at the baseline, and crop it out. It's super clowny, but it does the job.
+
+#### Caveats
+
+Github does not allow you to pass in custom style attributes to your images. While this is useful for security purposes,
+it makes it incredibly difficult to ensure that images will align correctly to the text. `readme2tex` circumvents this
+using one of two tricks:
+
+1. In Chrome, the attribute `valign=offset` works for `img` tags as well. This allows us to shift the image directly.
+Unfortunately, this is not supported within any of the other major browsers, therefore this mode is not enabled by
+default.
+2. In every (reasonably modern) browser, the `align=middle` attribute will vertically center an image. However, the
+definition of the vertical "center" is different. In particular, for Chrome, Firefox, (and probably Safari), that center
+is the exact middle of the image. For IE and Edge however, the center is about 5 pixels (the height of a lower-case character)
+above the exact center. Since this looks great for non-IE browsers, and reasonably good on Edge, this is the default
+rendering method. The trick here is to pad either the top or the bottom of the image with extra spaces until the
+baseline of the formula is at the center. For most formulas, this works great. However, if you have a tall formula,
+like <img alt="$\frac{~}{\sum\limits_{x^{x^{x^{x}}}}^{x^{x^{x^{x}}}} f(x)}$" src="svgs/bdd0f9b91b7fff7fe5a2b1b7684a96ef.png?invert_in_darkmode" align=middle width="56.16666pt" height="71.68953pt"/>, you'll notice that there might be a lot
+of slack vertical spacing between these lines. If this is a deal-breaker for you, you can always try the `--valign True`
+mode. For most inline formulas, this is usually a non-issue.
+
+#### How to compile this document
+Make sure that you have the `tikz` and the `xcolor` packages installed locally.
+
+    python -m readme2tex --usepackage "tikz" --usepackage "xcolor" --output README.md --branch svgs
+
+and of course
+
+    python -m readme2tex --usepackage "tikz" --usepackage "xcolor" --output README.md --branch svgs --add-git-hook
+
+For the `png` relative mode, use
+
+    python -m readme2tex --usepackage "tikz" --usepackage "xcolor" --output README.md --branch master --nocdn --pngtrick
+
+----------------------------------------
+
+<p align="center"><img alt="\begin{tikzpicture}[scale=0.25, line join=bevel]&#10;% \a and \b are two macros defining characteristic&#10;% dimensions of the Penrose triangle.&#9;&#9;&#10;\pgfmathsetmacro{\a}{2.5}&#10;\pgfmathsetmacro{\b}{0.9}&#10;&#10;\tikzset{%&#10;  apply style/.code     = {\tikzset{#1}},&#10;  triangle_edges/.style = {thick,draw=black}&#10;}&#10;&#10;\foreach \theta/\facestyle in {%&#10;    0/{triangle_edges, fill = gray!50},&#10;  120/{triangle_edges, fill = gray!25},&#10;  240/{triangle_edges, fill = gray!90}%&#10;}{&#10;  \begin{scope}[rotate=\theta]&#10;    \draw[apply style/.expand once=\facestyle]&#10;      ({-sqrt(3)/2*\a},{-0.5*\a})                     --&#10;      ++(-\b,0)                                       --&#10;        ({0.5*\b},{\a+3*sqrt(3)/2*\b})                -- % higher point&#9;&#10;        ({sqrt(3)/2*\a+2.5*\b},{-.5*\a-sqrt(3)/2*\b}) -- % rightmost point&#10;      ++({-.5*\b},-{sqrt(3)/2*\b})                    -- % lower point&#10;        ({0.5*\b},{\a+sqrt(3)/2*\b})                  --&#10;      cycle;&#10;    \end{scope}&#10;  }&#9;&#10;\end{tikzpicture}" src="svgs/48ab6ba0b4263d6ecddedfd213f66ff5.png?invert_in_darkmode" align=middle width="104.567595pt" height="90.73581pt"/></p>
