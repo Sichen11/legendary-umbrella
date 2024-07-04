@@ -1,128 +1,148 @@
-# Contributor Covenant Code of Conduct
+# ![image](https://user-images.githubusercontent.com/56273942/202568467-0ee721bb-1424-4efd-88fc-31b4f2a59dc6.png) DEPRECATED
 
-## Our Pledge
+## Announcement:
+As of November 18th, 2022, this repository is deprecated. The contents of this repository will remain available but we will no longer provide updates or accept new contributions and pull requests. We recommend you start [here](https://docs.aws.amazon.com/freertos/latest/userguide/freertos-getting-started-modular.html) for creating a new project. If you have an existing FreeRTOS project based on this repository, see the [migration guide](https://docs.aws.amazon.com/freertos/latest/userguide/github-repo-migration.html). 
 
-We as members, contributors, and leaders pledge to make participation in our
-community a harassment-free experience for everyone, regardless of age, body
-size, visible or invisible disability, ethnicity, sex characteristics, gender
-identity and expression, level of experience, education, socio-economic status,
-nationality, personal appearance, race, religion, or sexual identity
-and orientation.
+Over the years, AWS has improved the modularity of the FreeRTOS libraries and repository structure to make it easier for you to build and update FreeRTOS-based projects. This repository deprecation aligns with some of these significant initiatives:
+*   We decomposed libraries to include them in their individual repositories and removed interdependencies between each library giving you the flexibility to choose the FreeRTOS libraries and project structure that suits your project and toolchain.
+*   We split libraries that are AWS dependent and FreeRTOS dependent into separate repositories giving you the option to mix and match libraries that are specific to your board and use case.
+*   We provided  feature stability, security patches, and critical bug fixes through the Long Term Support (LTS) libraries. 
 
-We pledge to act and interact in ways that contribute to an open, welcoming,
-diverse, inclusive, and healthy community.
+Have more questions? Post them in the [FreeRTOS forum](https://forums.freertos.org/).
 
-## Our Standards
+# FreeRTOS AWS Reference Integrations
 
-Examples of behavior that contributes to a positive environment for our
-community include:
+## Cloning
+This repo uses [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to bring in dependent components.
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes,
-  and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the
-  overall community
+Note: If you download the ZIP file provided by GitHub UI, you will not get the contents of the submodules. (The ZIP file is also not a valid git repository)
 
-Examples of unacceptable behavior include:
+If using Windows, because this repository and its submodules contain symbolic links, set `core.symlinks` to true with the following command:
+```
+git config --global core.symlinks true
+```
+In addition to this, either enable [Developer Mode](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development) or, whenever using a git command that writes to the system (e.g. `git pull`, `git clone`, and `git submodule update --init --recursive`), use a console elevated as administrator so that git can properly create symbolic links for this repository. Otherwise, symbolic links will be written as normal files with the symbolic links' paths in them as text. [This](https://blogs.windows.com/windowsdeveloper/2016/12/02/symlinks-windows-10/) gives more explanation.
 
-* The use of sexualized language or imagery, and sexual attention or
-  advances of any kind
-* Trolling, insulting or derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or email
-  address, without their explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-  professional setting
+To clone using HTTPS:
+```
+git clone https://github.com/aws/amazon-freertos.git --recurse-submodules
+```
+Using SSH:
+```
+git clone git@github.com:aws/amazon-freertos.git --recurse-submodules
+```
 
-## Enforcement Responsibilities
+If you have downloaded the repo without using the `--recurse-submodules` argument, you need to run:
+```
+git submodule update --init --recursive
+```
 
-Community leaders are responsible for clarifying and enforcing our standards of
-acceptable behavior and will take appropriate and fair corrective action in
-response to any behavior that they deem inappropriate, threatening, offensive,
-or harmful.
+## Important branches to know
+master            --> Development is done continuously on this branch  
+release           --> Fully tested released source code  
+release-candidate --> Preview of upcoming release  
+feature/*         --> Alpha/beta of an upcoming feature  
 
-Community leaders have the right and responsibility to remove, edit, or reject
-comments, commits, code, wiki edits, issues, and other contributions that are
-not aligned to this Code of Conduct, and will communicate reasons for moderation
-decisions when appropriate.
+## Getting Started
 
-## Scope
+For more information on FreeRTOS, refer to the [Getting Started section of FreeRTOS webpage](https://aws.amazon.com/freertos).
 
-This Code of Conduct applies within all community spaces, and also applies when
-an individual is officially representing the community in public spaces.
-Examples of representing our community include using an official e-mail address,
-posting via an official social media account, or acting as an appointed
-representative at an online or offline event.
+To directly access the **Getting Started Guide** for supported hardware platforms, click the corresponding link in the Supported Hardware section below.
 
-## Enforcement
+For detailed documentation on FreeRTOS, refer to the [FreeRTOS User Guide](https://aws.amazon.com/documentation/freertos).
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-samariya.durgesh@gmail.com.
-All complaints will be reviewed and investigated promptly and fairly.
+### AWS Collection of Metrics
 
-All community leaders are obligated to respect the privacy and security of the
-reporter of any incident.
+The demos that connect to AWS IoT report metrics to AWS about the operating system, and the MQTT client library used by sending a specially formatted string in the username field of the MQTT CONNECT packet. These metrics help AWS IoT improve security and provide better technical support. Providing these metrics is optional for users, and these can be disabled by updating the following configuration macros in the `demos/include/aws_iot_metrics.h` file:
 
-## Enforcement Guidelines
+```
+#define AWS_IOT_METRICS_STRING           NULL
+#define AWS_IOT_METRICS_STRING_LENGTH    0U
+```
 
-Community leaders will follow these Community Impact Guidelines in determining
-the consequences for any action they deem in violation of this Code of Conduct:
+#### Format
 
-### 1. Correction
+The format of the username string with metrics is:
 
-**Community Impact**: Use of inappropriate language or other behavior deemed
-unprofessional or unwelcome in the community.
+```
+<Actual_Username>?SDK=<OS_Name>&Version=<OS_Version>MQTTLib=<MQTT_Library_name>@<MQTT_Library_version>
+```
 
-**Consequence**: A private, written warning from community leaders, providing
-clarity around the nature of the violation and an explanation of why the
-behavior was inappropriate. A public apology may be requested.
+where
 
-### 2. Warning
+* **Actual_Username** is the actual username used for authentication (if a username/password is used for authentication).
+* **OS_Name** is the Operating System the application is running on.
+* **OS_Version** is the version number of the Operating System.
+* **MQTT_Library_name** is the MQTT Client library being used.
+* **MQTT_Library_version** is the version of the MQTT Client library being used.
 
-**Community Impact**: A violation through a single incident or series
-of actions.
+## FreeRTOS Qualified Boards
 
-**Consequence**: A warning with consequences for continued behavior. No
-interaction with the people involved, including unsolicited interaction with
-those enforcing the Code of Conduct, for a specified period of time. This
-includes avoiding interactions in community spaces as well as external channels
-like social media. Violating these terms may lead to a temporary or
-permanent ban.
+For a complete list of boards that have been qualified for FreeRTOS by AWS Partners, please visit the [AWS Partner Device Catalog](https://devices.amazonaws.com/search?page=1&sv=freertos)
 
-### 3. Temporary Ban
+In addition, AWS supports the following boards with FreeRTOS Build Integration and maintains them with each release:
 
-**Community Impact**: A serious violation of community standards, including
-sustained inappropriate behavior.
+1. **Texas Instruments** - [CC3220SF-LAUNCHXL](https://devices.amazonaws.com/detail/a3G0L00000AANtaUAH/SimpleLink-Wi-Fi%C2%AE-CC3220SF-Wireless-Microcontroller-LaunchPad-Development-Kit).
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_ti.html)
+    * IDEs: [Code Composer Studio](http://www.ti.com/tools-software/ccs.html), [IAR Embedded Workbench](https://www.iar.com/iar-embedded-workbench/partners/texas-instruments)
+2. **STMicroelectronics** - [STM32L4 Discovery kit IoT node](https://devices.amazonaws.com/detail/a3G0L00000AANsWUAX/STM32L4-Discovery-Kit-IoT-Node).
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_st.html)
+    * IDE: [STM32 System Workbench](http://openstm32.org/HomePage)
+3. **NXP** - [LPC54018 IoT Module](https://devices.amazonaws.com/detail/a3G0L00000AANtAUAX/LPC54018-IoT-Solution), 
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_nxp.html)
+    * IDEs: [IAR Embedded Workbench](https://www.iar.com/iar-embedded-workbench/partners/nxp), [MCUXpresso IDE](https://www.nxp.com/mcuxpresso/ide/download)
+4. **Espressif** - [ESP32-DevKitC](https://devices.amazonaws.com/detail/a3G0L00000AANtjUAH/ESP32-WROOM-32-DevKitC), [ESP-WROVER-KIT](https://devices.amazonaws.com/detail/a3G0L00000AANtlUAH/ESP-WROVER-KIT), [ESP32-WROOM-32SE](https://devices.amazonaws.com/detail/a3G0L00000AANtjUAH/ESP32-WROOM-32-DevKitC), [ESP32-S2-SAOLA-1](https://devices.amazonaws.com/detail/a3G0h00000AkFngEAF/ESP32-S2-Saola-1)
+    * [Getting Started Guide - ESP32-DevKitC, ESP-WROVER-KIT](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_espressif.html)
+    * [Getting Started Guide - ESP32-WROOM-32SE](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_esp32wroom-32se.html)
+5. **Infineon** - [Infineon XMC4800 IoT Connectivity Kit](https://devices.amazonaws.com/detail/a3G0L00000AANsbUAH/XMC4800-IoT-FreeRTOS-Connectivity-Kit-WiFi), [Optiga TrustX](https://devices.amazonaws.com/detail/a3G0h000007712QEAQ/OPTIGA%E2%84%A2-Trust-X-Security-Solution)
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_infineon.html)
+    * IDE: [DAVE](https://infineoncommunity.com/dave-download_ID645)
+6. **Xilinx** - [Xilinx Zynq-7000 based MicroZed Industrial IoT Bundle](https://devices.amazonaws.com/detail/a3G0L00000AANtqUAH/MicroZed-IIoT-Bundle-with-FreeRTOS)
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_xilinx.html)
+    * IDE: [Xilinx SDK](https://www.xilinx.com/products/design-tools/embedded-software/sdk.html)
+7. **MediaTek** - [MediaTek MT7697Hx Development Kit](https://devices.amazonaws.com/detail/a3G0L00000AAOmPUAX/MT7697Hx-Development-Kit)
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_mediatek.html)
+    * IDE: [Keil uVision](http://www2.keil.com/mdk5/install/)
+8. **Renesas** - [Renesas Starter Kit+ for RX65N-2MB](https://devices.amazonaws.com/detail/a3G0L00000AAOkeUAH/Renesas-Starter-Kit+-for-RX65N-2MB)
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_renesas.html)
+    * IDE: [e2 studio](https://www.renesas.com/us/en/products/software-tools/tools/ide/e2studio.html)
+9. **Cypress CYW54907** - [Cypress CYW954907AEVAL1F Evaluation Kit](https://devices.amazonaws.com/detail/a3G0L00000AAPg5UAH/CYW954907AEVAL1F)
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_cypress_54.html)
+    * IDE: [WICED Studio](https://community.cypress.com/community/wiced-wifi)
+10. **Cypress CYW43907** - [Cypress CYW943907AEVAL1F Evaluation Kit](https://devices.amazonaws.com/detail/a3G0L00000AAPg0UAH/CYW943907AEVAL1F)
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_cypress_43.html)
+    * IDE: [WICED Studio](https://community.cypress.com/community/wiced-wifi)
+11. **Cypress PSoC 64** - [PSoC 64 Standard Secure AWS Wi-Fi Bluetooth Pioneer Kit](https://devices.amazonaws.com/detail/a3G0h0000088AgXEAU/PSoC%C2%AE-64-Standard-Secure-AWS-Wi-Fi-Bluetooth-Pioneer-Kit)
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_cypress_psoc64.html)
+    * IDE: [ModusToolbox](https://www.cypress.com/products/modustoolbox-software-environment)
+12. **NXP MW320** - [MW320 AWS IoT Starter Kit](https://devices.amazonaws.com/detail/a3G0h000000OaRnEAK/MW320-AWS-IoT-Starter-Kit)
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_mw32x.html)
+13. **NXP MW322** - [MW322 AWS IoT Starter Kit](https://devices.amazonaws.com/detail/a3G0h000000OblKEAS/MW322-AWS-IoT-Starter-Kit)
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_mw32x.html)
+14. **Nordic nRF52840 DK** - [nRF52840 DK Development kit](https://devices.amazonaws.com/detail/a3G0L00000AANtrUAH/nRF52840-Development-Kit)
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_nordic.html)  
+15. **Nuvoton** - [NuMaker-IoT-M487](https://devices.amazonaws.com/detail/a3G0h000000Tg9cEAC/NuMaker-IoT-M487)
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting-started-nuvoton-m487.html)
+16. **Windows Simulator** - To evaluate FreeRTOS without using MCU-based hardware, you can use the Windows Simulator.
+    * Requirements: Microsoft Windows 7 or newer, with at least a dual core and a hard-wired Ethernet connection
+    * [Getting Started Guide](https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_windows.html)
+    * IDE: [Visual Studio Community Edition](https://www.visualstudio.com/downloads/)
 
-**Consequence**: A temporary ban from any sort of interaction or public
-communication with the community for a specified period of time. No public or
-private interaction with the people involved, including unsolicited interaction
-with those enforcing the Code of Conduct, is allowed during this period.
-Violating these terms may lead to a permanent ban.
 
-### 4. Permanent Ban
+## amazon-freeRTOS/projects
+The ```./projects``` folder contains the IDE test and demo projects for each vendor and their boards. The majority of boards can be built with both IDE and cmake (there are some exceptions!). Please refer to the Getting Started Guides above for board specific instructions.
 
-**Community Impact**: Demonstrating a pattern of violation of community
-standards, including sustained inappropriate behavior,  harassment of an
-individual, or aggression toward or disparagement of classes of individuals.
+## Mbed TLS License
+This repository uses Mbed TLS under Apache 2.0.
 
-**Consequence**: A permanent ban from any sort of public interaction within
-the community.
+## amazon-freerTOS/vendors License
+The `./vendors` directory contains content that may be subject to different license terms. For vendor licensing information, see the LICENSE files or source header documentation for each vendor directory.
 
-## Attribution
+## CBMC
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage],
-version 2.0, available at
-https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
+The `tools/cbmc/proofs` directory contains CBMC proofs.
 
-Community Impact Guidelines were inspired by [Mozilla's code of conduct
-enforcement ladder](https://github.com/mozilla/diversity).
+To learn more about CBMC and proofs specifically, review the training material [here](https://model-checking.github.io/cbmc-training).
 
-[homepage]: https://www.contributor-covenant.org
+In order to run these proofs you will need to install CBMC and other tools by following the instructions [here](https://model-checking.github.io/cbmc-training/installation.html).
 
-For answers to common questions about this code of conduct, see the FAQ at
-https://www.contributor-covenant.org/faq. Translations are available at
-https://www.contributor-covenant.org/translations.
