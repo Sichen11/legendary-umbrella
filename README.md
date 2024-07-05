@@ -1,2 +1,3 @@
-*.md linguist-detectable=true
-*.md linguist-documentation=false
+global.___loader = {
+  enqueue: jest.fn(),
+};
