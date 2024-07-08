@@ -1,46 +1,204 @@
-# 项目背景
-
-蘑菇街能有今天的快速发展，得益于开源软件群雄崛起的大环境背景，我们一直对开源社区怀有感恩之情，因此也一直希望能为开源社区贡献一份力量。
-
-2013年我们蘑菇街从社区导购华丽转身时尚电商平台，为解决千万妹子和时尚卖家的沟通问题，我们开发了自己的即时通讯软件。既然已经有了用户使用的IM，为什么我们自己公司内部沟通还要用第三方的呢？因此就有了TT(TeamTalk)的雏形，现在蘑菇街内部的在线沟通全部通过TT来完成。随着TT功能的逐渐完善，我们决定把TT开源来回馈开源社区，希望国内的中小企业都能用上开源、免费、好用的IM工具！
-
-# 项目介绍
-* 名称：TeamTalk
-* 官网：http://tt.mogu.io/
-* 开源协议：[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
-* 定位：中小型企业用户，member >= 2
-* 特点：开源与产品并重
-* 功能：可靠的消息传递机制；支持文字、图片、语音等富文本信息；文件收发等	
-
-# 项目框架
-
-
-麻雀虽小五脏俱全，本项目涉及到多个平台、多种语言，简单关系如下图：
-     
-![teamtalk架构图](http://s6.mogucdn.com/b7/pic/140921/7n6ih_ieygmzjsmiywezjwmmytambqhayde_514x551.jpg)
-
-
-#### 服务端：
-     
-CppServer：TTCppServer工程，包括IM消息服务器、http服务器、文件传输服务器、文件存储服务器、登陆服务器
-java DB Proxy：TTJavaServer工程，承载着后台消息存储、redis等接口
-PHP server：TTPhpServer工程，teamtalk后台配置页面
-
-#### 客户端：
-
-- mac：TTMacClient工程，mac客户端工程
-- iOS：TTIOSClient工程，IOS客户端工程
-- Android：TTAndroidClient工程，android客户端工程
-- Windows：TTWinClient工程，windows客户端工程
-
-* 语言：c++、objective-c、java、php
-* 系统环境：Linux、Windows，Mac, iOS, Android
-
-# 代码下载
--[地址](https://github.com/mogujie/TeamTalk)
-
-# 交流
-
-* qq交流群1：341273218(已满)
-* qq交流群2:437335108
-* 邮件交流：tt@mogujie.com
+{
+	"package": "package.json",
+	"blueprint": "blueprint.md",
+	"input": "blueprint.md",
+	"output": "README.md",
+	"text": "Use this readme generator to easily generate beautiful readme's like this one! Simply extend your <code>package.json</code> and create a readme blueprint. On Github, the README file is like the landing page of your website because it is the first thing visitors see. You want to make a good first impression.",
+	"logo": {
+		"src": "https://raw.githubusercontent.com/andreasbm/readme/master/assets/logo-shadow.png",
+		"width": 150,
+		"height": 150
+	},
+	"placeholder": [
+		"[[",
+		"]]"
+	],
+	"documentationConfig": {
+		"markdown": {
+			"titleLevel": 2
+		}
+	},
+	"ids": {
+		"github": "andreasbm/readme",
+		"npm": "@appnest/readme"
+	},
+	"badges": [
+		{
+			"alt": "Custom badge",
+			"url": "https://github.com/badges/shields",
+			"img": "https://img.shields.io/badge/custom-badge-f39f37.svg"
+		},
+		{
+			"alt": "Maintained",
+			"img": "https://img.shields.io/badge/Maintained%3F-yes-green.svg",
+			"url": "https://github.com/andreasbm/readme/graphs/commit-activity"
+		}
+	],
+	"bullets": {
+		"Simple": "Extremely simple to use - so simple that it almost feels like magic!",
+		"Powerful": "Customize almost everything - add your own templates and variables if you like",
+		"Awesome": "The tool you don't know you need before you have many different repositories that all need maintenance"
+	},
+	"featured": [
+		"[lit-translate](https://github.com/andreasbm/lit-translate)",
+		"[masonry-layout](https://github.com/andreasbm/masonry-layout)",
+		"[focus-trap](https://github.com/andreasbm/focus-trap)",
+		"[web-router](https://github.com/andreasbm/web-router)",
+		"[web-config](https://github.com/andreasbm/web-config)",
+		"[ts-lit-plugin](https://github.com/runem/ts-lit-plugin)",
+		"[blob](https://github.com/andreasbm/blob)"
+	],
+	"templates": [
+		{
+			"name": "install",
+			"template": "Run `npm install [[ ids.npm ]]' to install this library!"
+		}
+	],
+	"example": {
+		"command": "node_modules/.bin/readme generate"
+	},
+	"properties": [
+		[
+			"Attribute",
+			"Type",
+			"Description"
+		],
+		[
+			"**size**",
+			"'medium', 'large'",
+			"Determines the size"
+		],
+		[
+			"**active**",
+			"boolean",
+			"Whether the element is active or not"
+		]
+	],
+	"commandOptions": [
+		[
+			"Option",
+			"Type",
+			"Description"
+		],
+		[
+			"-c, --config",
+			"string",
+			"Path of the configuration file. Defaults to 'blueprint.json"
+		],
+		[
+			"-p, --package",
+			"string",
+			"Path of the 'package.json' file. Defaults to 'package.json'."
+		],
+		[
+			"--pkg.name",
+			"string",
+			"Name of the project. Used for the 'title' template."
+		],
+		[
+			"--pkg.contributors",
+			"{name: string; email: string; url: string; img: string; info: string[];}[]",
+			"Contributors of the project. Used for the 'contributors' template."
+		],
+		[
+			"--pkg.license",
+			"string",
+			"License kind. Used for the 'license' template."
+		],
+		[
+			"-o, --output",
+			"string",
+			"Path of the generated README file. Defaults to 'README.md'."
+		],
+		[
+			"-h, --help",
+			"",
+			"Display this help message."
+		],
+		[
+			"-i, --input",
+			"string",
+			"The blueprint. Defaults to 'blueprint.md'."
+		],
+		[
+			"--badges",
+			"{alt: string, url: string, img: string}[]",
+			"Badges. Used for the 'badges' template."
+		],
+		[
+			"--text",
+			"string",
+			"Text describing your project. Used for the 'description' template."
+		],
+		[
+			"--demo",
+			"string",
+			"Demo url for your project. Used for the 'description' template."
+		],
+		[
+			"--lineBreak",
+			"string",
+			"The linebreak used in the generation of the README file. Defaults to 'rn'"
+		],
+		[
+			"--tab",
+			"string",
+			"The tab used in the generation of the README file. Defaults to 't'"
+		],
+		[
+			"--placeholder",
+			"[string, string]",
+			"The placeholder syntax used when looking for templates in the blueprint. Defaults to '[\"{{\", \"}}\"]."
+		],
+		[
+			"--line",
+			"string",
+			"The line style of the titles. Can also be an URL. Defaults to 'colored'."
+		],
+		[
+			"--templates",
+			"{name: string, template: string}[]",
+			"User created templates."
+		],
+		[
+			"-s, --silent",
+			"boolean",
+			"Whether the console output from the command should be silent."
+		],
+		[
+			"-d, --dry",
+			"boolean",
+			"Whether the command should run as dry. If dry, the output file is notgenerated but outputted to the console instead."
+		],
+		[
+			"--headingPrefix",
+			"{[key: number]: string}",
+			"The prefix of the header tags. Defaults to '{1: \"➤ \", 2: \"➤ \"}'"
+		],
+		[
+			"--logo",
+			"{src: string; alt?: string; width?: number; height?: number;}",
+			"The logo information. Used for the 'logo' template."
+		],
+		[
+			"--contributorsPerRow",
+			"number",
+			"The amount of contributors pr row when using the 'contributors' template. Defaults to '6'"
+		],
+		[
+			"--documentationConfig",
+			"object",
+			"Configuration object for automatic documentation template."
+		],
+		[
+			"--extend",
+			"string",
+			"Path to another configuration object that should be extended."
+		],
+		[
+			"--checkLinks",
+			"boolean",
+			"Checks all links for aliveness after the README file has been generated."
+		]
+	]
+}
