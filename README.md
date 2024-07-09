@@ -1,15 +1,8 @@
-# Changelog
+root = true
 
-## v1.0.0
-
-### Added or Changed
-- Added this changelog :)
-- Fixed typos in both templates
-- Back to top links
-- Added more "Built With" frameworks/libraries
-- Changed table of contents to start collapsed
-- Added checkboxes for major features on roadmap
-
-### Removed
-
-- Some packages/libraries from acknowledgements I no longer use
+[*]
+indent_style = tab
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
