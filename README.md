@@ -1,14 +1,17 @@
-# Como contribuir?
+source "http://rubygems.org"
+gemspec
 
-Este é um projeto totalmente livre que aceita contribuições via pull requests no GitHub. Este documento tem a responsabilidade de alinhar as contribuições de acordo com os padrões estabelecidos no mesmo. Em caso de dúvidas, [abra uma issue](https://github.com/iuricode/readme-template/issues/new).
-
-## Passos
-
-1. Crie um fork deste repositório.
-2. Envie seus commits em português.
-3. Insira um pequeno resumo sobre o que foi adicionado.
-4. Solicite um pull request.
-
-## Recomendação (opcional)
-
-Para uma melhor semântica nos commits, recomendamos nosso repositório sobre [padrões de commits](https://github.com/iuricode/padroes-de-commits). Assim ficará mais fácil para avaliar seu pull request.
+gem "redcarpet", :platforms => :ruby
+gem "kramdown", :platforms => :jruby
+gem "RedCloth"
+# using a tag version here because 0.18.3 was not published by the author to encourage users to upgrade.
+# however we want to bump up to this version since this has a security patch
+gem "commonmarker", git: "https://github.com/gjtorikian/commonmarker.git", tag: "v0.18.3"
+gem "rdoc", "~> 6.7.0"
+gem "org-ruby", "= 0.9.9"
+gem "creole", "~>0.3.6"
+gem "wikicloth", "=0.8.3"
+gem "twitter-text", "~> 1.14"
+gem "asciidoctor", "~> 2.0.5"
+gem "rake"
+gem "rexml"
