@@ -1,31 +1,10 @@
-require File.expand_path("../lib/github-markup", __FILE__)
+## Copyright 2021, [YOUR NAME]
 
-Gem::Specification.new do |s|
-  s.name          = "github-markup"
-  s.version       = GitHub::Markup::VERSION
-  s.summary       = "The code GitHub uses to render README.markup"
-  s.description   = <<~DESC
-    This gem is used by GitHub to render any fancy markup such as Markdown,
-    Textile, Org-Mode, etc. Fork it and add your own!
-  DESC
-  s.authors       = ["Chris Wanstrath"]
-  s.email         = "chris@ozmm.org"
-  s.homepage      = "https://github.com/github/markup"
-  s.license       = "MIT"
+###### Please delete this line and the next one
+###### APP TYPE can be a webpage/website, a web app, a software and so on
 
-  s.required_ruby_version = '>= 3.0.0'
+Permission is hereby granted, free of charge, to any person obtaining a copy of this [APP TYPE] and associated documentation files, to deal in the [APP TYPE] without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the [APP TYPE], and to permit persons to whom the [APP TYPE] is furnished to do so, subject to the following conditions:
 
-  s.files         = `git ls-files`.split($\)
-  s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
-  s.require_paths = %w[lib]
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the [APP TYPE].
 
-  s.add_development_dependency 'rake', '~> 12'
-  s.add_development_dependency 'activesupport', '~> 7.1.3.4'
-  s.add_development_dependency 'minitest', '~> 5.4', '>= 5.4.3'
-  s.add_development_dependency 'html-pipeline', '~> 1.0'
-  s.add_development_dependency 'sanitize', '>= 4.6.3'
-  s.add_development_dependency 'nokogiri', '~> 1.16.5'
-  s.add_development_dependency 'nokogiri-diff', '~> 0.3.0'
-  s.add_development_dependency "github-linguist", ">= 7.1.3"
-end
+THE [APP TYPE] IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE [APP TYPE] OR THE USE OR OTHER DEALINGS IN THE [APP TYPE].
