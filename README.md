@@ -1,126 +1,267 @@
-# Using the encryption tool (bufcrypt)
-
-`bufcrypt encrypt "mysupersecret"`
-
-`AQICAH******************************************************************************************************************cFrAlYeM`
-
-## Contents
-
-* [Before you use the tool](#before-you-use-the-tool)
-* [Installation and usage](#installation-and-usage)
-  * [Installation](#installation)
-  * [Usage](#usage)
-* [Intro and motivation](#intro-and-motivation)
-  * [How bufcrypt helps with documentation](#how-bufcrypt-helps-with-documentation)
-* [How to use bufcrypt in documentation](#how-bufcrypt-helps-with-documentation)
-
-## Before you use the tool
-
-You'll need an AWS key setup on your machine to use the `bufcrypt` encryption
-tool. Additionally the key will need permission to access the KMS key used.
-Ping Adnan to help you get setup with this if you need it.
-
-## Installation and usage
-
-### Installation
-
-1. Download the script from this repo and place it in `/usr/local/bin/bufcrypt`. 
-  * Use `chmod +x /usr/local/bin/bufcrypt` to make it executable.
-  * You may need to use `sudo` for this step depending on your local
-    environment.
-2. Run `bufcrypt help` to view the command documentation.
-3. Run `bufcrypt encrypt "MYSECRET"` to test it out. You should receive the
-   garbled text that looks like the stuff shown above.
-4. Copy the value that showed up in your terminal and run `bufcrypt decrypt
-   "paste-the-value-between-quotes"`.
-5. You should get `MYSECRET` as a result.
-
-### Usage
-
-**Encrypting single lines of text**
-
-`bufcrypt encrypt "senstive info goes here"`
+Getting started with Markdown
+=============================
 
 
-**Encrypting multiple lines of text**
+- [Getting started with Markdown](#getting-started-with-markdown)
+- [Titles](#titles)
+- [Paragraph](#paragraph)
+- [List](#list)
+	- [List CheckBox](#list-checkbox)
+- [Link](#link)
+	- [Anchor links](#anchor-links)
+- [Blockquote](#blockquote)
+- [Image | GIF](#image--gif)
+- [Style Text](#style-text)
+	- [Italic](#italic)
+	- [Bold](#bold)
+	- [Strikethrough](#strikethrough)
+- [Code](#code)
+- [Email](#email)
+- [Table](#table)
+	- [Table Align](#table-align)
+    	- [Align Center](#align-center)
+    	- [Align Left](#align-left)
+    	- [Align Right](#align-right)
+- [Escape Characters](#escape-characters)
+- [Emoji](#emoji)
+- [Shields Badges](#Shields-Badges)
+- [Markdown Editor](#markdown-editor)
+- [Some links for more in depth learning](#some-links-for-more-in-depth-learning)
+
+----------------------------------
+
+# Titles 
+
+### Title 1
+### Title 2
+
+	Title 1
+	========================
+	Title 2 
+	------------------------
+
+# Title 1
+## Title 2
+### Title 3
+#### Title 4
+##### Title 5
+###### Title 6
+
+    # Title 1
+    ## Title 2
+    ### Title 3    
+    #### Title 4
+    ##### Title 5
+    ###### Title 6    
+
+# Paragraph
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit. Phasellus eleifend egestas diam, id tincidunt arcu dictum quis. Pellentesque eu dui tempus, tempus massa sed, eleifend tortor. Donec in sem in erat iaculis tincidunt. Fusce condimentum hendrerit turpis nec vehicula. Aliquam finibus nisi vel eros lobortis dictum. Etiam congue tortor libero, quis faucibus ligula gravida a. Suspendisse non pulvinar nisl. Sed malesuada, felis vitae consequat gravida, dui ligula suscipit ligula, nec elementum nulla sem vel dolor. Vivamus augue elit, venenatis non lorem in, volutpat placerat turpis. Nullam et libero at eros vulputate auctor. Duis sed pharetra lacus. Sed egestas ligula vitae libero aliquet, ac imperdiet est ullamcorper. Sed dapibus sem tempus eros dignissim, ac suscipit lectus dapibus. Proin sagittis diam vel urna volutpat, vel ullamcorper urna lobortis. Suspendisse potenti.
+
+Nulla varius risus sapien, nec fringilla massa facilisis sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc vel ornare erat, eget rhoncus lectus. Suspendisse interdum scelerisque molestie. Aliquam convallis consectetur lorem ut consectetur. Nullam massa libero, cursus et porta ac, consequat eget nibh. Sed faucibus nisl augue, non viverra justo sagittis venenatis.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit. 
+    
+    Phasellus eleifend egestas diam, id tincidunt arcu dictum quis.
+
+# List 
+* Item 1;
+	* Item 1.1;
+* Item 2;
+	* Item 2.1;
+	* Item 2.2;
+* Item 3
+	* Item 3.1;
+		* Item 3.1.1;
+    
+>      * Item 1;
+>	      * Item 1.1;
+>	    * Item 2;
+>	     * Item 2.1;
+>	     * Item 2.2;
+>	    * Item 3
+>		   * Item 3.1;
+>			  * Item 3.1.1;
+
+## List CheckBox
+
+ - [ ] Item A
+ - [x] Item B
+ - [x] Item C
+ 
+>     - [ ] Item A
+>     - [x] Item B
+>     - [x] Item C
+
+
+# Link
+[Google](https://www.google.com) - _Google | Youtube | Gmail | Maps | PlayStore | GoogleDrive_
+
+[Youtube](https://www.youtube.com) - _Enjoy videos and music you love, upload original content, and share it with friends, family, and the world on YouTube._
+
+[GitHub](https://github.com/fefong/markdown_readme#getting-started-with-markdown) - _Project_
+
+		[Google](https://www.google.com) - _Google | Youtube | Gmail | Maps | PlayStore | GoogleDrive_
+
+## Anchor links
+
+[Markdown - Summary](#Getting-started-with-Markdown)
+
+[Markdown - Markdown Editor](#Markdown-Editor)
+
+		[Markdown - Link](#Link)
+
+# Blockquote
+> Lebenslangerschicksalsschatz: Lifelong Treasure of Destiny
+
+    > Lebenslangerschicksalsschatz: Lifelong Treasure of Destiny 
+
+# Image | GIF
+![myImage](https://media.giphy.com/media/XRB1uf2F9bGOA/giphy.gif)
+    
+    ![myImage](https://media.giphy.com/media/XRB1uf2F9bGOA/giphy.gif)
+    
+See more [Markdown Extras - Image Align](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#image-align)    
+
+# Style Text
+### Italic
+
+*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.*
+
+     *Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.*
+
+### Bold
+**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.**
+
+    **Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum, nibh eu commodo posuere, ligula ante dictum neque, vitae pharetra mauris mi a velit.**
+    
+### Strikethrough
+~~strikethrough text~~
+
+    ~~strikethrough text~~
+    
+# Code
+
+```java
+public static void main(String[] args) {
+	//TODO
+}
+```
+
+>   \`\`\`java <br>
+>   public static void main(String[] args) {<br>
+>	    //TODO<br>
+>	}<br>
+>   \`\`\`<br>
+
+See more [Markdown Extras - Style Text](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#style-text)
+
+# Email
+<email@email.com>
+
+    <email@email.com>
+
+# Table
+
+|Column 1|Column 2|Column 3|
+|---|---|---|
+|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
+|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
+
+>\|Column 1|Column 2|Column 3|<br>
+>\|---|---|---|<br>
+>\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
+>\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
+
+## Table Align
+
+## Align Center
+
+|Column 1|Column 2|Column 3|
+|:---:|:---:|:---:|
+|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
+|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
+
+>\|Column 1|Column 2|Column 3|<br>
+>\|:---:|:---:|:---:|<br>
+>\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
+>\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
+
+## Align Left
+
+|Column 1|Column 2|Column 3|
+|:---|:---|:---|
+|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
+|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
+
+>\|Column 1|Column 2|Column 3|<br>
+>\|:---|:---|:---|<br>
+>\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
+>\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
+
+## Align Right
+
+|Column 1|Column 2|Column 3|
+|---:|---:|---:|
+|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|
+|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|
+
+>\|Column 1|Column 2|Column 3|<br>
+>\|---:|---:|---:|<br>
+>\|Row 1 Column1| Row 1 Column 2| Row 1 Column 3|<br>
+>\|Row 2 Column1| Row 2 Column 2| Row 2 Column 3|<br>
+
+See more [Markdown Extras - Table](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table)
+* [Rownspan](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table---rowspan)
+* [Colspan](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#table---colspan)
+
+# Escape Characters
 
 ```
-bufcrypt encrypt "my sensitive info
-goes
-on multiple lines"
+\   backslash
+`   backtick
+*   asterisk
+_   underscore
+{}  curly braces
+[]  square brackets
+()  parentheses
+#   hash mark
++   plus sign
+-   minus sign (hyphen)
+.   dot
+!   exclamation mark
 ```
 
-You can achieve the above by just typing and hitting enter to get a new line.
-The terminal will allow any number of new lines until it receives a closing
-quotation mark
+# Emoji
 
-**Decrypting**
+* [Emoji](emoji.md#emoji);
+	* [People](emoji.md#people) - (:blush: ; :hushed: ; :shit:);
+	* [Nature](emoji.md#nature) - (:sunny: ; :snowman: ; :dog:);
+	* [Objects](emoji.md#objects) - (:file_folder: ; :computer: ; :bell:);
+	* [Places](emoji.md#places) - (:rainbow: ; :warning: ; :statue_of_liberty:);
+	* [Symbols](emoji.md#symbols) - (:cancer: ; :x: ; :shipit:);
+* [Kaomoji](emoji.md#kaomoji);
+* [Special-Symbols](emoji.md#special-symbols);
+	
 
-`bufcrypt decrypt "paste-the-encrypted-text-here"`
+# Shields Badges
 
-**Encrypting a file**
+:warning: _We are not responsible for this site_
 
-`bufcrypt encryptfile "~/.aws/credentials.backup"`
+See more: [https://shields.io/](https://shields.io/)
 
----
+[![GitHub forks](https://img.shields.io/github/forks/fefong/markdown_readme)](https://github.com/fefong/markdown_readme/network)
+![Markdown](https://img.shields.io/badge/markdown-project-red)
 
-**NOTE:** `bufcrypt help` will always carry the most up to date documentation of the
-command. This file is in sync at the time of this writing but might fall behind
-at times. Please refer to `bufcrypt help` as the primary documentation source
-for usage of the command.
+# Markdown Editor
 
+[StackEdit](https://stackedit.io) - _StackEdit’s Markdown syntax highlighting is unique. The refined text formatting of the editor helps you visualize the final rendering of your files._
 
-## Intro and Motivation
+# Some links for more in depth learning
 
-The encryption tool (henceforth referred to as `bufcrypt`) is a small shell
-script that uses AWS KMS for ecnrypting small chunks of text. The limit is
-currently capped at 4096 bits and will be increased in the near future. The
-script will also change to become a binary will allow even binary files to be
-encrypted.
+:page_facing_up: [Markdown Extras](https://github.com/fefong/markdown_readme/blob/master/markdown-extras.md#markdown---extras)
 
-Bufcrypt was create to allow us to encrypt values that you need to share via
-slack or other insecure channels **if needed**. This is especially useful if you
-need to share sensitive information such as AWS keys or login details to an app
-with the whole team. It is more convenient than sharing it via multiple one time
-secrets. Instead you can use a single ecnrypted value which can be safely pasted
-into channels such as slack or email.
+:page_facing_up: [Wikipedia - Markdown](https://pt.wikipedia.org/wiki/Markdown)
 
-### How `bufcrypt` helps with documentation
-
-For the purpose of documentation, bufcrypt is used to encrypt sensitive
-information that goes into our documenation.
-
-Sensitive information here is any info that we would avoid sharing in public.
-This includes IP addresses, certain commands, SQL structures such as column
-names of tables, and internal application subdomain information.
-
-**This should not be used as way to share volatile information such as API
-secret tokens inside our documentation. That information MUST remain outside of
-the docs regardless of it being encrypted or not.**
-
-A good measuring stick would be, "can an attacker immediately or effortlessly do
-something malicious with this information?". If the answer is Yes, it is
-volatile. If no, it's probably information that can be encrypted and placed in
-the docs.
+:page_facing_up: [Oficial](https://daringfireball.net/projects/markdown/)
 
 
-## How to use `bufcrypt` in documentation
-
-Once you have your encrypted value, to add it to the documentation, please enter
-the value between `<secret></secret>` tags. 
-
-If my encrpted value is `908454j3h319u0ashujhufhafa=/134o2urf1+` for example,
-I'd use
-
-`<secret>908454j3h319u0ashujhufhafa=/134o2urf1+</secret>` inside the docs when
-editing it. The final displayed markdown renders the value as normal (without
-the <secret> tag being visible)
-
-The reason for using `<secret>` is that in the future, we'll have a tool to
-automatically read the documentation and re-encrypt values with rotated keys.
-Having it between `<secret>` tags will make it easier to detect secrets and
-rotate them.
-
-There will be additional safeguards for this so don't worry if you forgot to use
-the `<secret>` tag. We'll be trying to have as many safeguards as possible for
-this.
