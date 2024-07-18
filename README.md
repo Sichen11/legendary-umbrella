@@ -1,25 +1,17 @@
-module.exports = {
-  root: true,
-  env: {
-    node: true,
-    jest: true
-  },
-  extends: ['airbnb-base', 'eslint:recommended'],
-  rules: {
-    semi: ['error', 'never'],
-    'no-use-before-define': ['error', { functions: false }],
-    'comma-dangle': 0,
-    'no-var': 2,
-    'prefer-const': 2,
-    'operator-linebreak': 0,
-    'no-confusing-arrow': 0,
-    'implicit-arrow-linebreak': 0,
-    indent: 0,
-    'no-param-reassign': 0,
-    'function-paren-newline': 0,
-    'arrow-parens': 0
-  },
-  parserOptions: {
-    parser: 'babel-eslint'
-  }
-}
+<div align="center">
+	<br>
+	<a href="https://github.com/sindresorhus/css-in-readme-like-wat/blame/main/header.svg">
+		<img src="header.svg" width="800" height="400" alt="Click to see the source">
+	</a>
+	<br>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+Explanation: https://css-tricks.com/custom-styles-in-github-readmes/
